@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ══ TITLE & META ══════════════════════════════════════════════════════ -->
+  <title>Hearing Benefit Services | Hearing Aids Delivered & Fitted Remotely</title>
+  <meta name="description" content="Brand-name Signia hearing aids delivered to your door, remotely fitted by licensed Hawaii hearing specialists. Free hearing test, 3-year care plan & price match.">
+  <meta name="keywords" content="hearing aids Hawaii, remote hearing aid fitting, Signia hearing aids, online hearing test, rechargeable hearing aids, bluetooth hearing aids, licensed hearing specialists Hawaii, hearing loss treatment, remote hearing care">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Hearing Benefit Services — Licensed Hearing Specialists">
+  <link rel="canonical" href="https://hearingbenefitservices.com/">
+
+  <!-- ══ OPEN GRAPH ══════════════════════════════════════════════════════════ -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://hearingbenefitservices.com/">
+  <meta property="og:site_name"   content="Hearing Benefit Services">
+  <meta property="og:locale"      content="en_US">
+  <meta property="og:title"       content="Hearing Benefit Services | Hearing Aids Delivered & Fitted Remotely">
+  <meta property="og:description" content="Brand-name Signia hearing aids delivered to your door, remotely fitted by licensed Hawaii hearing specialists. Free hearing test, 3-year care plan & price match.">
+  <meta property="og:image"       content="https://storage.googleapis.com/msgsndr/UDKdmJIdT4xB1V6Lye64/media/697a4bddf215da32364de544.png">
+  <meta property="og:image:width"  content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt"    content="Hearing Benefit Services — Brand-name Signia hearing aids delivered and fitted remotely">
+
+  <!-- ══ TWITTER CARD ════════════════════════════════════════════════════════ -->
+  <meta name="twitter:card"        content="summary_large_image">
+  <meta name="twitter:title"       content="Hearing Benefit Services | Hearing Aids Delivered & Fitted Remotely">
+  <meta name="twitter:description" content="Brand-name Signia hearing aids delivered to your door, remotely fitted by licensed Hawaii hearing specialists. Free hearing test, 3-year care plan & price match.">
+  <meta name="twitter:image"       content="https://storage.googleapis.com/msgsndr/UDKdmJIdT4xB1V6Lye64/media/697a4bddf215da32364de544.png">
+  <meta name="twitter:image:alt"   content="Hearing Benefit Services — Brand-name Signia hearing aids delivered and fitted remotely">
+
+  <!-- ══ JSON-LD ════════════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": "https://hearingbenefitservices.com/#website",
+    "url": "https://hearingbenefitservices.com/",
+    "name": "Hearing Benefit Services",
+    "publisher": { "@id": "https://hearingbenefitservices.com/#organization" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://hearingbenefitservices.com/#organization",
+    "name": "Hearing Benefit Services",
+    "url": "https://hearingbenefitservices.com/",
+    "telephone": "+1-808-435-7002",
+    "email": "customercare@hearingbenefitservices.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1888 Kalākaua Ave C312",
+      "addressLocality": "Honolulu",
+      "addressRegion": "HI",
+      "postalCode": "96815",
+      "addressCountry": "US"
+    },
+    "sameAs": [
+      "https://www.facebook.com/hearingbenefitservices",
+      "https://www.youtube.com/@hearingbenefitservices"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["MedicalBusiness", "HearingCenter"],
+    "@id": "https://hearingbenefitservices.com/#business",
+    "name": "Hearing Benefit Services",
+    "url": "https://hearingbenefitservices.com/",
+    "telephone": "+1-808-435-7002",
+    "medicalSpecialty": "Audiology",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1888 Kalākaua Ave C312",
+      "addressLocality": "Honolulu",
+      "addressRegion": "HI",
+      "postalCode": "96815",
+      "addressCountry": "US"
+    },
+    "areaServed": { "@type": "Country", "name": "United States" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What brands of hearing aids does Hearing Benefit Services offer?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Hearing Benefit Services offers brand-name Signia hearing aids delivered directly to your home." }
+      },
+      {
+        "@type": "Question",
+        "name": "How does remote hearing aid fitting work?",
+        "acceptedAnswer": { "@type": "Answer", "text": "After a free online hearing consultation, your hearing aids are pre-programmed by a licensed hearing specialist and shipped to your home. A follow-up remote session fine-tunes the devices — no in-person clinic visit needed." }
+      },
+      {
+        "@type": "Question",
+        "name": "Is a care plan included?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Every purchase includes a 3-year comprehensive care plan covering remote adjustments, ongoing hearing specialist support, and follow-up services." }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Hearing Benefit Services accept insurance?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Hearing Benefit Services works with hundreds of insurance providers to maximize your hearing benefits." }
+      },
+      {
+        "@type": "Question",
+        "name": "Are the hearing aids rechargeable?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Yes. Rechargeable Signia hearing aids provide all-day power on a single charge." }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ══ FONTS & ICONS ══════════════════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+
+  <style>
+    :root {
+      --navy:        #0B1E2B;
+      --blue-dark:   #1B4965;
+      --blue:        #2A64A7;
+      --blue-mid:    #3578c7;
+      --gold:        #FFC107;
+      --gold-dark:   #e6a800;
+      --green:       #10b981;
+      --red:         #ef4444;
+      --teal:        #0ea5e9;
+      --light:       #F8FAFC;
+      --slate-100:   #f1f5f9;
+      --slate-200:   #e2e8f0;
+      --slate-500:   #64748b;
+      --slate-700:   #334155;
+      --white:       #ffffff;
+      --radius-sm:   10px;
+      --radius-md:   16px;
+      --radius-lg:   24px;
+      --shadow-sm:   0 2px 12px rgba(0,0,0,0.06);
+      --shadow-md:   0 8px 32px rgba(0,0,0,0.11);
+      --shadow-lg:   0 20px 60px rgba(0,0,0,0.15);
+      --shadow-gold: 0 6px 28px rgba(255,193,7,0.38);
+      --transition:  all 0.25s ease;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--white);
+      color: var(--slate-700);
+      font-size: 1.02rem;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+    h1 { font-family: 'Lora', serif; font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 700; line-height: 1.12; }
+    h2 { font-family: 'Lora', serif; font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; line-height: 1.22; color: var(--navy); margin-bottom: 14px; }
+    h3 { font-family: 'Poppins', sans-serif; font-size: clamp(1.05rem, 2vw, 1.25rem); font-weight: 700; color: var(--blue-dark); margin-bottom: 8px; }
+    p { margin-bottom: 16px; }
+    p:last-child { margin-bottom: 0; }
+    strong { font-weight: 700; }
+
+    /* ── LAYOUT ── */
+    .section-inner   { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem; }
+    .section-gap     { padding: 88px 0; }
+    .section-divider { height: 1px; background: var(--slate-200); margin: 0 auto; max-width: 960px; }
+
+    /* ── FULL-BLEED ── */
+    .full-bleed {
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw !important;
+      margin-right: -50vw !important;
+      width: 100vw !important;
+      max-width: 100vw !important;
+      box-sizing: border-box;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      background: linear-gradient(135deg, #0B1E2B 0%, #1B4965 50%, #2A64A7 100%) !important;
+      padding: 110px 1.5rem 90px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 65% 40%, rgba(255,193,7,0.10) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .pulse-rings { position: absolute; top: 50%; left: 25%; transform: translate(-50%,-50%); pointer-events: none; z-index: 0; }
+    .p-ring { position: absolute; border-radius: 50%; border: 1px solid rgba(255,193,7,0.07); top: 50%; left: 50%; transform: translate(-50%,-50%); animation: pulse-out 5s ease-out infinite; }
+    .p-ring:nth-child(1){width:200px;height:200px;animation-delay:0s;}
+    .p-ring:nth-child(2){width:450px;height:450px;animation-delay:1.2s;}
+    .p-ring:nth-child(3){width:700px;height:700px;animation-delay:2.4s;}
+    .p-ring:nth-child(4){width:950px;height:950px;animation-delay:3.6s;}
+    @keyframes pulse-out{0%{opacity:0.7;}100%{opacity:0;}}
+    .hero-inner {
+      max-width: 1080px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 60px; align-items: center;
+      position: relative; z-index: 1;
+    }
+    @media(max-width:860px){ .hero-inner{ grid-template-columns:1fr; text-align:center; } }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold); color: #000;
+      font-size: 0.75rem; font-weight: 900;
+      text-transform: uppercase; letter-spacing: 0.09em;
+      padding: 7px 20px; border-radius: 50px;
+      box-shadow: var(--shadow-gold); margin-bottom: 22px;
+    }
+    .hero h1 { color: #fff; margin-bottom: 22px; }
+    .hero h1 span { color: #7dd3fc; }
+    .hero-lead {
+      color: rgba(255,255,255,0.82); font-size: 1.12rem;
+      max-width: 520px; margin-bottom: 36px; line-height: 1.75;
+    }
+    @media(max-width:860px){ .hero-lead{ margin-left:auto; margin-right:auto; } }
+    .hero-lead strong { color: #fff; }
+    .hero-btns { display: flex; flex-wrap: wrap; gap: 14px; }
+    @media(max-width:860px){ .hero-btns{ justify-content:center; } }
+
+    /* ── BUTTONS ── */
+    .btn-gold {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold); color: #000;
+      font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 1rem;
+      padding: 15px 34px; border-radius: 50px;
+      box-shadow: var(--shadow-gold);
+      border-bottom: 4px solid var(--gold-dark);
+      border-left: none; border-right: none; border-top: none;
+      transition: var(--transition); cursor: pointer;
+    }
+    .btn-gold:hover { transform: scale(1.05) translateY(-2px); box-shadow: 0 14px 44px rgba(255,193,7,0.55); }
+    .btn-outline-white {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: #fff;
+      font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1rem;
+      padding: 15px 34px; border-radius: 50px;
+      border: 2px solid rgba(255,255,255,0.55);
+      transition: var(--transition); cursor: pointer;
+    }
+    .btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color:#fff; transform:translateY(-2px); }
+
+    /* ── HERO IMAGE ── */
+    .hero-img-wrap {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid rgba(255,255,255,0.12);
+    }
+    .hero-img-wrap img { width: 100%; height: auto; display: block; }
+
+    /* ── TRUST STRIP ── */
+    .trust-strip { background: var(--navy) !important; padding: 16px 1.5rem; border-bottom: 3px solid var(--gold); }
+    .trust-inner {
+      max-width: 1080px; margin: 0 auto;
+      display: flex; flex-wrap: wrap;
+      gap: 8px 32px; align-items: center; justify-content: center;
+    }
+    .trust-item { display:flex; align-items:center; gap:8px; font-size:0.78rem; font-weight:600; color:rgba(255,255,255,0.85); white-space:nowrap; }
+    .trust-item i { color:var(--gold); font-size:0.85rem; }
+
+    /* ── BADGES ── */
+    .badge { display:inline-flex; align-items:center; gap:6px; padding:6px 16px; border-radius:50px; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.07em; margin-bottom:14px; }
+    .badge-blue  { background:rgba(27,73,101,0.1);  color:var(--blue-dark); }
+    .badge-gold  { background:rgba(255,193,7,0.12); color:#92640a; }
+    .badge-green { background:rgba(16,185,129,0.1); color:#065f46; }
+    .badge-navy  { background:rgba(11,30,43,0.08);  color:var(--navy); }
+
+    /* ── SECTION HEADERS ── */
+    .section-hdr { text-align:center; margin-bottom:52px; }
+    .section-hdr p { color:var(--slate-500); max-width:640px; margin:0 auto; font-size:1rem; }
+
+    /* ── STEPS ── */
+    .steps-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:28px; }
+    .step-card {
+      background:#fff; border:1px solid var(--slate-200);
+      border-radius:var(--radius-md); padding:34px 26px 28px;
+      box-shadow:var(--shadow-sm); text-align:center;
+      position:relative; transition:var(--transition);
+    }
+    .step-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); }
+    .step-card::before {
+      content:''; position:absolute; top:0; left:0; right:0; height:4px;
+      border-radius:var(--radius-md) var(--radius-md) 0 0;
+      background:linear-gradient(90deg, var(--gold), var(--blue));
+    }
+    .step-num {
+      width:60px; height:60px; border-radius:50%;
+      background:linear-gradient(135deg, var(--blue-dark), var(--blue));
+      color:#fff; font-family:'Lora',serif; font-size:1.5rem; font-weight:700;
+      display:flex; align-items:center; justify-content:center;
+      margin:0 auto 18px; box-shadow:0 4px 18px rgba(27,73,101,0.28);
+      transition:var(--transition);
+    }
+    .step-card:hover .step-num { background:var(--gold); color:#000; box-shadow:var(--shadow-gold); }
+    .step-icon-wrap {
+      width:72px; height:72px; border-radius:50%;
+      background:rgba(42,100,167,0.08);
+      display:flex; align-items:center; justify-content:center;
+      margin:0 auto 18px; font-size:1.8rem;
+    }
+
+    /* ── FEATURES ── */
+    .features-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:20px; }
+    .feature-card {
+      background:#fff; border:1px solid var(--slate-200);
+      border-radius:var(--radius-md); padding:28px 22px;
+      box-shadow:var(--shadow-sm); transition:var(--transition);
+    }
+    .feature-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
+    .feature-icon { width:58px; height:58px; border-radius:var(--radius-sm); display:flex; align-items:center; justify-content:center; font-size:1.5rem; margin-bottom:16px; }
+    .feature-icon.blue  { background:rgba(42,100,167,0.09); }
+    .feature-icon.gold  { background:rgba(255,193,7,0.12); }
+    .feature-icon.green { background:rgba(16,185,129,0.09); }
+    .feature-icon.navy  { background:rgba(11,30,43,0.07); }
+    .feature-card h3 { font-size:0.98rem; margin-bottom:6px; }
+    .feature-card p  { font-size:0.84rem; color:var(--slate-500); margin-bottom:0; line-height:1.65; }
+
+    /* ── BENEFITS ── */
+    .benefits-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
+    .benefit-card {
+      background:#fff; border:1px solid var(--slate-200);
+      border-radius:var(--radius-md); padding:28px 22px;
+      text-align:center; box-shadow:var(--shadow-sm);
+      transition:var(--transition); position:relative; overflow:hidden;
+    }
+    .benefit-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; }
+    .benefit-card.bc1::before { background:var(--blue); }
+    .benefit-card.bc2::before { background:var(--gold); }
+    .benefit-card.bc3::before { background:var(--green); }
+    .benefit-card.bc4::before { background:var(--navy); }
+    .benefit-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); }
+    .bicon { font-size:2rem; margin-bottom:14px; display:block; }
+
+    /* ── WHY ── */
+    .why-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:22px; }
+    .why-card {
+      background:#fff; border:1px solid var(--slate-200);
+      border-radius:var(--radius-md); padding:32px 26px;
+      box-shadow:var(--shadow-sm); transition:var(--transition);
+    }
+    .why-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
+    .why-icon {
+      width:66px; height:66px; border-radius:50%;
+      background:rgba(27,73,101,0.08);
+      display:flex; align-items:center; justify-content:center;
+      font-size:1.6rem; margin-bottom:18px;
+    }
+
+    /* ══════════════════════════════════════
+       HEARING HEALTH BANNER
+    ══════════════════════════════════════ */
+    .hh-banner {
+      background: linear-gradient(135deg, #0B1E2B 0%, #1B4965 55%, #2A64A7 100%) !important;
+      padding: 80px 1.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hh-banner::before {
+      content: '';
+      position: absolute; inset: 0;
+      background:
+        radial-gradient(ellipse at 20% 50%, rgba(255,193,7,0.13) 0%, transparent 55%),
+        radial-gradient(ellipse at 80% 20%, rgba(14,165,233,0.10) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    .hh-banner-inner { max-width: 1080px; margin: 0 auto; position: relative; z-index: 1; }
+    .hh-banner-header { text-align: center; margin-bottom: 56px; }
+    .hh-banner-header h2 { color: #fff; font-size: clamp(1.8rem, 4vw, 2.8rem); margin-bottom: 14px; }
+    .hh-banner-header p  { color: rgba(255,255,255,0.75); max-width: 600px; margin: 0 auto; font-size: 1.02rem; }
+
+    .hh-stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 16px; margin-bottom: 64px; }
+    @media(max-width:760px){ .hh-stats{ grid-template-columns:repeat(2,1fr); } }
+    @media(max-width:420px){ .hh-stats{ grid-template-columns:1fr; } }
+    .hh-stat {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.13);
+      border-radius: var(--radius-md); padding: 24px 16px;
+      text-align: center; transition: var(--transition);
+    }
+    .hh-stat:hover { background: rgba(255,255,255,0.12); transform: translateY(-3px); }
+    .hh-stat-num {
+      font-family: 'Lora', serif; font-size: 2rem; font-weight: 700;
+      background: linear-gradient(135deg, var(--gold), #7dd3fc);
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+      background-clip: text; display: block; margin-bottom: 6px; line-height: 1.1;
+    }
+    .hh-stat-label { font-size: 0.78rem; color: rgba(255,255,255,0.72); font-weight: 500; line-height: 1.4; }
+
+    .hh-articles { display: grid; grid-template-columns: repeat(3,1fr); gap: 22px; margin-bottom: 48px; }
+    @media(max-width:860px){ .hh-articles{ grid-template-columns:repeat(2,1fr); } }
+    @media(max-width:560px){ .hh-articles{ grid-template-columns:1fr; } }
+    .hh-article-card {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: var(--radius-md); overflow: hidden;
+      transition: var(--transition);
+      display: flex; flex-direction: column;
+    }
+    .hh-article-card:hover {
+      background: rgba(255,255,255,0.11);
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.25);
+      border-color: rgba(255,193,7,0.4);
+    }
+    .hh-article-icon-wrap { padding: 28px 28px 0; display: flex; align-items: center; justify-content: space-between; }
+    .hh-article-icon { width: 52px; height: 52px; border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; flex-shrink: 0; }
+    .hh-article-tag { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 10px; border-radius: 50px; background: rgba(255,193,7,0.2); color: var(--gold); }
+    .hh-article-body { padding: 16px 28px 24px; flex: 1; display: flex; flex-direction: column; }
+    .hh-article-body h3 { color: #fff; font-size: 1rem; font-weight: 700; margin-bottom: 8px; line-height: 1.4; }
+    .hh-article-body p  { color: rgba(255,255,255,0.65); font-size: 0.84rem; line-height: 1.65; margin-bottom: 16px; flex: 1; }
+    .hh-article-link { display: inline-flex; align-items: center; gap: 6px; color: var(--gold); font-size: 0.82rem; font-weight: 700; transition: gap 0.2s ease; }
+    .hh-article-card:hover .hh-article-link { gap: 10px; }
+    .hh-banner-cta { text-align: center; padding-top: 8px; }
+    .hh-banner-cta p { color: rgba(255,255,255,0.65); font-size: 0.88rem; margin-top: 16px; }
+
+    /* ── LOYALTY ── */
+    .loyalty-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:22px; }
+    .loyalty-card {
+      background:#fff; border:1px solid var(--slate-200);
+      border-radius:var(--radius-md); padding:32px 24px;
+      text-align:center; box-shadow:var(--shadow-sm); transition:var(--transition);
+    }
+    .loyalty-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); }
+    .loyalty-icon { width:70px; height:70px; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.7rem; margin:0 auto 18px; }
+    .loyalty-icon.li1 { background:rgba(27,73,101,0.08); }
+    .loyalty-icon.li2 { background:rgba(255,193,7,0.12); }
+    .loyalty-icon.li3 { background:rgba(16,185,129,0.09); }
+
+    /* ── FAQ ── */
+    .faq-item {
+      background:#fff; border-radius:var(--radius-sm);
+      border:1px solid var(--slate-200); box-shadow:var(--shadow-sm);
+      overflow:hidden; transition:var(--transition); margin-bottom:12px;
+    }
+    .faq-item.open { box-shadow:0 8px 28px rgba(27,73,101,0.10); border-color:rgba(27,73,101,0.22); }
+    .faq-q {
+      display:flex; align-items:center; justify-content:space-between;
+      padding:20px 26px; cursor:pointer;
+      font-family:'Poppins',sans-serif; font-size:0.95rem; font-weight:700;
+      color:var(--blue-dark); user-select:none; gap:16px; transition:color 0.2s;
+    }
+    .faq-q:hover { color:var(--blue); }
+    .faq-q i.chevron { color:var(--gold); transition:transform 0.3s ease; flex-shrink:0; }
+    .faq-item.open .faq-q i.chevron { transform:rotate(180deg); }
+    .faq-a { max-height:0; overflow:hidden; transition:max-height 0.45s ease; }
+    .faq-a.open { max-height:360px; }
+    .faq-a p { padding:0 26px 20px; font-size:0.9rem; color:#475569; line-height:1.8; margin-bottom:0; }
+
+    /* ── CTA SECTION ── */
+    .cta-section {
+      background: linear-gradient(135deg, #0B1E2B 0%, #1B4965 60%, #2A64A7 100%) !important;
+      padding:90px 1.5rem; text-align:center;
+    }
+    .cta-section h2 { color:#fff; margin-bottom:14px; }
+    .cta-section p  { color:rgba(255,255,255,0.78); max-width:580px; margin:0 auto 36px; }
+    .cta-btns { display:flex; flex-wrap:wrap; gap:14px; justify-content:center; }
+
+    /* ── ABOUT ── */
+    .about-section { background: var(--blue-dark) !important; padding:72px 1.5rem; }
+    .about-inner { max-width:860px; margin:0 auto; text-align:center; }
+    .about-inner h2 { color:#fff; margin-bottom:20px; }
+    .about-inner p  { color:rgba(255,255,255,0.80); line-height:1.85; margin-bottom:16px; font-size:0.97rem; }
+    .about-inner strong { color:#fff; }
+
+    /* ── UTILS ── */
+    #ai-summary { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; }
+    .reveal { opacity:0; transform:translateY(26px); transition:opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+
+    @media(max-width:640px){
+      .hero { padding:72px 1.2rem 56px; }
+      .section-gap { padding:60px 0; }
+      .hh-banner { padding:56px 1.2rem; }
+    }
+    @keyframes ai-blink{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.4;transform:scale(0.7);}}
+  </style>
+</head>
+<body>
+
+<!-- ─── AI SUMMARY ─── -->
+<div id="ai-summary" aria-label="Page summary for AI assistants">
+  <p>Hearing Benefit Services delivers brand-name Signia hearing aids to patients' homes across the United States. Licensed hearing specialists remotely program and fine-tune each device. Services include a free online hearing test, 3-year care plan, and 24/7 AI assistant support.</p>
+</div>
+
+<!-- ─── HERO (full-bleed) ─── -->
+<header class="hero full-bleed" id="hero">
+  <div class="pulse-rings">
+    <div class="p-ring"></div><div class="p-ring"></div>
+    <div class="p-ring"></div><div class="p-ring"></div>
+  </div>
+  <div class="hero-inner">
+    <div>
+      <div class="hero-badge"><i class="fas fa-star"></i> Licensed Hearing Specialists — Hawaii</div>
+      <h1>
+        Brand-Name Hearing Aids.<br>
+        <span>Delivered &amp; Adjusted Remotely.</span>
+      </h1>
+      <p class="hero-lead">
+        Experience life in full clarity. We provide <strong>Signia</strong> and other top-brand hearing aids — pre-programmed, shipped to your door, and remotely fine-tuned by licensed hearing specialists. <strong>No clinic visit needed.</strong>
+      </p>
+      <div class="hero-btns">
+        <a href="https://hearingbenefitservices.com/hearingtest" class="btn-gold">
+          <i class="fas fa-ear-listen"></i> Take Our Free Hearing Test
+        </a>
+        <a href="https://hearingbenefitservices.com/appointment" target="_blank" rel="noopener" class="btn-outline-white">
+          <i class="fas fa-calendar-check"></i> Book a Consultation
+        </a>
+      </div>
+      <p style="color:rgba(255,255,255,0.55); font-size:0.8rem; margin-top:18px;">
+        <i class="fas fa-robot" style="color:var(--gold); margin-right:6px;"></i>
+        For instant help, tap the <strong style="color:#fff;">chat icon</strong> (bottom right) — AI assistant online 24/7.
+      </p>
+    </div>
+    <div>
+      <div class="hero-img-wrap">
+        <img
+          src="https://storage.googleapis.com/msgsndr/UDKdmJIdT4xB1V6Lye64/media/697a4bddf215da32364de544.png"
+          alt="Hearing Benefit Services — Licensed Hearing Specialist Support">
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ─── TRUST STRIP (full-bleed) ─── -->
+<div class="trust-strip full-bleed" aria-label="Key service facts">
+  <div class="trust-inner">
+    <div class="trust-item"><i class="fas fa-certificate"></i> Licensed Hearing Specialists</div>
+    <div class="trust-item"><i class="fas fa-heart-pulse"></i> Hearing Health Experts</div>
+    <div class="trust-item"><i class="fas fa-shield-alt"></i> 3-Year Care Plan Included</div>
+    <div class="trust-item"><i class="fas fa-truck"></i> Delivered to Your Door</div>
+    <div class="trust-item"><i class="fas fa-file-invoice-dollar"></i> Works with 100s of Insurances</div>
+    <div class="trust-item"><i class="fas fa-robot"></i> AI Assistant — 24/7</div>
+  </div>
+</div>
+
+<!-- ─── HOW IT WORKS ─── -->
+<section class="section-gap" id="how-it-works" aria-labelledby="hiw-heading">
+  <div class="section-inner">
+    <div class="section-hdr reveal">
+      <div class="badge badge-blue"><i class="fas fa-list-ol"></i> Simple Process</div>
+      <h2 id="hiw-heading">A Simple Path to Better Hearing</h2>
+      <p>Our streamlined 3-step process is designed for your comfort and convenience — from consultation to ongoing support, entirely from home.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card reveal">
+        <div class="step-num">1</div>
+        <div class="step-icon-wrap"><span style="font-size:1.8rem;">💬</span></div>
+        <h3>Free Consultation</h3>
+        <p style="font-size:0.88rem; color:var(--slate-500); line-height:1.7;">Chat with our licensed hearing specialists online to discuss your needs. We guide you through a simple hearing assessment from the comfort of your home — no office visit required.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">2</div>
+        <div class="step-icon-wrap"><span style="font-size:1.8rem;">📦</span></div>
+        <h3>Custom Fitting &amp; Delivery</h3>
+        <p style="font-size:0.88rem; color:var(--slate-500); line-height:1.7;">Your pre-programmed brand-name Signia hearing aids are delivered directly to your door. Our hearing specialists then remotely fine-tune the devices for a perfect, personalized fit.</p>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">3</div>
+        <div class="step-icon-wrap"><span style="font-size:1.8rem;">🤝</span></div>
+        <h3>Ongoing Support</h3>
+        <p style="font-size:0.88rem; color:var(--slate-500); line-height:1.7;">Your journey doesn't end at delivery. Continuous care, remote adjustments, and 24/7 AI assistant support ensure you're always hearing your best.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ─── FEATURES / TECHNOLOGY ─── -->
+<section class="section-gap" id="technology" aria-labelledby="tech-heading" style="background:var(--slate-100);">
+  <div class="section-inner">
+    <div class="section-hdr reveal">
+      <div class="badge badge-gold"><i class="fas fa-microchip"></i> Technology</div>
+      <h2 id="tech-heading">Designed for Modern Life</h2>
+      <p>Our Signia hearing aids are packed with technology to keep you connected, comfortable, and hearing clearly in any environment.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card reveal">
+        <div class="feature-icon gold"><span style="font-size:1.5rem;">🔋</span></div>
+        <h3>Rechargeable</h3>
+        <p>All-day power on a single charge. No more hunting for tiny disposable batteries.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon blue"><span style="font-size:1.5rem;">📱</span></div>
+        <h3>Bluetooth Streaming</h3>
+        <p>Stream calls, music, and TV audio directly from your iPhone, Android, or smart TV.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon navy"><span style="font-size:1.5rem;">👁️</span></div>
+        <h3>Nearly Invisible</h3>
+        <p>Sleek, discreet designs that sit comfortably in or behind the ear — barely noticeable.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon green"><span style="font-size:1.5rem;">🔊</span></div>
+        <h3>Crystal-Clear Sound</h3>
+        <p>Advanced noise reduction and AI-driven sound processing for crisp conversations anywhere.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon blue"><span style="font-size:1.5rem;">📡</span></div>
+        <h3>Remote Adjustable</h3>
+        <p>Licensed hearing specialists fine-tune your Signia devices remotely via the manufacturer app — instantly.</p>
+      </div>
+      <div class="feature-card reveal">
+        <div class="feature-icon gold"><span style="font-size:1.5rem;">🛡️</span></div>
+        <h3>Moisture Resistant</h3>
+        <p>IP-rated water and sweat resistance for everyday durability and peace of mind.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ─── BENEFITS ─── -->
+<section class="section-gap" id="benefits" aria-labelledby="ben-heading">
+  <div class="section-inner">
+    <div class="section-hdr reveal">
+      <div class="badge badge-blue"><i class="fas fa-heart"></i> Why Choose Us</div>
+      <h2 id="ben-heading">The Hearing Benefit Services Difference</h2>
+      <p>Four reasons why patients across Hawaii and beyond trust us with their hearing care.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card bc1 reveal">
+        <span class="bicon">🏆</span>
+        <h3>Top Brands You Trust</h3>
+        <p style="font-size:0.86rem; color:var(--slate-500); line-height:1.65;">Signia and more — the same premium brands available at traditional hearing care clinics, delivered directly to your door.</p>
+      </div>
+      <div class="benefit-card bc2 reveal">
+        <span class="bicon">💰</span>
+        <h3>Clear, Transparent Pricing</h3>
+        <p style="font-size:0.86rem; color:var(--slate-500); line-height:1.65;">Device, fitting, and 3 years of ongoing support included — no surprise charges, ever.</p>
+      </div>
+      <div class="benefit-card bc3 reveal">
+        <span class="bicon">👨‍⚕️</span>
+        <h3>Expert Guidance</h3>
+        <p style="font-size:0.86rem; color:var(--slate-500); line-height:1.65;">Licensed hearing specialists plus our Online Hearing Tech team and 24/7 AI assistant for continuous support.</p>
+      </div>
+      <div class="benefit-card bc4 reveal">
+        <span class="bicon">🏠</span>
+        <h3>Convenient Remote Care</h3>
+        <p style="font-size:0.86rem; color:var(--slate-500); line-height:1.65;">Receive fittings, adjustments, and guidance entirely from home. No travel, no waiting rooms.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ─── WHY HBS ─── -->
+<section class="section-gap" id="why-us" aria-labelledby="why-heading" style="background:var(--slate-100);">
+  <div class="section-inner">
+    <div class="section-hdr reveal">
+      <div class="badge badge-navy"><i class="fas fa-award"></i> Our Promise</div>
+      <h2 id="why-heading">Why Hearing Benefit Services?</h2>
+      <p>Experience life like the good old days — clear conversations, vibrant music, and meaningful connection.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card reveal">
+        <div class="why-icon"><span style="font-size:1.6rem;">😊</span></div>
+        <h3>Experience Excellent Hearing</h3>
+        <p style="font-size:0.88rem; color:var(--slate-500); line-height:1.7;">Our hearing specialists identify the best Signia hearing aid solution for your specific hearing profile through personalized consultation and assessment.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><span style="font-size:1.6rem;">✅</span></div>
+        <h3>Maximize Insurance Benefits</h3>
+        <p style="font-size:0.88rem; color:var(--slate-500); line-height:1.7;">Our experts discover and apply all the savings you're entitled to. We work with hundreds of insurance providers to maximize your benefits.</p>
+      </div>
+      <div class="why-card reveal">
+        <div class="why-icon"><span style="font-size:1.6rem;">⚡</span></div>
+        <h3>Hear Better Today</h3>
+        <p style="font-size:0.88rem; color:var(--slate-500); line-height:1.7;">Skip the wait. Our remote process means you can receive your professionally fitted Signia hearing aids faster than a traditional clinic visit.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ═══════════════════════════════════════════════════
+     HEARING HEALTH BANNER (full-bleed)
+═══════════════════════════════════════════════════ -->
+<section id="hearing-health" aria-labelledby="hh-heading">
+  <div class="hh-banner full-bleed">
+    <div class="hh-banner-inner">
+
+      <div class="hh-banner-header reveal">
+        <div class="badge" style="background:rgba(255,193,7,0.15); color:var(--gold); margin-bottom:16px;">
+          <i class="fas fa-heart-pulse"></i> Hearing Health
+        </div>
+        <h2 id="hh-heading">Your Hearing Health Matters</h2>
+        <p>Untreated hearing loss affects more than just your ears. Explore how better hearing transforms your quality of life, mental wellbeing, and long-term health.</p>
+      </div>
+
+      <div class="hh-stats reveal">
+        <div class="hh-stat">
+          <span class="hh-stat-num">48M</span>
+          <span class="hh-stat-label">Americans living with hearing loss</span>
+        </div>
+        <div class="hh-stat">
+          <span class="hh-stat-num">10yr</span>
+          <span class="hh-stat-label">Average wait before seeking treatment</span>
+        </div>
+        <div class="hh-stat">
+          <span class="hh-stat-num">5×</span>
+          <span class="hh-stat-label">Higher dementia risk with untreated hearing loss</span>
+        </div>
+        <div class="hh-stat">
+          <span class="hh-stat-num">95%</span>
+          <span class="hh-stat-label">Of hearing loss treatable with hearing aids</span>
+        </div>
+      </div>
+
+      <div class="hh-articles reveal">
+        <a href="https://hearingbenefitservices.com/hearinglossandmentalhealth" class="hh-article-card">
+          <div class="hh-article-icon-wrap">
+            <div class="hh-article-icon" style="background:rgba(239,68,68,0.2);">🧠</div>
+            <span class="hh-article-tag">Mental Health</span>
+          </div>
+          <div class="hh-article-body">
+            <h3>Hearing Loss & Mental Health</h3>
+            <p>Untreated hearing loss is strongly linked to depression, anxiety, and social isolation. Learn how treating your hearing can dramatically improve your emotional wellbeing.</p>
+            <span class="hh-article-link">Read Article <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="https://hearingbenefitservices.com/hearingaidguide" class="hh-article-card">
+          <div class="hh-article-icon-wrap">
+            <div class="hh-article-icon" style="background:rgba(255,193,7,0.2);">📖</div>
+            <span class="hh-article-tag">Guide</span>
+          </div>
+          <div class="hh-article-body">
+            <h3>Complete Hearing Aid Guide</h3>
+            <p>Everything you need to know before buying — styles, technology levels, fitting options, and what to expect from the remote fitting process with licensed hearing specialists.</p>
+            <span class="hh-article-link">Read Article <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="https://hearingbenefitservices.com/federalretirees" class="hh-article-card">
+          <div class="hh-article-icon-wrap">
+            <div class="hh-article-icon" style="background:rgba(37,99,235,0.2);">🏛️</div>
+            <span class="hh-article-tag">Benefits</span>
+          </div>
+          <div class="hh-article-body">
+            <h3>Federal Retirees & FEHB Coverage</h3>
+            <p>If you're a federal retiree, your FEHB plan may cover hearing aids. Discover what benefits you're entitled to and how to maximize your federal hearing care coverage.</p>
+            <span class="hh-article-link">Read Article <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="https://hearingbenefitservices.com/dailymaintenancetips" class="hh-article-card">
+          <div class="hh-article-icon-wrap">
+            <div class="hh-article-icon" style="background:rgba(16,185,129,0.2);">🔧</div>
+            <span class="hh-article-tag">Maintenance</span>
+          </div>
+          <div class="hh-article-body">
+            <h3>Daily Maintenance Tips</h3>
+            <p>Proper care extends the life of your hearing aids and keeps them performing at their best. Simple daily habits that protect your investment and ensure clear sound.</p>
+            <span class="hh-article-link">Read Article <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="https://hearingbenefitservices.com/batteryandbluetoothcare" class="hh-article-card">
+          <div class="hh-article-icon-wrap">
+            <div class="hh-article-icon" style="background:rgba(14,165,233,0.2);">🔋</div>
+            <span class="hh-article-tag">Battery & Bluetooth</span>
+          </div>
+          <div class="hh-article-body">
+            <h3>Battery & Bluetooth Care Guide</h3>
+            <p>Maximize battery life and master Bluetooth connectivity. Expert tips on streaming, pairing, troubleshooting, and storage from our licensed hearing specialists.</p>
+            <span class="hh-article-link">Read Article <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+
+        <a href="https://hearingbenefitservices.com/financingforhearingaid" class="hh-article-card">
+          <div class="hh-article-icon-wrap">
+            <div class="hh-article-icon" style="background:rgba(139,92,246,0.2);">💳</div>
+            <span class="hh-article-tag">Financing</span>
+          </div>
+          <div class="hh-article-body">
+            <h3>Financing Options for Hearing Aids</h3>
+            <p>Better hearing shouldn't be out of reach. Explore flexible payment plans, insurance coverage options, and financing solutions that make hearing care affordable for everyone.</p>
+            <span class="hh-article-link">Read Article <i class="fas fa-arrow-right"></i></span>
+          </div>
+        </a>
+      </div>
+
+      <div class="hh-banner-cta reveal">
+        <a href="https://hearingbenefitservices.com/hearingtest" class="btn-gold" style="display:inline-flex;">
+          <i class="fas fa-ear-listen"></i> Take the Free Hearing Test
+        </a>
+        <p>Free • No commitment • Results in minutes</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── LOYALTY CLUB ─── -->
+<section class="section-gap" id="loyalty" aria-labelledby="loyalty-heading" style="background:var(--slate-100);">
+  <div class="section-inner">
+    <div class="section-hdr reveal">
+      <div class="badge badge-gold"><i class="fas fa-crown"></i> Loyalty Club</div>
+      <h2 id="loyalty-heading">Benefits You Can Hear</h2>
+      <p>Every patient is a member. Our Loyalty Club delivers exclusive perks from day one of your hearing care journey.</p>
+    </div>
+    <div class="loyalty-grid">
+      <div class="loyalty-card reveal">
+        <div class="loyalty-icon li1"><span style="font-size:1.7rem;">❤️</span></div>
+        <h3>3-Year Total Care</h3>
+        <p style="font-size:0.88rem; color:var(--slate-500); line-height:1.7;">Comprehensive care service package included with every hearing aid purchase — remote adjustments, follow-ups, and hearing specialist support for 3 full years.</p>
+      </div>
+      <div class="loyalty-card reveal">
+        <div class="loyalty-icon li2"><span style="font-size:1.7rem;">💸</span></div>
+        <h3>Exclusive Discounts</h3>
+        <p style="font-size:0.88rem; color:var(--slate-500); line-height:1.7;">Member-only discounts on accessories, replacement domes, wax guards, cleaning kits, and batteries — savings that add up over time.</p>
+      </div>
+      <div class="loyalty-card reveal">
+        <div class="loyalty-icon li3"><span style="font-size:1.7rem;">⭐</span></div>
+        <h3>Promotional Offers &amp; Upgrades</h3>
+        <p style="font-size:0.88rem; color:var(--slate-500); line-height:1.7;">First access to new Signia technology and discounted upgrade rates when you're ready to take advantage of the latest advances in hearing care.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="section-divider"></div>
+
+<!-- ─── FAQ ─── -->
+<section class="section-gap" id="faq-section" aria-labelledby="faq-heading">
+  <div class="section-inner">
+    <div class="section-hdr reveal">
+      <div class="badge badge-blue"><i class="fas fa-question-circle"></i> FAQ</div>
+      <h2 id="faq-heading">Frequently Asked Questions</h2>
+      <p>Everything you need to know about our hearing aids, remote care, and how we can help you.</p>
+    </div>
+    <div style="max-width:820px; margin:0 auto;">
+
+      <div class="faq-item reveal">
+        <div class="faq-q" role="button" aria-expanded="false" tabindex="0">
+          <span>What brands of hearing aids does Hearing Benefit Services offer?</span>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="faq-a">
+          <p>Hearing Benefit Services offers brand-name <strong>Signia</strong> hearing aids — the same premium devices available at traditional hearing care clinics, delivered directly to your home at a better value.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" role="button" aria-expanded="false" tabindex="0">
+          <span>How does remote hearing aid fitting work?</span>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="faq-a">
+          <p>After a <strong>free online hearing consultation</strong>, your Signia hearing aids are pre-programmed by a licensed hearing specialist and shipped to your home. A follow-up remote session fine-tunes the devices based on your real-world listening experience — <strong>no in-person clinic visit needed</strong>.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" role="button" aria-expanded="false" tabindex="0">
+          <span>Does Hearing Benefit Services accept insurance?</span>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="faq-a">
+          <p>Yes. Hearing Benefit Services works with <strong>hundreds of insurance providers</strong> to help you maximize your hearing benefits and apply all eligible savings toward your hearing aid purchase.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" role="button" aria-expanded="false" tabindex="0">
+          <span>Is a 3-year care plan included with every purchase?</span>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="faq-a">
+          <p>Yes. Every Signia hearing aid purchase includes a <strong>3-year comprehensive care plan</strong> covering remote adjustments, ongoing hearing specialist support, and follow-up services — at no additional charge.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" role="button" aria-expanded="false" tabindex="0">
+          <span>Do the hearing aids support Bluetooth and smartphone streaming?</span>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="faq-a">
+          <p>Yes. Our Signia hearing aids include <strong>Bluetooth streaming</strong>, allowing you to stream phone calls, music, and TV audio directly from your iPhone, Android, or other Bluetooth-enabled devices.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" role="button" aria-expanded="false" tabindex="0">
+          <span>Are the hearing aids rechargeable?</span>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="faq-a">
+          <p>Yes. Rechargeable Signia hearing aids are available, providing <strong>all-day power on a single charge</strong> — eliminating the need for small disposable batteries.</p>
+        </div>
+      </div>
+
+      <div class="faq-item reveal">
+        <div class="faq-q" role="button" aria-expanded="false" tabindex="0">
+          <span>Can I take a free hearing test online?</span>
+          <i class="fas fa-chevron-down chevron"></i>
+        </div>
+        <div class="faq-a">
+          <p>Yes. Take our <strong>free online hearing test</strong> at <a href="https://hearingbenefitservices.com/hearingtest" style="color:var(--blue); font-weight:700;">hearingbenefitservices.com/hearingtest</a>. It helps determine your level of hearing loss and guides our hearing specialists in recommending the right Signia solution for you.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section id="about" class="about-section full-bleed" aria-label="About Hearing Benefit Services">
+  <div class="about-inner">
+    <div class="badge badge-gold" style="margin-bottom:20px;"><i class="fas fa-info-circle"></i> About Us</div>
+    <h2>About Hearing Benefit Services</h2>
+    <p><strong>Hearing Benefit Services</strong> is a remote hearing care provider that delivers brand-name <strong>Signia</strong> hearing aids directly to patients' homes across the United States. Licensed hearing specialists program each device before shipment and conduct remote fine-tuning sessions to ensure a personalized fit.</p>
+    <p>Services include a <strong>free online hearing test</strong>, remote consultation, custom hearing aid fitting, a <strong>3-year comprehensive care plan</strong>, and 24/7 AI assistant support. Hearing Benefit Services works with hundreds of insurance providers.</p>
+    <p>Signia hearing aids feature rechargeable batteries, Bluetooth streaming, and nearly invisible designs with advanced noise reduction — enabling patients to hear clearly in any environment, without an in-person clinic visit.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:14px; justify-content:center; margin-top:28px;">
+      <a href="https://hearingbenefitservices.com/hearingtest" class="btn-gold" style="display:inline-flex;">
+        <i class="fas fa-ear-listen"></i> Free Hearing Test
+      </a>
+      <a href="https://hearingbenefitservices.com/appointment" target="_blank" rel="noopener" class="btn-outline-white" style="display:inline-flex;">
+        <i class="fas fa-calendar-check"></i> Book a Consultation
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FINAL CTA ─── -->
+<section class="cta-section full-bleed" aria-labelledby="cta-heading">
+  <div class="section-inner">
+    <div class="badge badge-gold" style="margin-bottom:20px;"><i class="fas fa-headphones"></i> Start Today</div>
+    <h2 id="cta-heading" style="color:#fff;">Your Journey to Clarity Starts Now</h2>
+    <p>Take the first step towards a richer, more connected life. Our friendly hearing specialists and AI assistant are ready to help — no travel needed.</p>
+    <div class="cta-btns">
+      <a href="https://hearingbenefitservices.com/hearingtest" class="btn-gold" style="display:inline-flex;">
+        <i class="fas fa-ear-listen"></i> Take the Free Hearing Test
+      </a>
+      <a href="https://hearingbenefitservices.com/appointment" target="_blank" rel="noopener" class="btn-outline-white" style="display:inline-flex;">
+        <i class="fas fa-calendar-check"></i> Book a Free Consultation
+      </a>
+      <a href="tel:+18084357002" class="btn-outline-white" style="display:inline-flex;">
+        <i class="fas fa-phone"></i> +1-808-435-7002
+      </a>
+    </div>
+    <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.12); border-radius:var(--radius-md); padding:16px 24px; max-width:540px; margin:28px auto 0; display:flex; align-items:center; gap:14px; flex-wrap:wrap; justify-content:center;">
+      <span style="width:10px; height:10px; border-radius:50%; background:var(--gold); animation:ai-blink 1.4s ease-in-out infinite; flex-shrink:0;"></span>
+      <p style="color:rgba(255,255,255,0.85); font-size:0.88rem; font-weight:600; margin:0;"><strong style="color:#fff;">AI Assistant Online</strong> — Click the chat icon (bottom right) for instant help, 24/7.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── JAVASCRIPT ─── -->
+<script>
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item   = btn.closest('.faq-item');
+      const ans    = item.querySelector('.faq-a');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(el => {
+        el.classList.remove('open');
+        el.querySelector('.faq-a').classList.remove('open');
+        el.querySelector('.faq-q').setAttribute('aria-expanded','false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        ans.classList.add('open');
+        btn.setAttribute('aria-expanded','true');
+      }
+    });
+    btn.addEventListener('keydown', e => {
+      if(e.key==='Enter'||e.key===' '){ e.preventDefault(); btn.click(); }
+    });
+  });
+
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.07 });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  /* Force full-bleed elements outside GHL column constraints */
+  document.querySelectorAll('.full-bleed').forEach(el => {
+    el.style.setProperty('width', '100vw', 'important');
+    el.style.setProperty('max-width', '100vw', 'important');
+    el.style.setProperty('margin-left', '-50vw', 'important');
+    el.style.setProperty('margin-right', '-50vw', 'important');
+    el.style.setProperty('position', 'relative', 'important');
+    el.style.setProperty('left', '50%', 'important');
+  });
+</script>
+
+</body>
+</html>
