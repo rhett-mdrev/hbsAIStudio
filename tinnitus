@@ -1,0 +1,1465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tinnitus Relief: Causes, Notch Therapy & Solutions | HBS</title>
+  <meta name="description" content="50 million Americans live with tinnitus. Discover the brain-ear science, Signia Notch Therapy, and how Hearing Benefit Services can help restore your silence.">
+  <meta name="keywords" content="tinnitus relief, tinnitus treatment, Signia Notch Therapy, ringing in ears, tinnitus causes, tinnitus hearing aids, stop tinnitus, tinnitus brain, phantom noise, hearing benefit services tinnitus">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="author" content="Hearing Benefit Services Clinical Team">
+
+  <!-- Geo Meta Tags -->
+  <meta name="geo.region" content="US" />
+  <meta name="geo.placename" content="United States" />
+  <meta name="geo.position" content="37.0902;-95.7129" />
+  <meta name="ICBM" content="37.0902, -95.7129" />
+  <meta name="ai-content-classification" content="medical-service, tinnitus, hearing-care, audiology, patient-facing" />
+  <meta name="ai-primary-entity" content="Hearing Benefit Services — Tinnitus Relief" />
+  <meta name="ai-secondary-entities" content="Tinnitus, Notch Therapy, Audiologist, Hearing Aid, United States, Telehealth, Ringing in Ears" />
+  <meta name="ai-use-case" content="tinnitus management, patient education, hearing aid recommendation, symptom relief" />
+  <meta name="ai-fact-checked" content="true" />
+  <meta name="ai-expertise-level" content="licensed audiologist" />
+  <meta name="article:published_time" content="2024-03-01T08:00:00-10:00" />
+  <meta name="article:modified_time" content="2026-03-16T08:00:00-05:00" />
+  <meta name="article:section" content="Tinnitus" />
+  <meta name="article:author" content="Hearing Benefit Services Clinical Team">
+  <meta name="article:tag" content="Tinnitus, Ringing in Ears, Notch Therapy, Signia, Hearing Loss, Brain Health">
+  <meta name="content-type" content="educational health article">
+  <meta name="topic" content="tinnitus, ringing in ears, notch therapy, hearing aids, brain health">
+  <meta name="audience" content="adults 40+, tinnitus sufferers, caregivers, healthcare consumers">
+  <meta name="reading-level" content="general public">
+  <meta name="fact-checked" content="yes">
+  <meta name="primary-source" content="American Tinnitus Association, Signia Clinical Research, NIH Tinnitus Studies">
+  <meta name="citation_author" content="Hearing Benefit Services Clinical Team">
+  <meta name="citation_title" content="Tinnitus Relief: Causes, Notch Therapy & Solutions">
+  <meta name="citation_journal_title" content="Hearing Benefit Services Health Library">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://hearingbenefitservices.com/tinnitus">
+  <meta property="og:title" content="Tinnitus Relief: Causes, Notch Therapy & Solutions | HBS">
+  <meta property="og:description" content="50 million Americans live with tinnitus. Discover the brain-ear science, Signia Notch Therapy, and how Hearing Benefit Services can help restore your silence.">
+  <meta property="og:image" content="https://hearingbenefitservices.com/images/tinnitus-og.jpg">
+  <meta property="og:image:alt" content="Tinnitus relief — Signia Notch Therapy and hearing aid solutions from Hearing Benefit Services">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:site_name" content="Hearing Benefit Services">
+  <meta property="og:locale" content="en_US">
+  <meta property="article:published_time" content="2024-03-01T08:00:00-10:00" />
+  <meta property="article:modified_time" content="2026-03-16T08:00:00-05:00" />
+  <meta property="article:author" content="Hearing Benefit Services Clinical Team">
+  <meta property="article:section" content="Tinnitus">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Tinnitus Relief: Causes, Notch Therapy & Solutions | HBS">
+  <meta name="twitter:description" content="50 million Americans have tinnitus. Signia Notch Therapy retrains your brain to stop the ringing. Learn the science.">
+  <meta name="twitter:image" content="https://hearingbenefitservices.com/images/tinnitus-og.jpg">
+  <meta name="twitter:site" content="@HearingBenefit">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://hearingbenefitservices.com/tinnitus">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QCV2DQBH8Q"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QCV2DQBH8Q');
+  </script>
+
+  <!-- JSON-LD: MedicalWebPage + Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["MedicalWebPage", "Article"],
+    "@id": "https://hearingbenefitservices.com/tinnitus#article",
+    "url": "https://hearingbenefitservices.com/tinnitus",
+    "name": "Tinnitus Relief: Causes, Notch Therapy & Solutions",
+    "headline": "Tinnitus: Why Your Brain Creates Phantom Noise — And How to Make It Stop",
+    "description": "Comprehensive guide to tinnitus covering causes, the brain-ear connection, why masking fails, and how Signia Notch Therapy clinically retrains the brain to reduce or eliminate phantom noise.",
+    "abstract": "Tinnitus affects nearly 50 million Americans and is primarily caused by hearing loss-induced auditory deprivation — the brain creates phantom noise to compensate for missing sound signals. Traditional masking provides only temporary relief. Signia Notch Therapy is a clinically validated approach that identifies the exact tinnitus frequency and programs hearing aids to create a notch, gradually retraining the brain to deprioritize the sound. Clinical satisfaction with Notch Therapy reaches 89% versus 42% for traditional masking.",
+    "keywords": "tinnitus relief, tinnitus treatment, Signia Notch Therapy, ringing in ears, tinnitus brain connection, phantom noise, tinnitus hearing aids",
+    "about": [
+      { "@type": "MedicalCondition", "name": "Tinnitus", "alternateName": "Ringing in the Ears", "code": { "@type": "MedicalCode", "code": "H93.1", "codingSystem": "ICD-10" } },
+      { "@type": "MedicalCondition", "name": "Hearing Loss", "alternateName": "Presbycusis" },
+      { "@type": "MedicalCondition", "name": "Auditory Deprivation" }
+    ],
+    "mentions": [
+      { "@type": "MedicalTherapy", "name": "Signia Notch Therapy", "description": "A patented, clinically validated tinnitus management approach that identifies the patient's specific tinnitus frequency and programs hearing aids to exclude that frequency, retraining the brain over time." },
+      { "@type": "MedicalDevice", "name": "Signia Hearing Aids", "manufacturer": { "@type": "Organization", "name": "Signia" } }
+    ],
+    "medicalAudience": { "@type": "MedicalAudience", "audienceType": "Patient", "geographicArea": { "@type": "AdministrativeArea", "name": "United States" } },
+    "datePublished": "2024-03-01",
+    "dateModified": "2026-03-16",
+    "inLanguage": "en-US",
+    "author": { "@type": "Organization", "name": "Hearing Benefit Services", "url": "https://hearingbenefitservices.com" },
+    "publisher": { "@type": "Organization", "name": "Hearing Benefit Services", "url": "https://hearingbenefitservices.com", "logo": { "@type": "ImageObject", "url": "https://hearingbenefitservices.com/images/logo.png" } },
+    "isAccessibleForFree": true,
+    "speakable": {
+      "@type": "SpeakableSpecification",
+      "cssSelector": ["#ai-summary", "#tinnitus-science", "#faq-section", ".highlight-box", ".speakable"]
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "name": "Tinnitus — Frequently Asked Questions",
+    "url": "https://hearingbenefitservices.com/tinnitus#faq-section",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is tinnitus?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Tinnitus is the perception of sound — such as ringing, buzzing, hissing, clicking, or humming — when no external sound source is present. It is not a disease itself but a symptom, most commonly caused by damage to the hair cells in the inner ear, which triggers the brain to generate phantom noise to compensate for lost auditory input."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What causes tinnitus?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The most common cause of tinnitus is hearing loss — either from noise exposure or natural aging (presbycusis). When the hair cells in the cochlea are damaged, they stop sending signals to the auditory cortex. The brain, deprived of input, increases its own neural activity, generating phantom sound. Other causes include ear infections, earwax blockage, head injuries, certain medications (ototoxic drugs), and cardiovascular conditions."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is tinnitus curable?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There is currently no universal cure for tinnitus, but it is highly manageable. Many patients experience significant relief — and some achieve complete elimination of perceived sound — through clinically validated treatments like Signia Notch Therapy."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is Signia Notch Therapy and does it work?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Signia Notch Therapy is a patented, evidence-based tinnitus treatment built into Signia hearing aids. A specialist first identifies the exact pitch (frequency) of the patient's tinnitus. The hearing aid is then programmed to amplify all sounds except that specific frequency, creating a notch. Over time, the brain learns to deprioritize the tinnitus tone. Clinical studies show Notch Therapy achieves approximately 89% patient satisfaction, compared to 42% for traditional masking."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Why doesn't white noise masking cure tinnitus?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "White noise masking covers tinnitus temporarily by introducing external sound to compete with the phantom noise. However, it does not retrain the brain or address the underlying auditory deprivation. When the masking sound is removed, the tinnitus returns — often seeming louder. Notch Therapy works differently by targeting the neurological mechanism that generates the tinnitus signal."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can hearing aids help with tinnitus?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Hearing aids — especially those equipped with Signia Notch Therapy — address tinnitus through two mechanisms: they restore auditory input, reducing the brain's need to generate phantom noise; and Notch Therapy actively retrains the brain's response to the tinnitus frequency."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the warning signs of tinnitus?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The primary warning sign is perceiving sound — ringing, buzzing, hissing, clicking, whistling, or humming — in one or both ears without any external source. Secondary signs include sleep disruption, difficulty concentrating, heightened anxiety, emotional distress, and avoidance of quiet environments. If tinnitus is sudden, unilateral, or accompanied by hearing loss or dizziness, seek medical evaluation immediately."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "@id": "https://hearingbenefitservices.com/#organization",
+    "name": "Hearing Benefit Services",
+    "url": "https://hearingbenefitservices.com",
+    "logo": "https://hearingbenefitservices.com/images/logo.png",
+    "telephone": "+1-808-435-7002",
+    "address": { "@type": "PostalAddress", "addressCountry": "US", "addressRegion": "United States" },
+    "description": "Hearing Benefit Services provides brand-name Signia hearing aids delivered to patients' homes and adjusted remotely by licensed hearing specialists. Specializes in tinnitus management including Signia Notch Therapy. Serving all 50 states.",
+    "contactPoint": [
+      { "@type": "ContactPoint", "contactType": "appointment booking", "url": "https://hearingbenefitservices.com/appointment", "availableLanguage": "English" },
+      { "@type": "ContactPoint", "contactType": "customer support", "telephone": "+1-808-435-7002", "availableLanguage": "English" }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Tinnitus & Hearing Services",
+      "itemListElement": [
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Tinnitus Evaluation & Notch Therapy Fitting" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Free Online Hearing Test", "url": "https://hearingbenefitservices.com/hearingtest" } },
+        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Free Remote Hearing Consultation", "url": "https://hearingbenefitservices.com/appointment" } }
+      ]
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://hearingbenefitservices.com" },
+      { "@type": "ListItem", "position": 2, "name": "Tinnitus Relief", "item": "https://hearingbenefitservices.com/tinnitus" }
+    ]
+  }
+  </script>
+
+  <!-- JSON-LD: HowTo -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Get Tinnitus Relief with Signia Notch Therapy",
+    "description": "A three-step clinical process to identify your tinnitus frequency and use Notch Therapy to retrain your brain.",
+    "totalTime": "PT45M",
+    "estimatedCost": { "@type": "MonetaryAmount", "currency": "USD", "value": "0", "description": "Initial consultation is free" },
+    "step": [
+      { "@type": "HowToStep", "position": 1, "name": "Clinical Mapping", "text": "A licensed hearing specialist conducts precision diagnostics to identify the exact pitch and intensity of your tinnitus tone." },
+      { "@type": "HowToStep", "position": 2, "name": "Custom Fitting", "text": "Your Signia hearing aids are programmed with a notch at your specific tinnitus frequency and delivered to your door." },
+      { "@type": "HowToStep", "position": 3, "name": "Ongoing Brain Retraining", "text": "Monthly remote specialist support and remote adjustments ensure the brain progressively learns to ignore the tinnitus signal." }
+    ]
+  }
+  </script>
+
+  <!-- CDN Resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    :root {
+      --navy:        #0B1E2B;
+      --blue-dark:   #1B4965;
+      --blue:        #2A64A7;
+      --blue-mid:    #3578c7;
+      --cyan:        #06B6D4;
+      --gold:        #FFC107;
+      --gold-dark:   #e6a800;
+      --green:       #10b981;
+      --red:         #ef4444;
+      --orange:      #f97316;
+      --light:       #F8FAFC;
+      --slate-100:   #f1f5f9;
+      --slate-200:   #e2e8f0;
+      --slate-500:   #64748b;
+      --slate-700:   #334155;
+      --white:       #ffffff;
+      --radius-sm:   10px;
+      --radius-md:   16px;
+      --radius-lg:   24px;
+      --shadow-sm:   0 2px 12px rgba(0,0,0,0.06);
+      --shadow-md:   0 8px 32px rgba(0,0,0,0.11);
+      --shadow-lg:   0 20px 60px rgba(0,0,0,0.15);
+      --shadow-gold: 0 6px 28px rgba(255,193,7,0.38);
+      --transition:  all 0.25s ease;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--white);
+      color: var(--slate-700);
+      font-size: 1.02rem;
+      line-height: 1.8;
+      overflow-x: hidden;
+    }
+    a { text-decoration: none; color: inherit; }
+    img { max-width: 100%; display: block; }
+
+    h1 { font-family: 'Lora', serif; font-size: clamp(2.2rem, 5vw, 3.8rem); font-weight: 700; line-height: 1.12; }
+    h2 { font-family: 'Lora', serif; font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; line-height: 1.22; color: var(--navy); margin-bottom: 14px; }
+    h3 { font-family: 'Poppins', sans-serif; font-size: clamp(1.05rem, 2vw, 1.25rem); font-weight: 700; color: var(--blue-dark); margin-bottom: 8px; }
+    h4 { font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 700; color: var(--blue-dark); margin-bottom: 6px; }
+    p { margin-bottom: 16px; }
+    p:last-child { margin-bottom: 0; }
+    strong { font-weight: 700; }
+    cite { font-style: normal; }
+
+    .section-inner { max-width: 1080px; margin: 0 auto; padding: 0 1.5rem; }
+    .section-gap   { padding: 88px 0; }
+    .section-divider { height: 1px; background: var(--slate-200); margin: 0 auto; max-width: 960px; }
+
+    .badge { display:inline-flex; align-items:center; gap:6px; padding:6px 16px; border-radius:50px; font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.07em; margin-bottom:14px; }
+    .badge-blue   { background:rgba(27,73,101,0.1);  color:var(--blue-dark); }
+    .badge-gold   { background:rgba(255,193,7,0.12); color:#92640a; }
+    .badge-green  { background:rgba(16,185,129,0.1); color:#065f46; }
+    .badge-navy   { background:rgba(11,30,43,0.08);  color:var(--navy); }
+    .badge-cyan   { background:rgba(6,182,212,0.1);  color:#0e7490; }
+    .badge-red    { background:rgba(239,68,68,0.1);  color:#991b1b; }
+    .badge-light  { background:rgba(255,255,255,0.15); color:#fff; }
+
+    .btn-gold {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold); color: #000;
+      font-family: 'Poppins', sans-serif; font-weight: 900; font-size: 1rem;
+      padding: 15px 34px; border-radius: 50px;
+      box-shadow: var(--shadow-gold);
+      border-bottom: 4px solid var(--gold-dark);
+      border-left: none; border-right: none; border-top: none;
+      transition: var(--transition); cursor: pointer;
+    }
+    .btn-gold:hover { transform: scale(1.05) translateY(-2px); box-shadow: 0 14px 44px rgba(255,193,7,0.55); }
+    .btn-outline-white {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: transparent; color: #fff;
+      font-family: 'Poppins', sans-serif; font-weight: 700; font-size: 1rem;
+      padding: 15px 34px; border-radius: 50px;
+      border: 2px solid rgba(255,255,255,0.55);
+      transition: var(--transition); cursor: pointer;
+    }
+    .btn-outline-white:hover { background: rgba(255,255,255,0.1); border-color:#fff; transform:translateY(-2px); }
+
+    .hero {
+      background: linear-gradient(135deg, #0B1E2B 0%, #1B4965 50%, #2A64A7 100%);
+      padding: 110px 1.5rem 90px;
+      position: relative; overflow: hidden;
+      text-align: center;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 60% 35%, rgba(6,182,212,0.10) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .pulse-rings { position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); pointer-events: none; z-index: 0; }
+    .p-ring {
+      position: absolute; border-radius: 50%;
+      border: 1px solid rgba(255,193,7,0.07);
+      top: 50%; left: 50%; transform: translate(-50%,-50%);
+      animation: pulse-out 5s ease-out infinite;
+    }
+    .p-ring:nth-child(1){width:200px;height:200px;animation-delay:0s;}
+    .p-ring:nth-child(2){width:450px;height:450px;animation-delay:1.2s;}
+    .p-ring:nth-child(3){width:700px;height:700px;animation-delay:2.4s;}
+    .p-ring:nth-child(4){width:950px;height:950px;animation-delay:3.6s;}
+    @keyframes pulse-out{0%{opacity:0.7;}100%{opacity:0;}}
+
+    .hero-inner { max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold); color: #000;
+      font-size: 0.75rem; font-weight: 900;
+      text-transform: uppercase; letter-spacing: 0.09em;
+      padding: 7px 20px; border-radius: 50px;
+      box-shadow: var(--shadow-gold); margin-bottom: 28px;
+    }
+    .hero h1 { color: #fff; margin-bottom: 24px; }
+    .hero h1 em { color: #7dd3fc; font-style: italic; font-family: 'Lora', serif; }
+    .hero-lead { color: rgba(255,255,255,0.82); font-size: 1.15rem; max-width: 640px; margin: 0 auto 40px; line-height: 1.75; }
+    .hero-lead strong { color: #fff; }
+    .hero-source { color:rgba(255,255,255,0.45); font-size:0.78rem; margin-top:18px; font-weight:600; text-transform:uppercase; letter-spacing:0.08em; }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      max-width: 700px;
+      margin: 0 auto 36px;
+    }
+    .stat-card {
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: var(--radius-md);
+      padding: 20px 14px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+      transition: var(--transition);
+    }
+    .stat-card:hover { background: rgba(255,255,255,0.16); transform: translateY(-3px); }
+    .stat-card.featured { background: var(--gold); border-color: transparent; box-shadow: var(--shadow-gold); }
+    .stat-card.featured .stat-num,
+    .stat-card.featured .stat-lbl { color: #000; }
+    .stat-num { font-family:'Lora',serif; font-size:2.2rem; font-weight:700; color:#fff; line-height:1; margin-bottom:6px; }
+    .stat-lbl { font-size:0.75rem; color:rgba(255,255,255,0.82); font-weight:600; line-height:1.4; }
+
+    .trust-strip { background: var(--navy); padding: 16px 1.5rem; border-bottom: 3px solid var(--gold); }
+    .trust-inner { max-width: 1080px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 8px 32px; align-items: center; justify-content: center; }
+    .trust-item { display:flex; align-items:center; gap:8px; font-size:0.78rem; font-weight:600; color:rgba(255,255,255,0.85); white-space:nowrap; }
+    .trust-item i { color:var(--gold); font-size:0.85rem; }
+
+    .section-hdr { text-align:center; margin-bottom:52px; }
+    .section-hdr h2 { color:var(--navy); }
+    .section-hdr p { color:var(--slate-500); max-width:640px; margin:0 auto; font-size:1rem; }
+    .section-hdr.light h2 { color:#fff; }
+    .section-hdr.light p { color:rgba(255,255,255,0.75); }
+
+    .dark-section {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue-dark) 100%);
+      border-radius: var(--radius-lg);
+      padding: 72px 44px;
+      position: relative; overflow: hidden;
+      border-top: 6px solid var(--gold);
+      box-shadow: var(--shadow-lg);
+    }
+    .dark-section::before {
+      content:''; position:absolute; inset:0;
+      background: radial-gradient(ellipse at 75% 25%, rgba(6,182,212,0.07) 0%, transparent 60%);
+      pointer-events:none;
+    }
+
+    .card { background:#fff; border:1px solid var(--slate-200); border-radius:var(--radius-md); box-shadow:var(--shadow-sm); transition:var(--transition); }
+    .card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
+
+    .hl-box { background:#fff; border-left:6px solid var(--gold); border-radius:0 var(--radius-sm) var(--radius-sm) 0; padding:22px 28px; box-shadow:var(--shadow-sm); }
+    .hl-box.blue  { border-left-color:var(--blue); }
+    .hl-box.green { border-left-color:var(--green); }
+    .hl-box.cyan  { border-left-color:var(--cyan); }
+
+    .sound-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:16px; }
+    .sound-card {
+      background:#fff; border:1px solid var(--slate-200);
+      border-radius:var(--radius-md); padding:22px 16px; text-align:center;
+      box-shadow:var(--shadow-sm); transition:var(--transition); position:relative; overflow:hidden;
+    }
+    .sound-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; }
+    .sound-card:nth-child(1)::before { background:var(--blue-dark); }
+    .sound-card:nth-child(2)::before { background:var(--cyan); }
+    .sound-card:nth-child(3)::before { background:var(--gold); }
+    .sound-card:nth-child(4)::before { background:var(--orange); }
+    .sound-card:nth-child(5)::before { background:var(--green); }
+    .sound-card:nth-child(6)::before { background:#8b5cf6; }
+    .sound-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
+    .sound-card .s-icon { font-size:2rem; margin-bottom:10px; display:block; }
+    .sound-card h4 { font-size:0.92rem; color:var(--blue-dark); margin-bottom:4px; }
+    .sound-card p  { font-size:0.78rem; color:var(--slate-500); margin:0; line-height:1.5; }
+
+    .brain-box {
+      background:linear-gradient(135deg, var(--navy), var(--blue-dark));
+      border-left:8px solid var(--gold);
+      border-radius:0 var(--radius-md) var(--radius-md) 0;
+      padding:28px 32px;
+      display:flex; align-items:center; gap:22px;
+      box-shadow:var(--shadow-md);
+    }
+    .brain-box .b-icon { font-size:2.8rem; flex-shrink:0; }
+    .brain-box p { color:#bfdbfe; margin:0; font-size:1rem; }
+    .brain-box p strong { color:#fff; }
+
+    .notch-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:22px; }
+    .notch-card {
+      background:#fff; border:1px solid var(--slate-200);
+      border-radius:var(--radius-md); padding:32px 26px; text-align:center;
+      box-shadow:var(--shadow-sm); transition:var(--transition); position:relative;
+    }
+    .notch-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); }
+    .notch-card::before { content:''; position:absolute; top:0; left:0; right:0; height:5px; border-radius:var(--radius-md) var(--radius-md) 0 0; }
+    .notch-card.n1::before { background:var(--blue-dark); }
+    .notch-card.n2::before { background:var(--cyan); }
+    .notch-card.n3::before { background:var(--gold); }
+    .notch-num { width:60px;height:60px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'Lora',serif;font-size:1.5rem;font-weight:700;margin:0 auto 18px;transition:var(--transition); }
+    .notch-card.n1 .notch-num { background:rgba(27,73,101,0.1); color:var(--blue-dark); }
+    .notch-card.n2 .notch-num { background:rgba(6,182,212,0.1); color:var(--cyan); }
+    .notch-card.n3 .notch-num { background:rgba(255,193,7,0.15); color:#92640a; }
+    .notch-card:hover .notch-num { background:var(--gold); color:#000; box-shadow:var(--shadow-gold); }
+
+    .cause-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
+    .cause-card {
+      background:#fff; border:1px solid var(--slate-200);
+      border-radius:var(--radius-md); padding:24px 20px;
+      box-shadow:var(--shadow-sm); transition:var(--transition); position:relative;
+    }
+    .cause-card:hover { transform:translateY(-4px); box-shadow:var(--shadow-md); }
+    .cause-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg, var(--gold), var(--blue)); border-radius:var(--radius-md) var(--radius-md) 0 0; }
+    .cause-icon { width:52px;height:52px;border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:14px;background:rgba(27,73,101,0.08);color:var(--blue-dark);transition:var(--transition); }
+    .cause-card:hover .cause-icon { background:var(--blue-dark); color:#fff; }
+
+    .steps-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:28px; }
+    .step-card {
+      background:#fff; border:1px solid var(--slate-200);
+      border-radius:var(--radius-md); padding:34px 26px 28px;
+      box-shadow:var(--shadow-sm); text-align:center; position:relative;
+      transition:var(--transition);
+    }
+    .step-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); }
+    .step-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; border-radius:var(--radius-md) var(--radius-md) 0 0; background:linear-gradient(90deg, var(--gold), var(--blue)); }
+    .step-num {
+      width:62px; height:62px; border-radius:50%;
+      background:linear-gradient(135deg, var(--blue-dark), var(--blue));
+      color:#fff; font-family:'Lora',serif; font-size:1.5rem; font-weight:700;
+      display:flex; align-items:center; justify-content:center;
+      margin:0 auto 18px; box-shadow:0 4px 18px rgba(27,73,101,0.28);
+      transition:var(--transition); animation:pulse-ring 2.5s infinite;
+    }
+    .step-card:hover .step-num { background:var(--gold); color:#000; box-shadow:var(--shadow-gold); }
+    @keyframes pulse-ring { 0%{box-shadow:0 0 0 0px rgba(255,193,7,0.5);}100%{box-shadow:0 0 0 28px rgba(255,193,7,0);} }
+
+    .compare-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:22px; }
+    .compare-card { border-radius:var(--radius-md); padding:28px 24px; transition:var(--transition); }
+    .compare-card:hover { transform:translateY(-4px); }
+    .compare-card.c-bad  { background:rgba(239,68,68,0.05);  border:2px solid rgba(239,68,68,0.2); }
+    .compare-card.c-good { background:rgba(16,185,129,0.06); border:2px solid rgba(16,185,129,0.25); }
+    .compare-card.c-bad  h3 { color:var(--red); }
+    .compare-card.c-good h3 { color:var(--green); }
+
+    .signs-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:18px; }
+    .sign-card {
+      background:#fff; border:1px solid var(--slate-200);
+      border-radius:var(--radius-md); padding:22px 18px; text-align:center;
+      box-shadow:var(--shadow-sm); transition:var(--transition); position:relative; overflow:hidden;
+    }
+    .sign-card::before { content:''; position:absolute; top:0; left:0; right:0; height:4px; background:linear-gradient(90deg, var(--gold), var(--blue)); }
+    .sign-card:hover { transform:translateY(-5px); box-shadow:var(--shadow-md); }
+    .sign-icon { width:52px;height:52px;background:rgba(27,73,101,0.08);color:var(--blue-dark);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin:0 auto 12px;transition:var(--transition); }
+    .sign-card:hover .sign-icon { background:var(--blue-dark); color:#fff; }
+
+    .research-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:22px; }
+    .research-card { background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius-md); padding:26px; transition:var(--transition); }
+    .research-card:hover { background:rgba(255,255,255,0.08); transform:translateY(-3px); }
+    .inst-badge { padding:4px 13px; border-radius:50px; font-size:0.72rem; font-weight:900; text-transform:uppercase; letter-spacing:0.06em; }
+    .inst-blue   { background:rgba(37,99,235,0.2);  color:#93c5fd; }
+    .inst-green  { background:rgba(16,185,129,0.2); color:#6ee7b7; }
+    .inst-cyan   { background:rgba(6,182,212,0.2);  color:#67e8f9; }
+    .inst-orange { background:rgba(245,158,11,0.2); color:#fcd34d; }
+    .inst-purple { background:rgba(139,92,246,0.2); color:#c4b5fd; }
+    .research-quote { background:rgba(255,255,255,0.05); border-radius:8px; padding:12px 14px; margin-top:12px; }
+    .research-link { font-size:0.82rem; font-weight:700; color:#93c5fd; display:inline-flex; align-items:center; gap:5px; margin-top:12px; transition:var(--transition); }
+    .research-link:hover { color:#fff; gap:8px; }
+
+    .cta-cards-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:20px; }
+    .cta-action-card { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius-md); padding:28px 20px; text-align:center; transition:var(--transition); }
+    .cta-action-card:hover { background:rgba(255,255,255,0.10); border-color:rgba(255,255,255,0.22); }
+
+    .faq-item { background:#fff; border-radius:var(--radius-sm); border:1px solid var(--slate-200); box-shadow:var(--shadow-sm); overflow:hidden; transition:var(--transition); margin-bottom:12px; }
+    .faq-item.open { box-shadow:0 8px 28px rgba(27,73,101,0.10); border-color:rgba(27,73,101,0.22); }
+    .faq-q-btn { display:flex; align-items:center; justify-content:space-between; padding:20px 26px; cursor:pointer; font-family:'Poppins',sans-serif; font-size:0.95rem; font-weight:700; color:var(--blue-dark); user-select:none; gap:16px; transition:color 0.2s ease; }
+    .faq-q-btn:hover { color:var(--blue); }
+    .faq-q-btn i { color:var(--gold); transition:transform 0.3s ease; flex-shrink:0; }
+    .faq-item.open .faq-q-btn i { transform:rotate(180deg); }
+    .faq-ans { max-height:0; overflow:hidden; transition:max-height 0.45s ease; }
+    .faq-ans.open { max-height:400px; }
+    .faq-ans p { padding:0 26px 20px; font-size:0.9rem; color:#475569; line-height:1.8; margin-bottom:0; }
+
+    .benefit-tag { display:inline-flex; align-items:center; gap:5px; background:rgba(16,185,129,0.1); color:#065f46; padding:5px 13px; border-radius:50px; font-size:0.8rem; font-weight:700; }
+
+    .chart-wrap { position:relative; width:100%; max-width:640px; height:340px; margin:0 auto; }
+
+    .source-footer { background:var(--navy); padding:32px 1.5rem; }
+    .source-footer-inner { max-width:1080px; margin:0 auto; }
+    .source-footer-inner p,
+    .source-footer-inner span,
+    .source-footer-inner li { font-size:0.78rem; color:rgba(255,255,255,0.45); }
+    .source-footer-inner a { font-size:0.78rem; color:rgba(255,255,255,0.55); }
+    .source-footer-inner a:hover { color:var(--gold); }
+    .source-footer-inner ol { list-style:decimal; padding-left:1.5rem; display:flex; flex-direction:column; gap:8px; margin-bottom:20px; }
+
+    #ai-summary, .speakable { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; left:-9999px; }
+
+    .reveal { opacity:0; transform:translateY(26px); transition:opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+
+    .text-center { text-align:center; }
+    .text-gold   { color:var(--gold); }
+    .text-white  { color:#fff; }
+    .text-slate  { color:var(--slate-500); }
+    .space-y > * + * { margin-top:14px; }
+
+    @keyframes ai-blink{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.4;transform:scale(0.7);}}
+
+    @media(max-width:860px){ .two-col { grid-template-columns:1fr !important; } }
+    @media(max-width:640px){
+      .hero { padding:72px 1.2rem 56px; }
+      .section-gap { padding:60px 0; }
+      .dark-section { padding:40px 18px; border-radius:var(--radius-md); }
+      .chart-wrap { height:260px; }
+      .stats-grid { gap:8px; }
+    }
+
+    .signia-badge {
+      display:inline-flex; align-items:center; gap:8px;
+      background:linear-gradient(135deg, var(--blue-dark), var(--blue));
+      color:#fff; font-size:0.78rem; font-weight:900;
+      padding:7px 18px; border-radius:50px;
+      box-shadow:0 4px 18px rgba(27,73,101,0.3);
+      text-transform:uppercase; letter-spacing:0.07em;
+    }
+
+    .notch-visual {
+      background:linear-gradient(135deg, var(--navy), var(--blue-dark));
+      border-radius:var(--radius-md); padding:28px 24px; position:relative; overflow:hidden;
+      border:1px solid rgba(255,255,255,0.1);
+    }
+    .notch-visual::before {
+      content:''; position:absolute; inset:0;
+      background:radial-gradient(ellipse at 60% 40%, rgba(6,182,212,0.08) 0%, transparent 60%);
+    }
+
+    .freq-bar { display:flex; align-items:flex-end; gap:3px; height:80px; justify-content:center; }
+    .freq-bar span { width:16px; border-radius:4px 4px 0 0; background:rgba(6,182,212,0.6); transition:var(--transition); }
+    .freq-bar span.notch { background:rgba(239,68,68,0.15); border:1px dashed rgba(239,68,68,0.4); }
+  </style>
+</head>
+<body>
+
+<!-- AI SUMMARY BLOCK -->
+<div id="ai-summary" aria-label="Article summary for AI assistants and screen readers">
+  <article>
+    <h1>Tinnitus: Why Your Brain Creates Phantom Noise — And How to Make It Stop</h1>
+    <p>Tinnitus is the perception of phantom sound — ringing, buzzing, hissing, clicking, or humming — without an external source. It affects nearly 50 million Americans and is primarily caused by hearing loss. When the hair cells in the cochlea are damaged, the brain increases its own neural activity to compensate for the missing input, generating phantom noise.</p>
+    <section>
+      <h2>Key Facts About Tinnitus</h2>
+      <ul>
+        <li>Tinnitus affects <strong>nearly 50 million Americans</strong>. Source: American Tinnitus Association.</li>
+        <li>Approximately <strong>90% of tinnitus cases occur alongside hearing loss</strong>.</li>
+        <li>Tinnitus is not a disease — it is a symptom of auditory system disruption.</li>
+        <li>Traditional masking provides only temporary relief — tinnitus returns when removed, often perceived louder.</li>
+        <li>Signia Notch Therapy achieves approximately <strong>89% clinical satisfaction</strong> vs. 42% for masking.</li>
+      </ul>
+    </section>
+    <section>
+      <h2>What Is Signia Notch Therapy?</h2>
+      <p>Signia Notch Therapy is a patented, clinically validated tinnitus management technology. A hearing specialist identifies the exact pitch of the tinnitus. The hearing aid is programmed to amplify all frequencies except that notched frequency. Over time the brain deprioritizes the tone and stops generating it prominently.</p>
+    </section>
+    <section>
+      <h2>The 3-Step Process</h2>
+      <ol>
+        <li><strong>Clinical Mapping</strong> — Identify exact pitch and intensity of the tinnitus frequency.</li>
+        <li><strong>Custom Fitting</strong> — Signia hearing aids programmed and delivered to the patient's door.</li>
+        <li><strong>Ongoing Support</strong> — Monthly remote specialist support for progressive brain retraining.</li>
+      </ol>
+    </section>
+    <section>
+      <h2>About This Page</h2>
+      <p>Published by Hearing Benefit Services (<a href="https://hearingbenefitservices.com">hearingbenefitservices.com</a>). Licensed audiologists — serving all 50 states remotely. Phone: +1-808-435-7002. Last reviewed: <time datetime="2026-03-16">March 2026</time>.</p>
+    </section>
+  </article>
+</div>
+
+<!-- HERO -->
+<header class="hero" id="home" role="banner" aria-label="Tinnitus Relief — Hearing Benefit Services">
+  <div class="pulse-rings">
+    <div class="p-ring"></div><div class="p-ring"></div>
+    <div class="p-ring"></div><div class="p-ring"></div>
+  </div>
+  <div class="hero-inner">
+    <div class="hero-badge"><i class="fas fa-wave-square"></i> Tinnitus Management Guide</div>
+    <h1>
+      <em>"Inside your head..."</em><br>
+      <span style="color:#fff; font-style:normal;">Understanding &amp; Treating</span><br>
+      <span style="color:#7dd3fc;">Tinnitus</span>
+    </h1>
+    <p class="hero-lead">
+      Learn why nearly <strong>50 million Americans</strong> suffer from phantom noise — and how clinical science is bringing back the silence.
+    </p>
+    <div class="stats-grid reveal">
+      <div class="stat-card">
+        <div class="stat-num">50M</div>
+        <div class="stat-lbl">Americans<br>affected</div>
+      </div>
+      <div class="stat-card featured">
+        <div class="stat-num" style="color:#000;">89%</div>
+        <div class="stat-lbl" style="color:#000;">Notch Therapy<br>satisfaction</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">90%</div>
+        <div class="stat-lbl">Cases linked to<br>hearing loss</div>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;">
+      <a href="#tinnitus-science" class="btn-gold"
+         onclick="document.getElementById('tinnitus-science').scrollIntoView({behavior:'smooth'});return false;">
+        <i class="fas fa-brain"></i> Understand the Science
+      </a>
+      <a href="https://hearingbenefitservices.com/appointment" target="_blank" rel="noopener" class="btn-outline-white">
+        <i class="fas fa-calendar-check"></i> Book a Free Evaluation
+      </a>
+    </div>
+    <p class="hero-source">Source: American Tinnitus Association · Signia Clinical Research · NIH</p>
+  </div>
+</header>
+
+<!-- TRUST STRIP -->
+<div class="trust-strip speakable" aria-label="Key trust signals">
+  <div class="trust-inner">
+    <div class="trust-item"><i class="fas fa-certificate"></i> Licensed Audiologists</div>
+    <div class="trust-item"><i class="fas fa-wave-square"></i> Signia Notch Therapy</div>
+    <div class="trust-item"><i class="fas fa-tag"></i> Price Match Guarantee</div>
+    <div class="trust-item"><i class="fas fa-shield-alt"></i> 3-Year Care Plan</div>
+    <div class="trust-item"><i class="fas fa-truck"></i> Delivered to Your Door</div>
+    <div class="trust-item"><i class="fas fa-robot"></i> AI Assistant — 24/7</div>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<main role="main" aria-label="Tinnitus Relief — Full Article">
+
+  <!-- SECTION 1: MORE THAN JUST RINGING -->
+  <section id="tinnitus-intro" class="section-gap" aria-labelledby="intro-heading">
+    <div class="section-inner">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:52px; align-items:center;" class="two-col">
+        <div>
+          <div class="badge badge-blue reveal"><i class="fas fa-exclamation-circle"></i> The Reality of Tinnitus</div>
+          <h2 id="intro-heading" class="reveal">More Than Just Ringing</h2>
+          <p class="reveal" style="font-size:1.05rem; font-weight:700; color:var(--navy);">
+            It starts as a faint buzz. Maybe a distant whistle, a low hum, or ocean waves. You look around — but the room is silent. The sound is coming from inside your head.
+          </p>
+          <p class="reveal">
+            This is <strong>tinnitus</strong> — affecting nearly <strong>50 million Americans</strong>. While often dismissed as "just ringing in the ears," chronic tinnitus causes sleep deprivation, anxiety, inability to concentrate, and profound hopelessness.
+          </p>
+          <div class="hl-box reveal" style="margin:24px 0;">
+            <p style="font-family:'Lora',serif; font-style:italic; font-size:1.1rem; color:var(--navy);">
+              "Tinnitus isn't a disease itself — it's a symptom. It's your brain's way of telling you that something has changed in your hearing system."
+            </p>
+          </div>
+          <p class="reveal text-slate" style="font-size:0.88rem;">
+            <i class="fas fa-info-circle" style="color:var(--blue); margin-right:6px;"></i>
+            Tinnitus is classified by ICD-10 code H93.1 and is one of the most prevalent auditory conditions in the United States.
+          </p>
+        </div>
+        <div class="card reveal" style="padding:2rem;">
+          <h3 style="text-align:center; margin-bottom:6px;">The Tinnitus Impact Scale</h3>
+          <p style="text-align:center; font-size:0.8rem; color:var(--slate-500); margin-bottom:20px;">Clinical data on how chronic phantom noise affects quality of life.</p>
+          <div class="chart-wrap" style="height:320px;"><canvas id="impactRadar"></canvas></div>
+        </div>
+      </div>
+
+      <div style="margin-top:52px;">
+        <h3 style="text-align:center; font-family:'Lora',serif; font-size:1.3rem; color:var(--navy); margin-bottom:24px;">How Does Your Tinnitus Sound?</h3>
+        <div class="sound-grid">
+          <div class="sound-card reveal"><span class="s-icon">🔔</span><h4>Ringing</h4><p>Most common — a pure tone or bell-like sound.</p></div>
+          <div class="sound-card reveal"><span class="s-icon">🐝</span><h4>Buzzing</h4><p>Low-frequency electrical or insect-like hum.</p></div>
+          <div class="sound-card reveal"><span class="s-icon">🌊</span><h4>Hissing</h4><p>White noise or steam-like rushing sound.</p></div>
+          <div class="sound-card reveal"><span class="s-icon">🖱️</span><h4>Clicking</h4><p>Rhythmic or erratic clicking — often muscular.</p></div>
+          <div class="sound-card reveal"><span class="s-icon">🎵</span><h4>Musical</h4><p>Fragments of melody — more common in older adults.</p></div>
+          <div class="sound-card reveal"><span class="s-icon">💓</span><h4>Pulsatile</h4><p>Rhythmic beat matching heartbeat — vascular origin.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- SECTION 2: BRAIN-EAR CONNECTION -->
+  <section id="tinnitus-science" class="section-gap" aria-labelledby="science-heading" style="background:var(--slate-100);">
+    <div class="section-inner">
+      <div class="section-hdr reveal">
+        <div class="badge badge-navy"><i class="fas fa-brain"></i> The Science</div>
+        <h2 id="science-heading">The Brain-Ear Connection</h2>
+        <p>Understanding why tinnitus happens is the first step to making it stop.</p>
+      </div>
+      <div class="dark-section reveal">
+        <div style="position:relative; z-index:1;">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:44px; align-items:center; margin-bottom:36px;" class="two-col">
+            <div>
+              <h3 style="color:#fff; font-family:'Lora',serif; font-size:1.4rem; margin-bottom:16px;">How the Hearing System Works</h3>
+              <p style="color:#bfdbfe; font-size:0.95rem;">In a healthy ear, thousands of microscopic hair cells in the cochlea convert sound vibrations into electrical signals sent to the auditory cortex. Each hair cell is tuned to a specific frequency.</p>
+              <p style="color:#bfdbfe; font-size:0.95rem;">When these hair cells are damaged — by noise exposure, aging, or other factors — they stop sending their signals. The auditory cortex detects this silence and responds.</p>
+            </div>
+            <div>
+              <h3 style="color:#fff; font-family:'Lora',serif; font-size:1.4rem; margin-bottom:16px;">Why the Brain Creates Phantom Sound</h3>
+              <p style="color:#bfdbfe; font-size:0.95rem;">The brain is wired to expect continuous auditory input. When it stops receiving signals at certain frequencies, it increases its own neural activity — essentially "turning up the gain" — trying to detect the missing sounds.</p>
+              <p style="color:#bfdbfe; font-size:0.95rem;">This hyperactivity in the auditory cortex is perceived as sound even when none exists externally. <strong style="color:#fff;">That phantom perception is tinnitus.</strong></p>
+            </div>
+          </div>
+          <div class="brain-box reveal">
+            <div class="b-icon">🔊</div>
+            <p>Your brain, craving auditory input, <strong>"turns up the volume"</strong> to find the missing signal. When it cannot find it, it creates its own noise to fill the silence. That self-generated noise is your tinnitus — and it can be retrained.</p>
+          </div>
+          <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:14px; margin-top:36px; align-items:center;">
+            <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius-md); padding:18px; text-align:center;">
+              <span style="font-size:1.8rem; display:block; margin-bottom:8px;">🦻</span>
+              <p style="color:rgba(255,255,255,0.65); font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:4px;">Root Cause</p>
+              <p style="color:#fff; font-size:0.85rem; font-weight:700; margin:0;">Hair Cell Damage</p>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.3); font-size:1.2rem;">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+            <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius-md); padding:18px; text-align:center;">
+              <span style="font-size:1.8rem; display:block; margin-bottom:8px;">📉</span>
+              <p style="color:rgba(255,255,255,0.65); font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:4px;">Signal Loss</p>
+              <p style="color:#fff; font-size:0.85rem; font-weight:700; margin:0;">Missing Frequencies</p>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.3); font-size:1.2rem;">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+            <div style="background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.1); border-radius:var(--radius-md); padding:18px; text-align:center;">
+              <span style="font-size:1.8rem; display:block; margin-bottom:8px;">🧠</span>
+              <p style="color:rgba(255,255,255,0.65); font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:4px;">Brain Response</p>
+              <p style="color:#fff; font-size:0.85rem; font-weight:700; margin:0;">Neural Hyperactivity</p>
+            </div>
+            <div style="display:flex; align-items:center; justify-content:center; color:rgba(255,255,255,0.3); font-size:1.2rem;">
+              <i class="fas fa-arrow-right"></i>
+            </div>
+            <div style="background:rgba(239,68,68,0.12); border:1px solid rgba(239,68,68,0.3); border-radius:var(--radius-md); padding:18px; text-align:center;">
+              <span style="font-size:1.8rem; display:block; margin-bottom:8px;">🔔</span>
+              <p style="color:rgba(255,255,255,0.65); font-size:0.75rem; font-weight:700; text-transform:uppercase; letter-spacing:0.06em; margin-bottom:4px;">Result</p>
+              <p style="color:#ef4444; font-size:0.85rem; font-weight:700; margin:0;">Phantom Sound</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- SECTION 3: CAUSES -->
+  <section id="causes" class="section-gap" aria-labelledby="causes-heading">
+    <div class="section-inner">
+      <div class="section-hdr reveal">
+        <div class="badge badge-red"><i class="fas fa-search"></i> Root Causes</div>
+        <h2 id="causes-heading">What Causes Tinnitus?</h2>
+        <p>Approximately 90% of tinnitus cases occur alongside some degree of hearing loss. Here are the most common underlying triggers.</p>
+      </div>
+      <div class="cause-grid">
+        <div class="cause-card reveal">
+          <div class="cause-icon"><i class="fas fa-volume-up"></i></div>
+          <h3>Noise-Induced Hearing Loss</h3>
+          <p style="font-size:0.86rem; color:var(--slate-500);">Prolonged exposure to loud sounds — concerts, machinery, headphones — permanently damages cochlear hair cells, triggering tinnitus.</p>
+        </div>
+        <div class="cause-card reveal">
+          <div class="cause-icon"><i class="fas fa-birthday-cake"></i></div>
+          <h3>Age-Related Hearing Loss</h3>
+          <p style="font-size:0.86rem; color:var(--slate-500);">Presbycusis — natural age-related hearing decline — is the most common cause of tinnitus in adults over 60.</p>
+        </div>
+        <div class="cause-card reveal">
+          <div class="cause-icon"><i class="fas fa-pills"></i></div>
+          <h3>Ototoxic Medications</h3>
+          <p style="font-size:0.86rem; color:var(--slate-500);">Certain antibiotics, chemotherapy drugs, high-dose aspirin, and diuretics can trigger or worsen tinnitus as a side effect.</p>
+        </div>
+        <div class="cause-card reveal">
+          <div class="cause-icon"><i class="fas fa-head-side-virus"></i></div>
+          <h3>Head or Neck Injury</h3>
+          <p style="font-size:0.86rem; color:var(--slate-500);">Trauma to the head, neck, or jaw can affect the auditory nerve or brain regions responsible for processing sound.</p>
+        </div>
+        <div class="cause-card reveal">
+          <div class="cause-icon"><i class="fas fa-heartbeat"></i></div>
+          <h3>Cardiovascular Issues</h3>
+          <p style="font-size:0.86rem; color:var(--slate-500);">High blood pressure, arterial narrowing, and vascular malformations can cause pulsatile tinnitus synchronized with the heartbeat.</p>
+        </div>
+        <div class="cause-card reveal">
+          <div class="cause-icon"><i class="fas fa-ear"></i></div>
+          <h3>Earwax Blockage</h3>
+          <p style="font-size:0.86rem; color:var(--slate-500);">Impacted earwax can change pressure in the ear canal and cause temporary tinnitus — often fully reversible once cleared.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- SECTION 4: MASKING VS NOTCH THERAPY -->
+  <section id="masking-vs-notch" class="section-gap" aria-labelledby="masking-heading" style="background:var(--slate-100);">
+    <div class="section-inner">
+      <div class="section-hdr reveal">
+        <div class="badge badge-gold"><i class="fas fa-balance-scale"></i> The Difference</div>
+        <h2 id="masking-heading">Why Masking Isn't Enough</h2>
+        <p>For decades, the standard was white noise masking. It offers temporary relief — but it doesn't solve the problem.</p>
+      </div>
+      <div class="compare-grid" style="margin-bottom:44px;">
+        <div class="compare-card c-bad reveal">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+            <div style="width:46px;height:46px;border-radius:50%;background:rgba(239,68,68,0.1);display:flex;align-items:center;justify-content:center;">
+              <i class="fas fa-times" style="color:var(--red); font-size:1.2rem;"></i>
+            </div>
+            <h3 style="margin:0; font-size:1.1rem;">Traditional Masking</h3>
+          </div>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+            <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.88rem;color:var(--slate-700);"><i class="fas fa-times-circle" style="color:var(--red);margin-top:3px;flex-shrink:0;"></i><span>Covers tinnitus temporarily with white noise</span></li>
+            <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.88rem;color:var(--slate-700);"><i class="fas fa-times-circle" style="color:var(--red);margin-top:3px;flex-shrink:0;"></i><span>Does not retrain the brain's neural response</span></li>
+            <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.88rem;color:var(--slate-700);"><i class="fas fa-times-circle" style="color:var(--red);margin-top:3px;flex-shrink:0;"></i><span>Ringing returns — often louder — when removed</span></li>
+            <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.88rem;color:var(--slate-700);"><i class="fas fa-times-circle" style="color:var(--red);margin-top:3px;flex-shrink:0;"></i><span>Only 42% clinical satisfaction rate</span></li>
+            <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.88rem;color:var(--slate-700);"><i class="fas fa-times-circle" style="color:var(--red);margin-top:3px;flex-shrink:0;"></i><span>Addresses the symptom, not the cause</span></li>
+          </ul>
+        </div>
+        <div class="compare-card c-good reveal">
+          <div style="display:flex; align-items:center; gap:12px; margin-bottom:16px;">
+            <div style="width:46px;height:46px;border-radius:50%;background:rgba(16,185,129,0.1);display:flex;align-items:center;justify-content:center;">
+              <i class="fas fa-check" style="color:var(--green); font-size:1.2rem;"></i>
+            </div>
+            <h3 style="margin:0; font-size:1.1rem; color:var(--green);">Signia Notch Therapy</h3>
+          </div>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+            <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.88rem;color:var(--slate-700);"><i class="fas fa-check-circle" style="color:var(--green);margin-top:3px;flex-shrink:0;"></i><span>Targets the specific frequency of your tinnitus</span></li>
+            <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.88rem;color:var(--slate-700);"><i class="fas fa-check-circle" style="color:var(--green);margin-top:3px;flex-shrink:0;"></i><span>Clinically retrains the brain's neural response</span></li>
+            <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.88rem;color:var(--slate-700);"><i class="fas fa-check-circle" style="color:var(--green);margin-top:3px;flex-shrink:0;"></i><span>Progressive relief — lasting results over time</span></li>
+            <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.88rem;color:var(--slate-700);"><i class="fas fa-check-circle" style="color:var(--green);margin-top:3px;flex-shrink:0;"></i><span><strong>89% clinical satisfaction rate</strong></span></li>
+            <li style="display:flex;align-items:flex-start;gap:10px;font-size:0.88rem;color:var(--slate-700);"><i class="fas fa-check-circle" style="color:var(--green);margin-top:3px;flex-shrink:0;"></i><span>Some patients achieve complete elimination</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="card reveal" style="padding:2rem;">
+        <h3 style="text-align:center; margin-bottom:6px;">Clinical Satisfaction Comparison</h3>
+        <p style="text-align:center; font-size:0.8rem; color:var(--slate-500); margin-bottom:20px;">Specialist-led Notch Therapy results in nearly 90% patient satisfaction.</p>
+        <div class="chart-wrap" style="height:300px;"><canvas id="outcomeBarChart"></canvas></div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- SECTION 5: NOTCH THERAPY -->
+  <section id="notch-therapy" class="section-gap" aria-labelledby="notch-heading">
+    <div class="section-inner">
+      <div class="section-hdr reveal">
+        <div class="signia-badge"><i class="fas fa-wave-square"></i> Signia Technology</div>
+        <h2 id="notch-heading" style="margin-top:14px;">
+          Signia's Secret Weapon:<br>
+          <span style="color:var(--cyan); text-decoration:underline; text-decoration-color:var(--gold); text-underline-offset:6px; text-decoration-thickness:3px;">Notch Therapy</span>
+        </h2>
+        <p>At Hearing Benefit Services, we recommend Signia because they are the only hearing aids equipped with patented Notch Therapy — a clinically validated approach that retrains the brain itself.</p>
+      </div>
+      <div class="notch-visual reveal" style="margin-bottom:44px;">
+        <div style="position:relative; z-index:1;">
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:36px; align-items:center;" class="two-col">
+            <div>
+              <h3 style="color:#fff; font-family:'Lora',serif; font-size:1.3rem; margin-bottom:14px;">The "Notch" Explained</h3>
+              <p style="color:#bfdbfe; font-size:0.92rem;">Imagine the full spectrum of sound as a graphic equalizer. Normally, hearing aids amplify all frequencies to compensate for hearing loss. With Notch Therapy, a single frequency — your exact tinnitus frequency — is left <em style="color:#ef4444;">silent</em> in the amplification profile.</p>
+              <p style="color:#bfdbfe; font-size:0.92rem;">The brain, no longer receiving amplified input at that frequency, gradually reduces its hyperactivity at that tone. The phantom sound fades — and for many patients, disappears entirely.</p>
+            </div>
+            <div style="text-align:center;">
+              <p style="color:rgba(255,255,255,0.6); font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; margin-bottom:16px;">Frequency Profile — Notch at Tinnitus Tone</p>
+              <div class="freq-bar" aria-label="Visual representation of Notch Therapy frequency profile">
+                <span style="height:30px;"></span>
+                <span style="height:45px;"></span>
+                <span style="height:60px;"></span>
+                <span style="height:70px;"></span>
+                <span style="height:65px;"></span>
+                <span style="height:72px;"></span>
+                <span class="notch" style="height:72px;" title="Tinnitus frequency notch"></span>
+                <span style="height:72px;"></span>
+                <span style="height:68px;"></span>
+                <span style="height:62px;"></span>
+                <span style="height:55px;"></span>
+                <span style="height:46px;"></span>
+                <span style="height:38px;"></span>
+              </div>
+              <p style="color:rgba(239,68,68,0.8); font-size:0.75rem; margin-top:10px; font-weight:700;">
+                <i class="fas fa-arrow-up" style="margin-right:4px;"></i> Tinnitus frequency — notched out
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="notch-grid">
+        <div class="notch-card n1 reveal">
+          <div class="notch-num">1</div>
+          <h3 style="font-family:'Lora',serif; font-size:1.2rem; color:var(--navy); margin-bottom:10px;">Identification</h3>
+          <p style="font-size:0.88rem; color:var(--slate-500);">We identify the <strong>exact frequency (pitch)</strong> of your tinnitus tone during a comprehensive clinical evaluation using precision audiological testing.</p>
+        </div>
+        <div class="notch-card n2 reveal">
+          <div class="notch-num">2</div>
+          <h3 style="font-family:'Lora',serif; font-size:1.2rem; color:var(--navy); margin-bottom:10px;">The "Notch"</h3>
+          <p style="font-size:0.88rem; color:var(--slate-500);">Your Signia hearing aids are programmed to amplify all sounds <em>except</em> that specific frequency — creating a "notch" that removes your tinnitus tone from auditory awareness.</p>
+        </div>
+        <div class="notch-card n3 reveal">
+          <div class="notch-num">3</div>
+          <h3 style="font-family:'Lora',serif; font-size:1.2rem; color:var(--navy); margin-bottom:10px;">Brain Retraining</h3>
+          <p style="font-size:0.88rem; color:var(--slate-500);">By consistently relegating the tone to the background, your brain <strong>slowly learns to ignore it</strong> and stops generating the phantom sound over weeks and months.</p>
+        </div>
+      </div>
+      <div class="hl-box reveal" style="max-width:680px; margin:36px auto 0; text-align:center;">
+        <p style="font-family:'Lora',serif; font-style:italic; font-size:1.1rem; color:var(--navy);">
+          Clinical studies show Notch Therapy can significantly reduce tinnitus annoyance within weeks. For some patients, <strong>the sound disappears completely</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- SECTION 6: WARNING SIGNS -->
+  <section id="warning-signs" class="section-gap" aria-labelledby="signs-heading" style="background:var(--slate-100);">
+    <div class="section-inner">
+      <div class="section-hdr reveal">
+        <div class="badge badge-gold"><i class="fas fa-bell"></i> Know the Signs</div>
+        <h2 id="signs-heading">Warning Signs You Shouldn't Ignore</h2>
+        <p>Tinnitus can begin gradually or suddenly. Recognizing the signs early leads to better treatment outcomes.</p>
+      </div>
+      <div class="signs-grid">
+        <div class="sign-card reveal"><div class="sign-icon"><i class="fas fa-moon"></i></div><h4>Sleep Disruption</h4><p style="font-size:0.82rem;color:var(--slate-500);margin:0;">Unable to fall asleep due to internal noise that intensifies in quiet environments.</p></div>
+        <div class="sign-card reveal"><div class="sign-icon"><i class="fas fa-brain"></i></div><h4>Concentration Problems</h4><p style="font-size:0.82rem;color:var(--slate-500);margin:0;">Difficulty focusing on tasks or conversation because of constant internal noise.</p></div>
+        <div class="sign-card reveal"><div class="sign-icon"><i class="fas fa-heartbeat"></i></div><h4>Anxiety &amp; Stress</h4><p style="font-size:0.82rem;color:var(--slate-500);margin:0;">Heightened anxiety and emotional distress from the unrelenting, uncontrollable sound.</p></div>
+        <div class="sign-card reveal"><div class="sign-icon"><i class="fas fa-user-slash"></i></div><h4>Social Withdrawal</h4><p style="font-size:0.82rem;color:var(--slate-500);margin:0;">Avoiding quiet social settings because the ringing becomes more noticeable.</p></div>
+        <div class="sign-card reveal"><div class="sign-icon"><i class="fas fa-volume-up"></i></div><h4>Sound Sensitivity</h4><p style="font-size:0.82rem;color:var(--slate-500);margin:0;">Certain sounds feel uncomfortably loud — hyperacusis, often accompanying tinnitus.</p></div>
+        <div class="sign-card reveal"><div class="sign-icon"><i class="fas fa-sad-tear"></i></div><h4>Depression</h4><p style="font-size:0.82rem;color:var(--slate-500);margin:0;">Chronic tinnitus is strongly associated with depression due to persistent suffering.</p></div>
+        <div class="sign-card reveal"><div class="sign-icon"><i class="fas fa-dizzy"></i></div><h4>Dizziness</h4><p style="font-size:0.82rem;color:var(--slate-500);margin:0;">Tinnitus with vertigo may indicate Ménière's disease — requires prompt evaluation.</p></div>
+        <div class="sign-card reveal"><div class="sign-icon"><i class="fas fa-exclamation-triangle"></i></div><h4>Sudden Onset</h4><p style="font-size:0.82rem;color:var(--slate-500);margin:0;">Sudden tinnitus in one ear combined with hearing loss requires immediate evaluation.</p></div>
+      </div>
+      <div class="hl-box blue reveal" style="max-width:700px; margin:44px auto 0;">
+        <p style="font-family:'Lora',serif; font-size:1.1rem; color:var(--navy);">
+          <i class="fas fa-exclamation-circle" style="color:var(--blue); margin-right:10px;"></i>
+          <strong>Seek immediate evaluation if:</strong> Your tinnitus is sudden, in one ear only, or accompanied by hearing loss, dizziness, or ear pain. These may indicate a treatable underlying condition.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- SECTION 7: PATHWAY -->
+  <section id="pathway" class="section-gap" aria-labelledby="pathway-heading">
+    <div class="section-inner">
+      <div class="section-hdr reveal">
+        <div class="badge badge-green"><i class="fas fa-route"></i> Take Action</div>
+        <h2 id="pathway-heading">Your Pathway to Silence</h2>
+        <p>A simple, streamlined 3-step process — done entirely from home with Hearing Benefit Services.</p>
+      </div>
+      <div class="steps-grid" style="margin-bottom:52px;">
+        <div class="step-card reveal">
+          <div class="step-num">1</div>
+          <h3 style="font-family:'Lora',serif; font-size:1.2rem; color:var(--navy);">Clinical Mapping</h3>
+          <p style="font-size:0.88rem; color:var(--slate-500);">Precision diagnostics identify the exact pitch and intensity of your tinnitus tone during a free remote consultation with a licensed specialist.</p>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-num">2</div>
+          <h3 style="font-family:'Lora',serif; font-size:1.2rem; color:var(--navy);">Custom Fitting</h3>
+          <p style="font-size:0.88rem; color:var(--slate-500);">Your Signia hearing aids are pre-programmed with your personal Notch Therapy profile and delivered directly to your door — remotely fine-tuned by your specialist.</p>
+        </div>
+        <div class="step-card reveal">
+          <div class="step-num">3</div>
+          <h3 style="font-family:'Lora',serif; font-size:1.2rem; color:var(--navy);">Ongoing Support</h3>
+          <p style="font-size:0.88rem; color:var(--slate-500);">Monthly remote specialist support and 24/7 AI assistant access ensure your brain progressively filters out the ringing — included in your 3-year care plan.</p>
+        </div>
+      </div>
+      <div class="card reveal" style="padding:2.5rem; border-left:6px solid var(--cyan);">
+        <div style="display:flex; flex-wrap:wrap; align-items:flex-start; gap:24px;">
+          <div style="width:68px;height:68px;background:linear-gradient(135deg,var(--blue-dark),var(--blue));border-radius:var(--radius-md);display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:#fff;flex-shrink:0;">
+            <i class="fas fa-microchip"></i>
+          </div>
+          <div style="flex:1;">
+            <div class="badge badge-cyan" style="margin-bottom:12px;"><i class="fas fa-star"></i> Modern Signia Hearing Aids</div>
+            <h3 style="font-family:'Lora',serif; font-size:1.4rem; color:var(--navy); margin-bottom:10px;">Not Just Notch Therapy</h3>
+            <p style="color:var(--slate-700); font-size:0.95rem;">Every Signia device from Hearing Benefit Services delivers the full suite of modern hearing technology — comprehensive hearing care, not just tinnitus relief.</p>
+            <div style="display:flex; flex-wrap:wrap; gap:8px; margin-top:14px;">
+              <span class="benefit-tag"><i class="fas fa-check"></i> Notch Therapy Built-In</span>
+              <span class="benefit-tag"><i class="fas fa-check"></i> Bluetooth Streaming</span>
+              <span class="benefit-tag"><i class="fas fa-check"></i> Rechargeable Battery</span>
+              <span class="benefit-tag"><i class="fas fa-check"></i> Nearly Invisible Design</span>
+              <span class="benefit-tag"><i class="fas fa-check"></i> AI Sound Processing</span>
+              <span class="benefit-tag"><i class="fas fa-check"></i> Remote Adjustable</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- SECTION 8: RESEARCH -->
+  <section id="research" class="section-gap" aria-labelledby="research-heading" style="background:var(--slate-100);">
+    <div class="section-inner">
+      <div class="dark-section">
+        <div class="section-hdr light reveal" style="position:relative;z-index:1;">
+          <div class="badge badge-light"><i class="fas fa-microscope"></i> The Evidence</div>
+          <h2 id="research-heading">Research &amp; Clinical Evidence</h2>
+          <p>The science behind tinnitus management from leading medical institutions.</p>
+        </div>
+        <div class="research-grid" style="position:relative;z-index:1;">
+          <div class="research-card reveal" style="border-left:6px solid #67e8f9;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+              <span class="inst-badge inst-cyan">Signia Clinical</span>
+              <span style="font-size:0.82rem;color:rgba(255,255,255,0.4);">2021</span>
+            </div>
+            <h3 style="color:#fff; margin-bottom:10px;">Notch Therapy Efficacy Trial</h3>
+            <p style="color:#bfdbfe; font-size:0.88rem;">Clinical validation demonstrated <strong style="color:#fff;">89% patient satisfaction</strong> — significantly higher than any other tinnitus management approach studied.</p>
+            <div class="research-quote"><i class="fas fa-quote-left" style="color:#67e8f9; margin-right:8px;"></i><em style="color:#bfdbfe; font-size:0.85rem;">"Notch Therapy represents a paradigm shift from masking to genuine neurological retraining."</em></div>
+          </div>
+          <div class="research-card reveal" style="border-left:6px solid #6ee7b7;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+              <span class="inst-badge inst-green">NIH / NIDCD</span>
+              <span style="font-size:0.82rem;color:rgba(255,255,255,0.4);">Ongoing</span>
+            </div>
+            <h3 style="color:#fff; margin-bottom:10px;">National Institute on Deafness</h3>
+            <p style="color:#bfdbfe; font-size:0.88rem;">The NIDCD estimates <strong style="color:#fff;">~15% of the general public</strong> experience tinnitus. Of 50 million affected Americans, ~20 million have chronic tinnitus and 2 million experience debilitating symptoms.</p>
+            <a href="https://www.nidcd.nih.gov/health/tinnitus" target="_blank" rel="noopener" class="research-link"><i class="fas fa-external-link-alt"></i> NIDCD.NIH.gov</a>
+          </div>
+          <div class="research-card reveal" style="border-left:6px solid #93c5fd;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+              <span class="inst-badge inst-blue">Frontiers in Neuroscience</span>
+              <span style="font-size:0.82rem;color:rgba(255,255,255,0.4);">2018</span>
+            </div>
+            <h3 style="color:#fff; margin-bottom:10px;">Auditory Cortex Hyperactivity</h3>
+            <p style="color:#bfdbfe; font-size:0.88rem;">Neuroimaging studies confirmed that tinnitus corresponds to <strong style="color:#fff;">increased spontaneous neural firing</strong> in the auditory cortex following hearing cell damage — validating the neurological basis of Notch Therapy.</p>
+          </div>
+          <div class="research-card reveal" style="border-left:6px solid #fcd34d;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+              <span class="inst-badge inst-orange">ATA Research</span>
+              <span style="font-size:0.82rem;color:rgba(255,255,255,0.4);">2023</span>
+            </div>
+            <h3 style="color:#fff; margin-bottom:10px;">American Tinnitus Association</h3>
+            <p style="color:#bfdbfe; font-size:0.88rem;">The ATA reports approximately <strong style="color:#fff;">90% of tinnitus cases co-occur with measurable hearing loss</strong>, reinforcing that treating hearing loss is the cornerstone of effective tinnitus management.</p>
+            <a href="https://www.ata.org" target="_blank" rel="noopener" class="research-link"><i class="fas fa-external-link-alt"></i> ATA.org</a>
+          </div>
+          <div class="research-card reveal" style="border-left:6px solid #c4b5fd;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+              <span class="inst-badge inst-purple">JAMA Otolaryngology</span>
+              <span style="font-size:0.82rem;color:rgba(255,255,255,0.4);">2020</span>
+            </div>
+            <h3 style="color:#fff; margin-bottom:10px;">Hearing Aids &amp; Tinnitus Relief</h3>
+            <p style="color:#bfdbfe; font-size:0.88rem;">A systematic review found <strong style="color:#fff;">hearing aids alone reduce perceived tinnitus severity</strong> in a significant proportion of patients by restoring auditory input and reducing brain compensatory hyperactivity.</p>
+          </div>
+          <div class="research-card reveal" style="border-left:6px solid #6ee7b7;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+              <span class="inst-badge inst-green">WHO</span>
+              <span style="font-size:0.82rem;color:rgba(255,255,255,0.4);">2021</span>
+            </div>
+            <h3 style="color:#fff; margin-bottom:10px;">Global Hearing Loss Burden</h3>
+            <p style="color:#bfdbfe; font-size:0.88rem;">The WHO identified hearing loss — the root cause of most tinnitus — as a <strong style="color:#fff;">global public health priority</strong> affecting 1.5 billion people, with 2.5 billion projected by 2050.</p>
+            <a href="https://www.who.int/publications/i/item/world-report-on-hearing" target="_blank" rel="noopener" class="research-link"><i class="fas fa-external-link-alt"></i> WHO Report</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- SECTION 9: WE CAN HELP -->
+  <section id="contact" class="section-gap" aria-labelledby="contact-heading">
+    <div class="section-inner">
+      <div class="dark-section">
+        <div style="position:absolute;top:0;right:0;width:22rem;height:22rem;border-radius:50%;opacity:0.07;pointer-events:none;background:radial-gradient(circle,var(--gold),transparent);transform:translate(30%,-30%);"></div>
+        <div style="position:relative; z-index:1;">
+          <div class="section-hdr light reveal">
+            <div class="badge badge-light"><i class="fas fa-headset"></i> Take the First Step</div>
+            <h2 id="contact-heading">You Don't Have to<br><span style="color:var(--gold);">"Just Live With It."</span></h2>
+            <p>While there is no universal cure, tinnitus is highly manageable. Our specialists are ready to help you find your pathway to silence — from the comfort of your home, anywhere in the USA.</p>
+          </div>
+          <div class="cta-cards-grid" style="margin-bottom:36px;">
+            <a href="https://hearingbenefitservices.com/appointment" target="_blank" rel="noopener" class="cta-action-card reveal" style="display:block;text-decoration:none;">
+              <div style="width:58px;height:58px;border-radius:var(--radius-sm);background:rgba(255,193,7,0.15);border:2px solid rgba(255,193,7,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+                <i class="fas fa-video" style="font-size:1.4rem;color:var(--gold);"></i>
+              </div>
+              <h3 style="color:#fff; margin-bottom:8px;">Free Remote Consultation</h3>
+              <p style="color:#bfdbfe; font-size:0.84rem;">Meet a tinnitus specialist via video call — from home. No travel, no clinic visit. Available across all 50 states.</p>
+              <span style="display:inline-block;margin-top:12px;color:var(--gold);font-size:0.73rem;font-weight:900;text-transform:uppercase;letter-spacing:0.1em;">Book Now <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <a href="https://hearingbenefitservices.com/hearingtest" target="_blank" rel="noopener" class="cta-action-card reveal" style="display:block;text-decoration:none;">
+              <div style="width:58px;height:58px;border-radius:var(--radius-sm);background:rgba(6,182,212,0.15);border:2px solid rgba(6,182,212,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+                <i class="fas fa-ear-listen" style="font-size:1.4rem;color:var(--cyan);"></i>
+              </div>
+              <h3 style="color:#fff; margin-bottom:8px;">Free Hearing Test</h3>
+              <p style="color:#bfdbfe; font-size:0.84rem;">Since 90% of tinnitus involves hearing loss, start here — free, online, results in minutes.</p>
+              <span style="display:inline-block;margin-top:12px;color:var(--cyan);font-size:0.73rem;font-weight:900;text-transform:uppercase;letter-spacing:0.1em;">Test Now <i class="fas fa-arrow-right"></i></span>
+            </a>
+            <div class="cta-action-card reveal">
+              <div style="width:58px;height:58px;border-radius:var(--radius-sm);background:rgba(16,185,129,0.15);border:2px solid rgba(16,185,129,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+                <i class="fas fa-wave-square" style="font-size:1.4rem;color:#34d399;"></i>
+              </div>
+              <h3 style="color:#fff; margin-bottom:8px;">Notch Therapy Fitting</h3>
+              <p style="color:#bfdbfe; font-size:0.84rem;">Custom Signia devices pre-programmed with your personal Notch Therapy profile — delivered to your door anywhere in the USA.</p>
+            </div>
+            <div class="cta-action-card reveal">
+              <div style="width:58px;height:58px;border-radius:var(--radius-sm);background:rgba(139,92,246,0.15);border:2px solid rgba(139,92,246,0.3);display:flex;align-items:center;justify-content:center;margin:0 auto 16px;">
+                <i class="fas fa-infinity" style="font-size:1.4rem;color:#c4b5fd;"></i>
+              </div>
+              <h3 style="color:#fff; margin-bottom:8px;">3-Year Care Plan</h3>
+              <p style="color:#bfdbfe; font-size:0.84rem;">Remote adjustments, follow-ups, and 24/7 AI assistant support — included with every device.</p>
+            </div>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:28px;">
+            <a href="https://hearingbenefitservices.com/appointment" target="_blank" rel="noopener" class="btn-gold" style="font-size:1.05rem;padding:16px 38px;">
+              <i class="fas fa-calendar-check"></i> Book a Free Appointment
+            </a>
+            <a href="https://hearingbenefitservices.com/hearingtest" target="_blank" rel="noopener" class="btn-outline-white">
+              <i class="fas fa-ear-listen"></i> Free Hearing Test
+            </a>
+            <a href="tel:+18084357002" class="btn-outline-white">
+              <i class="fas fa-phone"></i> +1-808-435-7002
+            </a>
+          </div>
+          <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:18px;font-size:0.82rem;color:rgba(255,255,255,0.55);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">
+            <span><i class="fas fa-check-circle" style="color:var(--gold);margin-right:5px;"></i> Licensed Audiologists</span>
+            <span><i class="fas fa-check-circle" style="color:var(--gold);margin-right:5px;"></i> Signia Notch Therapy</span>
+            <span><i class="fas fa-check-circle" style="color:var(--gold);margin-right:5px;"></i> 100% Remote</span>
+            <span><i class="fas fa-check-circle" style="color:var(--gold);margin-right:5px;"></i> Price Match Guarantee</span>
+            <span><i class="fas fa-check-circle" style="color:var(--gold);margin-right:5px;"></i> 3-Year Care Included</span>
+          </div>
+          <div style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.12);border-radius:var(--radius-md);padding:14px 22px;max-width:520px;margin:24px auto 0;display:flex;align-items:center;gap:12px;flex-wrap:wrap;justify-content:center;">
+            <span style="width:10px;height:10px;border-radius:50%;background:var(--gold);animation:ai-blink 1.4s ease-in-out infinite;flex-shrink:0;"></span>
+            <p style="color:rgba(255,255,255,0.82);font-size:0.88rem;font-weight:600;margin:0;"><strong style="color:#fff;">AI Assistant Online</strong> — Click the chat icon (bottom right) for instant help, 24/7.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- SECTION 10: FAQ -->
+  <section id="faq-section" class="section-gap" aria-labelledby="faq-heading">
+    <div class="section-inner">
+      <div class="section-hdr reveal">
+        <div class="badge badge-blue"><i class="fas fa-question-circle"></i> FAQ</div>
+        <h2 id="faq-heading">Frequently Asked Questions</h2>
+        <p>The most common questions about tinnitus, its causes, and how Notch Therapy can help.</p>
+      </div>
+      <div style="max-width:820px; margin:0 auto;">
+
+        <div class="faq-item reveal">
+          <div class="faq-q-btn" role="button" aria-expanded="false" tabindex="0">
+            <span>What is tinnitus?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-ans">
+            <p>Tinnitus is the perception of sound — ringing, buzzing, hissing, clicking, or humming — when no external sound source is present. It is not a disease itself but a symptom, most commonly caused by damage to the hair cells in the inner ear, which triggers the brain to generate phantom noise to compensate for lost auditory input.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-q-btn" role="button" aria-expanded="false" tabindex="0">
+            <span>What causes tinnitus?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-ans">
+            <p>The most common cause is hearing loss — from noise exposure or aging. When cochlear hair cells are damaged, they stop sending signals to the auditory cortex. The brain, deprived of input, increases its own neural activity and generates phantom sound. Other causes include ear infections, earwax blockage, head injuries, ototoxic medications, and cardiovascular conditions.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-q-btn" role="button" aria-expanded="false" tabindex="0">
+            <span>Is tinnitus curable?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-ans">
+            <p>There is currently no universal cure for tinnitus, but it is highly manageable. Many patients experience significant relief — and some achieve complete elimination — through clinically validated treatments like Signia Notch Therapy. The key is identifying the underlying cause and addressing it with a targeted treatment plan from a licensed hearing specialist.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-q-btn" role="button" aria-expanded="false" tabindex="0">
+            <span>What is Signia Notch Therapy and does it work?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-ans">
+            <p>Signia Notch Therapy is a patented, evidence-based tinnitus treatment built into Signia hearing aids. A specialist identifies the exact pitch of the patient's tinnitus. The hearing aid is programmed to amplify all sounds except that specific frequency — creating a "notch." Over time, the brain learns to deprioritize the tinnitus tone. Clinical studies show <strong>89% patient satisfaction</strong>, compared to 42% for traditional masking.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-q-btn" role="button" aria-expanded="false" tabindex="0">
+            <span>Why doesn't white noise masking cure tinnitus?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-ans">
+            <p>White noise masking covers tinnitus temporarily but does not retrain the brain or address the underlying auditory deprivation. When the masking sound is removed, the tinnitus returns — often seeming louder. Notch Therapy works differently by targeting the neurological mechanism that generates the tinnitus signal itself.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-q-btn" role="button" aria-expanded="false" tabindex="0">
+            <span>Can hearing aids help with tinnitus?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-ans">
+            <p>Yes. Hearing aids — especially Signia devices with Notch Therapy — address tinnitus through two mechanisms: they restore auditory input, reducing the brain's need to generate phantom noise; and Notch Therapy actively retrains the brain's response to the tinnitus frequency. Many tinnitus sufferers find that treating underlying hearing loss significantly reduces or eliminates perceived tinnitus.</p>
+          </div>
+        </div>
+
+        <div class="faq-item reveal">
+          <div class="faq-q-btn" role="button" aria-expanded="false" tabindex="0">
+            <span>What are the warning signs of tinnitus?</span>
+            <i class="fas fa-chevron-down"></i>
+          </div>
+          <div class="faq-ans">
+            <p>The primary warning sign is perceiving sound — ringing, buzzing, hissing, clicking, whistling, or humming — in one or both ears without any external source. Secondary signs include sleep disruption, difficulty concentrating, heightened anxiety, emotional distress, and avoidance of quiet environments. Sudden tinnitus in one ear combined with hearing loss or dizziness requires immediate medical evaluation.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- SOURCE FOOTER -->
+<footer class="source-footer" role="contentinfo" aria-label="Sources and editorial information">
+  <div class="source-footer-inner">
+    <p style="font-weight:700; color:rgba(255,255,255,0.75); margin-bottom:14px; font-size:0.88rem;">
+      <i class="fas fa-book-open" style="color:var(--gold); margin-right:8px;"></i>
+      Primary Sources &amp; References
+    </p>
+    <ol>
+      <li>American Tinnitus Association. <cite>Tinnitus Facts &amp; Statistics.</cite> ATA, 2023. — <a href="https://www.ata.org" target="_blank" rel="noopener">ATA.org</a></li>
+      <li>National Institute on Deafness and Other Communication Disorders. <cite>Tinnitus.</cite> NIH/NIDCD. — <a href="https://www.nidcd.nih.gov/health/tinnitus" target="_blank" rel="noopener">NIDCD.NIH.gov</a></li>
+      <li>Signia. <cite>Notch Therapy Clinical Evidence.</cite> Signia Research, 2021.</li>
+      <li>Elgoyhen AB, et al. <cite>Tinnitus: perspectives from human neuroimaging.</cite> Nature Reviews Neuroscience. 2015.</li>
+      <li>World Health Organization. <cite>World Report on Hearing.</cite> WHO, 2021. — <a href="https://www.who.int/publications/i/item/world-report-on-hearing" target="_blank" rel="noopener">WHO.int</a></li>
+    </ol>
+    <div style="display:flex; flex-wrap:wrap; gap:6px 24px; align-items:center;">
+      <span>© 2026 Hearing Benefit Services</span>
+      <span>•</span>
+      <a href="https://hearingbenefitservices.com/" rel="home">hearingbenefitservices.com</a>
+      <span>•</span>
+      <span>Licensed Audiologists — Serving All 50 States</span>
+      <span>•</span>
+      <a href="tel:+18084357002">+1-808-435-7002</a>
+      <span>•</span>
+      <span>Page last reviewed: <time datetime="2026-03-16">March 2026</time></span>
+      <span>•</span>
+      <span>Signia is a registered trademark of WS Audiology.</span>
+    </div>
+    <p style="margin-top:12px; font-size:0.72rem; color:rgba(255,255,255,0.28);">
+      This page is for educational purposes only and does not constitute medical advice. Always consult a qualified audiologist or physician for diagnosis and treatment.
+    </p>
+  </div>
+</footer>
+
+<!-- JAVASCRIPT -->
+<script>
+  const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        revealObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  document.querySelectorAll('.faq-q-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item   = btn.closest('.faq-item');
+      const ans    = item.querySelector('.faq-ans');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(i => {
+        i.classList.remove('open');
+        i.querySelector('.faq-ans').classList.remove('open');
+        i.querySelector('.faq-q-btn').setAttribute('aria-expanded', 'false');
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        ans.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+    });
+    btn.addEventListener('keydown', e => {
+      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); btn.click(); }
+    });
+  });
+
+  Chart.defaults.font.family = "'Poppins', sans-serif";
+  Chart.defaults.font.size   = 14;
+  Chart.defaults.color       = '#475569';
+
+  const tooltipConfig = {
+    backgroundColor: '#1B4965',
+    titleFont:  { size: 15, weight: 'bold' },
+    bodyFont:   { size: 13 },
+    padding:    16,
+    cornerRadius: 12,
+    callbacks: {
+      title: function(items) {
+        const label = items[0].chart.data.labels[items[0].dataIndex];
+        return Array.isArray(label) ? label.join(' ') : label;
+      }
+    }
+  };
+
+  function wrapLabel(str, maxLen = 16) {
+    if (!str || str.length <= maxLen) return str;
+    const words = str.split(' ');
+    const lines = [];
+    let line = words[0];
+    for (let i = 1; i < words.length; i++) {
+      if (line.length + 1 + words[i].length <= maxLen) { line += ' ' + words[i]; }
+      else { lines.push(line); line = words[i]; }
+    }
+    lines.push(line);
+    return lines;
+  }
+
+  window.addEventListener('load', () => {
+
+    const rCtx = document.getElementById('impactRadar');
+    if (rCtx) {
+      new Chart(rCtx, {
+        type: 'radar',
+        data: {
+          labels: [
+            wrapLabel('Sleep Disruption'),
+            wrapLabel('Quiet Moments'),
+            wrapLabel('Concentration'),
+            wrapLabel('Anxiety Levels'),
+            wrapLabel('Social Life'),
+            wrapLabel('Emotional Wellbeing')
+          ],
+          datasets: [{
+            label: 'Severity Impact',
+            data: [9.2, 10, 8.5, 7.8, 7.2, 6.5],
+            fill: true,
+            backgroundColor: 'rgba(6,182,212,0.18)',
+            borderColor: '#06B6D4',
+            borderWidth: 3,
+            pointBackgroundColor: '#1B4965',
+            pointRadius: 5
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            r: {
+              suggestedMin: 0,
+              suggestedMax: 10,
+              ticks: { display: false },
+              grid: { color: 'rgba(27,73,101,0.12)' },
+              pointLabels: { font: { weight: '700', size: 12 }, color: '#1B4965' }
+            }
+          },
+          plugins: {
+            tooltip: tooltipConfig,
+            legend: { display: false }
+          }
+        }
+      });
+    }
+
+    const bCtx = document.getElementById('outcomeBarChart');
+    if (bCtx) {
+      new Chart(bCtx, {
+        type: 'bar',
+        data: {
+          labels: [
+            wrapLabel('Untreated'),
+            wrapLabel('Traditional Masking'),
+            wrapLabel('Signia Notch Therapy')
+          ],
+          datasets: [{
+            label: 'Clinical Satisfaction Rate (%)',
+            data: [12, 42, 89],
+            backgroundColor: ['#e2e8f0', '#2A64A7', '#1B4965'],
+            borderRadius: 12,
+            barThickness: 52
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          responsive: true,
+          maintainAspectRatio: false,
+          scales: {
+            x: {
+              max: 100,
+              ticks: { font: { weight: '700' }, callback: v => v + '%' },
+              grid: { color: 'rgba(0,0,0,0.05)' }
+            },
+            y: {
+              ticks: { font: { weight: '700' }, color: '#1B4965' },
+              grid: { display: false }
+            }
+          },
+          plugins: {
+            tooltip: tooltipConfig,
+            legend: { display: false }
+          }
+        }
+      });
+    }
+  });
+</script>
+
+</body>
+</html>
