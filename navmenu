@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HBS Navigation</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    /* ── BRAND TOKENS ─────────────────────────────────────────── */
+    :root {
+      --navy:        #0a1628;
+      --navy-light:  #1a2b4a;
+      --navy-mid:    #162240;
+      --gold:        #b8972a;
+      --gold-light:  #d4af37;
+      --white:       #ffffff;
+      --off-white:   #f8f7f4;
+      --text-dark:   #1a2b4a;
+      --text-muted:  #6b7280;
+      --border:      #e5e7eb;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* ── NUCLEAR SPACING RESET ────────────────────────────────── */
+    .hbs-nav-wrapper,
+    .c-column:has(.hbs-nav-wrapper),
+    .c-row:has(.hbs-nav-wrapper),
+    .c-section:has(.hbs-nav-wrapper) {
+      margin:  0 !important;
+      padding: 0 !important;
+    }
+
+    /* ── NAV WRAPPER ──────────────────────────────────────────── */
+    .hbs-nav-wrapper {
+      position: relative;
+      width: 100vw;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--navy);
+      border-top: 1px solid rgba(255,255,255,0.08);
+      z-index: 9998;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* ── GHL PARENT FULL-WIDTH OVERRIDE ──────────────────────── */
+    .c-column:has(.hbs-nav-wrapper),
+    .c-row:has(.hbs-nav-wrapper),
+    .c-section:has(.hbs-nav-wrapper) {
+      width:         100% !important;
+      max-width:     100% !important;
+      padding-left:  0 !important;
+      padding-right: 0 !important;
+      padding-top:   0 !important;
+      margin-left:   0 !important;
+      margin-right:  0 !important;
+      margin-top:    0 !important;
+    }
+
+    /* ── NAV INNER GRID ───────────────────────────────────────── */
+    .hbs-nav-inner {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      width: 100%;
+      padding: 0 32px 0 20px;
+      min-height: 72px;
+      position: relative;
+    }
+
+    /* ── LOGO ─────────────────────────────────────────────────── */
+    .hbs-nav-logo { justify-self: start; }
+    .hbs-nav-logo img {
+      width: 170px;
+      height: auto;
+      display: block;
+      filter: brightness(0) invert(1);
+    }
+
+    /* ── DESKTOP NAV LINKS ────────────────────────────────────── */
+    .hbs-nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 2px;
+      flex-wrap: nowrap;
+    }
+
+    .nav-link {
+      font-family: 'Poppins', sans-serif;
+      font-size: 19px;                         /* was 17px → +2pt */
+      font-weight: 500;
+      color: rgba(255,255,255,0.88);
+      padding: 8px 12px;
+      border-radius: 6px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      white-space: nowrap;
+      letter-spacing: 0.01em;
+      text-decoration: none;
+      position: relative;
+      transition: color 0.2s;
+    }
+
+    /* Gold underline on hover / active */
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 2px;
+      left: 12px;
+      right: 12px;
+      height: 2px;
+      background: var(--gold-light);
+      transform: scaleX(0);
+      transform-origin: center;
+      transition: transform 0.2s ease;
+      border-radius: 2px;
+    }
+    .nav-link:hover,
+    .nav-link.is-active { color: var(--gold-light); }
+    .nav-link:hover::after,
+    .nav-link.is-active::after { transform: scaleX(1); }
+
+    /* ── RIGHT SIDE ───────────────────────────────────────────── */
+    .hbs-nav-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      justify-self: end;
+    }
+
+    .hbs-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 19px;                         /* was 17px → +2pt */
+      font-weight: 600;
+      color: var(--navy);
+      background: var(--gold);
+      text-decoration: none;
+      white-space: nowrap;
+      border: 2px solid transparent;
+      transition: background 0.2s, transform 0.15s;
+      letter-spacing: 0.01em;
+    }
+    .hbs-cta-btn:hover {
+      background: var(--gold-light);
+      transform: translateY(-1px);
+    }
+
+    /* ── HAMBURGER ────────────────────────────────────────────── */
+    .hbs-hamburger {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: var(--white);
+      font-size: 18px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .hbs-hamburger:hover { background: rgba(255,255,255,0.14); }
+
+    /* ── FULL-WIDTH MEGA PANELS ───────────────────────────────── */
+    .mega-panel {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-6px);
+      width: 100vw;
+      background: var(--white);
+      border-top: 3px solid var(--gold);
+      box-shadow: 0 12px 48px rgba(10,22,40,0.18);
+      z-index: 9997;
+      display: none;
+      opacity: 0;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+      pointer-events: none;
+    }
+    .mega-panel.is-open {
+      display: flex;
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+      pointer-events: all;
+    }
+
+    /* Left navy panel */
+    .mega-left {
+      width: 30%;
+      min-width: 260px;
+      background: var(--navy);
+      padding: 40px 36px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 16px;
+    }
+    .mega-left-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 12px;
+      background: rgba(184,151,42,0.18);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold-light);
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+    .mega-left-title {
+      font-family: 'Lora', serif;
+      font-size: 24px;                         /* was 22px → +2pt */
+      font-weight: 700;
+      color: var(--white);
+      line-height: 1.3;
+    }
+    .mega-left-desc {
+      font-family: 'Poppins', sans-serif;
+      font-size: 17px;                         /* was 15px → +2pt */
+      font-weight: 400;
+      color: rgba(255,255,255,0.70);
+      line-height: 1.6;
+    }
+    .mega-left-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 8px;
+      padding: 10px 20px;
+      border-radius: 8px;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Poppins', sans-serif;
+      font-size: 17px;                         /* was 15px → +2pt */
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s, transform 0.15s;
+      align-self: flex-start;
+    }
+    .mega-left-cta:hover { background: var(--gold-light); transform: translateY(-1px); }
+
+    /* Right white panel */
+    .mega-right {
+      flex: 1;
+      padding: 36px 48px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      background: var(--white);
+    }
+    .mega-right-grid {
+      display: grid;
+      gap: 6px 32px;
+    }
+    .mega-right-grid.cols-1 { grid-template-columns: 1fr; }
+    .mega-right-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+
+    .mega-section-label {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;                         /* was 12px → +2pt */
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      padding: 0 0 6px 0;
+      margin-bottom: 2px;
+      border-bottom: 1px solid var(--border);
+      grid-column: 1 / -1;
+    }
+
+    .mega-link {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 10px 12px;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background 0.18s;
+    }
+    .mega-link:hover { background: var(--off-white); }
+    .mega-link-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      background: #f0f4ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--navy-light);
+      font-size: 14px;
+      flex-shrink: 0;
+      transition: background 0.18s, color 0.18s;
+    }
+    .mega-link:hover .mega-link-icon { background: var(--gold); color: var(--white); }
+    .mega-link-text { display: flex; flex-direction: column; gap: 2px; }
+    .mega-link-label {
+      font-family: 'Poppins', sans-serif;
+      font-size: 19px;                         /* was 17px → +2pt */
+      font-weight: 500;
+      color: var(--navy-light);
+      line-height: 1.3;
+    }
+    .mega-link:hover .mega-link-label { color: var(--gold); }
+    .mega-link-sub {
+      font-family: 'Poppins', sans-serif;
+      font-size: 15px;                         /* was 13px → +2pt */
+      font-weight: 400;
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* ── MOBILE MENU ──────────────────────────────────────────── */
+    .hbs-mobile-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background: var(--navy);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      box-shadow: 0 24px 48px rgba(0,0,0,0.35);
+      z-index: 9999;
+      max-height: 82vh;
+      overflow-y: auto;
+      padding: 12px 0 24px;
+    }
+    .hbs-mobile-menu.open { display: block; }
+
+    .mobile-accordion-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      padding: 13px 20px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;                         /* was 18px → +2pt */
+      font-weight: 500;
+      color: rgba(255,255,255,0.88);
+      background: none;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      transition: background 0.2s, color 0.2s;
+    }
+    .mobile-accordion-btn:hover { background: rgba(184,151,42,0.12); color: var(--gold-light); }
+
+    .mobile-accordion-panel { display: none; padding: 4px 0 8px 16px; }
+    .mobile-accordion-panel.open { display: block; }
+
+    .mobile-section-label {
+      font-family: 'Poppins', sans-serif;
+      font-size: 14px;                         /* was 12px → +2pt */
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--gold);
+      padding: 12px 14px 4px;
+    }
+
+    .mobile-sub-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 14px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;                         /* was 18px → +2pt */
+      font-weight: 400;
+      color: rgba(255,255,255,0.80);
+      text-decoration: none;
+      border-radius: 8px;
+      transition: background 0.2s, color 0.2s;
+    }
+    .mobile-sub-link:hover { background: rgba(184,151,42,0.12); color: var(--gold-light); }
+
+    .mobile-direct-link {
+      display: block;
+      padding: 13px 20px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;                         /* was 18px → +2pt */
+      font-weight: 500;
+      color: rgba(255,255,255,0.88);
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s;
+    }
+    .mobile-direct-link:hover { background: rgba(184,151,42,0.12); color: var(--gold-light); }
+
+    .mobile-cta-wrap {
+      padding: 16px 20px 8px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      margin-top: 8px;
+    }
+    .mobile-cta-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      width: 100%;
+      padding: 13px 20px;
+      border-radius: 8px;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: 'Poppins', sans-serif;
+      font-size: 20px;                         /* was 18px → +2pt */
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .mobile-cta-btn:hover { background: var(--gold-light); }
+
+    /* ── RESPONSIVE ───────────────────────────────────────────── */
+    @media (max-width: 1023px) {
+      .hbs-nav-inner {
+        grid-template-columns: 1fr auto;
+        padding: 0 16px;
+        min-height: 64px;
+      }
+      .hbs-nav-links { display: none; }
+      .hbs-cta-btn   { display: none; }
+      .hbs-hamburger { display: flex; }
+      .mega-panel    { display: none !important; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════════════════════════
+     NAV WRAPPER
+══════════════════════════════════════════════════════════════ -->
+<div class="hbs-nav-wrapper">
+  <header class="w-full">
+    <div class="hbs-nav-inner" id="hbs-nav-root">
+
+      <!-- ── COL 1: LOGO ───────────────────────────────────────── -->
+      <a href="https://hearingbenefitservices.com/" class="hbs-nav-logo flex items-center">
+        <img
+          src="https://assets.cdn.filesafe.space/UDKdmJIdT4xB1V6Lye64/media/68f7cb4d3a4642fd12cdeaab.png"
+          alt="Hearing Benefit Services Logo"
+          width="170" height="57"
+        />
+      </a>
+
+      <!-- ── COL 2: DESKTOP NAV ────────────────────────────────── -->
+      <nav class="hbs-nav-links" aria-label="Main navigation">
+
+        <a href="https://hearingbenefitservices.com/how-it-works" class="nav-link">How It Works</a>
+
+        <!-- Technology -->
+        <div class="dd-wrapper" data-dd="tech">
+          <button class="nav-link flex items-center gap-1" aria-haspopup="true">
+            Technology <i class="fa-solid fa-chevron-down text-xs dd-chevron" style="transition:transform .2s;"></i>
+          </button>
+        </div>
+
+        <a href="https://hearingbenefitservices.com/products-list" class="nav-link">Shop</a>
+        <a href="https://hearingbenefitservices.com/testimonials" class="nav-link">Testimonials</a>
+
+        <!-- Hearing Health -->
+        <div class="dd-wrapper" data-dd="hearing">
+          <button class="nav-link flex items-center gap-1" aria-haspopup="true">
+            Hearing Health <i class="fa-solid fa-chevron-down text-xs dd-chevron" style="transition:transform .2s;"></i>
+          </button>
+        </div>
+
+        <!-- Resources -->
+        <div class="dd-wrapper" data-dd="resources">
+          <button class="nav-link flex items-center gap-1" aria-haspopup="true">
+            Resources <i class="fa-solid fa-chevron-down text-xs dd-chevron" style="transition:transform .2s;"></i>
+          </button>
+        </div>
+
+        <a href="https://hearingbenefitservices.com/about-us" class="nav-link">About Us</a>
+
+        <!-- Support -->
+        <div class="dd-wrapper" data-dd="support">
+          <button class="nav-link flex items-center gap-1" aria-haspopup="true">
+            Support <i class="fa-solid fa-chevron-down text-xs dd-chevron" style="transition:transform .2s;"></i>
+          </button>
+        </div>
+
+      </nav>
+
+      <!-- ── COL 3: CTA + HAMBURGER ────────────────────────────── -->
+      <div class="hbs-nav-right">
+        <a href="https://hearingbenefitservices.com/appointment" class="hbs-cta-btn">
+          <i class="fa-solid fa-calendar-check"></i> Book an Appointment
+        </a>
+        <button class="hbs-hamburger" id="hbs-hamburger-btn" aria-label="Open menu">
+          <i class="fa-solid fa-bars" id="hbs-ham-icon"></i>
+        </button>
+      </div>
+
+      <!-- ── MOBILE MENU ────────────────────────────────────────── -->
+      <div class="hbs-mobile-menu" id="hbs-mobile-menu">
+
+        <a href="https://hearingbenefitservices.com/how-it-works" class="mobile-direct-link">How It Works</a>
+
+        <!-- Technology accordion -->
+        <button class="mobile-accordion-btn" onclick="toggleMob('mob-tech')">
+          Technology <i class="fa-solid fa-chevron-down" id="icon-mob-tech" style="transition:transform .2s;font-size:14px;opacity:0.7;"></i>
+        </button>
+        <div class="mobile-accordion-panel" id="mob-tech">
+          <a href="https://hearingbenefitservices.com/technology" class="mobile-sub-link"><i class="fa-solid fa-microchip w-4"></i> Hearing Aid Technology</a>
+          <a href="https://hearingbenefitservices.com/signiafaq" class="mobile-sub-link"><i class="fa-solid fa-circle-question w-4"></i> Signia FAQ</a>
+          <a href="https://hearingbenefitservices.com/products-list" class="mobile-sub-link"><i class="fa-solid fa-bag-shopping w-4"></i> Shop Hearing Aids</a>
+        </div>
+
+        <a href="https://hearingbenefitservices.com/products-list" class="mobile-direct-link">Shop</a>
+        <a href="https://hearingbenefitservices.com/testimonials" class="mobile-direct-link">Testimonials</a>
+
+        <!-- Hearing Health accordion -->
+        <button class="mobile-accordion-btn" onclick="toggleMob('mob-hearing')">
+          Hearing Health <i class="fa-solid fa-chevron-down" id="icon-mob-hearing" style="transition:transform .2s;font-size:14px;opacity:0.7;"></i>
+        </button>
+        <div class="mobile-accordion-panel" id="mob-hearing">
+          <p class="mobile-section-label">Guides</p>
+          <a href="https://hearingbenefitservices.com/hearingaidguide" class="mobile-sub-link"><i class="fa-solid fa-book-open w-4"></i> Hearing Aid Guide</a>
+          <a href="https://hearingbenefitservices.com/hearinglossandmentalhealth" class="mobile-sub-link"><i class="fa-solid fa-brain w-4"></i> Hearing &amp; Mental Health</a>
+          <a href="https://hearingbenefitservices.com/hearinglossandfalls" class="mobile-sub-link"><i class="fa-solid fa-person-falling w-4"></i> Hearing Loss &amp; Falls</a>
+          <p class="mobile-section-label">Benefits</p>
+          <a href="https://hearingbenefitservices.com/federalretirees" class="mobile-sub-link"><i class="fa-solid fa-star w-4"></i> Federal Retirees</a>
+          <a href="https://hearingbenefitservices.com/financingforhearingaid" class="mobile-sub-link"><i class="fa-solid fa-credit-card w-4"></i> Financing Options</a>
+          <a href="https://hearingbenefitservices.com/medical-insurance-verification-form" class="mobile-sub-link"><i class="fa-solid fa-shield-halved w-4"></i> Insurance Verification</a>
+        </div>
+
+        <!-- Resources accordion -->
+        <button class="mobile-accordion-btn" onclick="toggleMob('mob-resources')">
+          Resources <i class="fa-solid fa-chevron-down" id="icon-mob-resources" style="transition:transform .2s;font-size:14px;opacity:0.7;"></i>
+        </button>
+        <div class="mobile-accordion-panel" id="mob-resources">
+          <a href="https://hearingbenefitservices.com/hearingaidguide" class="mobile-sub-link"><i class="fa-solid fa-book-open w-4"></i> Hearing Aid Guide</a>
+          <a href="https://hearingbenefitservices.com/dailymaintenancetips" class="mobile-sub-link"><i class="fa-solid fa-screwdriver-wrench w-4"></i> Maintenance Tips</a>
+          <a href="https://hearingbenefitservices.com/bluetooth-pairing-guide" class="mobile-sub-link"><i class="fa-brands fa-bluetooth w-4"></i> Bluetooth Pairing Guide</a>
+          <a href="https://hearingbenefitservices.com/cleaningguide" class="mobile-sub-link"><i class="fa-solid fa-broom w-4"></i> Cleaning Guide</a>
+          <a href="https://hearingbenefitservices.com/hearingtest" class="mobile-sub-link"><i class="fa-solid fa-ear-listen w-4"></i> Free Hearing Test</a>
+        </div>
+
+        <a href="https://hearingbenefitservices.com/about-us" class="mobile-direct-link">About Us</a>
+
+        <!-- Support accordion -->
+        <button class="mobile-accordion-btn" onclick="toggleMob('mob-support')">
+          Support <i class="fa-solid fa-chevron-down" id="icon-mob-support" style="transition:transform .2s;font-size:14px;opacity:0.7;"></i>
+        </button>
+        <div class="mobile-accordion-panel" id="mob-support">
+          <a href="https://hearingbenefitservices.com/support" class="mobile-sub-link"><i class="fa-solid fa-headset w-4"></i> Support Center</a>
+          <a href="https://hearingbenefitservices.com/contact-us" class="mobile-sub-link"><i class="fa-solid fa-envelope w-4"></i> Contact Us</a>
+          <a href="https://hearingbenefitservices.com/appointment" class="mobile-sub-link"><i class="fa-solid fa-calendar-check w-4"></i> Book an Appointment</a>
+          <a href="https://hearingbenefitservices.com/remote-appointments" class="mobile-sub-link"><i class="fa-solid fa-video w-4"></i> Remote Appointments</a>
+        </div>
+
+        <div class="mobile-cta-wrap">
+          <a href="https://hearingbenefitservices.com/appointment" class="mobile-cta-btn">
+            <i class="fa-solid fa-calendar-check"></i> Book an Appointment
+          </a>
+        </div>
+
+      </div><!-- /mobile menu -->
+    </div><!-- /hbs-nav-inner -->
+  </header>
+
+  <!-- ══════════════════════════════════════════════════════════
+       MEGA PANELS — inside .hbs-nav-wrapper
+  ══════════════════════════════════════════════════════════ -->
+
+  <!-- Technology Panel -->
+  <div class="mega-panel" id="panel-tech"
+       onmouseenter="cancelClose('tech')" onmouseleave="scheduleClose('tech')">
+    <div class="mega-left">
+      <div class="mega-left-icon"><i class="fa-solid fa-microchip"></i></div>
+      <div class="mega-left-title">Hearing Aid Technology</div>
+      <div class="mega-left-desc">Explore the latest Signia AI technology, digital vs analog, and available hearing aid styles to find your perfect fit.</div>
+      <a href="https://hearingbenefitservices.com/technology" class="mega-left-cta">
+        Explore Technology <i class="fa-solid fa-arrow-right text-sm"></i>
+      </a>
+    </div>
+    <div class="mega-right">
+      <div class="mega-right-grid cols-1">
+        <span class="mega-section-label">Technology</span>
+        <a href="https://hearingbenefitservices.com/technology" class="mega-link">
+          <span class="mega-link-icon"><i class="fa-solid fa-microchip"></i></span>
+          <span class="mega-link-text">
+            <span class="mega-link-label">Hearing Aid Technology</span>
+            <span class="mega-link-sub">AI-powered Signia devices &amp; features</span>
+          </span>
+        </a>
+        <a href="https://hearingbenefitservices.com/signiafaq" class="mega-link">
+          <span class="mega-link-icon"><i class="fa-solid fa-circle-question"></i></span>
+          <span class="mega-link-text">
+            <span class="mega-link-label">Signia FAQ</span>
+            <span class="mega-link-sub">Answers to common Signia questions</span>
+          </span>
+        </a>
+        <a href="https://hearingbenefitservices.com/products-list" class="mega-link">
+          <span class="mega-link-icon"><i class="fa-solid fa-bag-shopping"></i></span>
+          <span class="mega-link-text">
+            <span class="mega-link-label">Shop Hearing Aids</span>
+            <span class="mega-link-sub">Browse our full product catalog</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hearing Health Panel -->
+  <div class="mega-panel" id="panel-hearing"
+       onmouseenter="cancelClose('hearing')" onmouseleave="scheduleClose('hearing')">
+    <div class="mega-left">
+      <div class="mega-left-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+      <div class="mega-left-title">Your Hearing Health</div>
+      <div class="mega-left-desc">Guides, insurance benefits, and resources to help you understand and improve your hearing for a better quality of life.</div>
+      <a href="https://hearingbenefitservices.com/medical-insurance-verification-form" class="mega-left-cta">
+        Check My Insurance <i class="fa-solid fa-arrow-right text-sm"></i>
+      </a>
+    </div>
+    <div class="mega-right">
+      <div class="mega-right-grid cols-2">
+        <span class="mega-section-label">Guides</span>
+        <a href="https://hearingbenefitservices.com/hearingaidguide" class="mega-link">
+          <span class="mega-link-icon"><i class="fa-solid fa-book-open"></i></span>
+          <span class="mega-link-text">
+            <span class="mega-link-label">Hearing Aid Guide</span>
+            <span class="mega-link-sub">Everything you need to know</span>
+          </span>
+        </a>
+        <a href="https://hearingbenefitservices.com/hearinglossandmentalhealth" class="mega-link">
+          <span class="mega-link-icon"><i class="fa-solid fa-brain"></i></span>
+          <span class="mega-link-text">
+            <span class="mega-link-label">Hearing &amp; Mental Health</span>
+            <span class="mega-link-sub">Impact of hearing loss on wellbeing</span>
+          </span>
+        </a>
+        <a href="https://hearingbenefitservices.com/hearinglossandfalls" class="mega-link">
+          <span class="mega-link-icon"><i class="fa-solid fa-person-falling"></i></span>
+          <span class="mega-link-text">
+            <span class="mega-link-label">Hearing Loss &amp; Falls</span>
+            <span class="mega-link-sub">Balance &amp; fall prevention</span>
+          </span>
+        </a>
+        <span class="mega-section-label">Benefits</span>
+        <a href="https://hearingbenefitservices.com/federalretirees" class="mega-link">
+          <span class="mega-link-icon"><i class="fa-solid fa-star"></i></span>
+          <span class="mega-link-text">
+            <span class="mega-link-label">Federal Retirees</span>
+            <span class="mega-link-sub">Special benefits for retirees</span>
+          </span>
+        </a>
+        <a href="https://hearingbenefitservices.com/financingforhearingaid" class="mega-link">
+          <span class="mega-link-icon"><i class="fa-solid fa-credit-card"></i></span>
+          <span class="mega-link-text">
+            <span class="mega-link-label">Financing Options</span>
+            <span class="mega-link-sub">Flexible payment plans</span>
+          </span>
+        </a>
+        <a href="https://hearingbenefitservices.com/medical-insurance-verification-form" class="mega-link">
+          <span class="mega-link-icon"><i class="fa-solid fa-shield-halved"></i></span>
+          <span class="mega-link-text">
+            <span class="mega-link-label">Insurance Verification</span>
+            <span class="mega-link-sub">Check your coverage instantly</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Resources Panel -->
+  <div class="mega-panel" id="panel-resources"
+       onmouseenter="cancelClose('resources')" onmouseleave="scheduleClose('resources')">
+    <div class="mega-left">
+      <div class="mega-left-icon"><i class="fa-solid fa-book-open"></i></div>
+      <div class="mega-left-title">Helpful Resources</div>
+      <div class="mega-left-desc">Care guides, maintenance tips, and tools to help you get the most from your hearing aids every day.</div>
+      <a href="https://hearingbenefitservices.com/hearingtest" class="mega-left-cta">
+        Take Free Hearing Test <i class="fa-solid fa-arrow-right text-sm"></i>
+      </a>
+    </div>
+    <div class="mega-right">
+      <div class="mega-right-grid cols-2">
+        <span class="mega-section-label">Resources</span>
+        <a href="https://hearingbenefitservices.com/hearingaidguide" class="mega-link">
+          <span class="mega-link-icon"><i class="fa-solid fa-book-open"></i></span>
+          <span class="mega-link-text">
+            <span class="mega-link-label">Hearing Aid Guide</span>
+            <span class="mega-link-sub">Comprehensive buyer's guide</span>
+          </span>
+        </a>
+        <a href="https://hearingbenefitservices.com/dailymaintenancetips" class="mega-link">
+          <span class="mega-link-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+          <span class="mega-link-text">
+            <span class="mega-link-label">Maintenance Tips</span>
+            <span class="mega-link-sub">Keep your devices in top shape</span>
+          </span>
+        </a>
+        <a href="https://hearingbenefitservices.com/bluetooth-pairing-guide" class="mega-link">
+          <span class="mega-link-icon"><i class="fa-brands fa-bluetooth"></i></span>
+          <span class="mega-link-text">
+            <span class="mega-link-label">Bluetooth Pairing Guide</span>
+            <span class="mega-link-sub">Connect to your devices easily</span>
+          </span>
+        </a>
+        <a href="https://hearingbenefitservices.com/cleaningguide" class="mega-link">
+          <span class="mega-link-icon"><i class="fa-solid fa-broom"></i></span>
+          <span class="mega-link-text">
+            <span class="mega-link-label">Cleaning Guide</span>
+            <span class="mega-link-sub">Step-by-step cleaning instructions</span>
+          </span>
+        </a>
+        <a href="https://hearingbenefitservices.com/hearingtest" class="mega-link">
+          <span class="mega-link-icon"><i class="fa-solid fa-ear-listen"></i></span>
+          <span class="mega-link-text">
+            <span class="mega-link-label">Free Hearing Test</span>
+            <span class="mega-link-sub">Quick online assessment</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Support Panel -->
+  <div class="mega-panel" id="panel-support"
+       onmouseenter="cancelClose('support')" onmouseleave="scheduleClose('support')">
+    <div class="mega-left">
+      <div class="mega-left-icon"><i class="fa-solid fa-headset"></i></div>
+      <div class="mega-left-title">We're Here to Help</div>
+      <div class="mega-left-desc">Remote support, appointments, and expert audiologist guidance — all from the comfort of your home.</div>
+      <a href="https://hearingbenefitservices.com/appointment" class="mega-left-cta">
+        Book an Appointment <i class="fa-solid fa-arrow-right text-sm"></i>
+      </a>
+    </div>
+    <div class="mega-right">
+      <div class="mega-right-grid cols-1">
+        <span class="mega-section-label">Support</span>
+        <a href="https://hearingbenefitservices.com/support" class="mega-link">
+          <span class="mega-link-icon"><i class="fa-solid fa-headset"></i></span>
+          <span class="mega-link-text">
+            <span class="mega-link-label">Support Center</span>
+            <span class="mega-link-sub">FAQs, guides, and troubleshooting</span>
+          </span>
+        </a>
+        <a href="https://hearingbenefitservices.com/contact-us" class="mega-link">
+          <span class="mega-link-icon"><i class="fa-solid fa-envelope"></i></span>
+          <span class="mega-link-text">
+            <span class="mega-link-label">Contact Us</span>
+            <span class="mega-link-sub">Reach our care team</span>
+          </span>
+        </a>
+        <a href="https://hearingbenefitservices.com/appointment" class="mega-link">
+          <span class="mega-link-icon"><i class="fa-solid fa-calendar-check"></i></span>
+          <span class="mega-link-text">
+            <span class="mega-link-label">Book an Appointment</span>
+            <span class="mega-link-sub">Schedule your consultation</span>
+          </span>
+        </a>
+        <a href="https://hearingbenefitservices.com/remote-appointments" class="mega-link">
+          <span class="mega-link-icon"><i class="fa-solid fa-video"></i></span>
+          <span class="mega-link-text">
+            <span class="mega-link-label">Remote Appointments</span>
+            <span class="mega-link-sub">Virtual care from anywhere</span>
+          </span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</div><!-- /hbs-nav-wrapper -->
+
+
+<!-- ══════════════════════════════════════════════════════════════
+     SCRIPTS
+══════════════════════════════════════════════════════════════ -->
+<script>
+  /* ── Dropdown IDs ─────────────────────────────────────────── */
+  const DD_IDS = ['tech', 'hearing', 'resources', 'support'];
+  const closeTimers = {};
+
+  /* ── Open panel ──────────────────────────────────────────── */
+  function openPanel(name) {
+    cancelClose(name);
+    DD_IDS.forEach(id => { if (id !== name) closePanelNow(id); });
+    const p = document.getElementById('panel-' + name);
+    if (p) {
+      p.style.display = 'flex';
+      requestAnimationFrame(() => p.classList.add('is-open'));
+    }
+    const wrapper = document.querySelector('[data-dd="' + name + '"]');
+    if (wrapper) {
+      const btn  = wrapper.querySelector('.nav-link');
+      const chev = wrapper.querySelector('.dd-chevron');
+      if (btn)  btn.classList.add('is-active');
+      if (chev) chev.style.transform = 'rotate(180deg)';
+    }
+  }
+
+  /* ── Schedule close with delay ───────────────────────────── */
+  function scheduleClose(name) {
+    closeTimers[name] = setTimeout(() => closePanelNow(name), 180);
+  }
+
+  /* ── Cancel a pending close ──────────────────────────────── */
+  function cancelClose(name) { clearTimeout(closeTimers[name]); }
+
+  /* ── Immediately close panel ─────────────────────────────── */
+  function closePanelNow(name) {
+    const p = document.getElementById('panel-' + name);
+    if (p) {
+      p.classList.remove('is-open');
+      setTimeout(() => { if (!p.classList.contains('is-open')) p.style.display = 'none'; }, 200);
+    }
+    const wrapper = document.querySelector('[data-dd="' + name + '"]');
+    if (wrapper) {
+      const btn  = wrapper.querySelector('.nav-link');
+      const chev = wrapper.querySelector('.dd-chevron');
+      if (btn)  btn.classList.remove('is-active');
+      if (chev) chev.style.transform = 'rotate(0deg)';
+    }
+  }
+
+  /* ── Attach hover listeners ──────────────────────────────── */
+  document.querySelectorAll('.dd-wrapper').forEach(wrapper => {
+    const name = wrapper.dataset.dd;
+    wrapper.addEventListener('mouseenter', () => openPanel(name));
+    wrapper.addEventListener('mouseleave', () => scheduleClose(name));
+  });
+
+  /* ── Close on outside click ──────────────────────────────── */
+  document.addEventListener('click', e => {
+    const inWrapper = e.target.closest('.dd-wrapper');
+    const inPanel   = e.target.closest('.mega-panel');
+    if (!inWrapper && !inPanel) DD_IDS.forEach(closePanelNow);
+  });
+
+  /* ── Mobile accordion ────────────────────────────────────── */
+  function toggleMob(id) {
+    const panel = document.getElementById(id);
+    const icon  = document.getElementById('icon-' + id);
+    if (!panel) return;
+    const isOpen = panel.classList.contains('open');
+    panel.classList.toggle('open', !isOpen);
+    if (icon) icon.style.transform = isOpen ? 'rotate(0deg)' : 'rotate(180deg)';
+  }
+
+  /* ── Hamburger ───────────────────────────────────────────── */
+  const hamburger  = document.getElementById('hbs-hamburger-btn');
+  const mobileMenu = document.getElementById('hbs-mobile-menu');
+  const hamIcon    = document.getElementById('hbs-ham-icon');
+  if (hamburger && mobileMenu) {
+    hamburger.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.contains('open');
+      mobileMenu.classList.toggle('open', !isOpen);
+      hamIcon.className = isOpen ? 'fa-solid fa-bars' : 'fa-solid fa-xmark';
+    });
+  }
+
+  /* ── GHL full-width parent overrides ─────────────────────── */
+  document.querySelectorAll(
+    '.c-column:has(.hbs-nav-wrapper), .c-row:has(.hbs-nav-wrapper), .c-section:has(.hbs-nav-wrapper)'
+  ).forEach(el => {
+    el.style.maxWidth      = '100%';
+    el.style.width         = '100%';
+    el.style.paddingLeft   = '0';
+    el.style.paddingRight  = '0';
+    el.style.paddingTop    = '0';
+    el.style.paddingBottom = '0';
+    el.style.marginLeft    = '0';
+    el.style.marginRight   = '0';
+    el.style.marginTop     = '0';
+    el.style.marginBottom  = '0';
+  });
+
+  /* ── Nuclear gap removal ─────────────────────────────────── */
+  (function removeTopGap() {
+    function zeroGaps() {
+      document.querySelectorAll('.c-section, .c-row, .c-column, .c-wrapper')
+        .forEach(el => { el.style.marginBottom = '0'; el.style.paddingBottom = '0'; });
+
+      let el = document.querySelector('.hbs-nav-wrapper');
+      while (el && el !== document.body) {
+        el.style.marginBottom  = '0';
+        el.style.paddingBottom = '0';
+        el = el.parentElement;
+      }
+
+      const allSections = Array.from(document.querySelectorAll('.c-section'));
+      const navSection  = allSections.find(s => s.contains(document.querySelector('.hbs-nav-wrapper')));
+      if (navSection) {
+        navSection.style.marginBottom  = '0';
+        navSection.style.paddingBottom = '0';
+        let next = navSection.nextElementSibling;
+        while (next) {
+          next.style.marginTop  = '0';
+          next.style.paddingTop = '0';
+          if (next.offsetHeight > 0) break;
+          next = next.nextElementSibling;
+        }
+      }
+
+      document.querySelectorAll('body > div, body > section, body > main')
+        .forEach(el => { el.style.marginTop = '0'; });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', zeroGaps);
+    } else { zeroGaps(); }
+    [100, 300, 600, 1000, 2000].forEach(t => setTimeout(zeroGaps, t));
+  })();
+</script>
+
+</body>
+</html>
