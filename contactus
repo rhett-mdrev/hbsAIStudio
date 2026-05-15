@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- ═══════════════════════════════════════════════════════
+       CORE META
+  ═══════════════════════════════════════════════════════ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Hearing Benefit Services | Remote Hearing Care USA</title>
+  <meta name="description" content="Call 808-435-7002 or book a free remote hearing consultation online. Licensed U.S. audiologists available Mon–Fri 9am–5pm. Serving all 50 states via telehealth — no obligation." />
+  <meta name="keywords" content="contact hearing specialist USA, hearing aid fitting USA, free hearing consultation, hearing benefit services phone number, schedule hearing appointment USA, remote hearing aid fitting, hearing loss help USA, telehealth audiology USA" />
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="author" content="Hearing Benefit Services" />
+  <meta name="publisher" content="Hearing Benefit Services" />
+
+  <!-- ═══════════════════════════════════════════════════════
+       FRESHNESS SIGNALS
+  ═══════════════════════════════════════════════════════ -->
+  <meta name="article:published_time" content="2024-01-15T08:00:00-05:00" />
+  <meta name="article:modified_time"  content="2026-03-13T08:00:00-05:00" />
+  <meta name="article:section"        content="Contact" />
+
+  <!-- ═══════════════════════════════════════════════════════
+       GEO META — UNITED STATES
+  ═══════════════════════════════════════════════════════ -->
+  <meta name="geo.region"    content="US" />
+  <meta name="geo.placename" content="United States" />
+  <meta name="geo.position"  content="37.0902;-95.7129" />
+  <meta name="ICBM"          content="37.0902, -95.7129" />
+
+  <!-- ═══════════════════════════════════════════════════════
+       OPEN GRAPH
+  ═══════════════════════════════════════════════════════ -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:url"         content="https://hearingbenefitservices.com/contact-us" />
+  <meta property="og:title"       content="Contact Us | Hearing Benefit Services | Remote Hearing Care USA" />
+  <meta property="og:description" content="Call 808-435-7002 or book a free remote hearing consultation online. Licensed U.S. audiologists serving all 50 states. No obligation." />
+  <meta property="og:image"       content="https://hearingbenefitservices.com/images/contact-og.jpg" />
+  <meta property="og:image:width"  content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt"    content="Hearing Benefit Services — Contact our licensed U.S. audiologists" />
+  <meta property="og:site_name"   content="Hearing Benefit Services" />
+  <meta property="og:locale"      content="en_US" />
+
+  <!-- ═══════════════════════════════════════════════════════
+       TWITTER / X CARD
+  ═══════════════════════════════════════════════════════ -->
+  <meta name="twitter:card"        content="summary_large_image" />
+  <meta name="twitter:title"       content="Contact Us | Hearing Benefit Services | Remote Hearing Care USA" />
+  <meta name="twitter:description" content="Call 808-435-7002 or book a free remote hearing consultation. Licensed U.S. audiologists. All 50 states served via telehealth." />
+  <meta name="twitter:image"       content="https://hearingbenefitservices.com/images/contact-og.jpg" />
+  <meta name="twitter:image:alt"   content="Contact Hearing Benefit Services — free remote hearing care USA" />
+
+  <!-- ═══════════════════════════════════════════════════════
+       CANONICAL
+  ═══════════════════════════════════════════════════════ -->
+  <link rel="canonical" href="https://hearingbenefitservices.com/contact-us" />
+
+  <!-- ═══════════════════════════════════════════════════════
+       JSON-LD BLOCK 1 — ContactPage + WebPage
+  ═══════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["ContactPage","WebPage"],
+    "@id": "https://hearingbenefitservices.com/contact-us#webpage",
+    "url": "https://hearingbenefitservices.com/contact-us",
+    "name": "Contact Us | Hearing Benefit Services | Remote Hearing Care USA",
+    "description": "Call 808-435-7002 or book a free remote hearing consultation online. Licensed U.S. audiologists available Mon–Fri 9am–5pm. Serving all 50 states via telehealth.",
+    "datePublished": "2024-01-15",
+    "dateModified": "2026-03-13",
+    "inLanguage": "en-US",
+    "isPartOf": {
+      "@type": "WebSite",
+      "@id": "https://hearingbenefitservices.com/#website",
+      "url": "https://hearingbenefitservices.com",
+      "name": "Hearing Benefit Services"
+    },
+    "about": {
+      "@id": "https://hearingbenefitservices.com/#organization"
+    }
+  }
+  </script>
+
+  <!-- ═══════════════════════════════════════════════════════
+       JSON-LD BLOCK 2 — Audiologist / MedicalBusiness
+  ═══════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Audiologist","MedicalBusiness","LocalBusiness"],
+    "@id": "https://hearingbenefitservices.com/#organization",
+    "name": "Hearing Benefit Services",
+    "url": "https://hearingbenefitservices.com",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://hearingbenefitservices.com/images/logo.png"
+    },
+    "description": "Hearing Benefit Services provides licensed hearing specialists, free hearing consultations, and remote hearing aid fittings to patients across all 50 states.",
+    "telephone": "+1-808-435-7002",
+    "email": "info@hearingbenefitservices.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressRegion": "US",
+      "addressLocality": "United States",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "37.0902",
+      "longitude": "-95.7129"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "09:00",
+        "closes": "17:00"
+      }
+    ],
+    "contactPoint": [
+      {
+        "@type": "ContactPoint",
+        "telephone": "+1-808-435-7002",
+        "contactType": "customer service",
+        "areaServed": "US",
+        "availableLanguage": "English",
+        "hoursAvailable": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      },
+      {
+        "@type": "ContactPoint",
+        "email": "info@hearingbenefitservices.com",
+        "contactType": "customer service",
+        "areaServed": "US",
+        "availableLanguage": "English"
+      },
+      {
+        "@type": "ContactPoint",
+        "contactType": "technical support",
+        "description": "24/7 live chat support",
+        "availableLanguage": "English"
+      },
+      {
+        "@type": "ContactPoint",
+        "contactType": "appointment booking",
+        "url": "https://hearingbenefitservices.com/appointment",
+        "telephone": "+1-808-435-7002",
+        "availableLanguage": "English"
+      }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Hearing Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Free Hearing Consultation",
+            "description": "A complimentary initial hearing assessment and consultation with a licensed hearing specialist — available remotely to all 50 states."
+          },
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "MedicalProcedure",
+            "name": "Remote Hearing Aid Fitting",
+            "url": "https://hearingbenefitservices.com/appointment",
+            "description": "A one-on-one virtual hearing aid fitting session conducted online. Patients across all 50 states can receive specialist care from home."
+          }
+        }
+      ]
+    },
+    "sameAs": [
+      "https://hearingbenefitservices.com",
+      "https://www.facebook.com/hearingbenefitservices"
+    ]
+  }
+  </script>
+
+  <!-- ═══════════════════════════════════════════════════════
+       JSON-LD BLOCK 3 — FAQPage
+  ═══════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "@id": "https://hearingbenefitservices.com/contact-us#faq",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What are Hearing Benefit Services' business hours?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our licensed hearing specialists are available Monday through Friday, 9am to 5pm. Live chat is available 24/7."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the initial hearing consultation free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The initial hearing assessment and consultation are 100% complimentary — no obligation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I schedule a remote hearing aid fitting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Book online at https://hearingbenefitservices.com/appointment."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the phone number for Hearing Benefit Services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can reach Hearing Benefit Services at +1-808-435-7002, Monday through Friday, 9am to 5pm."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the email address for Hearing Benefit Services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can email us at info@hearingbenefitservices.com."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do you offer telehealth or remote hearing care?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. All consultations, fittings, and follow-up adjustments are conducted via secure telehealth — nationwide across the United States."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I get a fitting without visiting a clinic?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Absolutely. No clinic visit is required. Everything is handled remotely so you get expert care from the comfort of your own home, no matter where you live in the USA."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where does Hearing Benefit Services provide services?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "We serve patients across the entire United States. Because all our services are delivered remotely, you can receive expert hearing care from the comfort of your home — wherever you live."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FONTS
+  ═══════════════════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ═══════════════════════════════════════════════════════
+       STYLES
+  ═══════════════════════════════════════════════════════ -->
+  <style>
+    :root {
+      --navy-deep:    #0B1E2B;
+      --navy-mid:     #1B4965;
+      --navy-light:   #2A64A7;
+      --amber:        #FFC107;
+      --amber-dark:   #e6a800;
+      --emerald:      #10b981;
+      --slate-100:    #f1f5f9;
+      --slate-200:    #e2e8f0;
+      --slate-600:    #475569;
+      --slate-800:    #1e293b;
+      --white:        #ffffff;
+      --font-head:    'Lora', Georgia, serif;
+      --font-body:    'Poppins', sans-serif;
+      --radius:       12px;
+      --shadow-sm:    0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md:    0 4px 20px rgba(0,0,0,0.12);
+      --shadow-lg:    0 8px 40px rgba(0,0,0,0.16);
+      --transition:   0.3s ease;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html  { scroll-behavior: smooth; font-size: 16px; }
+    body  {
+      font-family: var(--font-body);
+      color: var(--slate-800);
+      background: var(--white);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4 { font-family: var(--font-head); line-height: 1.25; }
+    h1 { font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 700; }
+    h2 { font-size: clamp(1.6rem, 3.5vw, 2.4rem); font-weight: 700; }
+    h3 { font-size: clamp(1.15rem, 2vw, 1.5rem); font-weight: 600; }
+    p  { margin-bottom: 1rem; color: var(--slate-600); }
+    a  { color: var(--navy-light); text-decoration: none; transition: color var(--transition); }
+    a:hover { color: var(--navy-mid); }
+
+    .container   { max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+    .section     { width: 100%; padding: 5rem 0; }
+    .section-alt { background: var(--slate-100); }
+    .text-center { text-align: center; }
+
+    .section-tag {
+      display: inline-block;
+      background: rgba(245,158,11,.15);
+      color: #f59e0b;
+      font-size: 0.75rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 0.35rem 1rem; border-radius: 50px;
+      margin-bottom: 1rem;
+    }
+    .section-intro {
+      max-width: 680px; margin: 0 auto 3rem;
+      font-size: 1.05rem; color: var(--slate-600); text-align: center;
+    }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      padding: 0.85rem 2rem; border-radius: 50px;
+      font-family: var(--font-body); font-weight: 600;
+      font-size: 1rem; cursor: pointer; border: none;
+      transition: all var(--transition); text-decoration: none;
+    }
+    .btn-primary {
+      background: linear-gradient(135deg, var(--amber), var(--amber-dark));
+      color: var(--navy-deep);
+      box-shadow: 0 4px 18px rgba(255,193,7,0.35);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 24px rgba(255,193,7,0.5); color: var(--navy-deep); }
+    .btn-navy {
+      background: linear-gradient(135deg, var(--navy-mid), var(--navy-deep));
+      color: var(--white); box-shadow: var(--shadow-md);
+    }
+    .btn-navy:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); color: var(--white); }
+    .btn-outline-navy {
+      background: transparent; border: 2px solid var(--navy-light); color: var(--navy-light);
+    }
+    .btn-outline-navy:hover { background: var(--navy-light); color: var(--white); }
+    .btn-outline-white {
+      background: transparent; border: 2px solid var(--white); color: var(--white);
+    }
+    .btn-outline-white:hover { background: var(--white); color: var(--navy-mid); }
+    .btn-full { display: flex; width: 100%; justify-content: center; border-radius: var(--radius); }
+
+    /* ── Hero ── */
+    .hero {
+      width: 100%;
+      background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-mid) 55%, var(--navy-light) 100%);
+      color: var(--white);
+      padding: 6rem 0 5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: ''; position: absolute; inset: 0;
+      background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") repeat;
+      pointer-events: none;
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(8px);
+      padding: 0.4rem 1rem; border-radius: 50px;
+      font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.06em; text-transform: uppercase;
+      margin-bottom: 1.5rem; color: var(--amber);
+    }
+    .hero h1 { color: var(--white); margin-bottom: 1.25rem; }
+    .hero h1 span { color: var(--amber); }
+    .hero-subtitle {
+      font-size: 1.1rem; opacity: 0.88;
+      margin-bottom: 2rem; line-height: 1.75;
+      color: var(--white);
+    }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; }
+    .hero-contact-bar { margin-top: 2.5rem; display: flex; flex-wrap: wrap; gap: 1.25rem; }
+    .hero-contact-pill {
+      display: flex; align-items: center; gap: 0.6rem;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 50px; padding: 0.55rem 1.1rem;
+      font-size: 0.9rem; font-weight: 500;
+      color: rgba(255,255,255,0.92);
+      text-decoration: none; transition: all var(--transition);
+    }
+    .hero-contact-pill:hover { background: rgba(255,255,255,0.2); color: var(--white); }
+    .hero-contact-pill svg { color: var(--amber); flex-shrink: 0; }
+
+    .hero-visual { display: flex; flex-direction: column; gap: 1rem; }
+    .hero-card {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      backdrop-filter: blur(12px);
+      border-radius: var(--radius); padding: 1.5rem;
+    }
+    .hero-card-title {
+      font-size: 0.75rem; text-transform: uppercase;
+      letter-spacing: 0.1em; color: var(--amber);
+      font-weight: 600; margin-bottom: 1rem;
+    }
+    .stat-row { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+    .stat-chip {
+      background: rgba(255,255,255,0.07);
+      border-radius: 8px; padding: 0.85rem 1rem; text-align: center;
+    }
+    .stat-chip .num { display: block; font-size: 1.5rem; font-weight: 700; color: var(--amber); font-family: var(--font-head); }
+    .stat-chip .lbl { font-size: 0.72rem; opacity: 0.82; color: var(--white); }
+    .hours-list { display: flex; flex-direction: column; gap: 0.5rem; }
+    .hours-row {
+      display: flex; justify-content: space-between; align-items: center;
+      background: rgba(255,255,255,0.06); border-radius: 8px;
+      padding: 0.55rem 0.9rem; font-size: 0.85rem;
+    }
+    .hours-row .day  { font-weight: 500; opacity: 0.85; color: var(--white); }
+    .hours-row .time { color: var(--amber); font-weight: 600; }
+    .hours-row .badge-online {
+      font-size: 0.68rem; font-weight: 700;
+      background: var(--emerald); color: var(--white);
+      padding: 0.15rem 0.5rem; border-radius: 4px;
+    }
+
+    /* ── Trust Strip ── */
+    .trust-strip { width: 100%; background: var(--navy-deep); padding: 1.25rem 0; }
+    .trust-strip-inner {
+      display: flex; flex-wrap: wrap;
+      justify-content: center; gap: 2rem 3rem;
+    }
+    .trust-item {
+      display: flex; align-items: center; gap: 0.6rem;
+      color: rgba(255,255,255,0.85); font-size: 0.85rem; font-weight: 500;
+    }
+    .trust-item svg { color: var(--amber); flex-shrink: 0; }
+
+    /* ── Contact Cards ── */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem; align-items: start;
+    }
+    .contact-card {
+      background: var(--white); border-radius: var(--radius);
+      border: 1px solid var(--slate-200); box-shadow: var(--shadow-sm);
+      overflow: hidden; display: flex; flex-direction: column;
+      transition: all var(--transition);
+    }
+    .contact-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); border-color: var(--navy-light); }
+    .contact-card.featured {
+      border: 2px solid var(--navy-light); box-shadow: var(--shadow-md);
+      transform: translateY(-8px);
+    }
+    .contact-card.featured:hover { transform: translateY(-12px); box-shadow: var(--shadow-lg); }
+    .card-header {
+      padding: 2rem 2rem 1.5rem;
+      display: flex; flex-direction: column; align-items: center; text-align: center;
+    }
+    .card-icon {
+      width: 64px; height: 64px; border-radius: 16px;
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 1.25rem; font-size: 1.6rem;
+    }
+    .card-header h3 { color: var(--navy-deep); margin-bottom: 0.6rem; }
+    .card-header p  { font-size: 0.88rem; margin: 0; }
+    .card-body  { padding: 0 2rem 2rem; flex: 1; display: flex; flex-direction: column; gap: 0.75rem; }
+    .card-meta  { display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; color: var(--slate-600); }
+    .card-meta svg { color: var(--emerald); flex-shrink: 0; }
+    .card-footer { padding: 0 2rem 2rem; margin-top: auto; }
+    .featured-ribbon {
+      background: linear-gradient(135deg, var(--amber), var(--amber-dark));
+      color: var(--navy-deep); font-size: 0.72rem; font-weight: 700;
+      letter-spacing: 0.08em; text-transform: uppercase;
+      text-align: center; padding: 0.4rem;
+    }
+
+    /* ── Stats Band ── */
+    .stats-band {
+      width: 100%;
+      background: linear-gradient(135deg, var(--navy-mid), var(--navy-deep));
+      padding: 3.5rem 0;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem; text-align: center;
+    }
+    .stat-block .big {
+      font-family: var(--font-head); font-size: 2.6rem;
+      font-weight: 700; color: var(--amber); display: block;
+    }
+    .stat-block .sub { font-size: 0.82rem; color: rgba(255,255,255,0.75); margin-top: 0.25rem; }
+
+    /* ── Contact Form ── */
+    .form-wrapper {
+      background: var(--white); border-radius: var(--radius);
+      box-shadow: var(--shadow-lg); border: 1px solid var(--slate-200); overflow: hidden;
+    }
+    .form-header {
+      background: linear-gradient(135deg, var(--navy-mid), var(--navy-deep));
+      padding: 1.75rem 2rem; color: var(--white);
+    }
+    .form-header h3 { color: var(--white); margin-bottom: 0.25rem; font-size: 1.25rem; }
+    .form-header p  { opacity: 0.8; font-size: 0.88rem; margin: 0; color: var(--white); }
+    .form-body { padding: 0; }
+    iframe.contact-iframe { width: 100%; min-height: 573px; border: none; display: block; }
+
+    /* ── FAQ ── */
+    .faq-list { max-width: 780px; margin: 0 auto; display: flex; flex-direction: column; gap: 0.75rem; }
+    .faq-item {
+      background: var(--white); border: 1px solid var(--slate-200);
+      border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow-sm);
+    }
+    .faq-q {
+      width: 100%; background: none; border: none;
+      padding: 1.25rem 1.5rem;
+      display: flex; justify-content: space-between; align-items: center;
+      cursor: pointer; text-align: left;
+      font-family: var(--font-head); font-size: 0.95rem;
+      font-weight: 600; color: var(--navy-deep); gap: 1rem;
+    }
+    .faq-q:hover { background: var(--slate-100); }
+    .faq-icon {
+      width: 28px; height: 28px; border-radius: 50%;
+      background: var(--slate-100);
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      transition: transform var(--transition), background var(--transition);
+      font-size: 1.1rem; color: var(--navy-light);
+    }
+    .faq-item.open .faq-icon { transform: rotate(45deg); background: var(--navy-light); color: var(--white); }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.4s ease; }
+    .faq-item.open .faq-a { max-height: 400px; }
+    .faq-a-inner {
+      padding: 0 1.5rem 1.25rem;
+      font-size: 0.9rem; color: var(--slate-600); line-height: 1.7;
+    }
+    .faq-a-inner a { color: var(--navy-light); font-weight: 500; }
+    .faq-a-inner a:hover { text-decoration: underline; }
+
+    /* ── Final CTA ── */
+    .final-cta {
+      width: 100%;
+      background: linear-gradient(135deg, var(--navy-deep) 0%, var(--navy-mid) 60%, var(--navy-light) 100%);
+      padding: 6rem 0; text-align: center; color: var(--white);
+      position: relative; overflow: hidden;
+    }
+    .final-cta h2   { color: var(--white); margin-bottom: 1rem; }
+    .final-cta p    { font-size: 1.05rem; opacity: 0.85; max-width: 600px; margin: 0 auto 2.5rem; color: var(--white); }
+    .final-cta-buttons { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+    .cta-phone-pill {
+      display: inline-flex; align-items: center; gap: 0.5rem;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: var(--white); padding: 0.85rem 2rem; border-radius: 50px;
+      font-weight: 600; font-size: 1rem; transition: all var(--transition);
+      text-decoration: none;
+    }
+    .cta-phone-pill:hover { background: rgba(255,255,255,0.2); color: var(--white); }
+
+    /* ── Scroll Reveal ── */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+
+    /* ── Responsive ── */
+    @media (max-width: 960px) {
+      .contact-grid { grid-template-columns: 1fr; }
+      .contact-card.featured { transform: none; }
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-visual { display: none; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .hero    { padding: 4rem 0 3.5rem; }
+      .section { padding: 3.5rem 0; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- AI Summary (hidden, for LLM/AI crawlers) -->
+  <div id="ai-summary" aria-hidden="true" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;">
+    <h2>Contact Hearing Benefit Services — USA Nationwide</h2>
+    <p>Phone: +1-808-435-7002 (Mon–Fri 9am–5pm). Email: info@hearingbenefitservices.com. Book: https://hearingbenefitservices.com/appointment. Live chat 24/7. Serving all 50 states remotely.</p>
+  </div>
+
+  <main id="main-content">
+
+    <!-- ══════════════════════════════════════════════════════
+         HERO
+    ══════════════════════════════════════════════════════ -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-inner">
+
+          <div class="hero-content">
+            <div class="hero-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.02 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              Licensed U.S. Audiologists · All 50 States
+            </div>
+
+            <h1 id="hero-heading">
+              We're All Ears —<br /><span>Let's Talk Hearing</span>
+            </h1>
+            <p class="hero-subtitle">
+              Whether you have a quick question or are ready to start your journey to better hearing, our licensed U.S. audiologists are here to help — remotely, from anywhere in the country. Call, email, book online, or chat.
+            </p>
+
+            <div class="hero-actions">
+              <a href="https://hearingbenefitservices.com/appointment" class="btn btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Book Free Consultation
+              </a>
+              <a href="https://hearingbenefitservices.com/hearingtest" class="btn btn-outline-white">
+                Free Hearing Test
+              </a>
+            </div>
+
+            <div class="hero-contact-bar">
+              <a href="tel:+18084357002" class="hero-contact-pill">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.02 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                808-435-7002
+              </a>
+              <a href="mailto:info@hearingbenefitservices.com" class="hero-contact-pill">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                info@hearingbenefitservices.com
+              </a>
+              <div class="hero-contact-pill">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                Mon–Fri 9am–5pm
+              </div>
+            </div>
+          </div>
+
+          <!-- Hero Visual Cards -->
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-card">
+              <p class="hero-card-title">Contact Options</p>
+              <div class="stat-row">
+                <div class="stat-chip"><span class="num">📞</span><span class="lbl">Call a specialist</span></div>
+                <div class="stat-chip"><span class="num">📧</span><span class="lbl">Email anytime</span></div>
+                <div class="stat-chip"><span class="num">📅</span><span class="lbl">Book online — free</span></div>
+                <div class="stat-chip"><span class="num">💬</span><span class="lbl">Live chat 24/7</span></div>
+              </div>
+            </div>
+            <div class="hero-card">
+              <p class="hero-card-title">Hours of Availability</p>
+              <div class="hours-list">
+                <div class="hours-row"><span class="day">Mon – Fri</span><span class="time">9am – 5pm</span></div>
+                <div class="hours-row"><span class="day">Saturday</span><span class="time">Closed</span></div>
+                <div class="hours-row"><span class="day">Sunday</span><span class="time">Closed</span></div>
+                <div class="hours-row"><span class="day">Live Chat</span><span class="badge-online">24 / 7</span></div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         TRUST STRIP
+    ══════════════════════════════════════════════════════ -->
+    <div class="trust-strip">
+      <div class="container">
+        <div class="trust-strip-inner">
+          <div class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+            Licensed U.S. Audiologists
+          </div>
+          <div class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            Same-Week Appointments
+          </div>
+          <div class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+            Free Initial Consultation
+          </div>
+          <div class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            HIPAA-Compliant &amp; Secure
+          </div>
+          <div class="trust-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+            24/7 Live Chat Support
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════
+         CONTACT OPTIONS
+    ══════════════════════════════════════════════════════ -->
+    <section class="section" aria-labelledby="contact-options-heading">
+      <div class="container">
+        <div class="text-center" style="margin-bottom:3rem;">
+          <span class="section-tag">Get in Touch</span>
+          <h2 id="contact-options-heading">Choose How You'd Like to Reach Us</h2>
+          <p class="section-intro">Three easy ways to connect with our licensed hearing care team — by phone, by booking a free fitting online, or via live chat around the clock.</p>
+        </div>
+
+        <div class="contact-grid reveal">
+
+          <!-- Card 1: Call or Email -->
+          <article class="contact-card">
+            <div class="card-header">
+              <div class="card-icon" style="background:rgba(27,73,101,0.1);">📞</div>
+              <h3>Speak to a Specialist</h3>
+              <p>Direct access to licensed hearing specialists for personalized guidance on hearing aids and hearing loss solutions — available anywhere in the USA.</p>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Mon–Fri, 9am–5pm</span>
+              </div>
+              <div class="card-meta">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>Licensed audiologists on every call</span>
+              </div>
+            </div>
+            <div class="card-footer" style="display:flex;flex-direction:column;gap:0.75rem;">
+              <a href="tel:+18084357002" class="btn btn-navy btn-full">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.02 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                Call 808-435-7002
+              </a>
+              <a href="mailto:info@hearingbenefitservices.com" class="btn btn-outline-navy btn-full">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                Email Us
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 2: Book Appointment (Featured) -->
+          <article class="contact-card featured">
+            <div class="featured-ribbon">⭐ Most Popular — Free Consultation</div>
+            <div class="card-header">
+              <div class="card-icon" style="background:linear-gradient(135deg,var(--navy-mid),var(--navy-light));display:flex;align-items:center;justify-content:center;">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.75" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              </div>
+              <h3>Book a Free Remote Fitting</h3>
+              <p>Skip the waiting room. Book your one-on-one virtual hearing aid fitting online in minutes — from anywhere in the United States.</p>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Free initial consultation — no cost, no obligation</span>
+              </div>
+              <div class="card-meta">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                Same-week appointments available
+              </div>
+              <div class="card-meta">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+                All 50 states served via telehealth
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="https://hearingbenefitservices.com/appointment" class="btn btn-primary btn-full">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+                Book Online — It's Free
+              </a>
+            </div>
+          </article>
+
+          <!-- Card 3: Live Chat -->
+          <article class="contact-card">
+            <div class="card-header">
+              <div class="card-icon" style="background:rgba(16,185,129,0.1);">💬</div>
+              <h3>24/7 Live Chat Support</h3>
+              <p>Get quick assistance from our Online Hearing Tech team whenever you need it — day or night, any day of the week.</p>
+            </div>
+            <div class="card-body">
+              <div class="card-meta">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <span>Available 24 hours, 7 days a week</span>
+              </div>
+              <div class="card-meta">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                <span>Look for the chat bubble on this page</span>
+              </div>
+            </div>
+            <div class="card-footer">
+              <div class="btn btn-navy btn-full" style="cursor:default;opacity:0.85;">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                Chat Available on This Page
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         STATS BAND
+    ══════════════════════════════════════════════════════ -->
+    <div class="stats-band">
+      <div class="container">
+        <div class="stats-grid reveal">
+          <div class="stat-block">
+            <span class="big">100%</span>
+            <span class="sub">Free Initial Consultation</span>
+          </div>
+          <div class="stat-block">
+            <span class="big">24/7</span>
+            <span class="sub">Live Tech Support</span>
+          </div>
+          <div class="stat-block">
+            <span class="big">50</span>
+            <span class="sub">States Served Nationwide</span>
+          </div>
+          <div class="stat-block">
+            <span class="big">0</span>
+            <span class="sub">Travel Required</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══════════════════════════════════════════════════════
+         CONTACT FORM
+    ══════════════════════════════════════════════════════ -->
+    <section class="section section-alt" aria-labelledby="contact-form-heading">
+      <div class="container" style="max-width:860px;">
+        <div class="text-center" style="margin-bottom:2.5rem;">
+          <span class="section-tag">Send a Message</span>
+          <h2 id="contact-form-heading">Send Us a Message</h2>
+          <p class="section-intro">Fill out the form below and a member of our team will respond shortly — usually within one business day.</p>
+        </div>
+        <div class="form-wrapper reveal">
+          <div class="form-header">
+            <h3>Contact Form — Hearing Benefit Services</h3>
+            <p>Licensed U.S. audiologists serving all 50 states · Mon–Fri 9am–5pm · 24/7 live chat available</p>
+          </div>
+          <div class="form-body">
+            <iframe
+              class="contact-iframe"
+              src="https://api.leadconnectorhq.com/widget/form/yyuFOwF0uUCdALnmJsuF"
+              id="inline-yyuFOwF0uUCdALnmJsuF"
+              data-layout="{'id':'INLINE'}"
+              data-trigger-type="alwaysShow"
+              data-trigger-value=""
+              data-activation-type="alwaysActivated"
+              data-activation-value=""
+              data-deactivation-type="neverDeactivate"
+              data-deactivation-value=""
+              data-form-name="Contact Us"
+              data-height="573"
+              data-layout-iframe-id="inline-yyuFOwF0uUCdALnmJsuF"
+              data-form-id="yyuFOwF0uUCdALnmJsuF"
+              title="Contact Us Form — Hearing Benefit Services"
+              loading="lazy"
+            ></iframe>
+            <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         FAQ
+    ══════════════════════════════════════════════════════ -->
+    <section class="section" id="faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="text-center" style="margin-bottom:3rem;">
+          <span class="section-tag">Got Questions?</span>
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+          <p class="section-intro">Everything you need to know about contacting us and getting started with your hearing care journey — from anywhere in the USA.</p>
+        </div>
+
+        <div class="faq-list reveal">
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              What are Hearing Benefit Services' business hours?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                Our licensed hearing specialists are available <strong>Monday through Friday, 9am to 5pm</strong>. Our Online Hearing Tech support team is available <strong>24 hours a day, 7 days a week</strong> via live chat.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Is the initial hearing consultation really free?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                Yes — absolutely. Your <strong>initial hearing assessment and consultation</strong> with our licensed specialists are <strong>100% complimentary</strong> — no cost, no obligation.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              How do I schedule a remote hearing aid fitting?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                Simply <strong>book online</strong> at <a href="https://hearingbenefitservices.com/appointment">hearingbenefitservices.com/appointment</a> and choose a time that works for you. Sessions are one-on-one virtual appointments — no clinic visit required.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              What is the phone number for Hearing Benefit Services?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                You can reach us by calling <a href="tel:+18084357002"><strong>+1-808-435-7002</strong></a>, Monday through Friday, 9am to 5pm.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              What is the email address for Hearing Benefit Services?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                Email us anytime at <a href="mailto:info@hearingbenefitservices.com"><strong>info@hearingbenefitservices.com</strong></a>.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Do you offer telehealth or remote hearing care?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                Yes. All consultations, fittings, and follow-up adjustments are conducted via <strong>secure telehealth</strong> — nationwide across the entire United States. No clinic visit is ever required.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Can I get a fitting without visiting a clinic?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                Absolutely. Everything is handled <strong>100% remotely</strong>. You get expert care from the comfort of your own home — no matter where you live in the USA.
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-q" aria-expanded="false">
+              Where does Hearing Benefit Services provide services?
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-a">
+              <div class="faq-a-inner">
+                We serve patients across the <strong>entire United States</strong>. Because all services are delivered remotely via telehealth, you can receive expert hearing care from the comfort of your home — wherever you live across all 50 states.
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════════════════
+         FINAL CTA
+    ══════════════════════════════════════════════════════ -->
+    <section class="final-cta" aria-labelledby="cta-heading">
+      <div class="container">
+        <span class="section-tag" style="background:rgba(255,193,7,0.18);color:var(--amber);">Start Today — It's Free</span>
+        <h2 id="cta-heading">Better Hearing Is One Conversation Away</h2>
+        <p>Book a free remote hearing consultation, call our licensed specialists, or take the online hearing test — start your journey to better hearing today, from anywhere in the USA.</p>
+        <div class="final-cta-buttons">
+          <a href="https://hearingbenefitservices.com/appointment" class="btn btn-primary">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+            Book Free Consultation
+          </a>
+          <a href="https://hearingbenefitservices.com/hearingtest" class="btn btn-outline-white">
+            Free Hearing Test
+          </a>
+          <a href="tel:+18084357002" class="cta-phone-pill">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.02 2.18 2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+            808-435-7002
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════════════════════════════════════════
+       SCRIPTS
+  ══════════════════════════════════════════════════════ -->
+  <script>
+    /* ── FAQ Accordion ── */
+    document.querySelectorAll('.faq-q').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var item = btn.closest('.faq-item');
+        var isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(function(el) {
+          el.classList.remove('open');
+          el.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    /* ── Scroll Reveal ── */
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(function(el) { observer.observe(el); });
+  </script>
+
+</body>
+</html>
