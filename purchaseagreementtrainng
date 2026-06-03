@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Patient Agreement Generator | HBS Staff Training</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0d1f3c;
+  --navy-mid: #1a3560;
+  --blue: #1d6fa4;
+  --blue-light: #3a9fd4;
+  --gold: #c98a2a;
+  --gold-light: #e8b354;
+  --cream: #f7f4ef;
+  --white: #ffffff;
+  --gray-50: #f9fafb;
+  --gray-100: #f1f3f6;
+  --gray-200: #e2e8f0;
+  --gray-400: #94a3b8;
+  --gray-600: #475569;
+  --gray-800: #1e293b;
+  --green: #15803d;
+  --green-bg: #f0fdf4;
+  --green-border: #bbf7d0;
+  --red: #dc2626;
+  --red-bg: #fef2f2;
+  --amber: #d97706;
+  --amber-bg: #fffbeb;
+  --amber-border: #fde68a;
+  --purple: #7c3aed;
+  --purple-bg: #f5f3ff;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--gray-800);
+  line-height: 1.7;
+}
+
+/* ── TOP NAV ── */
+.top-nav {
+  background: var(--white);
+  border-bottom: 1px solid var(--gray-200);
+  padding: 14px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+.nav-left { display: flex; align-items: center; gap: 16px; }
+.nav-logo { height: 32px; }
+.nav-divider { width: 1px; height: 24px; background: var(--gray-200); }
+.nav-title { font-size: 13px; font-weight: 600; color: var(--gray-600); letter-spacing: 0.5px; }
+.nav-right { display: flex; align-items: center; gap: 12px; }
+.nav-badge {
+  background: var(--green-bg);
+  color: var(--green);
+  border: 1px solid var(--green-border);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+  letter-spacing: 0.3px;
+}
+.nav-back {
+  font-size: 12px;
+  color: var(--blue);
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.nav-back:hover { text-decoration: underline; }
+
+/* ── HERO ── */
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 55%, #1a4a7a 100%);
+  padding: 72px 40px 64px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -100px; right: -60px;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(29,111,164,0.25) 0%, transparent 65%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -80px; left: 30%;
+  width: 350px; height: 350px;
+  background: radial-gradient(circle, rgba(201,138,42,0.12) 0%, transparent 65%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+.hero-inner { max-width: 860px; margin: 0 auto; position: relative; z-index: 1; }
+.hero-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 20px;
+  padding: 6px 14px;
+  margin-bottom: 24px;
+}
+.hero-eyebrow span {
+  font-size: 11px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.75);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-family: 'DM Mono', monospace;
+}
+.hero-dot { width: 6px; height: 6px; background: var(--gold-light); border-radius: 50%; }
+.hero h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 42px;
+  color: var(--white);
+  line-height: 1.15;
+  margin-bottom: 16px;
+}
+.hero h1 em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+.hero-sub {
+  font-size: 16px;
+  color: rgba(255,255,255,0.65);
+  max-width: 580px;
+  margin-bottom: 36px;
+  font-weight: 300;
+}
+.hero-meta {
+  display: flex;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+.hero-meta-item {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.hero-meta-label {
+  font-size: 10px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-family: 'DM Mono', monospace;
+}
+.hero-meta-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgba(255,255,255,0.85);
+}
+
+/* ── MAIN LAYOUT ── */
+.main { max-width: 900px; margin: 0 auto; padding: 48px 40px 80px; }
+
+/* ── SECTION HEADERS ── */
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 24px;
+  margin-top: 52px;
+}
+.section-header:first-child { margin-top: 0; }
+.section-icon {
+  width: 36px; height: 36px;
+  background: var(--navy);
+  border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+.section-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 22px;
+  color: var(--navy);
+}
+.section-line {
+  flex: 1;
+  height: 1px;
+  background: var(--gray-200);
+}
+
+/* ── OVERVIEW CARD ── */
+.overview-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 14px;
+  padding: 28px 32px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+}
+.overview-card p {
+  font-size: 15px;
+  color: var(--gray-600);
+  margin-bottom: 20px;
+}
+.overview-card p:last-child { margin-bottom: 0; }
+.overview-card strong { color: var(--gray-800); font-weight: 600; }
+
+/* ── PURPOSE GRID ── */
+.purpose-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 0;
+}
+.purpose-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 12px;
+  padding: 22px 24px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+}
+.purpose-card-icon { font-size: 22px; margin-bottom: 10px; }
+.purpose-card h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.purpose-card p {
+  font-size: 13px;
+  color: var(--gray-600);
+  line-height: 1.6;
+}
+
+/* ── WORKFLOW STEPS ── */
+.workflow-container {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+}
+.workflow-step {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  border-bottom: 1px solid var(--gray-100);
+  transition: background 0.15s;
+}
+.workflow-step:last-child { border-bottom: none; }
+.workflow-step:hover { background: var(--gray-50); }
+.step-num {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 22px 0 22px;
+  position: relative;
+}
+.step-num-inner {
+  width: 28px; height: 28px;
+  background: var(--navy);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 12px;
+  font-weight: 700;
+  font-family: 'DM Mono', monospace;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 1;
+}
+.step-num::after {
+  content: '';
+  position: absolute;
+  top: 50px; left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: calc(100% - 50px);
+  background: var(--gray-200);
+}
+.workflow-step:last-child .step-num::after { display: none; }
+.step-body {
+  padding: 20px 24px 20px 12px;
+}
+.step-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+.step-name {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+.step-type {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 12px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  font-family: 'DM Mono', monospace;
+}
+.type-trigger { background: #fef3c7; color: #92400e; }
+.type-opportunity { background: #ede9fe; color: #5b21b6; }
+.type-document { background: #dbeafe; color: #1e40af; }
+.type-wait { background: #f1f5f9; color: #475569; }
+.type-notify { background: #d1fae5; color: #065f46; }
+.type-manual { background: #fee2e2; color: #991b1b; }
+
+.step-desc {
+  font-size: 13px;
+  color: var(--gray-600);
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+.step-fields {
+  background: var(--gray-50);
+  border: 1px solid var(--gray-200);
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 12px;
+}
+.step-field {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  border-bottom: 1px solid var(--gray-200);
+}
+.step-field:last-child { border-bottom: none; }
+.field-label {
+  padding: 8px 12px;
+  font-weight: 600;
+  color: var(--gray-600);
+  background: var(--gray-100);
+  border-right: 1px solid var(--gray-200);
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+}
+.field-value {
+  padding: 8px 12px;
+  color: var(--gray-800);
+  font-weight: 500;
+}
+.field-value code {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  background: var(--gray-200);
+  padding: 1px 6px;
+  border-radius: 4px;
+  color: var(--blue);
+}
+
+/* ── MANUAL STEP ── */
+.manual-block {
+  background: var(--amber-bg);
+  border: 1px solid var(--amber-border);
+  border-radius: 10px;
+  padding: 16px 18px;
+  margin: 8px 0;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.manual-block-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+.manual-block-content {}
+.manual-block-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+}
+.manual-block-text {
+  font-size: 13px;
+  color: #78350f;
+  line-height: 1.6;
+}
+
+/* ── SETEISHA CHECKLIST ── */
+.checklist-card {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+}
+.checklist-header {
+  background: var(--navy);
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.checklist-header h3 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+}
+.checklist-header-sub {
+  font-size: 12px;
+  color: rgba(255,255,255,0.5);
+  margin-top: 2px;
+}
+.checklist-item {
+  display: flex;
+  gap: 14px;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--gray-100);
+  align-items: flex-start;
+}
+.checklist-item:last-child { border-bottom: none; }
+.checklist-box {
+  width: 20px; height: 20px;
+  border: 2px solid var(--gray-300);
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.checklist-text { font-size: 14px; color: var(--gray-700); line-height: 1.6; }
+.checklist-text strong { color: var(--gray-800); font-weight: 600; }
+.checklist-num {
+  width: 22px; height: 22px;
+  background: var(--blue);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+/* ── PIPELINE STAGES ── */
+.pipeline-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+}
+.pipeline-stage {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 24px;
+  border-bottom: 1px solid var(--gray-100);
+  position: relative;
+}
+.pipeline-stage:last-child { border-bottom: none; }
+.pipeline-stage-num {
+  width: 28px; height: 28px;
+  background: var(--gray-100);
+  color: var(--gray-600);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 11px;
+  font-weight: 700;
+  font-family: 'DM Mono', monospace;
+  flex-shrink: 0;
+}
+.pipeline-stage-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--gray-800);
+  flex: 1;
+}
+.pipeline-stage-note {
+  font-size: 12px;
+  color: var(--gray-400);
+  font-style: italic;
+}
+.pipeline-stage.auto .pipeline-stage-num { background: #dbeafe; color: #1e40af; }
+.pipeline-stage.manual .pipeline-stage-num { background: var(--amber-bg); color: var(--amber); }
+
+/* ── IMPORTANT NOTES ── */
+.notes-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.note-card {
+  border-radius: 12px;
+  padding: 18px 20px;
+  border: 1px solid;
+}
+.note-card.warning {
+  background: var(--amber-bg);
+  border-color: var(--amber-border);
+}
+.note-card.info {
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+.note-card.success {
+  background: var(--green-bg);
+  border-color: var(--green-border);
+}
+.note-card.tip {
+  background: var(--purple-bg);
+  border-color: #ddd6fe;
+}
+.note-card-icon { font-size: 20px; margin-bottom: 8px; }
+.note-card h4 {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+.note-card.warning h4 { color: var(--amber); }
+.note-card.info h4 { color: #1d4ed8; }
+.note-card.success h4 { color: var(--green); }
+.note-card.tip h4 { color: var(--purple); }
+.note-card p { font-size: 13px; color: var(--gray-700); line-height: 1.6; }
+
+/* ── FOOTER ── */
+.footer {
+  background: var(--navy);
+  padding: 32px 40px;
+  text-align: center;
+  margin-top: 60px;
+}
+.footer img { height: 28px; opacity: 0.6; margin-bottom: 10px; }
+.footer p { font-size: 12px; color: rgba(255,255,255,0.35); }
+
+/* ── DIVIDER ── */
+.auto-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #1e40af;
+  background: #dbeafe;
+  border-radius: 10px;
+  padding: 2px 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.manual-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10px;
+  font-weight: 700;
+  color: #92400e;
+  background: #fef3c7;
+  border-radius: 10px;
+  padding: 2px 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.separator {
+  text-align: center;
+  padding: 10px 0;
+  position: relative;
+}
+.separator::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 0; right: 0;
+  height: 1px;
+  background: var(--gray-200);
+}
+.separator span {
+  position: relative;
+  background: var(--cream);
+  padding: 0 12px;
+  font-size: 11px;
+  color: var(--gray-400);
+  font-family: 'DM Mono', monospace;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+</style>
+</head>
+<body>
+
+<!-- TOP NAV -->
+<nav class="top-nav">
+  <div class="nav-left">
+    <img class="nav-logo" src="https://assets.cdn.filesafe.space/UDKdmJIdT4xB1V6Lye64/media/68f7cb4d3a4642fd12cdeaab.png" alt="HBS Logo">
+    <div class="nav-divider"></div>
+    <span class="nav-title">Staff Training</span>
+  </div>
+  <div class="nav-right">
+    <span class="nav-badge">● Live</span>
+    <a class="nav-back" href="https://hearingbenefitservices.com/hbstraininghub">← Training Hub</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">
+      <div class="hero-dot"></div>
+      <span>Workflow Training</span>
+    </div>
+    <h1>Patient Agreement <em>Generator</em></h1>
+    <p class="hero-sub">Automates purchase agreement creation, tracks 45-day trial periods, and alerts Seteisha 7 days before — and on the day — a trial expires.</p>
+    <div class="hero-meta">
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">Assigned To</span>
+        <span class="hero-meta-value">Seteisha Hall</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">Trigger</span>
+        <span class="hero-meta-value">Patient Agreement Trigger Form</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">Pipeline</span>
+        <span class="hero-meta-value">Patient Agreements Device Sales</span>
+      </div>
+      <div class="hero-meta-item">
+        <span class="hero-meta-label">Trial Duration</span>
+        <span class="hero-meta-value">45 Days</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN -->
+<main class="main">
+
+  <!-- OVERVIEW -->
+  <div class="section-header">
+    <div class="section-icon">📋</div>
+    <h2 class="section-title">Overview</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="overview-card">
+    <p>This workflow fires the moment a patient submits the <strong>Patient Agreement Trigger Form</strong>. It immediately creates a pipeline opportunity, generates a draft purchase agreement for Seteisha to review, then waits for the <strong>Trial Expiry Date</strong> to be filled in. Once that date is set, the system automatically notifies Seteisha <strong>7 days before</strong> the trial ends and again <strong>on the day it expires</strong>.</p>
+    <p>This workflow handles special cases — patients on a 45-day trial period before full purchase commitment. The automation ensures no trial slips through the cracks without a follow-up.</p>
+  </div>
+
+  <div class="purpose-grid" style="margin-top:12px;">
+    <div class="purpose-card">
+      <div class="purpose-card-icon">⚡</div>
+      <h4>What's Automated</h4>
+      <p>Opportunity creation, agreement draft generation, countdown timing, and both expiry notifications — all automatic once the form is submitted and the trial date is set.</p>
+    </div>
+    <div class="purpose-card">
+      <div class="purpose-card-icon">🙋</div>
+      <h4>What Seteisha Does</h4>
+      <p>Reviews and customizes the agreement draft, sends it to the patient, moves the pipeline stage manually as the patient progresses, and fills in the Trial Expiry Date after payment.</p>
+    </div>
+  </div>
+
+  <!-- WORKFLOW STEPS -->
+  <div class="section-header">
+    <div class="section-icon">🔄</div>
+    <h2 class="section-title">Workflow Steps</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="workflow-container">
+
+    <!-- TRIGGER -->
+    <div class="workflow-step">
+      <div class="step-num"><div class="step-num-inner">T</div></div>
+      <div class="step-body">
+        <div class="step-header">
+          <span class="step-name">Form Submitted</span>
+          <span class="step-type type-trigger">Trigger</span>
+          <span class="auto-label">⚡ Auto</span>
+        </div>
+        <p class="step-desc">Workflow starts the instant the patient submits the intake form.</p>
+        <div class="step-fields">
+          <div class="step-field">
+            <div class="field-label">Trigger Type</div>
+            <div class="field-value">Form Submitted</div>
+          </div>
+          <div class="step-field">
+            <div class="field-label">Form</div>
+            <div class="field-value">Patient Agreement Trigger Form — <a href="https://hearingbenefitservices.com/patientpurchaseagreement" target="_blank" style="color:var(--blue);font-weight:600;">hearingbenefitservices.com/patientpurchaseagreement</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- CREATE OPP -->
+    <div class="workflow-step">
+      <div class="step-num"><div class="step-num-inner">1</div></div>
+      <div class="step-body">
+        <div class="step-header">
+          <span class="step-name">Create Opportunity</span>
+          <span class="step-type type-opportunity">Opportunity</span>
+          <span class="auto-label">⚡ Auto</span>
+        </div>
+        <p class="step-desc">Creates a tracking card in the Patient Agreements Device Sales pipeline so the team can see where this patient stands.</p>
+        <div class="step-fields">
+          <div class="step-field">
+            <div class="field-label">Pipeline</div>
+            <div class="field-value">Patient Agreements Device Sales</div>
+          </div>
+          <div class="step-field">
+            <div class="field-label">Stage</div>
+            <div class="field-value">Form Submitted</div>
+          </div>
+          <div class="step-field">
+            <div class="field-label">Opportunity Name</div>
+            <div class="field-value"><code>{{contact.name}} - Agreement</code></div>
+          </div>
+          <div class="step-field">
+            <div class="field-label">Source</div>
+            <div class="field-value">Trigger Form</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SEND DOCS -->
+    <div class="workflow-step">
+      <div class="step-num"><div class="step-num-inner">2</div></div>
+      <div class="step-body">
+        <div class="step-header">
+          <span class="step-name">Send Documents & Contracts</span>
+          <span class="step-type type-document">Document</span>
+          <span class="auto-label">⚡ Auto</span>
+        </div>
+        <p class="step-desc">Generates the Kit Active iX Purchase Agreement as a <strong>draft</strong>. It will not send to the patient automatically — Seteisha must review, add payment details, and send manually.</p>
+        <div class="step-fields">
+          <div class="step-field">
+            <div class="field-label">Template</div>
+            <div class="field-value">Kit Active iX Purchase Agreement</div>
+          </div>
+          <div class="step-field">
+            <div class="field-label">From User</div>
+            <div class="field-value">Seteisha Hall</div>
+          </div>
+          <div class="step-field">
+            <div class="field-label">Sending Mode</div>
+            <div class="field-value">⚠️ Create as Draft (not sent automatically)</div>
+          </div>
+        </div>
+
+        <div class="manual-block" style="margin-top:12px;">
+          <div class="manual-block-icon">✋</div>
+          <div class="manual-block-content">
+            <div class="manual-block-title">Seteisha Action Required</div>
+            <div class="manual-block-text">Go to <strong>Documents & Contracts</strong>, find the draft for this patient, add the payment details and any custom terms, then send it. Once sent, move the pipeline to <strong>Agreement Sent (Waiting for Signature)</strong>.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WAIT -->
+    <div class="workflow-step">
+      <div class="step-num"><div class="step-num-inner">3</div></div>
+      <div class="step-body">
+        <div class="step-header">
+          <span class="step-name">Wait 7 Days Before Expiry</span>
+          <span class="step-type type-wait">Wait</span>
+          <span class="auto-label">⚡ Auto</span>
+        </div>
+        <p class="step-desc">The workflow pauses here and waits until exactly 7 days before the patient's Trial Expiry Date. The countdown does not start until Seteisha fills in that field.</p>
+        <div class="step-fields">
+          <div class="step-field">
+            <div class="field-label">Wait Type</div>
+            <div class="field-value">Until a specific date/time</div>
+          </div>
+          <div class="step-field">
+            <div class="field-label">Date Field</div>
+            <div class="field-value"><code>{{contact.trial_expiry_date}}</code></div>
+          </div>
+          <div class="step-field">
+            <div class="field-label">Timing</div>
+            <div class="field-value">7 days before expiry date</div>
+          </div>
+          <div class="step-field">
+            <div class="field-label">If Date Passed</div>
+            <div class="field-value">Continue to next action</div>
+          </div>
+        </div>
+
+        <div class="manual-block" style="margin-top:12px;">
+          <div class="manual-block-icon">📅</div>
+          <div class="manual-block-content">
+            <div class="manual-block-title">Critical: Fill in Trial Expiry Date</div>
+            <div class="manual-block-text">After the patient signs and pays, go to their contact record and fill in the <strong>Trial Expiry Date</strong> custom field. This is what activates the countdown. If this field is left blank, no expiry notifications will fire.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7-DAY NOTIFICATION -->
+    <div class="workflow-step">
+      <div class="step-num"><div class="step-num-inner">4</div></div>
+      <div class="step-body">
+        <div class="step-header">
+          <span class="step-name">Internal Notification — 7-Day Warning</span>
+          <span class="step-type type-notify">Notification</span>
+          <span class="auto-label">⚡ Auto</span>
+        </div>
+        <p class="step-desc">Seteisha receives an in-app notification exactly 7 days before the trial expires, prompting her to reach out to the patient.</p>
+        <div class="step-fields">
+          <div class="step-field">
+            <div class="field-label">Sent To</div>
+            <div class="field-value">Seteisha Hall</div>
+          </div>
+          <div class="step-field">
+            <div class="field-label">Title</div>
+            <div class="field-value"><code>7-Day Trial Expiry: {{contact.name}}</code></div>
+          </div>
+          <div class="step-field">
+            <div class="field-label">Message</div>
+            <div class="field-value">Reminder: {{contact.name}}'s hearing aid trial expires in exactly 7 days. Please check in with them!</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- WAIT 7 DAYS FIXED -->
+    <div class="workflow-step">
+      <div class="step-num"><div class="step-num-inner">5</div></div>
+      <div class="step-body">
+        <div class="step-header">
+          <span class="step-name">Wait for Trial End</span>
+          <span class="step-type type-wait">Wait</span>
+          <span class="auto-label">⚡ Auto</span>
+        </div>
+        <p class="step-desc">Fixed 7-day delay. After the warning fires, the system waits exactly 7 more days — landing on the trial expiry date.</p>
+        <div class="step-fields">
+          <div class="step-field">
+            <div class="field-label">Wait Type</div>
+            <div class="field-value">For a set period of time</div>
+          </div>
+          <div class="step-field">
+            <div class="field-label">Duration</div>
+            <div class="field-value">7 days</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- EXPIRY NOTIFICATION -->
+    <div class="workflow-step">
+      <div class="step-num"><div class="step-num-inner">6</div></div>
+      <div class="step-body">
+        <div class="step-header">
+          <span class="step-name">Trial Expired Notification</span>
+          <span class="step-type type-notify">Notification</span>
+          <span class="auto-label">⚡ Auto</span>
+        </div>
+        <p class="step-desc">On the day the trial expires, Seteisha receives a final notification. The redirect opens the opportunity card directly so she can update the pipeline.</p>
+        <div class="step-fields">
+          <div class="step-field">
+            <div class="field-label">Sent To</div>
+            <div class="field-value">Seteisha Hall</div>
+          </div>
+          <div class="step-field">
+            <div class="field-label">Title</div>
+            <div class="field-value"><code>Trial Expired Today: {{contact.name}}</code></div>
+          </div>
+          <div class="step-field">
+            <div class="field-label">Message</div>
+            <div class="field-value">{{contact.name}}'s 45-day hearing aid trial has ended today. Please update the pipeline or follow up.</div>
+          </div>
+          <div class="step-field">
+            <div class="field-label">Redirect</div>
+            <div class="field-value">Opportunity (opens pipeline card)</div>
+          </div>
+        </div>
+
+        <div class="manual-block" style="margin-top:12px;">
+          <div class="manual-block-icon">✋</div>
+          <div class="manual-block-content">
+            <div class="manual-block-title">Seteisha Action Required</div>
+            <div class="manual-block-text">Click the notification to open the opportunity. Update the pipeline stage to reflect the outcome — whether the patient is converting, extending, or returning the device.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- end workflow-container -->
+
+  <!-- PIPELINE STAGES -->
+  <div class="section-header">
+    <div class="section-icon">📊</div>
+    <h2 class="section-title">Pipeline Stages</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="pipeline-flow">
+    <div class="pipeline-stage auto">
+      <div class="pipeline-stage-num">1</div>
+      <div class="pipeline-stage-name">Form Submitted</div>
+      <span class="auto-label">⚡ Auto</span>
+    </div>
+    <div class="pipeline-stage auto">
+      <div class="pipeline-stage-num">2</div>
+      <div class="pipeline-stage-name">Agreement Drafted (Needs Review)</div>
+      <span class="auto-label">⚡ Auto</span>
+    </div>
+    <div class="pipeline-stage manual">
+      <div class="pipeline-stage-num">3</div>
+      <div class="pipeline-stage-name">Agreement Sent (Waiting for Signature)</div>
+      <span class="manual-label">✋ Manual move</span>
+    </div>
+    <div class="pipeline-stage manual">
+      <div class="pipeline-stage-num">4</div>
+      <div class="pipeline-stage-name">Agreement Signed & Paid</div>
+      <span class="manual-label">✋ Manual move</span>
+    </div>
+    <div class="pipeline-stage manual">
+      <div class="pipeline-stage-num">5</div>
+      <div class="pipeline-stage-name">Trial Active</div>
+      <span class="manual-label">✋ Manual move — fill Trial Expiry Date here</span>
+    </div>
+  </div>
+
+  <!-- SETEISHA CHECKLIST -->
+  <div class="section-header">
+    <div class="section-icon">✅</div>
+    <h2 class="section-title">Seteisha's Process Checklist</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="checklist-card">
+    <div class="checklist-header">
+      <div>
+        <h3>Step-by-Step: What To Do After a Form Is Submitted</h3>
+        <div class="checklist-header-sub">Follow this every time a patient submits the Patient Agreement Trigger Form · <a href="https://hearingbenefitservices.com/patientpurchaseagreement" target="_blank" style="color:rgba(255,255,255,0.6);text-decoration:underline;">hearingbenefitservices.com/patientpurchaseagreement</a></div>
+      </div>
+    </div>
+    <div class="checklist-item">
+      <div class="checklist-num">1</div>
+      <div class="checklist-text">Go to <strong>Documents & Contracts</strong> in GHL and find the draft agreement created for this patient.</div>
+    </div>
+    <div class="checklist-item">
+      <div class="checklist-num">2</div>
+      <div class="checklist-text">Add the <strong>payment details</strong>, device model, pricing, and any custom terms to the draft.</div>
+    </div>
+    <div class="checklist-item">
+      <div class="checklist-num">3</div>
+      <div class="checklist-text">Send the agreement to the patient and move the pipeline to <strong>Agreement Sent (Waiting for Signature)</strong>.</div>
+    </div>
+    <div class="checklist-item">
+      <div class="checklist-num">4</div>
+      <div class="checklist-text">Once the patient signs and pays, move the pipeline to <strong>Agreement Signed & Paid</strong>.</div>
+    </div>
+    <div class="checklist-item">
+      <div class="checklist-num">5</div>
+      <div class="checklist-text">Move the pipeline to <strong>Trial Active</strong> and fill in the <strong>Trial Expiry Date</strong> custom field on the contact record. This activates the countdown.</div>
+    </div>
+    <div class="checklist-item">
+      <div class="checklist-num">6</div>
+      <div class="checklist-text">When you receive the <strong>7-Day Warning notification</strong>, reach out to the patient to check in on their experience and discuss next steps.</div>
+    </div>
+    <div class="checklist-item">
+      <div class="checklist-num">7</div>
+      <div class="checklist-text">When you receive the <strong>Trial Expired notification</strong>, click it to open the opportunity and update the pipeline stage based on the outcome.</div>
+    </div>
+  </div>
+
+  <!-- IMPORTANT NOTES -->
+  <div class="section-header">
+    <div class="section-icon">💡</div>
+    <h2 class="section-title">Important Notes</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div class="notes-grid">
+    <div class="note-card warning">
+      <div class="note-card-icon">⚠️</div>
+      <h4>Trial Date Is Required</h4>
+      <p>If the Trial Expiry Date field is not filled in after the patient pays, no expiry notifications will fire. This field is the trigger for the entire countdown system.</p>
+    </div>
+    <div class="note-card info">
+      <div class="note-card-icon">📄</div>
+      <h4>Draft — Not Auto-Sent</h4>
+      <p>The agreement is created as a draft only. It will never send automatically. Seteisha must always review it and manually send to the patient.</p>
+    </div>
+    <div class="note-card success">
+      <div class="note-card-icon">🔔</div>
+      <h4>Two Notifications</h4>
+      <p>Seteisha receives two alerts: one 7 days before expiry and one on the expiry day. Both link directly to the patient's opportunity card.</p>
+    </div>
+    <div class="note-card tip">
+      <div class="note-card-icon">🔗</div>
+      <h4>Notification Redirect</h4>
+      <p>The expiry day notification redirects to the Opportunity view so Seteisha can immediately update the pipeline stage without having to search for the contact.</p>
+    </div>
+  </div>
+
+  <!-- KEY TERMS SUMMARY -->
+  <div class="section-header">
+    <div class="section-icon">📌</div>
+    <h2 class="section-title">Agreement — Key Terms at a Glance</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:12px;">
+    <div class="note-card info">
+      <div class="note-card-icon">⏱️</div>
+      <h4>45-Day Trial</h4>
+      <p>Patient has 45 days from receipt to return with no obligation. Only cost is insured return shipping. If an exchange is made within the trial, the 45-day period renews.</p>
+    </div>
+    <div class="note-card success">
+      <div class="note-card-icon">🔧</div>
+      <h4>2-Year Warranty</h4>
+      <p>Covers repairs from date of purchase. Shipping both ways via UPS — $30 standard, $50 insured. After warranty expires, all services are charged a la carte.</p>
+    </div>
+    <div class="note-card warning">
+      <div class="note-card-icon">💸</div>
+      <h4>Loss Deductible</h4>
+      <p>A loss deductible is applicable in the event of a lost hearing aid. Contact HBS for current deductible amounts.</p>
+    </div>
+    <div class="note-card tip">
+      <div class="note-card-icon">🔄</div>
+      <h4>Exchange Fee</h4>
+      <p>$45 programming fee applies if patient prefers to exchange an old hearing aid for a new one rather than repair — covers transfer of test results and settings.</p>
+    </div>
+    <div class="note-card info">
+      <div class="note-card-icon">🏥</div>
+      <h4>Insurance</h4>
+      <p>HBS handles all paperwork. If insurance sends a check to the patient, patient must pay HBS the owed amount. Benefits and eligibility are not guaranteed.</p>
+    </div>
+    <div class="note-card warning">
+      <div class="note-card-icon">🚚</div>
+      <h4>Pre-Shipment Evaluation</h4>
+      <p>All orders are subject to a mandatory personalized pre-shipment evaluation prior to dispensing, as required by law.</p>
+    </div>
+  </div>
+
+  <!-- FULL AGREEMENT TEXT -->
+  <div class="section-header" style="margin-top:52px;">
+    <div class="section-icon">📄</div>
+    <h2 class="section-title">Full Agreement Text Reference</h2>
+    <div class="section-line"></div>
+  </div>
+
+  <div style="background:var(--white);border:1px solid var(--gray-200);border-radius:14px;overflow:hidden;box-shadow:0 1px 6px rgba(0,0,0,0.04);">
+    <div style="background:var(--navy);padding:16px 24px;display:flex;align-items:center;gap:10px;">
+      <span style="font-size:16px;">📋</span>
+      <div>
+        <div style="font-size:14px;font-weight:600;color:var(--white);">Kit Active iX Purchase Agreement</div>
+        <div style="font-size:11px;color:rgba(255,255,255,0.45);margin-top:2px;">Reference copy — actual agreement is generated as a draft in GHL Documents & Contracts</div>
+      </div>
+    </div>
+    <div style="padding:32px 36px;font-size:14px;color:var(--gray-700);line-height:1.9;">
+
+      <p style="font-size:18px;font-weight:700;text-align:center;color:var(--navy);margin-bottom:24px;font-family:'DM Serif Display',serif;">PURCHASE AGREEMENT & TERMS OF SALE</p>
+
+      <p style="margin-bottom:20px;"><strong>1. The Agreement</strong> This Binding Purchase Agreement is entered into between Hearing Benefit Services, LLC and the Purchaser, whose information is captured dynamically as:</p>
+      <ul style="margin-left:24px;margin-bottom:20px;list-style:disc;">
+        <li><strong>Customer Name:</strong> <code style="background:var(--gray-100);padding:2px 6px;border-radius:4px;font-family:'DM Mono',monospace;font-size:12px;">{{contact.name}}</code></li>
+        <li><strong>Email Address:</strong> <code style="background:var(--gray-100);padding:2px 6px;border-radius:4px;font-family:'DM Mono',monospace;font-size:12px;">{{contact.email}}</code></li>
+        <li><strong>Phone Number:</strong> <code style="background:var(--gray-100);padding:2px 6px;border-radius:4px;font-family:'DM Mono',monospace;font-size:12px;">{{contact.phone}}</code></li>
+      </ul>
+
+      <div style="background:var(--gray-100);border:1px dashed var(--gray-400);border-radius:8px;padding:16px;text-align:center;color:var(--gray-400);font-style:italic;margin-bottom:20px;">[ Product Block — added manually by Seteisha before sending ]</div>
+
+      <p style="margin-bottom:20px;">I ("Buyer") hereby purchase from Low-Cost Hearing Solutions, LLC DBA Hearing Benefit Services HBS ("Seller"), the hearing system and equipment described below, agree to pay the purchase price written, and honor the following terms and conditions of the sale herein specified. The equipment is new and warranted against defects in material and workmanship.</p>
+
+      <p style="font-weight:700;color:var(--navy);margin-bottom:8px;">Pre-Shipment Evaluation:</p>
+      <ul style="margin-left:24px;margin-bottom:20px;list-style:disc;">
+        <li>All hearing aid orders are subject to a mandatory personalized pre-shipment evaluation prior to dispensing, as required by law.</li>
+      </ul>
+
+      <p style="font-weight:700;color:var(--navy);margin-bottom:8px;">Trial Period Information:</p>
+      <ul style="margin-left:24px;margin-bottom:20px;list-style:disc;">
+        <li>I acknowledge that I have a 45-day trial period in the first pair of hearing aids with no obligation.</li>
+        <li>I have been advised that upon cancellation, I am entitled to receive a refund of any payment made for the hearing aid; the only fee is shipping back the hearing aids with the package insured.</li>
+        <li>I acknowledge that if I choose to make any returns or exchanges, I need to make these within the 45-day trial period, and then my 45-day trial will renew.</li>
+        <li>I acknowledge I am responsible for any damages or lost devices that occur during my trial period.</li>
+      </ul>
+
+      <p style="font-weight:700;color:var(--navy);margin-bottom:8px;">Warranty Information:</p>
+      <ul style="margin-left:24px;margin-bottom:20px;list-style:disc;">
+        <li>I understand I have a 2-year repair on the hearing aids, which starts on the date purchased.</li>
+        <li>After the warranty expires, all services will be charged a la carte.</li>
+        <li>Repairs and exchanges during warranty pay for shipping there and back - UPS $30 or $50 with insurance.</li>
+        <li>If you prefer to exchange your old hearing aid for a new one rather than have it repaired, there will be a $45 programming fee to transfer your test results and settings from the old device to the new device.</li>
+        <li>A loss deductible is applicable in the event of a lost hearing aid. Please contact HBS for current deductible amounts.</li>
+      </ul>
+
+      <p style="font-weight:700;color:var(--navy);margin-bottom:8px;">Insurance Payment:</p>
+      <ul style="margin-left:24px;margin-bottom:20px;list-style:disc;">
+        <li>I acknowledge if the insurance sends me a check for the amount listed above, I will PAY HBS the pending amount that is owed.</li>
+        <li>We cannot guarantee your benefits or eligibility with your insurance plan.</li>
+        <li>Your insurance plan contract is between you and your insurance company.</li>
+        <li>Upon completion of our Patient Information Form and your assignment of benefits, we will extend the benefit offered by your insurance company and file for reimbursement.</li>
+        <li>We will handle all of the paperwork for you. All payments for services not covered by your insurance plan are expected at the time of visit or kindly return the hearing device.</li>
+      </ul>
+
+      <p style="font-weight:700;color:var(--navy);margin-bottom:8px;">Disclosures:</p>
+      <ul style="margin-left:24px;margin-bottom:20px;list-style:disc;">
+        <li>Buyer has been advised that a hearing aid will not restore normal hearing, nor will it prevent further hearing loss.</li>
+        <li>Hearing Benefit Services (HBS) does not take the place of a medical doctor and medical advice.</li>
+        <li>HBS always recommends seeing a person licensed to practice medicine in your state, such as a Primary Care, Audiologist (AuD), or Ear Nose and Throat specialist (ENT), prior to buying hearing aids.</li>
+        <li>I have been advised by HBS that the Food and Drug Administration has determined that my best health interest would be served if I had a medical evaluation by a licensed physician.</li>
+        <li>I have either already been to an ENT/AuD or do not wish a medical evaluation before purchasing a hearing aid.</li>
+        <li>I am over the age of 18.</li>
+      </ul>
+
+      <p style="font-weight:700;color:var(--navy);margin-bottom:8px;">State-Specific Disclosures:</p>
+      <ul style="margin-left:24px;margin-bottom:20px;list-style:disc;">
+        <li><strong>Florida:</strong> Any complaint concerning this hearing aid and guarantee, if not resolved with the seller, may be directed to the Florida Department of Health, Consumer Services Unit, 4052 Bald Cypress Way, Bin #C75, Tallahassee, FL 32399-3275; telephone (888) 419-3456.</li>
+        <li><strong>California:</strong> This hearing aid was dispensed by a licensed hearing aid dispenser. Any examination or representation made in connection with this sale is not a medical examination, diagnosis, or prescription and must not be regarded as medical advice. California residents have the right to cancel this purchase within 30 days of delivery for a full refund.</li>
+      </ul>
+
+      <div style="border-top:1px solid var(--gray-200);padding-top:20px;margin-top:8px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;">
+        <div><strong>Purchaser Print Name:</strong> <code style="background:var(--gray-100);padding:2px 6px;border-radius:4px;font-family:'DM Mono',monospace;font-size:12px;">{{contact.name}}</code></div>
+        <div><strong>Executed on date of:</strong> <code style="background:var(--gray-100);padding:2px 6px;border-radius:4px;font-family:'DM Mono',monospace;font-size:12px;">{{date.current}}</code></div>
+      </div>
+
+    </div>
+  </div>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <img src="https://assets.cdn.filesafe.space/UDKdmJIdT4xB1V6Lye64/media/68f7cb4d3a4642fd12cdeaab.png" alt="HBS Logo">
+  <p>Hearing Benefit Services · hearingbenefitservices.com · Honolulu, HI · Staff Training Document</p>
+</footer>
+
+</body>
+</html>
