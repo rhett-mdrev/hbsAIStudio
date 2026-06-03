@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Online Store Pipeline | Hearing Benefit Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f0f4f8;
+      color: #1a202c;
+      line-height: 1.7;
+    }
+
+    /* ── LOGIN OVERLAY ── */
+    #login-overlay {
+      position: fixed; inset: 0;
+      background: linear-gradient(135deg, #0a1628 0%, #1a3a5c 100%);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 9999;
+    }
+    .login-box {
+      background: #fff;
+      border-radius: 16px;
+      padding: 48px 40px;
+      width: min(420px, 92vw);
+      box-shadow: 0 24px 64px rgba(0,0,0,.35);
+      text-align: center;
+    }
+    .login-logo {
+      font-family: 'Lora', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0a1628;
+      margin-bottom: 6px;
+      letter-spacing: 0.02em;
+    }
+    .login-box h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.5rem;
+      color: #0a1628;
+      margin-bottom: 6px;
+    }
+    .login-box p { font-size: .9rem; color: #718096; margin-bottom: 28px; }
+    .login-divider {
+      width: 48px; height: 3px;
+      background: linear-gradient(90deg, #b8972a, #d4af37);
+      border-radius: 2px;
+      margin: 0 auto 24px;
+    }
+    .login-box input {
+      width: 100%; padding: 12px 16px;
+      border: 1.5px solid #cbd5e0; border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem; margin-bottom: 14px;
+      transition: border-color .2s;
+    }
+    .login-box input:focus { outline: none; border-color: #b8972a; }
+    .login-box button {
+      width: 100%; padding: 13px;
+      background: linear-gradient(135deg, #0a1628, #1a3a5c);
+      color: #fff; border: none; border-radius: 8px;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1rem; font-weight: 600; cursor: pointer;
+      transition: opacity .2s;
+      letter-spacing: 0.02em;
+    }
+    .login-box button:hover { opacity: .88; }
+    #login-error {
+      color: #e53e3e; font-size: .85rem;
+      margin-top: 10px; display: none;
+    }
+
+    /* ── MAIN CONTENT ── */
+    #main-content { display: none; }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #0a1628 0%, #1a3a5c 100%);
+      color: #fff;
+      padding: 56px 24px 48px;
+      text-align: center;
+      border-bottom: 4px solid #b8972a;
+    }
+    header .eyebrow {
+      font-size: .8rem; font-weight: 600;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: #b8972a; margin-bottom: 12px;
+    }
+    header h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      font-weight: 700; margin-bottom: 12px;
+    }
+    header p { font-size: 1rem; opacity: .82; max-width: 600px; margin: 0 auto; }
+
+    /* ── STICKY NAV ── */
+    nav.sticky {
+      position: sticky; top: 0; z-index: 100;
+      background: #0a1628;
+      padding: 0 16px;
+      overflow-x: auto; white-space: nowrap;
+      box-shadow: 0 2px 12px rgba(0,0,0,.3);
+      border-bottom: 2px solid #b8972a;
+    }
+    nav.sticky a {
+      display: inline-block; color: rgba(255,255,255,.72);
+      text-decoration: none; padding: 14px 16px;
+      font-size: .82rem; font-weight: 500;
+      letter-spacing: 0.03em;
+      transition: color .2s, background .2s;
+    }
+    nav.sticky a:hover { color: #d4af37; background: rgba(255,255,255,.06); }
+
+    /* ── LAYOUT ── */
+    .container { max-width: 980px; margin: 0 auto; padding: 40px 20px 80px; }
+
+    /* ── SECTION CARDS ── */
+    section {
+      background: #fff;
+      border-radius: 14px;
+      padding: 36px 32px;
+      margin-bottom: 28px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.07);
+    }
+    section h2 {
+      font-family: 'Lora', serif;
+      font-size: 1.3rem; font-weight: 700;
+      color: #0a1628; margin-bottom: 16px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid #b8972a;
+      display: flex; align-items: center; gap: 10px;
+    }
+    section h3 {
+      font-size: 1rem; font-weight: 600;
+      color: #1a3a5c; margin: 22px 0 8px;
+    }
+    section p { margin-bottom: 12px; color: #2d3748; font-size: .95rem; }
+    section ul, section ol { padding-left: 20px; margin-bottom: 12px; }
+    section li { margin-bottom: 6px; color: #2d3748; font-size: .93rem; }
+
+    /* ── INFO BOXES ── */
+    .info-box, .warn-box, .success-box, .purple-box {
+      border-radius: 10px; padding: 16px 20px;
+      margin: 16px 0; font-size: .92rem;
+    }
+    .info-box    { background: #eff6ff; border-left: 4px solid #2563eb; color: #1e3a5f; }
+    .warn-box    { background: #fff7ed; border-left: 4px solid #d97706; color: #92400e; }
+    .success-box { background: #f0fdf4; border-left: 4px solid #16a34a; color: #14532d; }
+    .purple-box  { background: #faf5ff; border-left: 4px solid #7c3aed; color: #3b0764; }
+    .gold-box    { background: #fefce8; border-left: 4px solid #b8972a; color: #713f12; }
+
+    /* ── CHIPS ── */
+    .chip {
+      display: inline-block; padding: 3px 12px;
+      border-radius: 20px; font-size: .75rem; font-weight: 600;
+      margin: 2px; white-space: nowrap;
+    }
+    .chip-navy   { background: #e8f0fb; color: #0a1628; border: 1px solid #b8c9e8; }
+    .chip-teal   { background: #e1f5ee; color: #085041; border: 1px solid #9fe1cb; }
+    .chip-blue   { background: #eff6ff; color: #1e3a5f; border: 1px solid #b5d4f4; }
+    .chip-amber  { background: #faeeda; color: #854f0b; border: 1px solid #fac775; }
+    .chip-purple { background: #faf5ff; color: #3b0764; border: 1px solid #d8b4fe; }
+    .chip-gray   { background: #f1efe8; color: #444441; border: 1px solid #d3d1c7; }
+    .chip-green  { background: #f0fdf4; color: #14532d; border: 1px solid #bbf7d0; }
+    .chip-red    { background: #fef2f2; color: #7f1d1d; border: 1px solid #fecaca; }
+
+    /* ── TAG PILL ── */
+    .tag {
+      display: inline-block;
+      background: #0a1628; color: #d4af37;
+      border-radius: 4px; padding: 1px 8px;
+      font-size: .73rem; font-weight: 600;
+      font-family: 'Poppins', monospace;
+      margin: 2px; letter-spacing: 0.03em;
+    }
+    .tag-remove {
+      background: #fef2f2; color: #991b1b;
+      border: 1px dashed #fca5a5;
+    }
+    .tag-add {
+      background: #16a34a; color: #fff;
+      border: none;
+    }
+    .tag-manual {
+      background: #b8972a; color: #fff;
+      border: none;
+    }
+
+    /* ── PIPELINE TABLE ── */
+    .pipeline-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: .88rem; }
+    .pipeline-table th {
+      background: #0a1628; color: #fff;
+      padding: 12px 14px; text-align: left;
+      font-weight: 600; letter-spacing: 0.03em;
+    }
+    .pipeline-table th:first-child { border-radius: 8px 0 0 0; }
+    .pipeline-table th:last-child  { border-radius: 0 8px 0 0; }
+    .pipeline-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid #e2e8f0;
+      vertical-align: top;
+      color: #2d3748;
+    }
+    .pipeline-table tr:nth-child(even) td { background: #f8faff; }
+    .pipeline-table tr.wade-row td { background: #faf5ff; }
+    .pipeline-table tr.wade-row td:first-child { border-left: 3px solid #7c3aed; }
+    .stage-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px;
+      background: #0a1628; color: #d4af37;
+      border-radius: 50%; font-weight: 700; font-size: .82rem;
+      flex-shrink: 0;
+    }
+    .stage-num-purple {
+      background: #7c3aed; color: #fff;
+    }
+    .owner-badge {
+      display: inline-block; padding: 3px 10px;
+      border-radius: 20px; font-size: .75rem; font-weight: 600;
+      white-space: nowrap;
+    }
+    .owner-auto    { background: #e1f5ee; color: #085041; }
+    .owner-set     { background: #eff6ff; color: #1e3a5f; }
+    .owner-andrea  { background: #faeeda; color: #854f0b; }
+    .owner-wade    { background: #faf5ff; color: #3b0764; }
+    .owner-cust    { background: #f1efe8; color: #444441; }
+
+    /* ── TIMELINE ── */
+    .timeline { position: relative; padding-left: 36px; margin-top: 8px; }
+    .timeline::before {
+      content: ''; position: absolute; left: 12px; top: 4px; bottom: 4px;
+      width: 3px; background: linear-gradient(180deg, #b8972a, #d4af37);
+      border-radius: 2px;
+    }
+    .timeline-item { position: relative; margin-bottom: 20px; }
+    .timeline-item::before {
+      content: ''; position: absolute; left: -28px; top: 5px;
+      width: 14px; height: 14px; border-radius: 50%;
+      background: #b8972a; border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #b8972a;
+    }
+    .timeline-item .day {
+      font-size: .75rem; font-weight: 700; color: #b8972a;
+      text-transform: uppercase; letter-spacing: 0.08em;
+      margin-bottom: 2px;
+    }
+    .timeline-item strong { color: #0a1628; display: block; margin-bottom: 2px; font-size: .95rem; }
+    .timeline-item p { font-size: .88rem; color: #4a5568; margin: 0; }
+
+    /* ── CHECKLIST ── */
+    .checklist { list-style: none; padding: 0; }
+    .checklist li {
+      padding: 10px 0 10px 36px;
+      position: relative;
+      border-bottom: 1px solid #f0f4f8;
+      color: #2d3748; font-size: .93rem;
+    }
+    .checklist li::before {
+      content: '☐'; position: absolute; left: 0;
+      font-size: 1.15rem; color: #b8972a;
+    }
+
+    /* ── LEGEND ── */
+    .legend {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      margin-bottom: 20px; padding: 16px 20px;
+      background: #f8faff; border-radius: 10px;
+      border: 1px solid #e2e8f0;
+    }
+    .legend-item {
+      display: flex; align-items: center; gap: 6px;
+      font-size: .82rem; font-weight: 500; color: #4a5568;
+    }
+    .legend-dot {
+      width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center; padding: 32px 16px;
+      font-size: .82rem; color: #718096;
+      border-top: 1px solid #e2e8f0;
+      background: #fff;
+    }
+
+    @media (max-width: 640px) {
+      section { padding: 24px 18px; }
+      .login-box { padding: 36px 24px; }
+      .pipeline-table { font-size: .8rem; }
+      .pipeline-table td, .pipeline-table th { padding: 10px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- LOGIN OVERLAY -->
+<div id="login-overlay">
+  <div class="login-box">
+    <div class="login-logo">Hearing Benefit Services</div>
+    <div class="login-divider"></div>
+    <h2>Staff Portal</h2>
+    <p>Internal use only — please sign in to continue</p>
+    <input type="text" id="uname" placeholder="Username" autocomplete="username" />
+    <input type="password" id="pword" placeholder="Password" autocomplete="current-password" />
+    <button onclick="checkLogin()">Sign In</button>
+    <p id="login-error">Incorrect username or password. Please try again.</p>
+  </div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div id="main-content">
+
+  <header>
+    <div class="eyebrow">Internal Reference Document</div>
+    <h1>Online Store Purchase Pipeline</h1>
+    <p>Complete stage-by-stage guide for Andrea and Seteisha — how every online order moves from purchase to delivered customer.</p>
+  </header>
+
+  <nav class="sticky">
+    <a href="#overview">Overview</a>
+    <a href="#roles">Team Roles</a>
+    <a href="#policies">Key Policies</a>
+    <a href="#pipeline">Pipeline Stages</a>
+    <a href="#tags">Tags Reference</a>
+    <a href="#post-delivery">Post-Delivery</a>
+    <a href="#feedback">Feedback Gate</a>
+    <a href="#feedbackform">Feedback Form</a>
+    <a href="#messages">Message Copy</a>
+    <a href="#lapsed">Lapsed Orders</a>
+    <a href="#feedbackform">Feedback Form</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- OVERVIEW -->
+    <section id="overview">
+      <h2>📋 Overview</h2>
+      <p>When a customer purchases hearing aids from the HBS online store, their order does not ship immediately. Every order goes through a mandatory pre-shipment consultation with Seteisha before Andrea programs and ships the hearing aids.</p>
+      <p>This document is your reference for every stage, who owns it, what tags are applied, and what automated messages go out.</p>
+
+      <div class="success-box">
+        ✅ <strong>The golden rule:</strong> Nothing ships until Seteisha completes the appointment and files the outcome form. Andrea programs and ships based on that form — no separate patient appointment needed.
+      </div>
+
+      <h3>Complete Post-Purchase Timeline</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="day">Purchase</div>
+          <strong>Order placed — hold begins</strong>
+          <p>Payment collected. 30-day clock starts. Booking link sent automatically.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="day">WA/DE Only</div>
+          <strong>Audiologist document required</strong>
+          <p>Customer emails prescription to HBS before booking link is released.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="day">Seteisha</div>
+          <strong>Virtual appointment + outcome form</strong>
+          <p>Seteisha conducts assessment, files outcome form, orders from Signia.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="day">Andrea</div>
+          <strong>Receives, programs, ships</strong>
+          <p>Andrea receives aids from Signia, programs using outcome form, ships via PirateShip.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="day">Day 2</div>
+          <strong>Check-in sent</strong>
+          <p>Automated SMS + email asking how the hearing aids are feeling.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="day">Day 14</div>
+          <strong>2-week follow-up sent</strong>
+          <p>Automated SMS + email — how is the product doing, do they need help?</p>
+        </div>
+        <div class="timeline-item">
+          <div class="day">Day 21</div>
+          <strong>Feedback form sent</strong>
+          <p>Customer rates experience 1–5 stars on HBS website form.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="day">Day 22+ (if 3–5 stars)</div>
+          <strong>Review request sent</strong>
+          <p>Links to Google, Facebook, and HBS website testimonials. Then moved to Current Client pipeline.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TEAM ROLES -->
+    <section id="roles">
+      <h2>👥 Team Roles</h2>
+      <table class="pipeline-table">
+        <thead>
+          <tr>
+            <th>Team Member</th>
+            <th>Pipeline Responsibilities</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="owner-badge owner-set">Seteisha Hall</span></td>
+            <td>
+              <ul style="margin:0; padding-left:18px;">
+                <li>Conducts virtual hearing assessment</li>
+                <li>Fills out outcome form completely (model, dome, receiver, all settings)</li>
+                <li>Orders hearing aids via Signia website — ships to Andrea's address</li>
+                <li>Reviews and approves WA/DE audiologist documents</li>
+                <li>Marks GHL tasks complete to trigger next automation steps</li>
+              </ul>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="owner-badge owner-andrea">Andrea Sotolongo</span></td>
+            <td>
+              <ul style="margin:0; padding-left:18px;">
+                <li>Receives hearing aids from Signia</li>
+                <li>Programs hearing aids using Seteisha's outcome form — no patient appointment needed</li>
+                <li>Creates shipping label in PirateShip</li>
+                <li>Schedules UPS or FedEx pickup at her location</li>
+                <li>Marks GHL tasks complete at each handoff point</li>
+              </ul>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- KEY POLICIES -->
+    <section id="policies">
+      <h2>📌 Key Policies</h2>
+
+      <div class="gold-box" style="margin-bottom:16px;">
+        <strong>30-Day Hold Policy</strong><br>
+        All orders are held after purchase until the pre-shipment appointment is completed. Customer has 30 days from purchase to complete their appointment or the order is automatically cancelled and fully refunded.<br><br>
+        <span class="chip chip-amber">Day 15</span> Reminder SMS/email sent &nbsp;
+        <span class="chip chip-amber">Day 25</span> Final warning sent &nbsp;
+        <span class="chip chip-red">Day 30</span> Auto-cancelled — full refund issued
+      </div>
+
+      <div class="purple-box">
+        <strong>Washington &amp; Delaware Rule</strong><br>
+        These states require an in-person audiologist consultation before a hearing aid can be dispensed. Customers must email their audiologist prescription or recommendation letter to <strong>info@hearingbenefitservices.com</strong> before the booking link is released. Seteisha or Andrea reviews the document and approves before proceeding.
+      </div>
+
+      <div class="info-box" style="margin-top:16px;">
+        <strong>Outcome Form = Programming Instructions</strong><br>
+        The outcome form Seteisha fills out is the only source Andrea uses to program the hearing aids. It must be completed in full — model, dome size, receiver, and all relevant settings. Andrea will not contact the patient for programming information.
+      </div>
+    </section>
+
+    <!-- PIPELINE STAGES -->
+    <section id="pipeline">
+      <h2>🗂️ Pipeline Stages</h2>
+
+      <div class="legend">
+        <div class="legend-item"><div class="legend-dot" style="background:#085041;"></div> Automated</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#1e3a5f;"></div> Seteisha</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#854f0b;"></div> Andrea</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#7c3aed;"></div> WA/DE only</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#444441;"></div> Customer</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#16a34a;"></div> Tag added automatically</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#b8972a;"></div> Tag added manually by team</div>
+        <div class="legend-item"><div class="legend-dot" style="background:#fef2f2;border:1px dashed #fca5a5;"></div> Tag removed</div>
+      </div>
+
+      <table class="pipeline-table">
+        <thead>
+          <tr>
+            <th style="width:42px;">#</th>
+            <th>Stage</th>
+            <th>Owner</th>
+            <th>GHL Task / Tags</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="stage-num">1</span></td>
+            <td>
+              <strong>Purchase completed</strong><br>
+              <span style="font-size:.82rem;color:#718096;">Order confirmed, payment collected, 30-day clock starts. Booking link SMS/email sent automatically.</span>
+            </td>
+            <td><span class="owner-badge owner-auto">Automated</span></td>
+            <td>
+              Add: <span class="tag tag-add">online-purchase</span> <span class="tag tag-add">order-hold</span>
+            </td>
+          </tr>
+          <tr class="wade-row">
+            <td><span class="stage-num stage-num-purple">2</span></td>
+            <td>
+              <strong>Awaiting audiologist document</strong><br>
+              <span style="font-size:.82rem;color:#718096;">WA/DE only — customer emails prescription or recommendation letter to HBS.</span>
+            </td>
+            <td><span class="owner-badge owner-wade">WA/DE only</span></td>
+            <td>
+              Add: <span class="tag tag-add">wade-awaiting-doc</span><br>
+              Remove: <span class="tag tag-remove">booking-link-sent</span>
+            </td>
+          </tr>
+          <tr class="wade-row">
+            <td><span class="stage-num stage-num-purple">3</span></td>
+            <td>
+              <strong>Document received &amp; reviewed</strong><br>
+              <span style="font-size:.82rem;color:#718096;">WA/DE only — Seteisha or Andrea approves document. Triggers booking link to be sent.</span>
+            </td>
+            <td><span class="owner-badge owner-wade">WA/DE only</span></td>
+            <td>
+              Add: <span class="tag tag-add">wade-doc-approved</span><br>
+              Remove: <span class="tag tag-remove">wade-awaiting-doc</span>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="stage-num">4</span></td>
+            <td>
+              <strong>Booking link sent</strong><br>
+              <span style="font-size:.82rem;color:#718096;">Customer receives SMS and email with appointment link.</span>
+            </td>
+            <td><span class="owner-badge owner-auto">Automated</span></td>
+            <td>
+              Add: <span class="tag tag-add">booking-link-sent</span>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="stage-num">5</span></td>
+            <td>
+              <strong>Appointment booked</strong><br>
+              <span style="font-size:.82rem;color:#718096;">Customer self-schedules via the booking link.</span>
+            </td>
+            <td><span class="owner-badge owner-cust">Customer</span></td>
+            <td>
+              Add: <span class="tag tag-add">appointment-booked</span><br>
+              Remove: <span class="tag tag-remove">booking-link-sent</span>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="stage-num">6</span></td>
+            <td>
+              <strong>Appointment completed — outcome form filed</strong><br>
+              <span style="font-size:.82rem;color:#718096;">Seteisha conducts virtual assessment and fills outcome form in full.</span>
+            </td>
+            <td><span class="owner-badge owner-set">Seteisha</span></td>
+            <td>
+              Add: <span class="tag tag-add">outcome-form-filed</span><br>
+              Remove: <span class="tag tag-remove">appointment-booked</span><br>
+              <span style="font-size:.8rem;color:#4a5568;">✦ Mark task "Outcome form filed — ready to order" complete → triggers Andrea notification</span>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="stage-num">7</span></td>
+            <td>
+              <strong>Hearing aid ordered on Signia</strong><br>
+              <span style="font-size:.82rem;color:#718096;">Seteisha logs into Signia website, places order — ships to Andrea's address.</span>
+            </td>
+            <td><span class="owner-badge owner-set">Seteisha</span></td>
+            <td>
+              Add: <span class="tag tag-manual">aids-ordered-signia</span><br>
+              <span style="font-size:.8rem;color:#4a5568;">✦ Andrea auto-notified: "Aids ordered — expect delivery"</span>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="stage-num">8</span></td>
+            <td>
+              <strong>Hearing aid received by Andrea</strong><br>
+              <span style="font-size:.82rem;color:#718096;">Andrea confirms delivery from Signia.</span>
+            </td>
+            <td><span class="owner-badge owner-andrea">Andrea</span></td>
+            <td>
+              Add: <span class="tag tag-manual">aids-received-andrea</span><br>
+              <span style="font-size:.8rem;color:#92400e;">✦ Andrea manually adds tag in GHL after confirming delivery, then marks task "Hearing aids received — ready to program" complete</span>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="stage-num">9</span></td>
+            <td>
+              <strong>Hearing aids programmed</strong><br>
+              <span style="font-size:.82rem;color:#718096;">Andrea programs using Seteisha's outcome form — no customer appointment needed.</span>
+            </td>
+            <td><span class="owner-badge owner-andrea">Andrea</span></td>
+            <td>
+              Add: <span class="tag tag-manual">aids-programmed</span><br>
+              Remove: <span class="tag tag-remove">aids-received-andrea</span><br>
+              <span style="font-size:.8rem;color:#92400e;">✦ Andrea manually adds tag in GHL after programming is complete, then marks task "Aids programmed — ready to ship" complete</span>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="stage-num">10</span></td>
+            <td>
+              <strong>Shipping label created — PirateShip</strong><br>
+              <span style="font-size:.82rem;color:#718096;">Andrea creates label and schedules UPS or FedEx pickup at her location.</span>
+            </td>
+            <td><span class="owner-badge owner-andrea">Andrea</span></td>
+            <td>
+              Add: <span class="tag tag-manual">shipping-label-created</span><br>
+              Remove: <span class="tag tag-remove">aids-programmed</span><br>
+              <span style="font-size:.8rem;color:#92400e;">✦ Andrea manually adds tag in GHL after creating label and scheduling pickup in PirateShip</span>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="stage-num">11</span></td>
+            <td>
+              <strong>Picked up and in transit</strong><br>
+              <span style="font-size:.82rem;color:#718096;">Andrea moves contact to this stage — triggers automatic shipping SMS and email to customer immediately.</span>
+            </td>
+            <td><span class="owner-badge owner-andrea">Andrea / Auto</span></td>
+            <td>
+              Add: <span class="tag tag-manual">in-transit</span><br>
+              Remove: <span class="tag tag-remove">shipping-label-created</span> <span class="tag tag-remove">order-hold</span><br>
+              <span style="font-size:.8rem;color:#92400e;">✦ Andrea manually moves contact to this stage in GHL after carrier pickup</span><br>
+              <span style="font-size:.8rem;color:#085041;">✦ Shipping SMS + email fires automatically the moment Andrea moves the stage</span>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="stage-num">12</span></td>
+            <td>
+              <strong>Delivered to customer</strong><br>
+              <span style="font-size:.82rem;color:#718096;">Customer receives hearing aids. Day 2 check-in fires automatically.</span>
+            </td>
+            <td><span class="owner-badge owner-auto">Automated</span></td>
+            <td>
+              Add: <span class="tag tag-manual">delivered</span> <span class="tag tag-add">order-hold-complete</span><br>
+              Remove: <span class="tag tag-remove">order-hold</span> <span class="tag tag-remove">in-transit</span><br>
+              <span style="font-size:.8rem;color:#92400e;">✦ Andrea manually confirms delivery by checking UPS or FedEx tracking website, then moves contact to this stage in GHL</span><br>
+              <span style="font-size:.8rem;color:#085041;">✦ Day 2 check-in SMS + email fires automatically once stage is moved</span>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="stage-num">13</span></td>
+            <td>
+              <strong>2-week follow-up</strong><br>
+              <span style="font-size:.82rem;color:#718096;">Day 14 after delivery — automated check-in asking how the hearing aids are performing and if they need help.</span>
+            </td>
+            <td><span class="owner-badge owner-auto">Automated</span></td>
+            <td>
+              Add: <span class="tag tag-add">2-week-followup-sent</span><br>
+              <span style="font-size:.8rem;color:#4a5568;">✦ If patient replies needing help — assign task to Seteisha for follow-up appointment</span>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="stage-num">14</span></td>
+            <td>
+              <strong>Feedback form sent</strong><br>
+              <span style="font-size:.82rem;color:#718096;">Day 21 after delivery — automated SMS + email with link to HBS feedback form. Customer rates 1–5 stars.</span>
+            </td>
+            <td><span class="owner-badge owner-auto">Automated</span></td>
+            <td>
+              Add: <span class="tag tag-add">feedback-form-sent</span>
+            </td>
+          </tr>
+          <tr>
+            <td><span class="stage-num">15</span></td>
+            <td>
+              <strong>Feedback received — review gate</strong><br>
+              <span style="font-size:.82rem;color:#718096;">3–5 stars: review request sent next day. 1–2 stars: Seteisha task assigned, no review request sent.</span>
+            </td>
+            <td><span class="owner-badge owner-auto">Automated</span></td>
+            <td>
+              Add: <span class="tag tag-add">feedback-received</span><br>
+              If ≥ 3 stars: <span class="tag">review-request-pending</span><br>
+              If ≤ 2 stars: <span class="tag">feedback-negative</span> + Seteisha task
+            </td>
+          </tr>
+          <tr>
+            <td><span class="stage-num">16</span></td>
+            <td>
+              <strong>Review request sent</strong><br>
+              <span style="font-size:.82rem;color:#718096;">Sent 1 day after 3–5 star feedback. Links to Google, Facebook, and HBS testimonials. Then move to Current Client pipeline.</span>
+            </td>
+            <td><span class="owner-badge owner-auto">Automated</span></td>
+            <td>
+              Add: <span class="tag tag-add">review-request-sent</span><br>
+              Remove: <span class="tag tag-remove">review-request-pending</span><br>
+              <span style="font-size:.8rem;color:#4a5568;">✦ Move to Current Client pipeline after sending</span>
+            </td>
+          </tr>
+          <tr style="background:#fff7ed;">
+            <td><span class="stage-num" style="background:#d97706;color:#fff;">!</span></td>
+            <td>
+              <strong>Order lapsed — manual refund required</strong><br>
+              <span style="font-size:.82rem;color:#718096;">Day 30 reached with no appointment completed. Automated internal notification sent to Seteisha. Seteisha must manually process full refund via GHL Payments.</span>
+            </td>
+            <td><span class="owner-badge owner-andrea" style="background:#faeeda;color:#854f0b;">Seteisha</span></td>
+            <td>
+              Add: <span class="tag tag-add">order-lapsed</span><br>
+              Remove: <span class="tag tag-remove">order-hold</span><br>
+              <span style="font-size:.8rem;color:#92400e;">✦ Internal notification + task fires to Seteisha automatically</span><br>
+              <span style="font-size:.8rem;font-weight:600;color:#7f1d1d;">Step 1:</span> <span style="font-size:.8rem;color:#92400e;">GHL → Payments → Transactions → find order → process full refund</span><br>
+              <span style="font-size:.8rem;font-weight:600;color:#7f1d1d;">Step 2:</span> <span style="font-size:.8rem;color:#92400e;">GHL → Tasks → find lapsed order task → mark complete</span><br>
+              <span style="font-size:.8rem;color:#085041;">✦ Cancellation SMS + email fires automatically after task is marked complete</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- TAGS REFERENCE -->
+    <section id="tags">
+      <h2>🏷️ Tags Reference</h2>
+      <p>All tags are applied and removed automatically by GHL workflows. Do not manually remove any tag without checking with the admin first.</p>
+
+      <table class="pipeline-table">
+        <thead>
+          <tr><th>Tag</th><th>Added At</th><th>Removed At</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="tag tag-add">online-purchase</span></td><td>Stage 1</td><td>Never</td><td>Identifies online store customers</td></tr>
+          <tr><td><span class="tag tag-add">order-hold</span></td><td>Stage 1</td><td>Stages 11 &amp; 12</td><td>Flags order as held — not yet shipped</td></tr>
+          <tr><td><span class="tag tag-add">wade-awaiting-doc</span></td><td>Stage 2</td><td>Stage 3</td><td>WA/DE — waiting for audiologist document</td></tr>
+          <tr><td><span class="tag tag-add">wade-doc-approved</span></td><td>Stage 3</td><td>Never</td><td>WA/DE — document reviewed and approved</td></tr>
+          <tr><td><span class="tag tag-add">booking-link-sent</span></td><td>Stage 4</td><td>Stage 5</td><td>Booking link has been sent to customer</td></tr>
+          <tr><td><span class="tag tag-add">appointment-booked</span></td><td>Stage 5</td><td>Stage 6</td><td>Customer has booked their appointment</td></tr>
+          <tr><td><span class="tag tag-add">outcome-form-filed</span></td><td>Stage 6</td><td>Never</td><td>Seteisha has filed the outcome form</td></tr>
+          <tr><td><span class="tag tag-manual">aids-ordered-signia</span></td><td>Stage 7</td><td>Never</td><td>Manual — Seteisha adds after placing Signia order</td></tr>
+          <tr><td><span class="tag tag-manual">aids-received-andrea</span></td><td>Stage 8</td><td>Stage 9</td><td>Manual — Andrea adds after confirming Signia delivery</td></tr>
+          <tr><td><span class="tag tag-manual">aids-programmed</span></td><td>Stage 9</td><td>Stage 10</td><td>Manual — Andrea adds after programming hearing aids</td></tr>
+          <tr><td><span class="tag tag-manual">shipping-label-created</span></td><td>Stage 10</td><td>Stage 11</td><td>Manual — Andrea adds after creating PirateShip label</td></tr>
+          <tr><td><span class="tag tag-manual">in-transit</span></td><td>Stage 11</td><td>Stage 12</td><td>Manual — Andrea moves stage after carrier pickup; SMS fires auto</td></tr>
+          <tr><td><span class="tag tag-manual">delivered</span></td><td>Stage 12</td><td>Never</td><td>Manual — Andrea confirms after checking UPS/FedEx tracking</td></tr>
+          <tr><td><span class="tag tag-add">order-hold-complete</span></td><td>Stage 12</td><td>Never</td><td>30-day hold period ended successfully</td></tr>
+          <tr><td><span class="tag tag-add">2-week-followup-sent</span></td><td>Stage 13</td><td>Never</td><td>Day 14 follow-up sent</td></tr>
+          <tr><td><span class="tag tag-add">feedback-form-sent</span></td><td>Stage 14</td><td>Never</td><td>Feedback form sent to customer</td></tr>
+          <tr><td><span class="tag tag-add">feedback-received</span></td><td>Stage 15</td><td>Never</td><td>Customer submitted feedback form</td></tr>
+          <tr><td><span class="tag tag-add">review-request-pending</span></td><td>Stage 15</td><td>Stage 16</td><td>3–5 stars — review request queued</td></tr>
+          <tr><td><span class="tag tag-add">feedback-negative</span></td><td>Stage 15</td><td>Never</td><td>1–2 stars — Seteisha follow-up needed</td></tr>
+          <tr><td><span class="tag tag-add">review-request-sent</span></td><td>Stage 16</td><td>Never</td><td>Review request sent to customer</td></tr>
+          <tr style="background:#fff7ed;"><td><span class="tag tag-add" style="background:#16a34a;color:#fff;">order-lapsed</span></td><td>Day 30 (no appointment)</td><td>Never</td><td>Order lapsed — manual refund required by Seteisha</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- POST-DELIVERY -->
+    <section id="post-delivery">
+      <h2>📬 Post-Delivery Automated Messages</h2>
+      <p>After delivery, three automated messages go out on a set schedule. No action needed from Seteisha or Andrea unless a customer replies.</p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="day">Day 2 after delivery</div>
+          <strong>Check-in SMS + Email</strong>
+          <p>Asks how the hearing aids are feeling. If patient replies needing help, assign task to Seteisha.</p>
+        </div>
+        <div class="timeline-item">
+          <div class="day">Day 14 after delivery</div>
+          <strong>2-Week Follow-Up SMS + Email</strong>
+          <p>Checks how the product is doing and offers help or adjustments. Tag: <span class="tag">2-week-followup-sent</span></p>
+        </div>
+        <div class="timeline-item">
+          <div class="day">Day 21 after delivery</div>
+          <strong>Feedback Form SMS + Email</strong>
+          <p>Links to HBS website feedback form. Customer rates 1–5 stars. Tag: <span class="tag">feedback-form-sent</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEEDBACK GATE -->
+    <section id="feedback">
+      <h2>⭐ Feedback Gate — How the Review Request Works</h2>
+      <p>HBS uses a feedback gate to protect its online reputation. The review request is only sent to customers who had a positive experience.</p>
+
+      <table class="pipeline-table">
+        <thead>
+          <tr><th>Feedback Score</th><th>What Happens</th><th>Who Acts</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="chip chip-green">3, 4, or 5 stars</span></td>
+            <td>Review request sent 1 day later to Google, Facebook, and HBS website testimonials. Contact moves to Current Client pipeline.</td>
+            <td><span class="owner-badge owner-auto">Automated</span></td>
+          </tr>
+          <tr>
+            <td><span class="chip chip-red">1 or 2 stars</span></td>
+            <td>No review request sent. Tag <span class="tag">feedback-negative</span> applied. Task assigned to Seteisha to follow up personally and resolve the issue.</td>
+            <td><span class="owner-badge owner-set">Seteisha</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="warn-box" style="margin-top:16px;">
+        ⚠️ <strong>Important for Seteisha:</strong> If a <span class="tag">feedback-negative</span> task is assigned to you, reach out to the customer within 24 hours. Understand their concern and see if it can be resolved. Do not ask them to leave a review until the issue is fully addressed.
+      </div>
+    </section>
+
+    <!-- FEEDBACK FORM -->
+    <section id="feedbackform">
+      <h2>📝 Feedback Form — Field Reference</h2>
+      <p>The HBS Hearing Aid Feedback Form is built in GHL and sent to customers on Day 21 after delivery. Below is the complete field reference for the form.</p>
+
+      <div class="gold-box" style="margin-bottom:20px;">
+        <strong>Form Name in GHL:</strong> HBS Hearing Aid Feedback Form<br>
+        <strong>Workflow Trigger:</strong> On form submission — reads <code>overall_rating</code> field to determine review gate path
+      </div>
+
+      <table class="pipeline-table">
+        <thead>
+          <tr>
+            <th style="width:30px;">#</th>
+            <th>Field Label</th>
+            <th>Type</th>
+            <th>Field Key</th>
+            <th>Required</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>
+              <strong>How would you rate your overall experience with Hearing Benefit Services?</strong><br>
+              <span style="font-size:.8rem;color:#16a34a;font-weight:600;">⭐ This is the field the workflow reads to trigger the review gate</span>
+            </td>
+            <td><span class="chip chip-navy">Star Rating 1–5</span></td>
+            <td><span class="tag tag-add">overall_rating</span></td>
+            <td>✅ Yes</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><strong>How satisfied are you with the sound quality of your hearing aids?</strong></td>
+            <td><span class="chip chip-navy">Dropdown</span></td>
+            <td><span class="tag tag-add">sound_quality_rating</span></td>
+            <td>✅ Yes</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>
+              <strong>How comfortable are your hearing aids to wear?</strong><br>
+              <span style="font-size:.8rem;color:#718096;">Options: Very Comfortable / Comfortable / Somewhat Uncomfortable / Very Uncomfortable</span>
+            </td>
+            <td><span class="chip chip-navy">Dropdown</span></td>
+            <td><span class="tag tag-add">comfort_rating</span></td>
+            <td>✅ Yes</td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td>
+              <strong>How easy was it to set up and start using your hearing aids?</strong><br>
+              <span style="font-size:.8rem;color:#718096;">Options: Very Easy / Easy / Difficult / Very Difficult</span>
+            </td>
+            <td><span class="chip chip-navy">Dropdown</span></td>
+            <td><span class="tag tag-add">setup_rating</span></td>
+            <td>✅ Yes</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>
+              <strong>How would you rate your experience with our team?</strong><br>
+              <span style="font-size:.8rem;color:#718096;">Options: Excellent / Good / Fair / Poor</span>
+            </td>
+            <td><span class="chip chip-navy">Dropdown</span></td>
+            <td><span class="tag tag-add">team_rating</span></td>
+            <td>✅ Yes</td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td>
+              <strong>Would you like a member of our team to contact you?</strong><br>
+              <span style="font-size:.8rem;color:#718096;">Options: Yes, please contact me / No, I'm all good</span>
+            </td>
+            <td><span class="chip chip-navy">Radio Button</span></td>
+            <td><span class="tag tag-add">wants_followup</span></td>
+            <td>✅ Yes</td>
+          </tr>
+          <tr style="background:#f0fdf4;">
+            <td>7</td>
+            <td>
+              <strong>What is the best time to reach you?</strong><br>
+              <span style="font-size:.8rem;color:#16a34a;font-weight:600;">⚡ Conditional — only shows if Field 6 = "Yes, please contact me"</span><br>
+              <span style="font-size:.8rem;color:#718096;">Options: Morning (9am–12pm HST) / Afternoon (12pm–3pm HST) / Late Afternoon (3pm–6pm HST)</span>
+            </td>
+            <td><span class="chip chip-navy">Dropdown</span></td>
+            <td><span class="tag tag-add">best_time_to_call</span></td>
+            <td>Conditional</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Hidden Fields (pre-populated by GHL automatically)</h3>
+      <p>These fields are added to the form but hidden from the customer. GHL fills them in automatically when the form link is sent.</p>
+      <table class="pipeline-table">
+        <thead>
+          <tr><th>Field Key</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><span class="tag tag-add">contact_id</span></td><td>Links the form submission back to the correct contact record in GHL</td></tr>
+          <tr><td><span class="tag tag-add">first_name</span></td><td>Pre-fills so submissions are identifiable</td></tr>
+          <tr><td><span class="tag tag-add">email</span></td><td>Pre-fills for contact record matching</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Workflow Logic After Submission</h3>
+      <table class="pipeline-table">
+        <thead>
+          <tr><th>Condition</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          <tr style="background:#f0fdf4;">
+            <td><span class="chip chip-green">overall_rating = 3, 4, or 5</span></td>
+            <td>
+              Add tag <span class="tag tag-add">feedback-positive</span><br>
+              Queue review request — sends 1 day later to Google, Facebook, and HBS website
+            </td>
+          </tr>
+          <tr style="background:#fef2f2;">
+            <td><span class="chip chip-red">overall_rating = 1 or 2</span></td>
+            <td>
+              Add tag <span class="tag tag-manual">feedback-negative</span><br>
+              Assign task to Seteisha — do NOT send review request
+            </td>
+          </tr>
+          <tr style="background:#eff6ff;">
+            <td><span class="chip chip-blue">wants_followup = Yes</span></td>
+            <td>
+              Assign task to Seteisha with <code>best_time_to_call</code> included in task notes<br>
+              <span style="font-size:.82rem;color:#718096;">Applies regardless of star rating</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="warn-box" style="margin-top:16px;">
+        ⚠️ <strong>For Seteisha:</strong> If you receive a <span class="tag tag-manual">feedback-negative</span> task, reach out to the customer within 24 hours at their preferred time (<code>best_time_to_call</code>). Understand their concern and resolve it before considering any review request. Never ask a dissatisfied customer for a public review.
+      </div>
+    </section>
+
+    <!-- MESSAGE COPY -->
+    <section id="messages">
+      <h2>💬 Automated Message Copy Reference</h2>
+      <p>All messages below are sent automatically by GHL. Neither Seteisha nor Andrea needs to send these manually.</p>
+
+      <h3>Stage 11 — Shipping Notification (fires when Andrea moves stage)</h3>
+      <div class="info-box">
+        <strong>SMS:</strong> Hi {{contact.first_name}}, great news — your hearing aids are on their way! They have been shipped and are heading to you now. You will receive your tracking information shortly. Questions? Call us at +1-808-435-7002.<br><br>
+        <strong>Email Subject:</strong> Your hearing aids are on their way! 🎉
+      </div>
+
+      <h3>Stage 12 — Day 2 Check-In</h3>
+      <div class="info-box">
+        <strong>SMS:</strong> Hi {{contact.first_name}}, this is Hearing Benefit Services checking in! It's been a couple of days since your hearing aids arrived. How are they feeling? Any questions or adjustments needed? Reply anytime or call +1-808-435-7002.<br><br>
+        <strong>Email Subject:</strong> How are your new hearing aids feeling?
+      </div>
+
+      <h3>Stage 13 — Day 14 Follow-Up</h3>
+      <div class="info-box">
+        <strong>SMS:</strong> Hi {{contact.first_name}}, it's been two weeks since your hearing aids arrived! How are they working for you? Do you have any questions or need any adjustments? We're here to help. Reply anytime or call +1-808-435-7002.<br><br>
+        <strong>Email Subject:</strong> Two weeks in — how are your hearing aids?
+      </div>
+
+      <h3>Stage 14 — Day 21 Feedback Form</h3>
+      <div class="info-box">
+        <strong>SMS:</strong> Hi {{contact.first_name}}, we'd love to know how your hearing aids are working for you! Could you take 1 minute to share your experience? [Feedback Form Link] — Hearing Benefit Services.<br><br>
+        <strong>Email Subject:</strong> How has your experience been? We'd love to know.
+      </div>
+
+      <h3>Stage 16 — Review Request (3–5 stars only)</h3>
+      <div class="success-box">
+        <strong>SMS:</strong> Hi {{contact.first_name}}, thank you so much for your feedback! We're so glad you're happy with your hearing aids. If you have a moment, we'd love if you could share your experience online — it really helps others find the hearing care they need. Google: [link] | Facebook: [link] | Our website: [link]<br><br>
+        <strong>Email Subject:</strong> Loving your hearing aids? Share your experience!
+      </div>
+
+      <h3>⚠️ Order Lapsed — Internal Notification to Seteisha (Day 30)</h3>
+      <div class="warn-box">
+        <strong>Internal GHL Notification to Seteisha:</strong><br>
+        "ACTION REQUIRED: The order for {{contact.first_name}} {{contact.last_name}} has lapsed. Their pre-shipment appointment was not completed within 30 days.<br><br>
+        Step 1 — Go to GHL → Payments → Transactions → find this order → process full refund.<br><br>
+        Step 2 — Return to your GHL Tasks → find this task → mark complete.<br><br>
+        The cancellation SMS and email to the customer will fire automatically after you mark complete. Both steps must be completed."
+      </div>
+
+      <h3>Order Lapsed — Cancellation SMS + Email to Customer (after Seteisha marks refund complete)</h3>
+      <div class="warn-box">
+        <strong>SMS:</strong> Hi {{contact.first_name}}, your Hearing Benefit Services order has been cancelled as your pre-shipment consultation was not completed within 30 days. A full refund has been issued and will appear within 5–10 business days. We hope to hear from you again. Call us at +1-808-435-7002 if you have questions.<br><br>
+        <strong>Email Subject:</strong> Your order has been cancelled — full refund issued
+      </div>
+    </section>
+
+  </div>
+
+  <section id="lapsed" style="max-width:980px;margin:0 auto 28px;padding:0 20px;">
+    <div style="background:#fff;border-radius:14px;padding:36px 32px;box-shadow:0 2px 12px rgba(0,0,0,.07);">
+      <h2 style="font-family:Lora,serif;font-size:1.3rem;font-weight:700;color:#0a1628;margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid #d97706;display:flex;align-items:center;gap:10px;">⚠️ Lapsed Orders — What Seteisha Needs to Do</h2>
+      <p style="color:#2d3748;font-size:.95rem;margin-bottom:12px;">A lapsed order occurs when a customer purchases hearing aids but does not complete their pre-shipment appointment within <strong>30 calendar days</strong>. This is a manual process — GHL cannot automatically process refunds.</p>
+
+      <div style="background:#fff7ed;border-left:4px solid #d97706;border-radius:10px;padding:16px 20px;margin:16px 0;font-size:.92rem;color:#92400e;">
+        <strong>When a lapse happens, Seteisha will receive an internal GHL notification and a task assigned to her. There are two separate steps that must both be completed — in two different places in GHL.</strong>
+      </div>
+
+      <div style="background:#fef2f2;border-radius:10px;padding:20px 24px;margin-bottom:16px;">
+        <p style="font-weight:700;color:#7f1d1d;font-size:.95rem;margin-bottom:12px;">Step 1 — Process the Refund in GHL Payments</p>
+        <ol style="padding-left:18px;margin:0;">
+          <li style="margin-bottom:8px;color:#2d3748;font-size:.93rem;">Go to <strong>GHL → Payments → Transactions</strong></li>
+          <li style="margin-bottom:8px;color:#2d3748;font-size:.93rem;">Search for the customer by name or order number</li>
+          <li style="margin-bottom:8px;color:#2d3748;font-size:.93rem;">Click the order → select <strong>Refund</strong> → process the <strong>full refund</strong></li>
+          <li style="margin-bottom:0;color:#2d3748;font-size:.93rem;">Confirm the refund was processed successfully</li>
+        </ol>
+      </div>
+
+      <div style="background:#f0fdf4;border-radius:10px;padding:20px 24px;margin-bottom:16px;">
+        <p style="font-weight:700;color:#14532d;font-size:.95rem;margin-bottom:12px;">Step 2 — Mark the Task Complete in GHL Tasks</p>
+        <ol style="padding-left:18px;margin:0;">
+          <li style="margin-bottom:8px;color:#2d3748;font-size:.93rem;">Go to <strong>GHL → Tasks</strong> (left sidebar)</li>
+          <li style="margin-bottom:8px;color:#2d3748;font-size:.93rem;">Find the task: <em>"Order lapsed — manual refund required for [Customer Name]"</em></li>
+          <li style="margin-bottom:8px;color:#2d3748;font-size:.93rem;">Click the task → click <strong>Mark Complete</strong></li>
+          <li style="margin-bottom:0;color:#2d3748;font-size:.93rem;">GHL will automatically send the cancellation SMS and email to the customer</li>
+        </ol>
+      </div>
+
+      <div style="background:#eff6ff;border-left:4px solid #2563eb;border-radius:10px;padding:14px 20px;margin-bottom:16px;font-size:.9rem;color:#1e3a5f;">
+        <strong>⚠️ Important:</strong> These are two separate actions in two different places. Completing only Step 1 will process the refund but will NOT send the customer their cancellation message. Completing only Step 2 without refunding will trigger the cancellation message without the refund being processed. Both steps must be done in order.
+      </div>
+
+      <div style="background:#fef2f2;border-left:4px solid #dc2626;border-radius:10px;padding:16px 20px;margin:16px 0;font-size:.92rem;color:#7f1d1d;">
+        <strong>⏱️ Time-sensitive:</strong> Process the refund within <strong>24 hours</strong> of receiving the lapse notification. The customer's payment is still on hold and they are expecting a refund.
+      </div>
+
+      <div style="background:#f0fdf4;border-left:4px solid #16a34a;border-radius:10px;padding:16px 20px;margin:16px 0;font-size:.92rem;color:#14532d;">
+        <strong>💡 Pro tip:</strong> Before processing the refund, check if the customer replied to any SMS or email at any point during the 30 days. If they did, try calling them once — they may have simply forgotten to book. If you reach them and they want to proceed, the order can be reinstated with a new purchase.
+      </div>
+    </div>
+  </section>
+
+  <section id="feedbackform" style="max-width:980px;margin:0 auto 28px;padding:0 20px;">
+    <div style="background:#fff;border-radius:14px;padding:36px 32px;box-shadow:0 2px 12px rgba(0,0,0,.07);">
+      <h2 style="font-family:'Lora',serif;font-size:1.3rem;font-weight:700;color:#0a1628;margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid #b8972a;">📝 Feedback Form — Field Reference</h2>
+
+      <p style="color:#2d3748;font-size:.95rem;margin-bottom:12px;">The HBS Hearing Aid Feedback Form is sent to every customer on <strong>Day 21 after delivery</strong>. It captures their satisfaction score and follow-up preference, which determines whether a review request is sent.</p>
+
+      <div style="background:#fefce8;border-left:4px solid #b8972a;border-radius:10px;padding:16px 20px;margin-bottom:20px;font-size:.92rem;color:#713f12;">
+        <strong>Form Name in GHL:</strong> HBS Hearing Aid Feedback Form<br>
+        <strong>Key Field:</strong> <span class="tag tag-add">overall_rating</span> — the workflow reads this to trigger the review gate<br>
+        <strong>Review sent if:</strong> overall_rating = 3, 4, or 5 stars — 1 day after submission<br>
+        <strong>Review blocked if:</strong> overall_rating = 1 or 2 stars — Seteisha task assigned instead
+      </div>
+
+      <h3 style="font-size:1rem;font-weight:600;color:#1a3a5c;margin:20px 0 10px;">Form Fields</h3>
+      <table class="pipeline-table">
+        <thead>
+          <tr>
+            <th style="width:40px;">#</th>
+            <th>Field Label &amp; Options</th>
+            <th>Type</th>
+            <th>Field Key</th>
+            <th>Required</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="background:#f0fdf4;">
+            <td><span class="stage-num">1</span></td>
+            <td>
+              <strong>How would you rate your overall experience with Hearing Benefit Services?</strong><br>
+              <span style="font-size:.8rem;color:#16a34a;font-weight:600;">⭐ This is the field the workflow reads to trigger the review gate</span>
+            </td>
+            <td><span class="owner-badge owner-auto">Star Rating 1–5</span></td>
+            <td><span class="tag tag-add">overall_rating</span></td>
+            <td style="color:#16a34a;font-weight:600;">Yes</td>
+          </tr>
+          <tr>
+            <td><span class="stage-num">2</span></td>
+            <td>
+              <strong>How satisfied are you with the sound quality of your hearing aids?</strong><br>
+              <span style="font-size:.8rem;color:#718096;">Very Satisfied / Satisfied / Neutral / Unsatisfied / Very Unsatisfied</span>
+            </td>
+            <td><span class="owner-badge" style="background:#e8f0fb;color:#0a1628;">Dropdown</span></td>
+            <td><span class="tag tag-add">sound_quality_rating</span></td>
+            <td style="color:#16a34a;font-weight:600;">Yes</td>
+          </tr>
+          <tr>
+            <td><span class="stage-num">3</span></td>
+            <td>
+              <strong>How comfortable are your hearing aids to wear?</strong><br>
+              <span style="font-size:.8rem;color:#718096;">Very Comfortable / Comfortable / Somewhat Uncomfortable / Very Uncomfortable</span>
+            </td>
+            <td><span class="owner-badge" style="background:#e8f0fb;color:#0a1628;">Dropdown</span></td>
+            <td><span class="tag tag-add">comfort_rating</span></td>
+            <td style="color:#16a34a;font-weight:600;">Yes</td>
+          </tr>
+          <tr>
+            <td><span class="stage-num">4</span></td>
+            <td>
+              <strong>How easy was it to set up and start using your hearing aids?</strong><br>
+              <span style="font-size:.8rem;color:#718096;">Very Easy / Easy / Difficult / Very Difficult</span>
+            </td>
+            <td><span class="owner-badge" style="background:#e8f0fb;color:#0a1628;">Dropdown</span></td>
+            <td><span class="tag tag-add">setup_rating</span></td>
+            <td style="color:#16a34a;font-weight:600;">Yes</td>
+          </tr>
+          <tr>
+            <td><span class="stage-num">5</span></td>
+            <td>
+              <strong>How would you rate your experience with our team?</strong><br>
+              <span style="font-size:.8rem;color:#718096;">Excellent / Good / Fair / Poor</span>
+            </td>
+            <td><span class="owner-badge" style="background:#e8f0fb;color:#0a1628;">Dropdown</span></td>
+            <td><span class="tag tag-add">team_rating</span></td>
+            <td style="color:#16a34a;font-weight:600;">Yes</td>
+          </tr>
+          <tr>
+            <td><span class="stage-num">6</span></td>
+            <td>
+              <strong>Would you like a member of our team to contact you?</strong><br>
+              <span style="font-size:.8rem;color:#718096;">Yes, please contact me / No, I'm all good</span>
+            </td>
+            <td><span class="owner-badge" style="background:#e8f0fb;color:#0a1628;">Radio Button</span></td>
+            <td><span class="tag tag-add">wants_followup</span></td>
+            <td style="color:#16a34a;font-weight:600;">Yes</td>
+          </tr>
+          <tr style="background:#eff6ff;">
+            <td><span class="stage-num" style="background:#185fa5;">7</span></td>
+            <td>
+              <strong>What is the best time to reach you?</strong><br>
+              <span style="font-size:.8rem;color:#185fa5;font-weight:600;">⚡ Conditional — only shows if Field 6 = "Yes, please contact me"</span><br>
+              <span style="font-size:.8rem;color:#718096;">Morning (9am–12pm HST) / Afternoon (12pm–3pm HST) / Late Afternoon (3pm–6pm HST)</span>
+            </td>
+            <td><span class="owner-badge" style="background:#e8f0fb;color:#0a1628;">Dropdown</span></td>
+            <td><span class="tag tag-add">best_time_to_call</span></td>
+            <td style="color:#185fa5;font-weight:600;">Conditional</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3 style="font-size:1rem;font-weight:600;color:#1a3a5c;margin:24px 0 10px;">Hidden Fields (auto-filled by GHL)</h3>
+      <table class="pipeline-table">
+        <thead>
+          <tr><th>Field Key</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr style="background:#f0fdf4;"><td><span class="tag tag-add">contact_id</span></td><td>Links submission to the correct contact record in GHL automatically</td></tr>
+          <tr style="background:#f0fdf4;"><td><span class="tag tag-add">first_name</span></td><td>Pre-fills so submissions are identifiable by name</td></tr>
+          <tr style="background:#f0fdf4;"><td><span class="tag tag-add">email</span></td><td>Pre-fills for contact record matching</td></tr>
+        </tbody>
+      </table>
+
+      <h3 style="font-size:1rem;font-weight:600;color:#1a3a5c;margin:24px 0 10px;">Workflow Logic After Submission</h3>
+      <table class="pipeline-table">
+        <thead>
+          <tr><th>Condition</th><th>Action</th></tr>
+        </thead>
+        <tbody>
+          <tr style="background:#f0fdf4;">
+            <td><span class="chip chip-green">overall_rating = 3, 4, or 5 ⭐</span></td>
+            <td>Add <span class="tag tag-add">feedback-positive</span> &nbsp; Review request queued — fires 1 day later to Google, Facebook &amp; HBS website</td>
+          </tr>
+          <tr style="background:#fef2f2;">
+            <td><span class="chip chip-red">overall_rating = 1 or 2 ⭐</span></td>
+            <td>Add <span class="tag tag-manual">feedback-negative</span> &nbsp; Assign task to Seteisha — NO review request sent</td>
+          </tr>
+          <tr style="background:#eff6ff;">
+            <td><span class="chip chip-blue">wants_followup = Yes</span></td>
+            <td>Assign task to Seteisha with <span class="tag tag-add">best_time_to_call</span> in task notes — applies regardless of star rating</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="background:#fff7ed;border-left:4px solid #d97706;border-radius:10px;padding:14px 20px;margin-top:16px;font-size:.92rem;color:#92400e;">
+        ⚠️ <strong>For Seteisha:</strong> If you receive a <span class="tag tag-manual">feedback-negative</span> task, reach out within <strong>24 hours</strong> at the customer's preferred time. Resolve their concern completely before ever asking for a review.
+      </div>
+
+      <div style="background:#eff6ff;border-left:4px solid #2563eb;border-radius:10px;padding:14px 20px;margin-top:12px;font-size:.92rem;color:#1e3a5f;">
+        💡 For the full interactive form preview and detailed GHL build instructions, see the <strong>HBS Feedback Form Portal</strong> — a separate staff portal document.
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>Hearing Benefit Services — Internal Staff Portal &nbsp;|&nbsp; Confidential &nbsp;|&nbsp; April 2026</p>
+  </footer>
+
+</div>
+
+<script>
+  function checkLogin() {
+    var u = document.getElementById('uname').value.trim();
+    var p = document.getElementById('pword').value.trim();
+    if (u === 'training' && p === 'l8ZiBguc6I4CW8') {
+      document.getElementById('login-overlay').style.display = 'none';
+      document.getElementById('main-content').style.display  = 'block';
+    } else {
+      document.getElementById('login-error').style.display = 'block';
+    }
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') checkLogin();
+  });
+</script>
+
+</body>
+</html>
