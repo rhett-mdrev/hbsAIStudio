@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>3-Year Upgrade SMS Campaign | Hearing Benefit Services</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #f0f4f8;
+      color: #1a202c;
+      line-height: 1.7;
+    }
+
+    /* ── LOGIN OVERLAY ── */
+    #login-overlay {
+      position: fixed; inset: 0;
+      background: linear-gradient(135deg, #0a3d62 0%, #1e6fa8 100%);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 9999;
+    }
+    .login-box {
+      background: #fff;
+      border-radius: 16px;
+      padding: 48px 40px;
+      width: min(420px, 92vw);
+      box-shadow: 0 24px 64px rgba(0,0,0,.25);
+      text-align: center;
+    }
+    .login-box h2 { font-size: 1.5rem; color: #0a3d62; margin-bottom: 6px; }
+    .login-box p  { font-size: .9rem; color: #718096; margin-bottom: 28px; }
+    .login-box input {
+      width: 100%; padding: 12px 16px;
+      border: 1.5px solid #cbd5e0; border-radius: 8px;
+      font-size: 1rem; margin-bottom: 14px;
+      transition: border-color .2s;
+    }
+    .login-box input:focus { outline: none; border-color: #1e6fa8; }
+    .login-box button {
+      width: 100%; padding: 13px;
+      background: linear-gradient(135deg, #0a3d62, #1e6fa8);
+      color: #fff; border: none; border-radius: 8px;
+      font-size: 1rem; font-weight: 600; cursor: pointer;
+      transition: opacity .2s;
+    }
+    .login-box button:hover { opacity: .88; }
+    #login-error {
+      color: #e53e3e; font-size: .85rem;
+      margin-top: 10px; display: none;
+    }
+
+    /* ── MAIN CONTENT ── */
+    #main-content { display: none; }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #0a3d62 0%, #1e6fa8 100%);
+      color: #fff; padding: 48px 24px; text-align: center;
+    }
+    header h1 { font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 700; }
+    header p  { margin-top: 10px; font-size: 1.05rem; opacity: .88; }
+
+    /* ── STICKY NAV ── */
+    nav.sticky {
+      position: sticky; top: 0; z-index: 100;
+      background: #0a3d62; padding: 0 16px;
+      overflow-x: auto; white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,.3);
+    }
+    nav.sticky a {
+      display: inline-block; color: #bee3f8;
+      text-decoration: none; padding: 14px 18px;
+      font-size: .88rem; font-weight: 500;
+      transition: color .2s, background .2s;
+    }
+    nav.sticky a:hover { color: #fff; background: rgba(255,255,255,.1); }
+
+    /* ── LAYOUT ── */
+    .container { max-width: 960px; margin: 0 auto; padding: 40px 20px 80px; }
+
+    /* ── SECTION CARDS ── */
+    section {
+      background: #fff;
+      border-radius: 14px;
+      padding: 36px 32px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.07);
+    }
+    section h2 {
+      font-size: 1.35rem; font-weight: 700;
+      color: #0a3d62; margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #bee3f8;
+    }
+    section h3 {
+      font-size: 1.05rem; font-weight: 700;
+      color: #1e6fa8; margin: 22px 0 8px;
+    }
+    section p  { margin-bottom: 12px; color: #2d3748; }
+    section ul, section ol {
+      padding-left: 20px; margin-bottom: 12px;
+    }
+    section li { margin-bottom: 6px; color: #2d3748; }
+
+    /* ── TIMELINE ── */
+    .timeline { position: relative; padding-left: 32px; margin-top: 8px; }
+    .timeline::before {
+      content: ''; position: absolute; left: 10px; top: 0; bottom: 0;
+      width: 3px; background: #bee3f8; border-radius: 2px;
+    }
+    .timeline-item { position: relative; margin-bottom: 24px; }
+    .timeline-item::before {
+      content: '';
+      position: absolute; left: -26px; top: 4px;
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      background: #1e6fa8;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #1e6fa8;
+    }
+    .timeline-item strong { color: #0a3d62; display: block; margin-bottom: 2px; }
+
+    /* ── SMS BUBBLE ── */
+    .sms-bubble {
+      background: #ebf8ff;
+      border-left: 4px solid #1e6fa8;
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px;
+      margin: 12px 0;
+      font-style: italic;
+      color: #1a365d;
+      font-size: .95rem;
+      white-space: pre-line;
+    }
+    .sms-label {
+      font-size: .75rem; font-weight: 700;
+      color: #1e6fa8; text-transform: uppercase;
+      letter-spacing: .06em; margin-bottom: 6px;
+    }
+
+    /* ── CHIPS ── */
+    .chip {
+      display: inline-block;
+      padding: 3px 12px;
+      border-radius: 12px;
+      font-size: .78rem; font-weight: 700;
+      margin: 2px;
+    }
+    .chip-blue   { background: #ebf8ff; color: #1e6fa8; }
+    .chip-green  { background: #f0fff4; color: #276749; }
+    .chip-yellow { background: #fffff0; color: #744210; }
+    .chip-red    { background: #fff5f5; color: #c53030; }
+    .chip-purple { background: #faf5ff; color: #553c9a; }
+    .chip-gray   { background: #f7fafc; color: #4a5568; }
+
+    /* ── INFO BOXES ── */
+    .info-box, .warn-box, .success-box {
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: .93rem;
+    }
+    .info-box    { background: #ebf8ff; border-left: 4px solid #1e6fa8; color: #1a365d; }
+    .warn-box    { background: #fffbeb; border-left: 4px solid #d69e2e; color: #744210; }
+    .success-box { background: #f0fff4; border-left: 4px solid #38a169; color: #22543d; }
+
+    /* ── TABLE ── */
+    .action-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: .92rem; }
+    .action-table th {
+      background: #0a3d62; color: #fff;
+      padding: 10px 14px; text-align: left;
+    }
+    .action-table td { padding: 10px 14px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+    .action-table tr:nth-child(even) td { background: #f7fafc; }
+
+    /* ── CHECKLIST ── */
+    .checklist { list-style: none; padding: 0; }
+    .checklist li {
+      padding: 8px 0 8px 32px;
+      position: relative;
+      border-bottom: 1px solid #f0f4f8;
+      color: #2d3748;
+    }
+    .checklist li::before {
+      content: '☐';
+      position: absolute; left: 0;
+      font-size: 1.1rem; color: #1e6fa8;
+    }
+
+    /* ── STEP NUMBER ── */
+    .step-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px;
+      background: #1e6fa8; color: #fff;
+      border-radius: 50%; font-size: .82rem; font-weight: 700;
+      margin-right: 10px; flex-shrink: 0;
+    }
+    .step-row {
+      display: flex; align-items: flex-start;
+      padding: 10px 0; border-bottom: 1px solid #f0f4f8;
+    }
+    .step-row:last-child { border-bottom: none; }
+    .step-row p { margin: 0; color: #2d3748; }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center; padding: 32px 16px;
+      font-size: .82rem; color: #718096;
+    }
+
+    code {
+      background: #fef08a;
+      color: #1a202c;
+      font-family: 'Courier New', monospace;
+      font-size: .88rem;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      border: 1px solid #fde047;
+    }
+
+    @media (max-width: 600px) {
+      section { padding: 24px 18px; }
+      .login-box { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login-overlay">
+  <div class="login-box">
+    <h2>🎧 Staff Training Portal</h2>
+    <p>Hearing Benefit Services — Internal Use Only</p>
+    <input type="text"     id="uname" placeholder="Username"  autocomplete="username" />
+    <input type="password" id="pword" placeholder="Password"  autocomplete="current-password" />
+    <button onclick="checkLogin()">Sign In</button>
+    <p id="login-error">Incorrect username or password. Please try again.</p>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div id="main-content">
+
+  <header>
+    <h1>🎧 3-Year Upgrade SMS Campaign — Training & Process Guide</h1>
+    <p>Everything Seteisha needs to know — from finding contacts to closing the sale.</p>
+  </header>
+
+  <nav class="sticky">
+    <a href="#overview">Overview</a>
+    <a href="#sms-messages">SMS Messages</a>
+    <a href="#when-reply">When They Reply</a>
+    <a href="#process">Your Process</a>
+    <a href="#pipeline">Pipeline Stages</a>
+    <a href="#discovery">Discovery Questions</a>
+    <a href="#closing">Closing Script</a>
+    <a href="#objections">Objections</a>
+    <a href="#standards">Standards</a>
+    <a href="#value-prop">Value Prop</a>
+    <a href="#smart-list">Smart List</a>
+    <a href="#tagging">Tagging Contacts</a>
+    <a href="#stop-optout">STOP Opt-Out</a>
+    <a href="#checklist">Daily Checklist</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- SECTION 1 — OVERVIEW -->
+    <section id="overview">
+      <h2>📋 Overview — What Is This Campaign?</h2>
+      <p>
+        The <strong>3-Year Upgrade SMS Campaign</strong> is an automated outreach campaign targeting existing HBS customers
+        whose hearing aids are 3 or more years old. These contacts already know HBS, already trust us, and are overdue
+        for an upgrade — making them the highest-converting segment in the entire business.
+      </p>
+      <p>
+        When a contact is tagged with <code>customer_3plus_years</code> in GoHighLevel, the workflow fires automatically.
+        Three SMS messages are sent over 6 days. <strong>Your role begins the moment a contact replies.</strong>
+      </p>
+      <div class="success-box">
+        ✅ <strong>Your goal:</strong> Convert replies into booked consults and close at a rate above 40%. Every reply is a warm lead — they already raised their hand.
+      </div>
+
+      <h3>At-a-Glance Timeline</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>Day 0 — Tag Applied</strong>
+          Workflow fires instantly. Day 1 SMS is sent to the contact automatically.
+        </div>
+        <div class="timeline-item">
+          <strong>Day 3 — Follow-Up SMS (if no reply)</strong>
+          Newer technology follow-up sent automatically.
+        </div>
+        <div class="timeline-item">
+          <strong>Day 6 — Final SMS (if still no reply)</strong>
+          Limited-time offer reminder sent automatically.
+        </div>
+        <div class="timeline-item">
+          <strong>Any Day — Contact Replies</strong>
+          Workflow stops all SMS. Contact moves to Engaged / Replied. You get a task in GHL. Call within 15 minutes.
+        </div>
+        <div class="timeline-item">
+          <strong>Same Day as Consult — Quote Sent</strong>
+          You send the quote within 2 hours of the consult completing.
+        </div>
+        <div class="timeline-item">
+          <strong>Day 7+ — No Reply</strong>
+          Contact is moved to Long-Term Nurture automatically.
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2 — SMS MESSAGES -->
+    <section id="sms-messages">
+      <h2>💬 The 3 SMS Messages Sent to the Contact</h2>
+      <p>
+        These messages are sent automatically by GHL. <strong>You do not send these.</strong>
+        Read them carefully so you know exactly what the customer has seen before they reply to you.
+      </p>
+
+      <h3>Day 1 — Intro + 10% Savings Offer (Sent Immediately on Tag)</h3>
+      <div class="sms-label">Day 1 SMS</div>
+      <div class="sms-bubble">Hi [First Name], this is Hearing Benefit Services. We now have newer Signia hearing aid options with remote fitting, home delivery, and a limited 10% savings offer. If your hearing aids are 3+ years old, you may be due for an upgrade. Want a quick recommendation or benefits check? Reply STOP at any time to opt out.</div>
+
+      <h3>Day 3 — Newer Technology Follow-Up (Sent if No Reply)</h3>
+      <div class="sms-label">Day 3 SMS</div>
+      <div class="sms-bubble">Hi [First Name], just following up in case you wanted to see what newer hearing technology may help with clarity, Bluetooth, rechargeability, and easier remote support. We can guide you from home. Want us to text you options?</div>
+
+      <h3>Day 6 — Final Limited-Time Offer (Sent if Still No Reply)</h3>
+      <div class="sms-label">Day 6 SMS</div>
+      <div class="sms-bubble">Final follow-up for now: our current hearing aid savings offer is available for a limited time. If you'd like pricing, insurance review, or help choosing the right model, reply YES and we'll help.</div>
+
+      <div class="info-box">
+        💡 All messages use <strong>[First Name]</strong> — GHL automatically personalises these with the contact's first name.
+      </div>
+    </section>
+
+    <!-- SECTION 3 — WHEN THEY REPLY -->
+    <section id="when-reply">
+      <h2>🔔 What Happens When a Contact Replies</h2>
+      <p>When a contact replies to <em>any</em> of the 3 SMS messages, the following happens automatically in GHL:</p>
+      <ul>
+        <li>The workflow <strong>stops</strong> — no more automated SMS messages are sent to that contact</li>
+        <li>An <strong>automated auto-reply SMS</strong> is immediately sent to the contact</li>
+        <li>The contact's opportunity is moved to the <span class="chip chip-blue">Engaged / Replied</span> stage in the pipeline</li>
+        <li>A <strong>task is created and assigned to you</strong> in GHL with the contact's name and phone number</li>
+      </ul>
+
+      <h3>Auto-Reply SMS (Sent Automatically to the Contact)</h3>
+      <div class="sms-label">Auto-Reply SMS</div>
+      <div class="sms-bubble">Hi {{contact.first_name}}, thank you for reaching out to Hearing Benefit Services! One of our hearing specialists will contact you within 24 hours. Do you prefer a call, text, or email? And what time of day works best for you? You can also book a consultation directly here: https://hearingbenefitservices.com/appointment</div>
+
+      <h3>Your Task Notification</h3>
+      <table class="action-table">
+        <thead><tr><th>Field</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Title</td><td>[First Name] [Last Name] replied to the Upgrade SMS — Call Now</td></tr>
+          <tr><td>Description</td><td>Contact replied to the 3-Year Upgrade SMS Campaign. Phone: [number]. Review their reply in conversations and call within 15 minutes.</td></tr>
+          <tr><td>Assigned to</td><td>Seteisha Hall</td></tr>
+          <tr><td>Due</td><td>Same day at 4:00 PM (before end of business)</td></tr>
+        </tbody>
+      </table>
+
+      <div class="warn-box">
+        ⚠️ <strong>15-minute rule:</strong> Every inbound reply must be responded to within 15 minutes during business hours. Hot leads go cold fast.
+      </div>
+    </section>
+
+    <!-- SECTION 4 — YOUR PROCESS -->
+    <section id="process">
+      <h2>🗺️ Your Process — Start to Finish</h2>
+      <p>From the moment you receive the task notification, here is the complete process you follow:</p>
+
+      <h3>Step 1 — Review the Reply Immediately</h3>
+      <p>Open GHL → go to <strong>Conversations</strong> → find the contact's reply. Read exactly what they said. This tells you their tone, urgency, and what they need before you call.</p>
+
+      <h3>Step 2 — Call Within 15 Minutes</h3>
+      <p>Use this opening when they pick up:</p>
+      <div class="sms-label">Opening Script</div>
+      <div class="sms-bubble">Hi [First Name], this is Seteisha with Hearing Benefit Services. Thanks for reaching out! I saw you were interested in learning more about our hearing aid options. I'd love to help you find the best fit. Do you have a few minutes to chat?</div>
+
+      <h3>Step 3 — Run the Consult Call Flow</h3>
+      <p>Every consult follows this 6-step flow. Do not skip rapport — it is what separates a conversion from a hang-up.</p>
+
+      <div class="step-row"><span class="step-num">1</span><p><strong>Build rapport</strong> — ask how they're doing, make it human</p></div>
+      <div class="step-row"><span class="step-num">2</span><p><strong>Uncover the real hearing problem</strong> — what situations are most frustrating?</p></div>
+      <div class="step-row"><span class="step-num">3</span><p><strong>Review device history</strong> — what are they using now, how old, what works and what doesn't?</p></div>
+      <div class="step-row"><span class="step-num">4</span><p><strong>Educate simply</strong> — explain the upgrade without jargon</p></div>
+      <div class="step-row"><span class="step-num">5</span><p><strong>Recommend clearly</strong> — one specific product, not three options</p></div>
+      <div class="step-row"><span class="step-num">6</span><p><strong>Ask for the commitment</strong> — use the closing script below</p></div>
+
+      <h3>Step 4 — Send the Quote Same Day</h3>
+      <p>Send every quote the same day as the consult — ideally within 2 hours. Never let a consult end without a quote going out. Once the quote is sent, move the contact to <span class="chip chip-blue">Quote Sent</span> in the pipeline.</p>
+
+      <h3>Step 5 — Follow Up on Every Open Quote</h3>
+      <table class="action-table">
+        <thead><tr><th>Day</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>Day 1</td><td>Follow up after sending the quote</td></tr>
+          <tr><td>Day 3</td><td>Second follow-up</td></tr>
+          <tr><td>Day 5</td><td>Third follow-up</td></tr>
+          <tr><td>Day 7</td><td>Fourth follow-up</td></tr>
+          <tr><td>Weekly</td><td>Continue until closed or moved to Long-Term Nurture</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SECTION 5 — PIPELINE STAGES -->
+    <section id="pipeline">
+      <h2>📊 Pipeline Stages — What Each One Means</h2>
+      <p>Every contact in this campaign moves through the <strong>3-Year Upgrade SMS Campaign</strong> pipeline. Here is what each stage means and what your action is:</p>
+      <table class="action-table">
+        <thead><tr><th>#</th><th>Stage</th><th>Meaning &amp; Your Action</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td><span class="chip chip-gray">Tagged — 3+ Year Customer</span></td><td>Contact has been tagged. Workflow is firing automatically. No action needed yet.</td></tr>
+          <tr><td>2</td><td><span class="chip chip-gray">Day 1 SMS Sent</span></td><td>First message delivered. No action needed from you yet.</td></tr>
+          <tr><td>3</td><td><span class="chip chip-gray">Day 3 SMS Sent</span></td><td>Second message delivered. No action needed unless they reply.</td></tr>
+          <tr><td>4</td><td><span class="chip chip-gray">Day 6 SMS Sent</span></td><td>Final message delivered. No action needed unless they reply.</td></tr>
+          <tr><td>5</td><td><span class="chip chip-blue">Engaged / Replied</span></td><td>Contact replied. You have a task. <strong>Call within 15 minutes.</strong></td></tr>
+          <tr><td>6</td><td><span class="chip chip-blue">Consult Booked</span></td><td>You booked a consult. Appointment reminders are active.</td></tr>
+          <tr><td>7</td><td><span class="chip chip-blue">Consult Completed</span></td><td>You spoke with the contact. <strong>Send quote same day.</strong></td></tr>
+          <tr><td>8</td><td><span class="chip chip-yellow">Quote Sent</span></td><td>Quote delivered. Begin follow-up sequence.</td></tr>
+          <tr><td>9</td><td><span class="chip chip-yellow">Payment Pending</span></td><td>Verbal yes received. Collect payment or process insurance.</td></tr>
+          <tr><td>10</td><td><span class="chip chip-green">Closed Won</span></td><td>Sale complete. Device ordered. Delivery in progress.</td></tr>
+          <tr><td>11</td><td><span class="chip chip-red">Closed Lost</span></td><td>Not moving forward at this time.</td></tr>
+          <tr><td>12</td><td><span class="chip chip-purple">Long-Term Nurture</span></td><td>Interested but not ready. They stay in a drip sequence.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SECTION 6 — DISCOVERY QUESTIONS -->
+    <section id="discovery">
+      <h2>🔍 Discovery Questions to Ask on the Call</h2>
+      <p>Use these questions to uncover the real hearing problem and build trust before recommending anything:</p>
+      <ul>
+        <li>What situations are most frustrating for you right now with your hearing?</li>
+        <li>Are you wearing hearing aids currently?</li>
+        <li>How old are they?</li>
+        <li>What do you like about them?</li>
+        <li>What's not working well anymore?</li>
+        <li>What would better hearing help you do more easily right now?</li>
+        <li>Are you mainly exploring options, or are you hoping to solve this soon?</li>
+      </ul>
+    </section>
+
+    <!-- SECTION 7 — CLOSING SCRIPT -->
+    <section id="closing">
+      <h2>🎯 Closing Script</h2>
+      <p>Use this when you are ready to ask for the commitment:</p>
+      <div class="sms-label">Closing Script</div>
+      <div class="sms-bubble">Based on everything we reviewed, I believe this is a strong fit for you. We do have the current savings promotion available, and the next step would be to get you started so we can move toward delivery and fitting. Would you like to go ahead with that option?</div>
+    </section>
+
+    <!-- SECTION 8 — OBJECTIONS -->
+    <section id="objections">
+      <h2>🛡️ Objection Handling</h2>
+      <p>Every objection is a question in disguise. Your goal is not to argue — it is to identify the real blocker and address it directly.</p>
+
+      <h3>"It's too expensive."</h3>
+      <div class="sms-label">Response</div>
+      <div class="sms-bubble">I understand. Better hearing is an important investment, so that's a fair concern. What many people find helpful is looking at the full value: the technology, the support, the remote care, and the current savings. What part feels heaviest to you right now — the total price, monthly affordability, or deciding whether it's worth it?</div>
+
+      <h3>"I need to think about it."</h3>
+      <div class="sms-label">Response</div>
+      <div class="sms-bubble">Of course. Usually when someone says that, it means they want a little more clarity before deciding. Is it the product fit, the price, timing, or just wanting to feel more certain? I can help you get there faster.</div>
+
+      <h3>"I want to compare with other places."</h3>
+      <div class="sms-label">Response</div>
+      <div class="sms-bubble">That makes sense. What makes us different is that we provide premium hearing technology with remote fitting, home delivery, and ongoing support all included. What specifically do you want to compare so I can help make it apples-to-apples?</div>
+
+      <h3>"I'm not sure remote service will work."</h3>
+      <div class="sms-label">Response</div>
+      <div class="sms-bubble">A lot of people feel that way at first because they're used to thinking hearing care has to happen in person. What we do is guide you remotely with licensed specialists, pre-program the devices based on your hearing profile, ship them directly to your home, and then fine-tune them with follow-up support. Most of our clients say it's actually more convenient than going to a clinic.</div>
+    </section>
+
+    <!-- SECTION 9 — STANDARDS -->
+    <section id="standards">
+      <h2>⏱️ Response Time Standards</h2>
+      <p>These are non-negotiable standards for this campaign:</p>
+      <table class="action-table">
+        <thead><tr><th>Situation</th><th>Standard</th></tr></thead>
+        <tbody>
+          <tr><td>Contact replies to any SMS</td><td><strong>Call back within 15 minutes</strong> during business hours</td></tr>
+          <tr><td>Consult completed</td><td><strong>Quote sent same day</strong>, ideally within 2 hours</td></tr>
+          <tr><td>Quote sent — Day 1 follow-up</td><td>Follow up the same day the quote was sent</td></tr>
+          <tr><td>Quote sent — Day 3, 5, 7</td><td>Follow up on each of these days</td></tr>
+          <tr><td>No-show</td><td>Same-day recovery attempt via SMS and call</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SECTION 10 — VALUE PROP -->
+    <section id="value-prop">
+      <h2>💡 What Makes HBS Different — Use This in Every Call</h2>
+      <p>Include at least 2–3 of these points in every consult call and follow-up. This is the value story that separates HBS from every other option:</p>
+      <ul>
+        <li>Premium Signia hearing aids — not entry-level devices</li>
+        <li>Remote consultations — no driving to a clinic</li>
+        <li>Delivered directly to your door</li>
+        <li>3-year care plan included with every purchase</li>
+        <li>Help with insurance benefits — HBS does the legwork</li>
+        <li>Rechargeable and Bluetooth options available</li>
+        <li>Ongoing support from licensed hearing specialists</li>
+        <li>Better value than traditional brick-and-mortar clinic quotes</li>
+      </ul>
+      <div class="info-box">
+        💡 If a message doesn't communicate the convenience and value story, rewrite it before sending.
+      </div>
+    </section>
+
+    <!-- SECTION 11 — SMART LIST -->
+    <section id="smart-list">
+      <h2>🔎 How to Create the Smart List in GHL</h2>
+      <p>Before launching the campaign, you need to build a Smart List that filters all contacts whose last activity was 3 or more years ago. These are the contacts the campaign is designed to reach.</p>
+
+      <h3>Step-by-Step</h3>
+      <div class="step-row"><span class="step-num">1</span><p>Go to <strong>Contacts</strong> in the left sidebar</p></div>
+      <div class="step-row"><span class="step-num">2</span><p>Click <strong>Smart Lists</strong> at the top of the page</p></div>
+      <div class="step-row"><span class="step-num">3</span><p>Click <strong>+ New Smart List</strong></p></div>
+      <div class="step-row"><span class="step-num">4</span><p>Name it: <strong>3+ Year Customers — Upgrade Ready</strong></p></div>
+      <div class="step-row"><span class="step-num">5</span><p>Click <strong>Add Filter</strong> → click <strong>Advanced Filters</strong></p></div>
+      <div class="step-row"><span class="step-num">6</span><p>Set the filter: <strong>Last Activity</strong> → <strong>Is</strong> → <strong>More than</strong> → <strong>3</strong> → <strong>Years</strong> → <strong>Ago</strong></p></div>
+      <div class="step-row"><span class="step-num">7</span><p>(Recommended) Click <strong>+ Add Filter</strong> → set <strong>Tags</strong> → <strong>does not include</strong> → <code>sold</code> — excludes anyone already in a recent sale</p></div>
+      <div class="step-row"><span class="step-num">8</span><p>(Recommended) Click <strong>+ Add Filter</strong> → set <strong>Tags</strong> → <strong>does not include</strong> → <code>opted_out</code> — excludes anyone who has previously replied STOP</p></div>
+      <div class="step-row"><span class="step-num">9</span><p>Click <strong>Save Smart List</strong></p></div>
+
+      <div class="success-box">
+        ✅ <strong>The "More than 3 Years Ago" filter is dynamic</strong> — it automatically stays current. You never have to update the date manually.
+      </div>
+
+      <p>GHL will now show you every contact whose last activity was 3 or more years ago. This is your full upgrade-ready list.</p>
+    </section>
+
+    <!-- SECTION 12 — TAGGING -->
+    <section id="tagging">
+      <h2>🏷️ How to Tag All Contacts and Launch the Campaign</h2>
+      <p>Once the Smart List is saved and the workflow is published, follow these steps. The moment the tag is applied, the workflow fires automatically and Day 1 SMS begins sending.</p>
+
+      <h3>Tagging Process</h3>
+      <div class="step-row"><span class="step-num">1</span><p>Open the Smart List: <strong>3+ Year Customers — Upgrade Ready</strong></p></div>
+      <div class="step-row"><span class="step-num">2</span><p>Click the <strong>checkbox at the top</strong> of the list to select all contacts on the page</p></div>
+      <div class="step-row"><span class="step-num">3</span><p>Click the banner that says <strong>"Select all X contacts"</strong> — this selects every contact in the list, not just those visible on screen</p></div>
+      <div class="step-row"><span class="step-num">4</span><p>Click <strong>Actions</strong> at the top of the page</p></div>
+      <div class="step-row"><span class="step-num">5</span><p>Select <strong>Add Tag</strong></p></div>
+      <div class="step-row"><span class="step-num">6</span><p>Type <code>customer_3plus_years</code> and confirm</p></div>
+      <div class="step-row"><span class="step-num">7</span><p>Click <strong>Apply</strong></p></div>
+
+      <h3>Before You Tag — Critical Checklist</h3>
+      <div class="warn-box">
+        ⚠️ Do not apply the tags until you have confirmed ALL of the following:
+      </div>
+      <ul class="checklist" style="margin-top:12px;">
+        <li>The <strong>HBS — 3-Year Upgrade SMS Sequence</strong> workflow is <strong>Published</strong> in GHL — not Draft</li>
+        <li>You have tested the workflow on 2–3 contacts manually and confirmed Day 1 SMS fired correctly</li>
+        <li>Your SMS sending number is verified in GHL</li>
+        <li>You have enough SMS credits for the volume you are about to send</li>
+        <li>Your GHL calendar is open and ready to receive consult bookings</li>
+      </ul>
+
+      <h3>Test First — Always</h3>
+      <p>
+        Before tagging the full list, tag 2–3 contacts manually by opening their contact record →
+        click <strong>Add Tag</strong> → type <code>customer_3plus_years</code>.
+        Wait a few minutes and confirm the Day 1 SMS was delivered.
+        Once confirmed, go back and tag the full Smart List.
+      </p>
+    </section>
+
+    <!-- SECTION 13 — STOP OPT-OUT -->
+    <section id="stop-optout">
+      <h2>🚫 STOP Opt-Out — What Happens When a Contact Replies STOP</h2>
+      <p>If a contact replies STOP to any SMS message, the following happens automatically in GHL via the <strong>HBS — STOP Opt-Out</strong> workflow:</p>
+      <ul>
+        <li>The contact's opportunity is moved to <span class="chip chip-red">Closed Lost</span> in the 3-Year Upgrade SMS Campaign pipeline</li>
+        <li>The <code>customer_3plus_years</code> tag is removed so they cannot be re-enrolled</li>
+        <li>The <code>opted_out</code> tag is applied to the contact</li>
+        <li>All future SMS messages to this contact are stopped</li>
+      </ul>
+      <div class="success-box">
+        ✅ <strong>You do not need to take any action</strong> when someone replies STOP — everything is handled automatically. The contact will appear in the <span class="chip chip-red">Closed Lost</span> stage of the pipeline.
+      </div>
+
+      <h3>STOP Opt-Out Workflow Summary</h3>
+      <table class="action-table">
+        <thead><tr><th>Step</th><th>Action</th></tr></thead>
+        <tbody>
+          <tr><td>Trigger</td><td>Customer replies STOP via SMS</td></tr>
+          <tr><td>1</td><td>Move opportunity to <span class="chip chip-red">Closed Lost</span></td></tr>
+          <tr><td>2</td><td>Remove tag: <code>customer_3plus_years</code></td></tr>
+          <tr><td>3</td><td>Add tag: <code>opted_out</code></td></tr>
+          <tr><td>4</td><td>End workflow</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Important — The opted_out Tag</h3>
+      <p>The <code>opted_out</code> tag is your protection against accidentally re-contacting someone who has asked to stop receiving messages. The Smart List is filtered to exclude all contacts with this tag — so they will <strong>never</strong> be re-enrolled in the campaign even if the <code>customer_3plus_years</code> tag is re-applied in the future.</p>
+
+      <div class="warn-box">
+        ⚠️ <strong>Never manually remove the <code>opted_out</code> tag</strong> from a contact unless you have their explicit written consent to be re-contacted.
+      </div>
+    </section>
+
+    <!-- SECTION 14 — DAILY CHECKLIST -->
+    <section id="checklist">
+      <h2>✅ Your Daily Checklist</h2>
+      <p>Use this every day when you log into GHL:</p>
+      <ul class="checklist">
+        <li>Log in to GHL and check your <strong>Tasks</strong> — complete any overdue tasks first</li>
+        <li>Check the <strong>3-Year Upgrade SMS Campaign pipeline</strong> — review anyone in Engaged / Replied</li>
+        <li>Call back any contact who replied to an SMS within 15 minutes during business hours</li>
+        <li>Send any outstanding quotes from completed consults — same day, within 2 hours</li>
+        <li>Follow up on all open quotes per the Day 1, 3, 5, 7 schedule</li>
+        <li>Check your <strong>SMS inbox</strong> — reply to any inbound texts from leads within 15 minutes</li>
+        <li>Mark all completed tasks as done to keep the pipeline clean</li>
+        <li>Update pipeline stages after every call or action</li>
+      </ul>
+      <div class="warn-box">
+        ⚠️ <strong>Never manually move a contact's pipeline stage backward</strong> — this can interfere with the automated workflow logic.
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>Hearing Benefit Services &nbsp;|&nbsp; hearingbenefitservices.com &nbsp;|&nbsp; Honolulu, HI &nbsp;|&nbsp; Internal Staff Training — Confidential</p>
+  </footer>
+
+</div>
+
+<script>
+  function checkLogin() {
+    var u = document.getElementById('uname').value.trim();
+    var p = document.getElementById('pword').value.trim();
+    if (u === 'training' && p === 'l8ZiBguc6I4CW8') {
+      document.getElementById('login-overlay').style.display = 'none';
+      document.getElementById('main-content').style.display  = 'block';
+    } else {
+      document.getElementById('login-error').style.display = 'block';
+    }
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') checkLogin();
+  });
+</script>
+
+</body>
+</html>
