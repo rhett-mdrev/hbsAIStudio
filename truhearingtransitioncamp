@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>True Hearing Transition Campaign | Hearing Benefit Services</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #f0f4f8; color: #1a202c; line-height: 1.7; }
+
+    #login-overlay { position: fixed; inset: 0; background: linear-gradient(135deg, #0a3d62 0%, #1e6fa8 100%); display: flex; align-items: center; justify-content: center; z-index: 9999; }
+    .login-box { background: #fff; border-radius: 16px; padding: 48px 40px; width: min(420px, 92vw); box-shadow: 0 24px 64px rgba(0,0,0,.25); text-align: center; }
+    .login-box h2 { font-size: 1.5rem; color: #0a3d62; margin-bottom: 6px; }
+    .login-box p { font-size: .9rem; color: #718096; margin-bottom: 28px; }
+    .login-box input { width: 100%; padding: 12px 16px; border: 1.5px solid #cbd5e0; border-radius: 8px; font-size: 1rem; margin-bottom: 14px; transition: border-color .2s; }
+    .login-box input:focus { outline: none; border-color: #1e6fa8; }
+    .login-box button { width: 100%; padding: 13px; background: linear-gradient(135deg, #0a3d62, #1e6fa8); color: #fff; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: opacity .2s; }
+    .login-box button:hover { opacity: .88; }
+    #login-error { color: #e53e3e; font-size: .85rem; margin-top: 10px; display: none; }
+
+    #main-content { display: none; }
+
+    header { background: linear-gradient(135deg, #0a3d62 0%, #1e6fa8 100%); color: #fff; padding: 48px 24px; text-align: center; }
+    header h1 { font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 700; }
+    header p { margin-top: 10px; font-size: 1.05rem; opacity: .88; }
+
+    nav.sticky { position: sticky; top: 0; z-index: 100; background: #0a3d62; padding: 0 16px; overflow-x: auto; white-space: nowrap; box-shadow: 0 2px 8px rgba(0,0,0,.3); }
+    nav.sticky a { display: inline-block; color: #bee3f8; text-decoration: none; padding: 14px 18px; font-size: .88rem; font-weight: 500; transition: color .2s, background .2s; }
+    nav.sticky a:hover { color: #fff; background: rgba(255,255,255,.1); }
+
+    .container { max-width: 960px; margin: 0 auto; padding: 40px 20px 80px; }
+
+    section { background: #fff; border-radius: 14px; padding: 36px 32px; margin-bottom: 32px; box-shadow: 0 2px 12px rgba(0,0,0,.07); }
+    section h2 { font-size: 1.35rem; font-weight: 700; color: #0a3d62; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #bee3f8; }
+    section h3 { font-size: 1.05rem; font-weight: 700; color: #1e6fa8; margin: 22px 0 8px; }
+    section p { margin-bottom: 12px; color: #2d3748; }
+    section ul, section ol { padding-left: 20px; margin-bottom: 12px; }
+    section li { margin-bottom: 6px; color: #2d3748; }
+
+    .action-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: .92rem; }
+    .action-table th { background: #0a3d62; color: #fff; padding: 10px 14px; text-align: left; }
+    .action-table td { padding: 10px 14px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+    .action-table tr:nth-child(even) td { background: #f7fafc; }
+
+    .chip { display: inline-block; padding: 3px 12px; border-radius: 12px; font-size: .78rem; font-weight: 700; margin: 2px; }
+    .chip-blue { background: #ebf8ff; color: #1e6fa8; }
+    .chip-green { background: #f0fff4; color: #276749; }
+    .chip-yellow { background: #fffff0; color: #744210; }
+    .chip-red { background: #fff5f5; color: #c53030; }
+    .chip-gray { background: #f7fafc; color: #4a5568; }
+
+    .info-box, .warn-box, .success-box { border-radius: 10px; padding: 16px 20px; margin: 16px 0; font-size: .93rem; }
+    .info-box { background: #ebf8ff; border-left: 4px solid #1e6fa8; color: #1a365d; }
+    .warn-box { background: #fffbeb; border-left: 4px solid #d69e2e; color: #744210; }
+    .success-box { background: #f0fff4; border-left: 4px solid #38a169; color: #22543d; }
+
+    .step-row { display: flex; align-items: flex-start; padding: 10px 0; border-bottom: 0.5px solid #f0f4f8; }
+    .step-row:last-child { border-bottom: none; }
+    .step-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: #1e6fa8; color: #fff; border-radius: 50%; font-size: .82rem; font-weight: 700; margin-right: 10px; flex-shrink: 0; }
+    .step-row p { margin: 0; color: #2d3748; font-size: 0.97rem; }
+
+    code { background: #fef08a; color: #1a202c; font-family: 'Courier New', monospace; font-size: .88rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; border: 1px solid #fde047; }
+
+    .checklist { list-style: none; padding: 0; }
+    .checklist li { padding: 8px 0 8px 32px; position: relative; border-bottom: 1px solid #f0f4f8; color: #2d3748; }
+    .checklist li::before { content: '☐'; position: absolute; left: 0; font-size: 1.1rem; color: #1e6fa8; }
+
+    .keyword-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .keyword { background: #f0fff4; color: #276749; border: 1px solid #c6f6d5; border-radius: 20px; padding: 4px 14px; font-size: .88rem; font-weight: 500; }
+
+    footer { text-align: center; padding: 32px 16px; font-size: .82rem; color: #718096; }
+
+    @media (max-width: 600px) { section { padding: 24px 18px; } .login-box { padding: 36px 24px; } }
+  </style>
+</head>
+<body>
+
+<div id="login-overlay">
+  <div class="login-box">
+    <h2>🎧 Staff Training Portal</h2>
+    <p>Hearing Benefit Services — Internal Use Only</p>
+    <input type="text" id="uname" placeholder="Username" autocomplete="username" />
+    <input type="password" id="pword" placeholder="Password" autocomplete="current-password" />
+    <button onclick="checkLogin()">Sign In</button>
+    <p id="login-error">Incorrect username or password. Please try again.</p>
+  </div>
+</div>
+
+<div id="main-content">
+
+  <header>
+    <h1>📧 True Hearing Transition Campaign — Staff Training Guide</h1>
+    <p>Everything Seteisha needs to know about the True Hearing Transition Campaign from start to finish.</p>
+  </header>
+
+  <nav class="sticky">
+    <a href="#overview">Overview</a>
+    <a href="#emails">The Two Emails</a>
+    <a href="#pipeline">Pipeline Stages</a>
+    <a href="#launch">How to Launch</a>
+    <a href="#replies">When They Reply</a>
+    <a href="#ai-detection">AI Detection</a>
+    <a href="#checklist">Daily Checklist</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- OVERVIEW -->
+    <section id="overview">
+      <h2>📋 Overview — What Is This Campaign?</h2>
+      <p>The <strong>True Hearing Transition Campaign</strong> is an informational email campaign for existing TruHearing patients. Its purpose is to notify them that Hearing Benefit Services is no longer in the TruHearing network.</p>
+      <div class="warn-box">
+        ⚠️ <strong>This is NOT a sales campaign.</strong> Do not treat replies as sales leads unless the patient specifically expresses interest in continuing care or purchasing hearing aids.
+      </div>
+      <p>Two emails are sent automatically once the campaign is triggered. Your role is to monitor replies daily and move contacts to the correct pipeline stage based on their response.</p>
+
+      <h3>Who Receives This Campaign</h3>
+      <ul>
+        <li>Contacts tagged <code>true hearing</code> — approximately 96 contacts</li>
+        <li>Contacts tagged <code>true hearing one year</code> — approximately 21 contacts</li>
+        <li>Total: approximately <strong>117 patients</strong></li>
+      </ul>
+    </section>
+
+    <!-- THE TWO EMAILS -->
+    <section id="emails">
+      <h2>💌 The Two Emails Sent</h2>
+      <p>These emails are sent automatically by GHL. <strong>You do not send these manually.</strong></p>
+      <table class="action-table">
+        <thead><tr><th>#</th><th>Subject</th><th>Sent When</th><th>From</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><strong>Email 1</strong></td>
+            <td><em>Important Update Regarding Your Hearing Care</em></td>
+            <td>Immediately on tag</td>
+            <td>Hearing Benefit Services</td>
+          </tr>
+          <tr>
+            <td><strong>Email 2</strong></td>
+            <td><em>A Personal Note from Andrea</em></td>
+            <td>3 days after Email 1</td>
+            <td>Hearing Benefit Services</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Email 1 — General Transition Notice</h3>
+      <p>An official notice informing patients that HBS is no longer in network with TruHearing. Includes:</p>
+      <ul>
+        <li>TruHearing contact number: <strong>1-866-581-9464</strong></li>
+        <li>Option to continue care with HBS at <strong>$65 per visit</strong></li>
+        <li>Signia Bluetooth support number: <strong>800-350-6093</strong></li>
+        <li>HBS contact: <strong>1-808-435-7002</strong></li>
+      </ul>
+
+      <h3>Email 2 — Personal Note from Andrea</h3>
+      <p>A warm personal message from Andrea explaining her decision to step back from TruHearing and letting patients know she is still available as a hearing specialist offering Signia hearing aids online at $2,500.</p>
+
+      <div class="info-box">
+        💡 Both emails include a <strong>Reply STOP</strong> opt-out option in the footer. If a patient replies STOP, move them to <span class="chip chip-red">Opted Out</span> in the pipeline.
+      </div>
+
+      <h3>Email 1 Preview — General Transition Notice</h3>
+      <p style="font-size:.88rem; color:#718096; margin-bottom:12px;">This is exactly what the patient receives immediately after the tag is applied.</p>
+      <div style="border:2px solid #e2e8f0; border-radius:12px; overflow:hidden; margin-bottom:32px;">
+        <div style="background:#f7fafc; padding:10px 16px; border-bottom:1px solid #e2e8f0; font-size:.82rem; color:#4a5568; display:flex; gap:16px;">
+          <span><strong>From:</strong> Hearing Benefit Services</span>
+          <span><strong>Subject:</strong> Important Update Regarding Your Hearing Care</span>
+        </div>
+        <div style="background:#f4f6f8; padding:24px 16px;">
+          <div style="max-width:580px; margin:0 auto; background:#fff; border-radius:4px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.08);">
+            <div style="background:#ffffff; padding:24px 32px; text-align:center; border-bottom:2px solid #bee3f8;">
+              <img src="https://assets.cdn.filesafe.space/UDKdmJIdT4xB1V6Lye64/media/68f7cb4d3a4642fd12cdeaab.png" alt="Hearing Benefit Services" style="max-width:160px; height:auto;" />
+            </div>
+            <div style="background:#ebf8ff; border-bottom:2px solid #bee3f8; padding:12px 32px; text-align:center;">
+              <p style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.1em; color:#1e6fa8; margin:0;">📋 &nbsp; Important Update Regarding Your Hearing Care</p>
+            </div>
+            <div style="padding:28px 32px;">
+              <p style="font-size:15px; color:#2d3748; margin-bottom:16px;">Dear {{contact.first_name}},</p>
+              <p style="font-size:14px; color:#2d3748; margin-bottom:14px; line-height:1.8;">At Hearing Benefit Services, our priority has always been to provide you with personalized, high-quality hearing care. We would like to inform you that our practice is transitioning away from participation in the TruHearing network.</p>
+              <p style="font-size:14px; font-weight:700; color:#2d3748; margin-bottom:14px;">We are currently not in network with TruHearing.</p>
+              <div style="background:#fff8f0; border:1.5px solid #f6ad55; border-radius:8px; padding:16px 20px; margin:16px 0;">
+                <p style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:#c05621; margin-bottom:10px;">🔵 TruHearing Contact Information</p>
+                <p style="font-size:13px; color:#2d3748; margin-bottom:6px;">For any future questions regarding appointments, your new in-network TruHearing provider, or benefits, please contact TruHearing directly:</p>
+                <p style="font-size:13px; font-weight:700; color:#2d3748; margin-bottom:4px;">TruHearing</p>
+                <p style="font-size:13px; color:#2d3748; margin-bottom:4px;">Phone: 1-866-581-9464</p>
+                <p style="font-size:13px; color:#2d3748;">Monday – Friday</p>
+              </div>
+              <div style="background:#f0f7ff; border-left:4px solid #1e6fa8; border-radius:0 8px 8px 0; padding:14px 18px; margin:16px 0;">
+                <p style="font-size:13px; color:#1a365d; margin:0;">Should you wish to continue your care with us, we remain available for both <strong>in-person appointments on Oahu</strong> and <strong>remote appointments</strong> at a fee of <strong>$65 per visit</strong>.</p>
+              </div>
+              <p style="font-size:14px; color:#2d3748; margin-bottom:14px; line-height:1.8;">Our goal is to ensure continuity of care in a way that best supports your individual needs.</p>
+              <div style="background:#f7fafc; border:1px solid #e2e8f0; border-radius:8px; padding:16px 20px; margin:16px 0;">
+                <p style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.08em; color:#4a5568; margin-bottom:10px;">📞 Quick Reference Numbers</p>
+                <p style="font-size:13px; color:#2d3748; margin-bottom:4px;"><strong>TruHearing Appointments:</strong> 866-581-9464</p>
+                <p style="font-size:13px; color:#2d3748; margin-bottom:4px;"><strong>Signia Bluetooth & App Pairing Support:</strong> 800-350-6093</p>
+                <p style="font-size:13px; color:#2d3748;"><strong>Hearing Benefit Services:</strong> 1-808-435-7002</p>
+              </div>
+              <p style="font-size:14px; color:#2d3748; margin-bottom:14px; line-height:1.8;">We sincerely appreciate the opportunity to be part of your hearing care. If you have any questions or would like to schedule an appointment, please call or text us at <strong>1-808-435-7002</strong>.</p>
+              <div style="margin-top:20px; padding-top:16px; border-top:1px solid #e2e8f0;">
+                <p style="font-size:13px; color:#718096; font-style:italic; margin-bottom:4px;">Warm regards,</p>
+                <p style="font-size:14px; font-weight:700; color:#0a3d62;">Hearing Benefit Services</p>
+                <p style="font-size:12px; color:#1e6fa8;">hearingbenefitservices.com</p>
+              </div>
+            </div>
+            <div style="background:#1e6fa8; padding:20px 32px; text-align:center;">
+              <p style="color:#bee3f8; font-size:12px; margin-bottom:4px;"><strong style="color:#fff;">Hearing Benefit Services</strong></p>
+              <p style="color:#bee3f8; font-size:12px; margin-bottom:8px;">hearingbenefitservices.com &nbsp;|&nbsp; 1-808-435-7002</p>
+              <p style="color:#bee3f8; font-size:11px;">If you no longer wish to receive emails from us, please reply with STOP.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3>Email 2 Preview — Personal Note from Andrea</h3>
+      <p style="font-size:.88rem; color:#718096; margin-bottom:12px;">This is sent 3 days after Email 1 if the patient has not replied.</p>
+      <div style="border:2px solid #e2e8f0; border-radius:12px; overflow:hidden; margin-bottom:16px;">
+        <div style="background:#f7fafc; padding:10px 16px; border-bottom:1px solid #e2e8f0; font-size:.82rem; color:#4a5568; display:flex; gap:16px;">
+          <span><strong>From:</strong> Hearing Benefit Services</span>
+          <span><strong>Subject:</strong> A Personal Note from Andrea</span>
+        </div>
+        <div style="background:#f4f6f8; padding:24px 16px;">
+          <div style="max-width:580px; margin:0 auto; background:#fff; border-radius:4px; overflow:hidden; box-shadow:0 2px 8px rgba(0,0,0,.08);">
+            <div style="background:#ffffff; padding:24px 32px; text-align:center; border-bottom:2px solid #bee3f8;">
+              <img src="https://assets.cdn.filesafe.space/UDKdmJIdT4xB1V6Lye64/media/68f7cb4d3a4642fd12cdeaab.png" alt="Hearing Benefit Services" style="max-width:160px; height:auto;" />
+            </div>
+            <div style="background:#fdf6ec; border-top:3px solid #c8903a; border-bottom:3px solid #c8903a; padding:14px 32px; text-align:center;">
+              <p style="font-size:11px; font-weight:700; text-transform:uppercase; letter-spacing:0.12em; color:#c8903a; margin:0;">✦ &nbsp; A Personal Note from Andrea &nbsp; ✦</p>
+            </div>
+            <div style="padding:28px 32px; font-family:Georgia, serif;">
+              <p style="font-size:22px; font-weight:700; color:#0a3d62; margin-bottom:20px;">Aloha {{contact.first_name}},</p>
+              <p style="font-size:14px; color:#2d3748; margin-bottom:16px; line-height:1.9;">It has truly been such a blessing and an honor to care for each and every one of you. I'm so grateful for the trust you've placed in me over the years, and I genuinely love and appreciate you all more than words can express.</p>
+              <p style="font-size:14px; color:#2d3748; margin-bottom:16px; line-height:1.9;">I wanted to share that I've made the difficult decision to step back from TruHearing so I can be more present for my six-year-old son during this special time in his life. This wasn't an easy choice, but it's one that feels right for my family.</p>
+              <p style="font-size:14px; color:#2d3748; margin-bottom:16px; line-height:1.9;">Please know that I am still here as a hearing specialist. My passion for helping people hear better hasn't changed at all. I'm continuing to support and help people remotely and in new ways that allow me to still be of service.</p>
+              <div style="background:#f0f7ff; border-left:4px solid #1e6fa8; border-radius:0 8px 8px 0; padding:14px 18px; margin:16px 0;">
+                <p style="font-size:13px; color:#1a365d; margin:0;">I am offering <strong>Signia hearing aids online for $2,500</strong> through <span style="color:#1e6fa8;">hearingbenefitservices.com</span> as a more affordable option — for those who may not have insurance coverage.</p>
+              </div>
+              <p style="font-size:14px; color:#2d3748; margin-bottom:16px; line-height:1.9;">While things may look a little different, I'm not going anywhere. My husband is retiring here in Oahu, so this will continue to be home for us.</p>
+              <p style="font-size:14px; color:#2d3748; margin-bottom:16px; line-height:1.9;">You can always reach me directly at <strong>808-435-7002</strong> if you need anything at all or would like to set up a call. I'm still here.</p>
+              <div style="margin-top:24px; padding-top:20px; border-top:1px solid #e2e8f0;">
+                <p style="font-size:14px; color:#c8903a; font-style:italic; margin-bottom:6px;">With so much aloha and gratitude,</p>
+                <p style="font-size:16px; font-weight:700; color:#0a3d62; font-style:italic;">Andrea</p>
+                <p style="font-size:12px; color:#718096; margin-top:4px;">Hearing Benefit Services</p>
+              </div>
+            </div>
+            <div style="background:#1e6fa8; padding:20px 32px; text-align:center;">
+              <p style="color:#bee3f8; font-size:12px; margin-bottom:4px;"><strong style="color:#fff;">Hearing Benefit Services</strong></p>
+              <p style="color:#bee3f8; font-size:12px; margin-bottom:8px;">hearingbenefitservices.com &nbsp;|&nbsp; 1-808-435-7002</p>
+              <p style="color:#bee3f8; font-size:11px;">If you no longer wish to receive emails from us, please reply with STOP.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+    </section>
+
+    <!-- PIPELINE STAGES -->
+    <section id="pipeline">
+      <h2>📊 Pipeline Stages — True Hearing Transition Campaign</h2>
+      <p>Every contact is tracked in the <strong>True Hearing Transition Campaign</strong> pipeline in GHL.</p>
+      <table class="action-table">
+        <thead><tr><th>Stage</th><th>Meaning</th><th>Your Action</th></tr></thead>
+        <tbody>
+          <tr><td><span class="chip chip-gray">General Notice Sent</span></td><td>Email 1 delivered automatically</td><td>No action needed</td></tr>
+          <tr><td><span class="chip chip-gray">Personal Note Sent</span></td><td>Email 2 delivered automatically</td><td>No action needed</td></tr>
+          <tr><td><span class="chip chip-blue">Replied</span></td><td>Contact replied to either email</td><td>Review reply and move to correct stage</td></tr>
+          <tr><td><span class="chip chip-green">Interested in Services</span></td><td>Contact expressed interest in continuing with HBS</td><td>Flag for follow-up — this is a warm opportunity</td></tr>
+          <tr><td><span class="chip chip-red">Opted Out</span></td><td>Contact replied STOP</td><td>No further contact — move to Opted Out</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- HOW TO LAUNCH -->
+    <section id="launch">
+      <h2>🚀 How to Launch the Campaign</h2>
+      <p>Follow these steps exactly to launch the True Hearing Transition Campaign.</p>
+
+      <h3>Step-by-Step</h3>
+      <div class="step-row"><span class="step-num">1</span><p>Go to <strong>Contacts → Smart Lists</strong></p></div>
+      <div class="step-row"><span class="step-num">2</span><p>Create a new Smart List — name it: <strong>True Hearing Patients — Transition 2026</strong></p></div>
+      <div class="step-row"><span class="step-num">3</span><p>Set filters: <strong>Tags includes</strong> → <code>true hearing</code> AND/OR <strong>Tags includes</strong> → <code>true hearing one year</code></p></div>
+      <div class="step-row"><span class="step-num">4</span><p>Click <strong>Save Smart List</strong></p></div>
+      <div class="step-row"><span class="step-num">5</span><p>Select all contacts in the list — click <strong>"Select all X contacts"</strong></p></div>
+      <div class="step-row"><span class="step-num">6</span><p>Click <strong>Actions → Add Tag</strong></p></div>
+      <div class="step-row"><span class="step-num">7</span><p>Type <code>th_transition_2026</code> and confirm</p></div>
+      <div class="step-row"><span class="step-num">8</span><p>Click <strong>Apply</strong> — the workflow fires automatically for every contact</p></div>
+
+      <div class="warn-box" style="margin-top:20px;">
+        ⚠️ <strong>Test first — always.</strong> Before tagging the full list, apply <code>th_transition_2026</code> to 2–3 contacts manually and confirm both emails send correctly. Only then tag the full Smart List.
+      </div>
+    </section>
+
+    <!-- WHEN THEY REPLY -->
+    <section id="replies">
+      <h2>💬 What to Do When a Patient Replies</h2>
+      <p>Review all replies in GHL Conversations daily and move the contact to the correct pipeline stage:</p>
+
+      <table class="action-table">
+        <thead><tr><th>If the patient says...</th><th>Move to this stage</th></tr></thead>
+        <tbody>
+          <tr><td>General question, thank you, or acknowledgment</td><td><span class="chip chip-blue">Replied</span></td></tr>
+          <tr><td>Asks about buying hearing aids, pricing, or booking with Andrea</td><td><span class="chip chip-green">Interested in Services</span></td></tr>
+          <tr><td>Replies STOP or asks to be removed</td><td><span class="chip chip-red">Opted Out</span></td></tr>
+        </tbody>
+      </table>
+
+      <div class="info-box" style="margin-top:16px;">
+        💡 If a patient moves to <span class="chip chip-green">Interested in Services</span> — treat them as a warm lead and follow up personally. They are not a TruHearing patient anymore — they are a potential HBS patient.
+      </div>
+    </section>
+
+    <!-- AI DETECTION -->
+    <section id="ai-detection">
+      <h2>🤖 AI Auto-Detection for Buying Intent</h2>
+      <p>GHL's AI automatically detects replies containing buying intent keywords and moves the contact to <span class="chip chip-green">Interested in Services</span> without you having to do it manually. A task is also assigned to you when this happens.</p>
+
+      <h3>Keywords the AI Watches For</h3>
+      <div class="keyword-grid">
+        <span class="keyword">interested</span>
+        <span class="keyword">buy</span>
+        <span class="keyword">purchase</span>
+        <span class="keyword">how much</span>
+        <span class="keyword">price</span>
+        <span class="keyword">cost</span>
+        <span class="keyword">appointment</span>
+        <span class="keyword">book</span>
+        <span class="keyword">schedule</span>
+        <span class="keyword">sign up</span>
+        <span class="keyword">join</span>
+        <span class="keyword">Andrea</span>
+      </div>
+
+      <div class="warn-box" style="margin-top:16px;">
+        ⚠️ <strong>Always do a daily manual review</strong> of all replies — the AI may miss replies that are phrased differently. Your review catches what automation can't.
+      </div>
+    </section>
+
+    <!-- DAILY CHECKLIST -->
+    <section id="checklist">
+      <h2>✅ Your Daily Checklist</h2>
+      <p>Use this every day while the campaign is active:</p>
+      <ul class="checklist">
+        <li>Log in to GHL and check your <strong>Tasks</strong> — complete any overdue tasks first</li>
+        <li>Check the <strong>True Hearing Transition Campaign pipeline</strong> — review anyone in Replied or Interested in Services</li>
+        <li>Check your <strong>email inbox in GHL</strong> — reply to any inbound messages within 24 hours</li>
+        <li>Move contacts to the correct pipeline stage based on their reply</li>
+        <li>If AI flagged anyone as Interested in Services — follow up personally</li>
+        <li>Mark all completed tasks as done to keep the pipeline clean</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>Hearing Benefit Services &nbsp;|&nbsp; hearingbenefitservices.com &nbsp;|&nbsp; Honolulu, HI &nbsp;|&nbsp; Internal Staff Training — Confidential</p>
+  </footer>
+
+</div>
+
+<script>
+  function checkLogin() {
+    var u = document.getElementById('uname').value.trim();
+    var p = document.getElementById('pword').value.trim();
+    if (u === 'training' && p === 'l8ZiBguc6I4CW8') {
+      document.getElementById('login-overlay').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    } else {
+      document.getElementById('login-error').style.display = 'block';
+    }
+  }
+  document.addEventListener('keydown', function(e) { if (e.key === 'Enter') checkLogin(); });
+</script>
+
+</body>
+</html>
