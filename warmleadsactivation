@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Warm Lead Reactivation Campaign | HBS</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+:root {
+    --navy: #1a2744;
+    --blue: #2563eb;
+    --teal: #0d9488;
+    --green: #16a34a;
+    --orange: #ea580c;
+    --red: #dc2626;
+    --purple: #7c3aed;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+    --text: #1e293b;
+    --text-light: #64748b;
+    --accent-bg: #eff6ff;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+
+/* Top Navigation */
+.top-nav {
+    background: var(--card); padding: 16px 24px; border-bottom: 1px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100;
+}
+.back-btn {
+    text-decoration: none; color: var(--text-light); font-weight: 600; font-size: 0.9rem;
+    display: flex; align-items: center; gap: 8px; transition: color 0.2s;
+}
+.back-btn:hover { color: var(--blue); }
+
+/* Document Header */
+.doc-header {
+    background: linear-gradient(135deg, var(--navy) 0%, #2d3f63 100%);
+    color: white; padding: 60px 20px; text-align: center;
+}
+.doc-header h1 { font-family: 'DM Serif Display', serif; font-size: 2.5rem; margin-bottom: 12px; }
+.doc-header .subtitle { font-size: 1.1rem; opacity: 0.9; margin-bottom: 24px; font-weight: 500; }
+.meta-badges {
+    display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;
+}
+.meta-badge {
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+    padding: 6px 14px; border-radius: 20px; font-size: 0.85rem; font-weight: 600;
+}
+
+/* Main Content Layout */
+.container { max-width: 1000px; margin: -30px auto 40px; padding: 0 20px; position: relative; z-index: 10; }
+
+.section-card {
+    background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+    padding: 32px; margin-bottom: 24px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+.section-title {
+    font-family: 'DM Serif Display', serif; font-size: 1.6rem; color: var(--navy);
+    margin-bottom: 20px; padding-bottom: 12px; border-bottom: 2px solid var(--accent-bg);
+}
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; margin-bottom: 16px; font-size: 0.95rem; }
+th, td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--border); }
+th { background: var(--accent-bg); color: var(--navy); font-weight: 700; text-transform: uppercase; font-size: 0.8rem; letter-spacing: 0.5px; }
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #f8fafc; }
+
+/* Typography & Lists */
+p { margin-bottom: 16px; color: var(--text); }
+ul, ol { margin-bottom: 16px; padding-left: 24px; color: var(--text); }
+li { margin-bottom: 8px; }
+strong { color: var(--navy); }
+
+/* UI Elements */
+.tag {
+    background: #e2e8f0; color: #334155; font-family: monospace; font-size: 0.85rem;
+    padding: 2px 8px; border-radius: 4px; font-weight: 600;
+}
+.tag-blue { background: #dbeafe; color: #1e40af; }
+.tag-green { background: #dcfce7; color: #166534; }
+.tag-red { background: #fee2e2; color: #991b1b; }
+.tag-orange { background: #ffedd5; color: #9a3412; }
+
+/* Message Blocks (SMS/Email) */
+.copy-block {
+    background: #f8fafc; border-left: 4px solid var(--blue); border-radius: 0 8px 8px 0;
+    padding: 20px; margin-bottom: 24px; position: relative;
+}
+.copy-block.email { border-left-color: var(--purple); }
+.copy-type {
+    font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+    color: var(--blue); margin-bottom: 8px; display: block;
+}
+.copy-block.email .copy-type { color: var(--purple); }
+.copy-subject { font-weight: 700; margin-bottom: 12px; color: var(--navy); }
+.copy-body { font-size: 0.95rem; line-height: 1.6; color: #334155; white-space: pre-wrap; font-family: 'DM Sans', sans-serif; }
+.copy-meta {
+    margin-top: 16px; font-size: 0.8rem; color: var(--text-light); font-style: italic;
+    border-top: 1px solid var(--border); padding-top: 12px;
+}
+
+/* Alert/Note blocks */
+.alert {
+    padding: 16px 20px; border-radius: 8px; margin-bottom: 16px; font-size: 0.95rem;
+}
+.alert-yellow { background: #fffbeb; border-left: 4px solid #f59e0b; }
+.alert-blue { background: #eff6ff; border-left: 4px solid var(--blue); }
+.alert-red { background: #fef2f2; border-left: 4px solid var(--red); }
+.alert-green { background: #f0fdf4; border-left: 4px solid var(--green); }
+
+/* Checklists */
+.check-list { list-style: none; padding-left: 0; }
+.check-list li {
+    display: flex; align-items: flex-start; gap: 12px; padding: 12px;
+    background: #f8fafc; border: 1px solid var(--border); border-radius: 8px; margin-bottom: 8px;
+}
+.check-list li::before {
+    content: "◻"; color: var(--text-light); font-size: 1.2rem; line-height: 1; font-family: sans-serif;
+}
+.check-list li.done::before { content: "☑"; color: var(--green); }
+
+.footer { text-align: center; padding: 40px 20px; color: var(--text-light); font-size: 0.85rem; }
+
+@media (max-width: 768px) {
+    .section-card { padding: 20px; }
+    .doc-header h1 { font-size: 2rem; }
+    table { display: block; overflow-x: auto; white-space: nowrap; }
+}
+</style>
+</head>
+<body>
+
+<div class="top-nav">
+    <a href="https://hearingbenefitservices.com/hbstraininghub" class="back-btn">← Back to Training Hub</a>
+    <img src="https://assets.cdn.filesafe.space/UDKdmJIdT4xB1V6Lye64/media/68f7cb4d3a4642fd12cdeaab.png" alt="HBS" style="height: 30px;">
+</div>
+
+<div class="doc-header">
+    <h1>HBS — Warm Lead Reactivation</h1>
+    <div class="subtitle">Full Campaign Context & Build Guide</div>
+    <div class="meta-badges">
+        <span class="meta-badge">Last Updated: May 2026</span>
+        <span class="meta-badge" style="background: rgba(22, 163, 74, 0.25); border-color: #16a34a;">Status: ✅ Built & Live</span>
+        <span class="meta-badge">GHL Location ID: UDKdmJIdT4xB1V6Lye64</span>
+    </div>
+</div>
+
+<div class="container">
+
+    <!-- CAMPAIGN OVERVIEW -->
+    <div class="section-card">
+        <h2 class="section-title">Campaign Overview</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <td style="width: 30%;"><strong>Campaign Name</strong></td>
+                    <td>Warm Lead Reactivation Campaign</td>
+                </tr>
+                <tr>
+                    <td><strong>Goal</strong></td>
+                    <td>Re-engage contacts who previously showed interest but never converted</td>
+                </tr>
+                <tr>
+                    <td><strong>Target Segment</strong></td>
+                    <td>Contacts tagged <span class="tag tag-blue">warm_lead_old</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Channels</strong></td>
+                    <td>SMS + Email (multi-channel)</td>
+                </tr>
+                <tr>
+                    <td><strong>Discount</strong></td>
+                    <td>10% savings offer</td>
+                </tr>
+                <tr>
+                    <td><strong>SMS Sender</strong></td>
+                    <td>HBS main line (1-808-435-7002)</td>
+                </tr>
+                <tr>
+                    <td><strong>Email Sender</strong></td>
+                    <td>Seteisha — Hearing Benefit Services</td>
+                </tr>
+                <tr>
+                    <td><strong>Booking Link</strong></td>
+                    <td><a href="https://hearingbenefitservices.com/appointment" target="_blank" style="color: var(--blue);">https://hearingbenefitservices.com/appointment</a></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 style="margin: 24px 0 12px; color: var(--navy);">Who Gets This Campaign</h3>
+        <p>Contacts tagged <span class="tag tag-blue">warm_lead_old</span> — people who previously:</p>
+        <ul>
+            <li>Called HBS but did not book</li>
+            <li>Messaged or emailed but did not convert</li>
+            <li>Requested a quote but never followed through</li>
+            <li>Took an online hearing test but did not schedule a consult</li>
+        </ul>
+        <div class="alert alert-yellow">
+            <strong>Strategy Note:</strong> These contacts already raised their hand once. They require a different angle than cold outreach — lead with convenience and value rather than referencing prior contact, which may have been years ago.
+        </div>
+    </div>
+
+    <!-- PIPELINE & TIMELINE -->
+    <div class="section-card">
+        <h2 class="section-title">Pipeline & Timeline</h2>
+        <p><strong>Pipeline Name:</strong> Warm Lead Reactivation Campaign<br>
+        <strong>Feeds into:</strong> Custom Quote Leads pipeline (ID: k5l7BQeHjz8cbzrv3VnS) once engaged</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Stage Name</th>
+                    <th>What It Means</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>1</td><td>Tagged — Warm Lead</td><td>Contact entered the campaign via tag</td></tr>
+                <tr><td>2</td><td>Day 1 SMS Sent</td><td>First SMS delivered</td></tr>
+                <tr><td>3</td><td>Day 2 Email Sent</td><td>First email delivered (skipped if no valid email)</td></tr>
+                <tr><td>4</td><td>Day 3 SMS Sent</td><td>Second SMS delivered</td></tr>
+                <tr><td>5</td><td>Day 5 SMS Sent</td><td>Final SMS delivered</td></tr>
+                <tr><td>6</td><td>Day 6 Email Sent</td><td>Second email delivered (skipped if no valid email)</td></tr>
+                <tr><td>7</td><td>Day 9 Email Sent</td><td>Final email delivered (skipped if no valid email)</td></tr>
+                <tr style="background: #eff6ff;"><td>8</td><td><strong>Engaged / Replied</strong></td><td><strong>Contact responded via any channel — conversation live</strong></td></tr>
+                <tr style="background: #dcfce7;"><td>9</td><td>Consult Booked</td><td>On Seteisha's calendar</td></tr>
+                <tr style="background: #dcfce7;"><td>10</td><td>Consult Completed</td><td>Seteisha has spoken with the contact</td></tr>
+                <tr><td>11</td><td>Long-Term Nurture</td><td>No response after full sequence — tagged for drip</td></tr>
+            </tbody>
+        </table>
+
+        <h3 style="margin: 32px 0 16px; color: var(--navy);">Multi-Channel Sequence Timeline</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Day</th>
+                    <th>Channel</th>
+                    <th>Action</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Day 1</td><td><strong>SMS</strong></td><td>First outreach SMS sent</td><td>All contacts receive this</td></tr>
+                <tr><td>Day 2</td><td><strong>Email</strong></td><td>First email sent</td><td>Valid email contacts only</td></tr>
+                <tr><td>Day 3</td><td><strong>SMS</strong></td><td>Second SMS sent</td><td>All contacts receive this</td></tr>
+                <tr><td>Day 5</td><td><strong>SMS</strong></td><td>Final SMS sent</td><td>All contacts receive this</td></tr>
+                <tr><td>Day 6</td><td><strong>Email</strong></td><td>Second email sent</td><td>Valid email contacts only</td></tr>
+                <tr><td>Day 9</td><td><strong>Email</strong></td><td>Final email sent</td><td>Valid email contacts only</td></tr>
+                <tr style="background: #f8fafc;"><td><em>Any Day</em></td><td><em>Either</em></td><td><em>Contact replies → Engaged/Replied stage</em></td><td><em>Seteisha notified immediately</em></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- WORKFLOW LOGIC -->
+    <div class="section-card">
+        <h2 class="section-title">Workflow Logic</h2>
+        <p><strong>Workflow Name:</strong> HBS — Warm Lead Reactivation<br>
+        <strong>Trigger:</strong> Tag <span class="tag tag-blue">warm_lead_old</span> applied to contact</p>
+
+        <div class="alert alert-blue">
+            <strong>Important:</strong> All contacts enter the workflow regardless of email status. SMS messages are sent to everyone. Emails are only sent to contacts with a valid, non-bounced email address. Contacts tagged <span class="tag tag-orange">email_bounced</span> or with a blank email field receive all 3 SMS messages but no emails.
+        </div>
+
+        <h3 style="margin: 24px 0 16px; color: var(--navy);">Main Sequence</h3>
+        <div style="padding-left: 12px; border-left: 2px solid var(--border);">
+            <p>Update Opportunity → Stage: Tagged — Warm Lead (creates opportunity if none exists)</p>
+            <p>Send Day 1 SMS → Move to Stage: Day 1 SMS Sent</p>
+            <p style="color: var(--text-light); font-size: 0.9rem;">↓ <em>Wait 1 day for reply to Day 1 SMS</em></p>
+            <p><strong>Check: Email Valid?</strong> — if bounced/empty → wait 1 day → skip to Day 3 SMS<br>
+            If valid → Send Day 2 Email → Stage: Day 2 Email Sent → wait 1 day for reply</p>
+            <p style="color: var(--text-light); font-size: 0.9rem;">↓ <em>Time Out</em></p>
+            <p>Send Day 3 SMS → Stage: Day 3 SMS Sent</p>
+            <p style="color: var(--text-light); font-size: 0.9rem;">↓ <em>Wait 2 days for reply to Day 3 SMS</em></p>
+            <p>Send Day 5 SMS → Stage: Day 5 SMS Sent</p>
+            <p style="color: var(--text-light); font-size: 0.9rem;">↓ <em>Wait 1 day for reply to Day 5 SMS</em></p>
+            <p><strong>Check: Email Valid?</strong> — if bounced/empty → wait 3 days → skip to Day 9 check<br>
+            If valid → Send Day 6 Email → Stage: Day 6 Email Sent → wait 3 days for reply</p>
+            <p style="color: var(--text-light); font-size: 0.9rem;">↓ <em>Time Out</em></p>
+            <p><strong>Check: Email Valid?</strong> — if bounced/empty → wait 7 days → go to end path<br>
+            If valid → Send Day 9 Email → Stage: Day 9 Email Sent → wait 7 days for reply</p>
+            <p style="color: var(--text-light); font-size: 0.9rem;">↓ <em>Time Out</em></p>
+            <p>Apply tag <span class="tag">long_term_nurture</span> → Stage: Long-Term Nurture → End workflow</p>
+        </div>
+
+        <div class="alert alert-yellow" style="margin-top: 20px;">
+            <strong>GHL Logic Note:</strong> The email check uses an If/Else gate before each email send. The YES (bounced/empty) branch uses a standard time delay to keep timing in sync, then a Go To action to route the contact back into the correct point in the main sequence. Never use an End block on the email skip branch — it would terminate the workflow entirely.
+        </div>
+
+        <h3 style="margin: 32px 0 16px; color: var(--navy);">Contact Reply Branch <span style="font-weight: normal; font-size: 0.9rem; color: var(--text-light);">(Fires at any Wait step)</span></h3>
+        <p>Every Wait step in the sequence listens for a contact reply. When a reply is detected:</p>
+        <ol>
+            <li>Move contact to Stage 8 (Engaged / Replied)</li>
+            <li>Send auto-reply SMS: <em>"Thanks for getting back to us! One of our hearing specialists will be in touch shortly. You can also book directly here: https://hearingbenefitservices.com/appointment"</em></li>
+            <li>Create task for Seteisha:
+                <ul>
+                    <li><strong>Title:</strong> Warm Lead Replied — Call Within 15 Minutes</li>
+                    <li><strong>Description:</strong> [Contact Name] replied to the Warm Lead Reactivation Campaign. Call or respond within 15 minutes. Review their prior history before calling.</li>
+                    <li><strong>Due:</strong> 1 hour from time of reply</li>
+                </ul>
+            </li>
+            <li>End workflow for this contact</li>
+        </ol>
+
+        <div class="alert alert-green" style="margin-top: 8px;">
+            <strong>Note:</strong> The <span class="tag tag-blue">warm_lead_old</span> tag is intentionally kept on the contact after the workflow ends — it serves as a permanent record that they went through this campaign. Use the <span class="tag">long_term_nurture</span> tag to filter or exclude no-reply contacts from future campaigns.
+        </div>
+
+        <h3 style="margin: 32px 0 16px; color: var(--red);">STOP Opt-Out</h3>
+        <p>STOP replies are handled by the global <strong>HBS — STOP Opt-Out</strong> workflow. When a contact replies STOP:</p>
+        <ul>
+            <li>Apply tag <span class="tag tag-red">opted_out</span></li>
+            <li>Remove from all active workflows</li>
+            <li>Move to Long-Term Nurture stage</li>
+            <li>No further SMS or email ever sent</li>
+        </ul>
+    </div>
+
+    <!-- EMAIL EXCLUSION LOGIC -->
+    <div class="section-card">
+        <h2 class="section-title">Email Exclusion Logic</h2>
+
+        <div class="alert alert-blue">
+            Contacts are never blocked from the workflow due to email issues. They simply skip email steps and receive SMS only. This ensures no warm lead falls through the cracks due to a bad email address.
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Layer</th>
+                    <th>Where</th>
+                    <th>What It Does</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>If/Else Gate</td>
+                    <td>Before Day 2 Email</td>
+                    <td>Checks for <span class="tag tag-orange">email_bounced</span> tag OR empty email — if true, waits 1 day then skips to Day 3 SMS</td>
+                </tr>
+                <tr>
+                    <td>If/Else Gate</td>
+                    <td>Before Day 6 Email</td>
+                    <td>Same check — if true, waits 3 days then skips to Day 9 email check</td>
+                </tr>
+                <tr>
+                    <td>If/Else Gate</td>
+                    <td>Before Day 9 Email</td>
+                    <td>Same check — if true, waits 7 days then routes to Long-Term Nurture end path</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3 style="margin: 24px 0 12px; color: var(--navy);">Why the Time Delays Matter</h3>
+        <p>When a contact skips an email, they must still wait the same number of days that email contacts spend waiting for a reply. Without this delay, the skipped-email contact would receive the next SMS immediately — ruining the campaign timing and bombarding them with messages out of sequence.</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Skipped Email</th>
+                    <th>Required Delay</th>
+                    <th>Then Routes To</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Day 2 Email</td><td>Wait 1 Day</td><td>Day 3 SMS</td></tr>
+                <tr><td>Day 6 Email</td><td>Wait 3 Days</td><td>Day 9 Email Check</td></tr>
+                <tr><td>Day 9 Email</td><td>Wait 7 Days</td><td>Long-Term Nurture End Path</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- CAMPAIGN COPY -->
+    <div class="section-card">
+        <h2 class="section-title">Campaign Copy & Messages</h2>
+
+        <h3 style="margin: 0 0 16px; color: var(--navy);">SMS Messages</h3>
+
+        <div class="copy-block">
+            <span class="copy-type">Day 1 SMS</span>
+            <div class="copy-body">Hi {{contact.first_name}}, this is Hearing Benefit Services! We wanted to reach out because we have some exciting updates — newer Signia hearing aid options with remote fitting, home delivery, and a current 10% savings offer. Would you like a quick recommendation or benefits check? Reply anytime. Reply STOP to opt out.</div>
+            <div class="copy-meta">Character count: ~290 | STOP opt-out included</div>
+        </div>
+
+        <div class="copy-block">
+            <span class="copy-type">Day 3 SMS</span>
+            <div class="copy-body">Hi {{contact.first_name}}, just following up. Hearing technology has improved a lot — clearer sound, Bluetooth, rechargeable, and full remote support from home. Want us to show you what's available? Reply YES and we'll send options.</div>
+            <div class="copy-meta">Character count: ~210</div>
+        </div>
+
+        <div class="copy-block">
+            <span class="copy-type">Day 5 SMS</span>
+            <div class="copy-body">Last follow-up for now, {{contact.first_name}}. If you're still exploring hearing help, we'd love to connect you with one of our specialists — no clinic visit needed. Reply CALL to schedule a quick consult or STOP to opt out.</div>
+            <div class="copy-meta">Character count: ~210</div>
+        </div>
+
+        <div class="copy-block">
+            <span class="copy-type">Auto-Reply SMS (fires when contact replies)</span>
+            <div class="copy-body">Thanks for getting back to us! One of our hearing specialists will be in touch shortly. You can also book directly here: https://hearingbenefitservices.com/appointment</div>
+            <div class="copy-meta">Fires automatically — Seteisha task created simultaneously</div>
+        </div>
+
+        <h3 style="margin: 40px 0 16px; color: var(--navy);">Email Messages</h3>
+
+        <div class="copy-block email">
+            <span class="copy-type">Email 1 — Day 2</span>
+            <div class="copy-subject">Subject: Still looking for hearing help? We kept your spot.</div>
+            <div class="copy-body">Hi {{contact.first_name}},
+
+A little while back you reached out to Hearing Benefit Services about your hearing. We wanted to reconnect — because a lot has changed, and we think you'll like what we have available now.
+
+At HBS, we make the entire process simple and remote:
+
+• Premium Signia hearing aids delivered directly to your door
+• Remote consultations with licensed hearing specialists — no clinic visit
+• Rechargeable and Bluetooth options available
+• 3-year care plan included with every purchase
+• We help check your insurance benefits too
+
+We're currently offering 10% savings on select solutions for a limited time.
+
+If you'd like a quick recommendation or a benefits check, just reply to this email or book a short consult below.
+
+[Book a Free Consultation]
+https://hearingbenefitservices.com/appointment
+
+Talk soon,
+Seteisha
+Hearing Specialist — Hearing Benefit Services
+1-808-435-7002
+hearingbenefitservices.com</div>
+        </div>
+
+        <div class="copy-block email">
+            <span class="copy-type">Email 2 — Day 6</span>
+            <div class="copy-subject">Subject: How does your hearing compare to where it could be?</div>
+            <div class="copy-body">Hi {{contact.first_name}},
+
+Most people don't realize how much they're missing until they experience what updated hearing technology actually sounds like.
+
+Clearer conversations. Better phone calls. TV without the volume at max. Hearing the people you care about without asking them to repeat themselves.
+
+At Hearing Benefit Services, we fit you remotely — meaning no appointments to drive to, no waiting rooms, and no pressure. Just a specialist who listens, recommends the right device, and ships it directly to your home.
+
+Our current 10% savings offer is still available if you'd like to move forward.
+
+[Get a Free Recommendation]
+https://hearingbenefitservices.com/appointment
+
+Seteisha
+Hearing Specialist — Hearing Benefit Services
+1-808-435-7002
+hearingbenefitservices.com</div>
+        </div>
+
+        <div class="copy-block email">
+            <span class="copy-type">Email 3 — Day 9</span>
+            <div class="copy-subject">Subject: Last note from us, {{contact.first_name}}</div>
+            <div class="copy-body">Hi {{contact.first_name}},
+
+I don't want to keep filling your inbox, so this will be my last email for now.
+
+If you're still thinking about hearing help — even if the timing isn't right yet — I'd love to get you a quick quote so you at least know what you're looking at. No commitment, no pressure.
+
+You can reply here, call us at 1-808-435-7002, or book a short consult below.
+
+We're here whenever you're ready.
+
+[Book a Consult]
+https://hearingbenefitservices.com/appointment
+
+Seteisha
+Hearing Benefit Services
+hearingbenefitservices.com</div>
+        </div>
+    </div>
+
+    <!-- DATA & ARCHITECTURE -->
+    <div class="section-card">
+        <h2 class="section-title">Data & Architecture</h2>
+
+        <h3 style="margin: 0 0 16px; color: var(--navy);">Contact Tags Used</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Tag</th>
+                    <th>Applied When</th>
+                    <th>Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><span class="tag tag-blue">warm_lead_old</span></td><td>Trigger — starts the workflow</td><td>Kept after campaign ends as permanent record</td></tr>
+                <tr><td><span class="tag tag-orange">email_bounced</span></td><td>Pre-existing — applied to contacts with invalid/bounced email</td><td>These contacts receive SMS only — no emails sent</td></tr>
+                <tr><td><span class="tag tag-red">opted_out</span></td><td>Contact replies STOP</td><td>Handled by global STOP Opt-Out workflow</td></tr>
+                <tr><td><span class="tag">long_term_nurture</span></td><td>No response after full 9-day sequence</td><td>Use this to exclude from future campaigns</td></tr>
+                <tr><td><span class="tag tag-green">consult_booked</span></td><td>Appointment scheduled by Seteisha</td><td>Applied manually after reply</td></tr>
+                <tr><td><span class="tag tag-green">consult_completed</span></td><td>Seteisha completes the consult</td><td>Applied manually after call</td></tr>
+                <tr><td><span class="tag">quote_sent</span></td><td>Quote delivered to contact</td><td>Applied manually</td></tr>
+            </tbody>
+        </table>
+
+        <h3 style="margin: 32px 0 16px; color: var(--navy);">Smart List Filter: "Warm Leads — Reactivation Ready"</h3>
+        <ul>
+            <li>Tag contains <span class="tag tag-blue">warm_lead_old</span></li>
+            <li>Tag does NOT contain <span class="tag tag-red">opted_out</span></li>
+            <li>Tag does NOT contain <span class="tag">sold</span></li>
+            <li>Tag does NOT contain <span class="tag tag-green">consult_booked</span></li>
+            <li>Tag does NOT contain <span class="tag">long_term_nurture</span></li>
+        </ul>
+
+        <h3 style="margin: 32px 0 16px; color: var(--navy);">Workflow Behavior Rules</h3>
+        <ul style="list-style-type: square;">
+            <li><strong>All contacts enter the workflow</strong> — no one is blocked at entry regardless of email status</li>
+            <li><strong>Bounced/empty email contacts receive SMS only</strong> — timing stays in sync via time delays</li>
+            <li><strong>Contact replies at any point</strong> — Seteisha gets an urgent task due 1 hour from the time of reply; contact gets auto-reply SMS</li>
+            <li><strong>warm_lead_old tag is kept</strong> — serves as a permanent record of campaign participation</li>
+            <li><strong>STOP opt-out handled globally</strong> — the HBS STOP Opt-Out workflow manages all opt-outs</li>
+            <li><strong>No duplicate outreach</strong> — exclude contacts already active in 3-Year Upgrade or Out-of-Warranty campaigns</li>
+        </ul>
+    </div>
+
+    <!-- STANDARDS & LAUNCH -->
+    <div class="section-card">
+        <h2 class="section-title">Standards & Launch Requirements</h2>
+
+        <h3 style="margin: 0 0 16px; color: var(--navy);">HBS Value Proposition Checklist</h3>
+        <p style="font-size: 0.9rem; color: var(--text-light); margin-bottom: 12px;">Every manual message or custom reply must include at least 2–3 of these:</p>
+        <ul class="check-list">
+            <li>Premium Signia hearing aids — not entry-level</li>
+            <li>Remote consultations — no clinic visit required</li>
+            <li>Delivered directly to your door</li>
+            <li>3-year care plan included</li>
+            <li>Help with insurance benefits</li>
+            <li>Rechargeable and Bluetooth options</li>
+            <li>Ongoing licensed specialist support</li>
+            <li>Better value than brick-and-mortar clinics</li>
+        </ul>
+
+        <h3 style="margin: 32px 0 16px; color: var(--navy);">Response Time Standards</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Situation</th>
+                    <th>Standard</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td>Contact replies to SMS or email</td><td><strong>Seteisha calls within 15 minutes</strong> during business hours</td></tr>
+                <tr><td>Consult completed</td><td>Quote sent same day, within 2 hours</td></tr>
+                <tr><td>Quote follow-up</td><td>Day 1, Day 3, Day 5, Day 7, then weekly</td></tr>
+            </tbody>
+        </table>
+
+        <h3 style="margin: 32px 0 16px; color: var(--navy);">GHL Build / Launch Checklist</h3>
+        <ul class="check-list done">
+            <li>Pipeline created with all 11 stages</li>
+            <li>All tags confirmed in GHL (including email_bounced)</li>
+            <li>Smart List created and filtered correctly</li>
+            <li>Email Template 1 built (Day 2 Email)</li>
+            <li>Email Template 2 built (Day 6 Email)</li>
+            <li>Email Template 3 built (Day 9 Email)</li>
+            <li>Workflow created: HBS — Warm Lead Reactivation</li>
+            <li>Trigger set: tag added = warm_lead_old</li>
+            <li>Update Opportunity (Action 1) creates opportunity if none exists</li>
+            <li>All 3 SMS messages loaded with correct copy</li>
+            <li>All 3 If/Else email gates built with correct OR conditions</li>
+            <li>Skip Delay + Go To routing built on all 3 email skip branches</li>
+            <li>All 6 Wait steps set to "Until the contact replies"</li>
+            <li>Contact Reply branch built on all 6 Wait steps</li>
+            <li>Task for Seteisha confirmed — due 1 hour from reply time</li>
+            <li>Auto-reply SMS confirmed working</li>
+            <li>No Reply end path: Apply long_term_nurture tag → Stage: Long-Term Nurture → End</li>
+        </ul>
+    </div>
+
+</div>
+
+<div class="footer">
+    Hearing Benefit Services | hearingbenefitservices.com | Honolulu, HI<br>
+    GHL Location ID: UDKdmJIdT4xB1V6Lye64 | Internal Campaign Documentation
+</div>
+
+</body>
+</html>
