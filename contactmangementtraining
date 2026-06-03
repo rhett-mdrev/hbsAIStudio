@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Contact Management: Tagging, Exporting & Importing | Hearing Benefit Services</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #f0f4f8; color: #1a202c; line-height: 1.7; }
+
+    /* LOGIN */
+    #login-overlay { position: fixed; inset: 0; background: linear-gradient(135deg, #0a3d62 0%, #1e6fa8 100%); display: flex; align-items: center; justify-content: center; z-index: 9999; }
+    .login-box { background: #fff; border-radius: 16px; padding: 48px 40px; width: min(420px, 92vw); box-shadow: 0 24px 64px rgba(0,0,0,.25); text-align: center; }
+    .login-box h2 { font-size: 1.5rem; color: #0a3d62; margin-bottom: 6px; }
+    .login-box p { font-size: .9rem; color: #718096; margin-bottom: 28px; }
+    .login-box input { width: 100%; padding: 12px 16px; border: 1.5px solid #cbd5e0; border-radius: 8px; font-size: 1rem; margin-bottom: 14px; transition: border-color .2s; }
+    .login-box input:focus { outline: none; border-color: #1e6fa8; }
+    .login-box button { width: 100%; padding: 13px; background: linear-gradient(135deg, #0a3d62, #1e6fa8); color: #fff; border: none; border-radius: 8px; font-size: 1rem; font-weight: 600; cursor: pointer; transition: opacity .2s; }
+    .login-box button:hover { opacity: .88; }
+    #login-error { color: #e53e3e; font-size: .85rem; margin-top: 10px; display: none; }
+
+    #main-content { display: none; }
+
+    header { background: linear-gradient(135deg, #0a3d62 0%, #1e6fa8 100%); color: #fff; padding: 48px 24px; text-align: center; }
+    header h1 { font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 700; }
+    header p { margin-top: 10px; font-size: 1.05rem; opacity: .88; }
+
+    nav.sticky { position: sticky; top: 0; z-index: 100; background: #0a3d62; padding: 0 16px; overflow-x: auto; white-space: nowrap; box-shadow: 0 2px 8px rgba(0,0,0,.3); }
+    nav.sticky a { display: inline-block; color: #bee3f8; text-decoration: none; padding: 14px 18px; font-size: .88rem; font-weight: 500; transition: color .2s, background .2s; }
+    nav.sticky a:hover { color: #fff; background: rgba(255,255,255,.1); }
+
+    .container { max-width: 960px; margin: 0 auto; padding: 40px 20px 80px; }
+
+    section { background: #fff; border-radius: 14px; padding: 36px 32px; margin-bottom: 32px; box-shadow: 0 2px 12px rgba(0,0,0,.07); }
+    section h2 { font-size: 1.35rem; font-weight: 700; color: #0a3d62; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #bee3f8; }
+    section h3 { font-size: 1.05rem; font-weight: 700; color: #1e6fa8; margin: 22px 0 8px; }
+    section p { margin-bottom: 12px; color: #2d3748; }
+    section ul, section ol { padding-left: 20px; margin-bottom: 12px; }
+    section li { margin-bottom: 6px; color: #2d3748; }
+
+    .action-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: .92rem; }
+    .action-table th { background: #0a3d62; color: #fff; padding: 10px 14px; text-align: left; }
+    .action-table td { padding: 10px 14px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+    .action-table tr:nth-child(even) td { background: #f7fafc; }
+
+    .info-box, .warn-box, .success-box { border-radius: 10px; padding: 16px 20px; margin: 16px 0; font-size: .93rem; }
+    .info-box { background: #ebf8ff; border-left: 4px solid #1e6fa8; color: #1a365d; }
+    .warn-box { background: #fffbeb; border-left: 4px solid #d69e2e; color: #744210; }
+    .success-box { background: #f0fff4; border-left: 4px solid #38a169; color: #22543d; }
+
+    .step-row { display: flex; align-items: flex-start; padding: 12px 0; border-bottom: 0.5px solid #f0f4f8; }
+    .step-row:last-child { border-bottom: none; }
+    .step-num { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; background: #1e6fa8; color: #fff; border-radius: 50%; font-size: .82rem; font-weight: 700; margin-right: 12px; flex-shrink: 0; margin-top: 2px; }
+    .step-row .step-content { flex: 1; }
+    .step-row .step-content p { margin: 0; color: #2d3748; font-size: 0.97rem; }
+    .step-row .step-content .step-note { font-size: .84rem; color: #718096; margin-top: 4px; }
+
+    code { background: #fef08a; color: #1a202c; font-family: 'Courier New', monospace; font-size: .88rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; border: 1px solid #fde047; }
+
+    .tag-pill { display: inline-block; padding: 4px 14px; border-radius: 20px; font-size: .82rem; font-weight: 700; font-family: 'Courier New', monospace; margin: 2px; }
+    .tag-florida { background: #fff5f5; color: #c53030; border: 1px solid #fed7d7; }
+    .tag-hawaii { background: #ebf8ff; color: #1e6fa8; border: 1px solid #bee3f8; }
+    .tag-general { background: #fef08a; color: #1a202c; border: 1px solid #fde047; }
+
+    .flow-diagram { display: flex; align-items: center; gap: 0; margin: 20px 0; flex-wrap: wrap; }
+    .flow-box { background: #f7fafc; border: 1.5px solid #e2e8f0; border-radius: 10px; padding: 12px 16px; text-align: center; font-size: .85rem; font-weight: 600; color: #2d3748; min-width: 120px; }
+    .flow-box.blue { background: #ebf8ff; border-color: #bee3f8; color: #1e6fa8; }
+    .flow-box.green { background: #f0fff4; border-color: #c6f6d5; color: #276749; }
+    .flow-box.orange { background: #fffbeb; border-color: #fbd38d; color: #c05621; }
+    .flow-arrow { font-size: 1.2rem; color: #a0aec0; padding: 0 8px; }
+
+    .checklist { list-style: none; padding: 0; }
+    .checklist li { padding: 8px 0 8px 32px; position: relative; border-bottom: 1px solid #f0f4f8; color: #2d3748; }
+    .checklist li::before { content: '☐'; position: absolute; left: 0; font-size: 1.1rem; color: #1e6fa8; }
+
+    footer { text-align: center; padding: 32px 16px; font-size: .82rem; color: #718096; }
+
+    @media (max-width: 600px) { section { padding: 24px 18px; } .login-box { padding: 36px 24px; } .flow-diagram { flex-direction: column; } .flow-arrow { transform: rotate(90deg); } }
+  </style>
+</head>
+<body>
+
+<div id="login-overlay">
+  <div class="login-box">
+    <h2>🎧 Staff Training Portal</h2>
+    <p>Hearing Benefit Services — Internal Use Only</p>
+    <input type="text" id="uname" placeholder="Username" autocomplete="username" />
+    <input type="password" id="pword" placeholder="Password" autocomplete="current-password" />
+    <button onclick="checkLogin()">Sign In</button>
+    <p id="login-error">Incorrect username or password. Please try again.</p>
+  </div>
+</div>
+
+<div id="main-content">
+
+  <header>
+    <h1>🏷️ Contact Management — Tagging, Exporting & Importing</h1>
+    <p>How to tag contacts, export lists, and import contacts between GHL accounts.</p>
+  </header>
+
+  <nav class="sticky">
+    <a href="#overview">Overview</a>
+    <a href="#tagging">How to Tag</a>
+    <a href="#bulk-tag">Bulk Tagging</a>
+    <a href="#smart-list">Smart Lists</a>
+    <a href="#export">Exporting Contacts</a>
+    <a href="#import">Importing Contacts</a>
+    <a href="#real-example">Real Example</a>
+    <a href="#tag-reference">Tag Reference</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- OVERVIEW -->
+    <section id="overview">
+      <h2>📋 Overview</h2>
+      <p>This guide explains how to manage contacts in GoHighLevel (GHL) — including how to tag contacts individually or in bulk, how to create Smart Lists, how to export contacts to a CSV file, and how to import contacts from one GHL account to another.</p>
+
+      <h3>Why Tagging Matters</h3>
+      <p>Tags in GHL are labels attached to contacts that drive automation logic. When you apply a tag, it can:</p>
+      <ul>
+        <li>Trigger a workflow automatically</li>
+        <li>Add a contact to a pipeline</li>
+        <li>Filter contacts into Smart Lists</li>
+        <li>Identify where a contact came from</li>
+        <li>Exclude contacts from campaigns</li>
+      </ul>
+
+      <div class="info-box">
+        💡 <strong>Rule of thumb:</strong> If a tag doesn't exist yet, GHL will create it the first time you type it. Always double-check spelling — tags are case sensitive.
+      </div>
+
+      <h3>The Florida → Hawaii Migration — What We Did</h3>
+      <div class="flow-diagram">
+        <div class="flow-box orange">Tag Florida contacts<br/><small>source_florida</small></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-box blue">Tag Hawaii contacts<br/><small>source_hawaii</small></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-box">Export Florida contacts<br/><small>CSV to hard drive</small></div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-box green">Import into Hawaii GHL<br/><small>contacts merged</small></div>
+      </div>
+    </section>
+
+    <!-- HOW TO TAG A SINGLE CONTACT -->
+    <section id="tagging">
+      <h2>🏷️ How to Tag a Single Contact</h2>
+      <p>Use this method when you need to tag one contact manually — for example to test a workflow before launching to the full list.</p>
+
+      <div class="step-row"><span class="step-num">1</span><div class="step-content"><p>Go to <strong>Contacts</strong> in the left sidebar</p></div></div>
+      <div class="step-row"><span class="step-num">2</span><div class="step-content"><p>Search for the contact by name or phone number</p></div></div>
+      <div class="step-row"><span class="step-num">3</span><div class="step-content"><p>Click on the contact to open their record</p></div></div>
+      <div class="step-row"><span class="step-num">4</span><div class="step-content"><p>Scroll down to the <strong>Tags</strong> section on the right side panel</p></div></div>
+      <div class="step-row"><span class="step-num">5</span><div class="step-content"><p>Click <strong>+ Add Tag</strong></p></div></div>
+      <div class="step-row"><span class="step-num">6</span><div class="step-content"><p>Type the tag name and select it from the dropdown or press Enter to create it</p><p class="step-note">Example: type <code>customer_3plus_years</code> to trigger the 3-Year Upgrade SMS workflow</p></div></div>
+      <div class="step-row"><span class="step-num">7</span><div class="step-content"><p>The tag is applied immediately — if a workflow is triggered, it will fire within seconds</p></div></div>
+
+      <div class="success-box" style="margin-top:16px;">
+        ✅ <strong>Test tip:</strong> Always tag 2-3 test contacts individually before bulk tagging the full list. This lets you confirm the workflow fires correctly without affecting all contacts.
+      </div>
+    </section>
+
+    <!-- BULK TAGGING -->
+    <section id="bulk-tag">
+      <h2>🏷️🏷️ How to Bulk Tag Multiple Contacts</h2>
+      <p>Use this method to apply a tag to a large group of contacts at once — for example when launching a campaign.</p>
+
+      <div class="step-row"><span class="step-num">1</span><div class="step-content"><p>Go to <strong>Contacts</strong> in the left sidebar</p></div></div>
+      <div class="step-row"><span class="step-num">2</span><div class="step-content"><p>Use filters or open a <strong>Smart List</strong> to narrow down the contacts you want to tag</p></div></div>
+      <div class="step-row"><span class="step-num">3</span><div class="step-content"><p>Click the <strong>checkbox at the top</strong> of the contacts list to select all visible contacts</p></div></div>
+      <div class="step-row"><span class="step-num">4</span><div class="step-content"><p>Click the banner that appears: <strong>"Select all X contacts"</strong> — this selects every contact in the filtered list, not just those visible on screen</p><p class="step-note">Important: if you skip this step you will only tag the contacts visible on the current page</p></div></div>
+      <div class="step-row"><span class="step-num">5</span><div class="step-content"><p>Click <strong>Actions</strong> at the top of the page</p></div></div>
+      <div class="step-row"><span class="step-num">6</span><div class="step-content"><p>Select <strong>Add Tag</strong></p></div></div>
+      <div class="step-row"><span class="step-num">7</span><div class="step-content"><p>Type the tag name and confirm</p></div></div>
+      <div class="step-row"><span class="step-num">8</span><div class="step-content"><p>Click <strong>Apply</strong> — all selected contacts are tagged immediately</p></div></div>
+
+      <div class="warn-box">
+        ⚠️ <strong>Be careful with bulk tagging.</strong> If the tag triggers a workflow, it will fire for every contact simultaneously. Always test on 2-3 contacts first.
+      </div>
+    </section>
+
+    <!-- SMART LISTS -->
+    <section id="smart-list">
+      <h2>📋 How to Create a Smart List</h2>
+      <p>A Smart List is a saved filtered view of your contacts. It automatically updates as contacts meet or stop meeting the filter criteria.</p>
+
+      <div class="step-row"><span class="step-num">1</span><div class="step-content"><p>Go to <strong>Contacts</strong> in the left sidebar</p></div></div>
+      <div class="step-row"><span class="step-num">2</span><div class="step-content"><p>Click <strong>Smart Lists</strong> at the top of the page</p></div></div>
+      <div class="step-row"><span class="step-num">3</span><div class="step-content"><p>Click <strong>+ New Smart List</strong></p></div></div>
+      <div class="step-row"><span class="step-num">4</span><div class="step-content"><p>Give it a clear name — for example: <strong>3+ Year Customers — Upgrade Ready</strong></p></div></div>
+      <div class="step-row"><span class="step-num">5</span><div class="step-content"><p>Click <strong>Add Filter</strong> and set your conditions</p></div></div>
+      <div class="step-row"><span class="step-num">6</span><div class="step-content"><p>Click <strong>Save Smart List</strong></p></div></div>
+
+      <h3>Common Filter Examples</h3>
+      <table class="action-table">
+        <thead><tr><th>What You Want</th><th>Filter Settings</th></tr></thead>
+        <tbody>
+          <tr><td>Contacts inactive for 3+ years</td><td>Last Activity → Is → More than → 3 → Years → Ago</td></tr>
+          <tr><td>Contacts with a specific tag</td><td>Tags → includes → [tag name]</td></tr>
+          <tr><td>Exclude contacts with a tag</td><td>Tags → does not include → [tag name]</td></tr>
+          <tr><td>Contacts from a specific source</td><td>Tags → includes → source_florida OR source_hawaii</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- EXPORTING CONTACTS -->
+    <section id="export">
+      <h2>📤 How to Export Contacts from GHL</h2>
+      <p>Use this to download a list of contacts to your computer as a CSV file — for backup, migration, or importing into another GHL account.</p>
+
+      <div class="step-row"><span class="step-num">1</span><div class="step-content"><p>Go to <strong>Contacts</strong> in the left sidebar</p></div></div>
+      <div class="step-row"><span class="step-num">2</span><div class="step-content"><p>Filter or open a Smart List to show only the contacts you want to export</p><p class="step-note">Example: open the Smart List filtered by tag <code>source_florida</code> to export only Florida contacts</p></div></div>
+      <div class="step-row"><span class="step-num">3</span><div class="step-content"><p>Click the <strong>checkbox at the top</strong> to select all visible contacts</p></div></div>
+      <div class="step-row"><span class="step-num">4</span><div class="step-content"><p>Click <strong>"Select all X contacts"</strong> to select the entire filtered list</p></div></div>
+      <div class="step-row"><span class="step-num">5</span><div class="step-content"><p>Click <strong>Actions</strong> at the top</p></div></div>
+      <div class="step-row"><span class="step-num">6</span><div class="step-content"><p>Select <strong>Export</strong></p></div></div>
+      <div class="step-row"><span class="step-num">7</span><div class="step-content"><p>GHL will prepare the CSV file and send a download link to your email — check your inbox</p></div></div>
+      <div class="step-row"><span class="step-num">8</span><div class="step-content"><p>Download the CSV file and save it to your hard drive</p></div></div>
+
+      <div class="info-box">
+        💡 The exported CSV will include all contact fields — name, email, phone, tags, and custom fields. Keep it in a safe location as it contains patient data.
+      </div>
+    </section>
+
+    <!-- IMPORTING CONTACTS -->
+    <section id="import">
+      <h2>📥 How to Import Contacts into GHL</h2>
+      <p>Use this to upload a CSV file of contacts into a GHL account — for example when migrating contacts from Florida into the Hawaii account.</p>
+
+      <div class="step-row"><span class="step-num">1</span><div class="step-content"><p>Go to <strong>Contacts</strong> in the left sidebar</p></div></div>
+      <div class="step-row"><span class="step-num">2</span><div class="step-content"><p>Click the <strong>Import</strong> button at the top right (looks like an upload icon)</p></div></div>
+      <div class="step-row"><span class="step-num">3</span><div class="step-content"><p>Click <strong>Upload CSV</strong> and select the file from your hard drive</p></div></div>
+      <div class="step-row"><span class="step-num">4</span><div class="step-content"><p>GHL will show a field mapping screen — match your CSV columns to GHL fields</p><p class="step-note">Example: match "First Name" column → First Name field, "Phone" column → Phone field</p></div></div>
+      <div class="step-row"><span class="step-num">5</span><div class="step-content"><p>Scroll down and look for the <strong>Tags</strong> option — you can apply a tag to all imported contacts at this step</p><p class="step-note">Example: apply <code>source_florida</code> so you know these contacts came from the Florida account</p></div></div>
+      <div class="step-row"><span class="step-num">6</span><div class="step-content"><p>Click <strong>Import</strong> to begin the upload</p></div></div>
+      <div class="step-row"><span class="step-num">7</span><div class="step-content"><p>GHL will process the import — you will receive a notification when complete</p></div></div>
+      <div class="step-row"><span class="step-num">8</span><div class="step-content"><p>Go to Contacts and search or filter by <code>source_florida</code> to confirm all contacts imported correctly</p></div></div>
+
+      <div class="warn-box">
+        ⚠️ <strong>Check for duplicates.</strong> If a contact already exists in GHL with the same phone number or email, GHL will merge the records rather than create duplicates. Review the import report to confirm.
+      </div>
+    </section>
+
+    <!-- REAL EXAMPLE -->
+    <section id="real-example">
+      <h2>✅ Real Example — Florida to Hawaii Migration</h2>
+      <p>Here is exactly what was done to migrate Florida contacts into the Hawaii GHL account:</p>
+
+      <h3>Step 1 — Tag Florida Contacts</h3>
+      <p>In the Florida GHL account, all contacts were tagged with <span class="tag-pill tag-florida">source_florida</span> so they could be easily identified and filtered for export.</p>
+
+      <h3>Step 2 — Tag Hawaii Contacts</h3>
+      <p>In the Hawaii GHL account, all existing contacts were tagged with <span class="tag-pill tag-hawaii">source_hawaii</span> to distinguish them from incoming Florida contacts.</p>
+
+      <h3>Step 3 — Export Florida Contacts</h3>
+      <p>In the Florida GHL account, the Smart List filtered by <span class="tag-pill tag-florida">source_florida</span> was used to select all Florida contacts and export them as a CSV file to the hard drive.</p>
+
+      <h3>Step 4 — Import into Hawaii GHL</h3>
+      <p>The CSV file was uploaded into the Hawaii GHL account using the Import function. The <span class="tag-pill tag-florida">source_florida</span> tag was applied during import so all incoming contacts were immediately identifiable.</p>
+
+      <div class="success-box">
+        ✅ <strong>Result:</strong> Both contact groups are now in the Hawaii GHL account and can be targeted independently using their source tags — <span class="tag-pill tag-florida">source_florida</span> for Florida contacts and <span class="tag-pill tag-hawaii">source_hawaii</span> for Hawaii contacts.
+      </div>
+
+      <h3>How to Filter by Source in Future Campaigns</h3>
+      <table class="action-table">
+        <thead><tr><th>If you want to target...</th><th>Filter by tag...</th></tr></thead>
+        <tbody>
+          <tr><td>Florida contacts only</td><td><span class="tag-pill tag-florida">source_florida</span></td></tr>
+          <tr><td>Hawaii contacts only</td><td><span class="tag-pill tag-hawaii">source_hawaii</span></td></tr>
+          <tr><td>All contacts</td><td>No tag filter needed</td></tr>
+          <tr><td>Exclude Florida contacts</td><td>Tags does not include <span class="tag-pill tag-florida">source_florida</span></td></tr>
+          <tr><td>Exclude Hawaii contacts</td><td>Tags does not include <span class="tag-pill tag-hawaii">source_hawaii</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- TAG REFERENCE -->
+    <section id="tag-reference">
+      <h2>📌 HBS Tag Reference</h2>
+      <p>Here is a reference of all active tags in GHL and what they are used for:</p>
+      <table class="action-table">
+        <thead><tr><th>Tag</th><th>Purpose</th><th>Triggers Workflow?</th></tr></thead>
+        <tbody>
+          <tr><td><code>source_florida</code></td><td>Contact originated from the Florida GHL account</td><td>No</td></tr>
+          <tr><td><code>source_hawaii</code></td><td>Contact is an original Hawaii GHL contact</td><td>No</td></tr>
+          <tr><td><code>customer_3plus_years</code></td><td>Triggers the 3-Year Upgrade SMS Campaign</td><td>Yes</td></tr>
+          <tr><td><code>opted_out</code></td><td>Contact replied STOP — do not contact</td><td>No</td></tr>
+          <tr><td><code>th_transition_2026</code></td><td>Triggers the True Hearing Transition email campaign</td><td>Yes</td></tr>
+          <tr><td><code>true hearing</code></td><td>Existing TruHearing patient (~96 contacts)</td><td>No</td></tr>
+          <tr><td><code>true hearing one year</code></td><td>TruHearing patient less than 1 year (~21 contacts)</td><td>No</td></tr>
+          <tr><td><code>sold</code></td><td>Sale completed — excluded from upgrade campaigns</td><td>No</td></tr>
+          <tr><td><code>warm_lead_old</code></td><td>Previous warm lead from prior contact</td><td>No</td></tr>
+          <tr><td><code>repair_inquiry</code></td><td>Contact inquired about device repair</td><td>No</td></tr>
+          <tr><td><code>long_term_nurture</code></td><td>Interested but not ready — in drip sequence</td><td>No</td></tr>
+          <tr><td><code>consult_booked</code></td><td>Consultation appointment booked</td><td>No</td></tr>
+          <tr><td><code>consult_completed</code></td><td>Consultation has been completed</td><td>No</td></tr>
+          <tr><td><code>quote_sent</code></td><td>Quote has been sent to contact</td><td>No</td></tr>
+          <tr><td><code>group_offer_church</code></td><td>Church or community group offer</td><td>No</td></tr>
+          <tr><td><code>group_offer_family</code></td><td>Family group offer</td><td>No</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>Hearing Benefit Services &nbsp;|&nbsp; hearingbenefitservices.com &nbsp;|&nbsp; Honolulu, HI &nbsp;|&nbsp; Internal Staff Training — Confidential</p>
+  </footer>
+
+</div>
+
+<script>
+  function checkLogin() {
+    var u = document.getElementById('uname').value.trim();
+    var p = document.getElementById('pword').value.trim();
+    if (u === 'training' && p === 'l8ZiBguc6I4CW8') {
+      document.getElementById('login-overlay').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+    } else {
+      document.getElementById('login-error').style.display = 'block';
+    }
+  }
+  document.addEventListener('keydown', function(e) { if (e.key === 'Enter') checkLogin(); });
+</script>
+
+</body>
+</html>
