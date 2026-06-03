@@ -1,0 +1,1310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HBS Training — Hearing Test Lead Automation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --navy: #0B1E2B;
+      --blue-dark: #1B4965;
+      --blue: #2A64A7;
+      --blue-light: #EBF3FC;
+      --gold: #FFC107;
+      --gold-dark: #e6a800;
+      --gold-light: #FFF8E1;
+      --green: #10b981;
+      --green-light: #ECFDF5;
+      --red: #ef4444;
+      --red-light: #FEF2F2;
+      --orange: #f97316;
+      --slate-50: #F8FAFC;
+      --slate-100: #F1F5F9;
+      --slate-200: #E2E8F0;
+      --slate-400: #94A3B8;
+      --slate-500: #64748B;
+      --slate-700: #334155;
+      --slate-800: #1E293B;
+      --white: #ffffff;
+      --auto: color: auto;
+      --auto-label: #AUTOMATED;
+      --manual-label: #MANUAL-SETEISHA;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--slate-50);
+      color: var(--slate-700);
+      font-size: 1rem;
+      line-height: 1.75;
+    }
+
+    /* ── LAYOUT ── */
+    .page-wrap { max-width: 900px; margin: 0 auto; padding: 0 24px 80px; }
+
+    /* ── HEADER ── */
+    .page-header {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue-dark) 60%, var(--blue) 100%);
+      padding: 60px 40px 50px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-header::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: rgba(255,193,7,0.07);
+      pointer-events: none;
+    }
+    .header-logo {
+      display: inline-block;
+      margin-bottom: 20px;
+    }
+    .header-logo img { height: 44px; filter: brightness(0) invert(1); opacity: 0.9; }
+    .header-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--gold); color: #000;
+      font-family: 'DM Mono', monospace;
+      font-size: 0.72rem; font-weight: 500;
+      text-transform: uppercase; letter-spacing: 0.1em;
+      padding: 5px 16px; border-radius: 50px;
+      margin-bottom: 18px;
+    }
+    .page-header h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.7rem, 3.5vw, 2.4rem);
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+    .page-header p {
+      color: rgba(255,255,255,0.72);
+      font-size: 1.05rem;
+      max-width: 560px;
+      margin: 0 auto 28px;
+    }
+    .header-meta {
+      display: flex; gap: 24px; justify-content: center; flex-wrap: wrap;
+    }
+    .header-meta-item {
+      display: flex; align-items: center; gap: 8px;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.85rem; font-weight: 500;
+    }
+    .header-meta-item i { color: var(--gold); font-size: 0.9rem; }
+
+    /* ── COLOR KEY ── */
+    .color-key {
+      display: flex; gap: 12px; flex-wrap: wrap;
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin: 28px 0 0;
+    }
+    .color-key-title { font-size: 0.8rem; font-weight: 600; color: var(--slate-500); text-transform: uppercase; letter-spacing: 0.06em; width: 100%; margin-bottom: 2px; }
+    .ck-pill {
+      display: inline-flex; align-items: center; gap: 7px;
+      padding: 5px 14px; border-radius: 50px;
+      font-size: 0.82rem; font-weight: 600;
+    }
+    .ck-auto { background: #EBF4FF; color: #1B4965; }
+    .ck-manual { background: #FFF3E0; color: #92640a; }
+    .ck-system { background: #F0FDF4; color: #166534; }
+
+    /* ── SECTION TITLES ── */
+    .section-block { margin-top: 52px; }
+    .section-title {
+      font-family: 'Lora', serif;
+      font-size: 1.45rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .section-title-icon {
+      width: 36px; height: 36px;
+      background: var(--blue-light);
+      border-radius: 10px;
+      display: inline-flex; align-items: center; justify-content: center;
+      color: var(--blue);
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .section-sub { color: var(--slate-500); font-size: 0.95rem; margin-bottom: 20px; padding-left: 48px; }
+
+    /* ── OVERVIEW CARDS ── */
+    .overview-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 14px;
+      margin-top: 20px;
+    }
+    .ov-card {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 20px;
+      position: relative;
+    }
+    .ov-card-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: var(--slate-400); margin-bottom: 8px; }
+    .ov-card-value { font-size: 1.05rem; font-weight: 600; color: var(--navy); line-height: 1.4; }
+    .ov-card-icon {
+      position: absolute; top: 18px; right: 18px;
+      width: 32px; height: 32px;
+      border-radius: 8px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.9rem;
+    }
+    .ov-card-icon.blue { background: var(--blue-light); color: var(--blue); }
+    .ov-card-icon.gold { background: var(--gold-light); color: var(--gold-dark); }
+    .ov-card-icon.green { background: var(--green-light); color: var(--green); }
+    .ov-card-icon.red  { background: var(--red-light); color: var(--red); }
+
+    /* ── PIPELINE STAGES ── */
+    .pipeline-wrap { margin-top: 20px; }
+    .pipeline-stage {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      margin-bottom: 4px;
+    }
+    .stage-num {
+      width: 32px; height: 32px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.78rem;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+      z-index: 2;
+    }
+    .stage-connector {
+      width: 20px; height: 2px;
+      background: var(--slate-200);
+      flex-shrink: 0;
+    }
+    .stage-box {
+      flex: 1;
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: 10px;
+      padding: 10px 16px;
+      font-size: 0.92rem;
+      font-weight: 500;
+      color: var(--slate-800);
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .stage-box.highlight { border-color: var(--blue); background: var(--blue-light); color: var(--blue-dark); }
+    .stage-box.won { border-color: var(--green); background: var(--green-light); color: #065f46; }
+    .stage-box.lost { border-color: var(--red); background: var(--red-light); color: #991b1b; }
+    .stage-box.nurture { border-color: var(--gold-dark); background: var(--gold-light); color: #7a5200; }
+    .stage-tag {
+      font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      padding: 3px 10px; border-radius: 50px;
+    }
+    .tag-auto { background: #DBEAFE; color: #1e40af; }
+    .tag-manual { background: #FEF3C7; color: #92400e; }
+    .stage-line {
+      width: 2px;
+      height: 8px;
+      background: var(--slate-200);
+      margin-left: 15px;
+    }
+
+    /* ── WORKFLOW TABLE ── */
+    .workflow-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+      font-size: 0.9rem;
+    }
+    .workflow-table th {
+      background: var(--navy);
+      color: #fff;
+      padding: 10px 16px;
+      text-align: left;
+      font-size: 0.78rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .workflow-table th:first-child { border-radius: 10px 0 0 0; }
+    .workflow-table th:last-child  { border-radius: 0 10px 0 0; }
+    .workflow-table td {
+      padding: 11px 16px;
+      border-bottom: 1px solid var(--slate-200);
+      vertical-align: top;
+      color: var(--slate-700);
+    }
+    .workflow-table tr:last-child td { border-bottom: none; }
+    .workflow-table tr:nth-child(even) td { background: var(--slate-50); }
+    .workflow-table tr:nth-child(odd) td { background: var(--white); }
+    .step-num-badge {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 24px; height: 24px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+    }
+    .pill-auto   { display: inline-flex; align-items: center; gap: 5px; background: #EBF4FF; color: #1B4965; padding: 3px 11px; border-radius: 50px; font-size: 0.78rem; font-weight: 600; }
+    .pill-manual { display: inline-flex; align-items: center; gap: 5px; background: #FFF3E0; color: #92640a; padding: 3px 11px; border-radius: 50px; font-size: 0.78rem; font-weight: 600; }
+    .pill-system { display: inline-flex; align-items: center; gap: 5px; background: #F0FDF4; color: #166534; padding: 3px 11px; border-radius: 50px; font-size: 0.78rem; font-weight: 600; }
+
+    /* ── EMAIL SEQUENCE ── */
+    .email-sequence { margin-top: 20px; display: flex; flex-direction: column; gap: 14px; }
+    .email-card {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: 14px;
+      padding: 20px 22px;
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 16px;
+      align-items: start;
+    }
+    .email-timing {
+      text-align: center;
+      background: var(--navy);
+      color: #fff;
+      border-radius: 10px;
+      padding: 12px 8px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+    .email-timing .big { font-size: 1.5rem; font-weight: 700; display: block; line-height: 1; margin-bottom: 2px; }
+    .email-timing.gold-bg { background: var(--gold-dark); color: #000; }
+    .email-meta-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.07em; color: var(--slate-400); margin-bottom: 4px; }
+    .email-subject { font-size: 1rem; font-weight: 600; color: var(--navy); margin-bottom: 6px; }
+    .email-angle { font-size: 0.9rem; color: var(--slate-500); }
+    .email-cta {
+      display: inline-flex; align-items: center; gap: 6px;
+      margin-top: 10px;
+      background: var(--blue-light);
+      color: var(--blue-dark);
+      border-radius: 50px;
+      padding: 4px 14px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    /* ── FORM FIELDS ── */
+    .form-fields-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+      margin-top: 16px;
+    }
+    .form-field-card {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: 12px;
+      padding: 16px 18px;
+    }
+    .form-field-name { font-weight: 600; color: var(--navy); font-size: 0.95rem; margin-bottom: 4px; }
+    .form-field-type { font-size: 0.78rem; color: var(--slate-400); font-family: 'DM Mono', monospace; }
+    .form-field-note { font-size: 0.85rem; color: var(--slate-500); margin-top: 6px; }
+    .form-field-req {
+      display: inline-block;
+      background: var(--red-light);
+      color: var(--red);
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 2px 8px;
+      border-radius: 50px;
+      margin-left: 8px;
+    }
+
+    /* ── PENDING QUESTIONS ── */
+    .questions-block { margin-top: 20px; display: flex; flex-direction: column; gap: 12px; }
+    .question-card {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 12px 12px 0;
+      padding: 18px 20px;
+    }
+    .question-card.answered {
+      border-left-color: var(--green);
+      background: var(--green-light);
+    }
+    .q-meta { display: flex; align-items: center; gap: 10px; margin-bottom: 8px; }
+    .q-num {
+      width: 26px; height: 26px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: #000;
+      font-size: 0.75rem;
+      font-weight: 700;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .q-num.answered { background: var(--green); color: #fff; }
+    .q-status-badge {
+      font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.06em;
+      padding: 3px 10px; border-radius: 50px;
+    }
+    .q-status-pending  { background: var(--gold-light); color: #7a5200; }
+    .q-status-answered { background: var(--green-light); color: #065f46; }
+    .q-status-partial  { background: #FFF3E0; color: #92400e; }
+    .q-directed-to { font-size: 0.78rem; color: var(--slate-400); margin-left: auto; }
+    .question-text { font-weight: 600; color: var(--navy); font-size: 0.95rem; margin-bottom: 6px; }
+    .question-context { font-size: 0.88rem; color: var(--slate-500); line-height: 1.6; }
+    .answer-box {
+      margin-top: 10px;
+      background: rgba(16,185,129,0.08);
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 0.88rem;
+      color: #065f46;
+      display: flex; gap: 8px; align-items: flex-start;
+    }
+    .answer-box i { margin-top: 2px; flex-shrink: 0; }
+
+    /* ── CHECKLIST ── */
+    .build-checklist { margin-top: 16px; display: flex; flex-direction: column; gap: 8px; }
+    .checklist-item {
+      display: flex; align-items: center; gap: 14px;
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: 10px;
+      padding: 13px 18px;
+    }
+    .checklist-item.done { background: var(--green-light); border-color: rgba(16,185,129,0.3); }
+    .checklist-item.in-progress { background: var(--gold-light); border-color: rgba(255,193,7,0.4); }
+    .check-box {
+      width: 22px; height: 22px;
+      border-radius: 6px;
+      border: 2px solid var(--slate-300);
+      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .check-box.done { background: var(--green); border-color: var(--green); color: #fff; font-size: 0.75rem; }
+    .check-box.pending { border-color: var(--slate-300); }
+    .check-label { font-weight: 500; color: var(--slate-700); font-size: 0.92rem; flex: 1; }
+    .checklist-item.done .check-label { color: #065f46; }
+    .check-phase {
+      font-size: 0.72rem; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.05em;
+      padding: 3px 10px; border-radius: 50px;
+      background: var(--slate-100); color: var(--slate-500);
+    }
+
+    /* ── INFO BOX ── */
+    .info-box {
+      background: var(--blue-light);
+      border: 1px solid rgba(42,100,167,0.2);
+      border-left: 4px solid var(--blue);
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      margin-top: 16px;
+      font-size: 0.92rem;
+      color: var(--blue-dark);
+      display: flex; gap: 12px; align-items: flex-start;
+    }
+    .info-box i { margin-top: 2px; flex-shrink: 0; }
+
+    .warn-box {
+      background: var(--gold-light);
+      border: 1px solid rgba(255,193,7,0.3);
+      border-left: 4px solid var(--gold-dark);
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      margin-top: 16px;
+      font-size: 0.92rem;
+      color: #7a5200;
+      display: flex; gap: 12px; align-items: flex-start;
+    }
+    .warn-box i { margin-top: 2px; flex-shrink: 0; }
+
+    /* ── FOOTER ── */
+    .page-footer {
+      margin-top: 60px;
+      padding: 28px;
+      background: var(--navy);
+      border-radius: 16px;
+      text-align: center;
+      color: rgba(255,255,255,0.6);
+      font-size: 0.85rem;
+    }
+    .page-footer strong { color: #fff; }
+    .page-footer a { color: var(--gold); text-decoration: none; }
+
+    /* ── DIVIDER ── */
+    .divider { height: 1px; background: var(--slate-200); margin: 40px 0; }
+
+    @media(max-width: 640px) {
+      .page-header { padding: 40px 20px 36px; }
+      .email-card { grid-template-columns: 1fr; }
+      .workflow-table { font-size: 0.82rem; }
+      .workflow-table td, .workflow-table th { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ══ HEADER ══ -->
+  <header class="page-header">
+    <div class="header-logo">
+      <img src="https://assets.cdn.filesafe.space/UDKdmJIdT4xB1V6Lye64/media/68f7cb4d3a4642fd12cdeaab.png" alt="Hearing Benefit Services" />
+    </div>
+    <div class="header-badge"><i class="fas fa-robot" style="margin-right:6px;"></i> Staff Training Guide</div>
+    <h1>Hearing Test Lead Automation</h1>
+    <p>How every hearing test submission flows from the website into our sales pipeline and what happens next.</p>
+    <div class="header-meta">
+      <div class="header-meta-item"><i class="fas fa-calendar-alt"></i> June 2026</div>
+      <div class="header-meta-item"><i class="fas fa-code-branch"></i> Version 1.0</div>
+      <div class="header-meta-item"><i class="fas fa-user"></i> Rhett &amp; Seteisha</div>
+    </div>
+  </header>
+
+  <div class="page-wrap">
+
+    <!-- COLOR KEY -->
+    <div class="color-key">
+      <div class="color-key-title">Color Key</div>
+      <span class="ck-pill ck-auto"><i class="fas fa-robot"></i> AUTOMATED — GHL handles this automatically</span>
+      <span class="ck-pill ck-manual"><i class="fas fa-user"></i> MANUAL — SETEISHA action required</span>
+      <span class="ck-pill ck-system"><i class="fas fa-cog"></i> SYSTEM — One-time setup by Rhett</span>
+    </div>
+
+    <!-- ══ OVERVIEW ══ -->
+    <div class="section-block">
+      <div class="section-title">
+        <span class="section-title-icon"><i class="fas fa-map-signs"></i></span>
+        Campaign Overview
+      </div>
+      <div class="section-sub">What this automation does at a glance.</div>
+      <div class="overview-grid">
+        <div class="ov-card">
+          <div class="ov-card-label">Trigger</div>
+          <div class="ov-card-value">Hearing test form submitted on website</div>
+          <div class="ov-card-icon blue"><i class="fas fa-bolt"></i></div>
+        </div>
+        <div class="ov-card">
+          <div class="ov-card-label">Pipeline</div>
+          <div class="ov-card-value">Hearing Test Leads (12 stages)</div>
+          <div class="ov-card-icon blue"><i class="fas fa-filter"></i></div>
+        </div>
+        <div class="ov-card">
+          <div class="ov-card-label">Follow-Up Emails</div>
+          <div class="ov-card-value">4 emails: Day 0, Day 3, Day 7, Day 14</div>
+          <div class="ov-card-icon gold"><i class="fas fa-envelope"></i></div>
+        </div>
+        <div class="ov-card">
+          <div class="ov-card-label">Tag Applied</div>
+          <div class="ov-card-value"><code style="font-family:'DM Mono',monospace;font-size:0.9em;">hearing_test_lead</code></div>
+          <div class="ov-card-icon green"><i class="fas fa-tag"></i></div>
+        </div>
+        <div class="ov-card">
+          <div class="ov-card-label">Seteisha Notified?</div>
+          <div class="ov-card-value">Yes — task created on any reply</div>
+          <div class="ov-card-icon gold"><i class="fas fa-bell"></i></div>
+        </div>
+        <div class="ov-card">
+          <div class="ov-card-label">Goal</div>
+          <div class="ov-card-value">Book a free consult → close a hearing aid sale</div>
+          <div class="ov-card-icon green"><i class="fas fa-bullseye"></i></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ HOW IT WORKS ══ -->
+    <div class="section-block">
+      <div class="section-title">
+        <span class="section-title-icon"><i class="fas fa-route"></i></span>
+        How It Works — Step by Step
+      </div>
+      <div class="section-sub">The full journey from website visitor to booked consult.</div>
+
+      <table class="workflow-table">
+        <thead>
+          <tr>
+            <th style="width:44px;">#</th>
+            <th>What Happens</th>
+            <th>Who / What</th>
+            <th>Type</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><span class="step-num-badge">1</span></td>
+            <td><strong>Visitor takes hearing test</strong> on hearingbenefitservices.com/hearingtest. Results show instantly on screen.</td>
+            <td>Website visitor</td>
+            <td><span class="pill-auto"><i class="fas fa-globe"></i> Website</span></td>
+          </tr>
+          <tr>
+            <td><span class="step-num-badge">2</span></td>
+            <td><strong>Form appears below results.</strong> Visitor enters name + email + phone to receive results by email.</td>
+            <td>GHL Form (embedded on page)</td>
+            <td><span class="pill-auto"><i class="fas fa-robot"></i> Automated</span></td>
+          </tr>
+          <tr>
+            <td><span class="step-num-badge">3</span></td>
+            <td><strong>Contact is created</strong> (or updated if existing) in GHL. Tag <code style="font-family:'DM Mono',monospace;font-size:0.85em;">hearing_test_lead</code> is applied.</td>
+            <td>GHL Workflow</td>
+            <td><span class="pill-auto"><i class="fas fa-robot"></i> Automated</span></td>
+          </tr>
+          <tr>
+            <td><span class="step-num-badge">4</span></td>
+            <td><strong>Opportunity created</strong> in Hearing Test Leads pipeline → Stage: <em>Form Submitted</em>.</td>
+            <td>GHL Workflow</td>
+            <td><span class="pill-auto"><i class="fas fa-robot"></i> Automated</span></td>
+          </tr>
+          <tr>
+            <td><span class="step-num-badge">5</span></td>
+            <td><strong>Results email sent immediately.</strong> Includes personalized audiogram summary, product recommendation, and booking link.</td>
+            <td>GHL Workflow → Email 1</td>
+            <td><span class="pill-auto"><i class="fas fa-robot"></i> Automated</span></td>
+          </tr>
+          <tr>
+            <td><span class="step-num-badge">6</span></td>
+            <td><strong>If contact replies at any point</strong> — auto-reply SMS fires, Seteisha receives a task notification to follow up within 1 hour.</td>
+            <td>GHL Workflow → Seteisha</td>
+            <td><span class="pill-manual"><i class="fas fa-user"></i> Manual — Seteisha</span></td>
+          </tr>
+          <tr>
+            <td><span class="step-num-badge">7</span></td>
+            <td><strong>Day 3 follow-up email</strong> sent if no reply. Pipeline stage updated automatically.</td>
+            <td>GHL Workflow</td>
+            <td><span class="pill-auto"><i class="fas fa-robot"></i> Automated</span></td>
+          </tr>
+          <tr>
+            <td><span class="step-num-badge">8</span></td>
+            <td><strong>Day 7 follow-up email</strong> sent if no reply. Adds urgency — limited savings offer.</td>
+            <td>GHL Workflow</td>
+            <td><span class="pill-auto"><i class="fas fa-robot"></i> Automated</span></td>
+          </tr>
+          <tr>
+            <td><span class="step-num-badge">9</span></td>
+            <td><strong>Day 14 final email</strong> — soft close. If still no reply, pipeline moves to <em>Long-Term Nurture</em>.</td>
+            <td>GHL Workflow</td>
+            <td><span class="pill-auto"><i class="fas fa-robot"></i> Automated</span></td>
+          </tr>
+          <tr>
+            <td><span class="step-num-badge">10</span></td>
+            <td><strong>Seteisha manages</strong> all engaged contacts — books consults, sends quotes, closes sales, updates pipeline stages.</td>
+            <td>Seteisha</td>
+            <td><span class="pill-manual"><i class="fas fa-user"></i> Manual — Seteisha</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- ══ PIPELINE ══ -->
+    <div class="section-block">
+      <div class="section-title">
+        <span class="section-title-icon"><i class="fas fa-filter"></i></span>
+        Pipeline: Hearing Test Leads
+      </div>
+      <div class="section-sub">12 stages — GHL auto-moves contacts through the first 5. Seteisha manages stages 6–12.</div>
+
+      <div class="pipeline-wrap">
+
+        <div class="pipeline-stage">
+          <div class="stage-num">1</div>
+          <div class="stage-connector"></div>
+          <div class="stage-box"><span>Form Submitted</span><span class="stage-tag tag-auto">Auto</span></div>
+        </div>
+        <div class="stage-line"></div>
+        <div class="pipeline-stage">
+          <div class="stage-num">2</div>
+          <div class="stage-connector"></div>
+          <div class="stage-box"><span>Results Email Sent</span><span class="stage-tag tag-auto">Auto</span></div>
+        </div>
+        <div class="stage-line"></div>
+        <div class="pipeline-stage">
+          <div class="stage-num">3</div>
+          <div class="stage-connector"></div>
+          <div class="stage-box"><span>Day 3 Follow-Up Sent</span><span class="stage-tag tag-auto">Auto</span></div>
+        </div>
+        <div class="stage-line"></div>
+        <div class="pipeline-stage">
+          <div class="stage-num">4</div>
+          <div class="stage-connector"></div>
+          <div class="stage-box"><span>Day 7 Follow-Up Sent</span><span class="stage-tag tag-auto">Auto</span></div>
+        </div>
+        <div class="stage-line"></div>
+        <div class="pipeline-stage">
+          <div class="stage-num">5</div>
+          <div class="stage-connector"></div>
+          <div class="stage-box"><span>Day 14 Follow-Up Sent</span><span class="stage-tag tag-auto">Auto</span></div>
+        </div>
+        <div class="stage-line"></div>
+        <div class="pipeline-stage">
+          <div class="stage-num">6</div>
+          <div class="stage-connector"></div>
+          <div class="stage-box highlight"><span>Engaged / Replied</span><span class="stage-tag tag-auto">Auto</span></div>
+        </div>
+        <div class="stage-line"></div>
+        <div class="pipeline-stage">
+          <div class="stage-num">7</div>
+          <div class="stage-connector"></div>
+          <div class="stage-box"><span>Consult Booked</span><span class="stage-tag tag-manual">Seteisha</span></div>
+        </div>
+        <div class="stage-line"></div>
+        <div class="pipeline-stage">
+          <div class="stage-num">8</div>
+          <div class="stage-connector"></div>
+          <div class="stage-box"><span>Consult Completed</span><span class="stage-tag tag-manual">Seteisha</span></div>
+        </div>
+        <div class="stage-line"></div>
+        <div class="pipeline-stage">
+          <div class="stage-num">9</div>
+          <div class="stage-connector"></div>
+          <div class="stage-box"><span>Quote Sent</span><span class="stage-tag tag-manual">Seteisha</span></div>
+        </div>
+        <div class="stage-line"></div>
+        <div class="pipeline-stage">
+          <div class="stage-num">10</div>
+          <div class="stage-connector"></div>
+          <div class="stage-box won"><span>Closed Won</span><span class="stage-tag tag-manual">Seteisha</span></div>
+        </div>
+        <div class="stage-line"></div>
+        <div class="pipeline-stage">
+          <div class="stage-num">11</div>
+          <div class="stage-connector"></div>
+          <div class="stage-box lost"><span>Closed Lost</span><span class="stage-tag tag-manual">Seteisha</span></div>
+        </div>
+        <div class="stage-line"></div>
+        <div class="pipeline-stage">
+          <div class="stage-num">12</div>
+          <div class="stage-connector"></div>
+          <div class="stage-box nurture"><span>Long-Term Nurture</span><span class="stage-tag tag-auto">Auto</span></div>
+        </div>
+      </div>
+
+      <div class="info-box" style="margin-top:20px;">
+        <i class="fas fa-info-circle"></i>
+        <div>GHL automatically moves contacts through stages 1–5 as each email sends. Stage 6 (Engaged/Replied) is triggered the moment any contact replies to an email or SMS. Seteisha takes over from stage 7 onward.</div>
+      </div>
+    </div>
+
+    <!-- ══ TEAM DECISION: FORM EXPERIENCE ══ -->
+    <div class="section-block">
+      <div class="section-title">
+        <span class="section-title-icon" style="background:var(--gold-light);color:var(--gold-dark);"><i class="fas fa-code-branch"></i></span>
+        <span>Team Decision: What Does the Patient See After the Test?</span>
+      </div>
+      <div class="section-sub">We need to pick one of two options. Scroll down to see how each one looks on the actual hearing test page.</div>
+
+      <!-- OPTION COMPARISON TABLE -->
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-top:20px;margin-bottom:28px;">
+        <div style="background:var(--white);border:2px solid var(--blue);border-radius:14px;padding:20px 22px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+            <div style="width:34px;height:34px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;">A</div>
+            <div style="font-weight:700;color:var(--navy);font-size:1.05rem;">Need Help? (Simple CTA)</div>
+          </div>
+          <p style="font-size:0.9rem;color:var(--slate-500);margin-bottom:14px;">Results show on screen. Below the results, a simple form asks: <em>"Need help understanding your results?"</em> — patient fills in contact info to request a follow-up from Seteisha.</p>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;"><i class="fas fa-check-circle" style="color:var(--green);"></i> <span>Simple — builds inside GHL only</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;"><i class="fas fa-check-circle" style="color:var(--green);"></i> <span>No custom development needed</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;"><i class="fas fa-check-circle" style="color:var(--green);"></i> <span>Ready to launch in 2–3 days</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;"><i class="fas fa-times-circle" style="color:var(--red);"></i> <span>Email does NOT include their actual results</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;"><i class="fas fa-times-circle" style="color:var(--red);"></i> <span>Lower perceived value (no "results delivery")</span></div>
+          </div>
+        </div>
+        <div style="background:var(--white);border:2px solid var(--gold-dark);border-radius:14px;padding:20px 22px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+            <div style="width:34px;height:34px;border-radius:50%;background:var(--gold-dark);color:#000;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;">B</div>
+            <div style="font-weight:700;color:var(--navy);font-size:1.05rem;">Send My Results (Full Email)</div>
+          </div>
+          <p style="font-size:0.9rem;color:var(--slate-500);margin-bottom:14px;">Results show on screen. Below the results, a form offers: <em>"Get your results emailed to you."</em> — the email includes their actual audiogram data, result tier, and a product recommendation.</p>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;"><i class="fas fa-check-circle" style="color:var(--green);"></i> <span>Professional — feels like a real medical service</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;"><i class="fas fa-check-circle" style="color:var(--green);"></i> <span>Higher conversion — real value in the email</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;"><i class="fas fa-check-circle" style="color:var(--green);"></i> <span>Can personalize emails by severity level</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;"><i class="fas fa-times-circle" style="color:var(--red);"></i> <span>Requires custom development (Rhett has a way to host this for free — no monthly server cost)</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;"><i class="fas fa-times-circle" style="color:var(--red);"></i> <span>Additional 3–5 days build time after Option A is live</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;"><i class="fas fa-times-circle" style="color:var(--red);"></i> <span>Free email service limited to 3,000 emails/month (more than enough for current volume)</span></div>
+          </div>
+        </div>
+        <div style="background:var(--white);border:2px solid var(--green);border-radius:14px;padding:20px 22px;">
+          <div style="display:flex;align-items:center;gap:10px;margin-bottom:14px;">
+            <div style="width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:0.9rem;">C</div>
+            <div style="font-weight:700;color:var(--navy);font-size:1.05rem;">Both — A First, Then B</div>
+          </div>
+          <p style="font-size:0.9rem;color:var(--slate-500);margin-bottom:14px;">Rhett launches Option A first so the team starts capturing leads immediately. Then Rhett builds Option B as an upgrade — once live, the results email upgrades to include the full audiogram automatically.</p>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;"><i class="fas fa-check-circle" style="color:var(--green);"></i> <span>Start capturing leads in 2–3 days</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;"><i class="fas fa-check-circle" style="color:var(--green);"></i> <span>Upgrade to full results email later — no downtime</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;"><i class="fas fa-check-circle" style="color:var(--green);"></i> <span>Same pipeline + workflow for both — only the email changes</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;"><i class="fas fa-check-circle" style="color:var(--green);"></i> <span>No risk — if Option B takes longer, Option A is already running</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;"><i class="fas fa-check-circle" style="color:var(--green);"></i> <span>Free hosting + 3,000 emails/month at no cost</span></div>
+            <div style="display:flex;align-items:center;gap:8px;font-size:0.85rem;"><i class="fas fa-star" style="color:var(--gold);"></i> <span style="font-weight:600;">Rhett's recommended approach</span></div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-bottom:40px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+          <div style="width:38px;height:38px;border-radius:50%;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;">A</div>
+          <div>
+            <div style="font-family:'Lora',serif;font-weight:700;font-size:1.2rem;color:var(--navy);">Option A — "Need Help?" Simple Form</div>
+            <div style="font-size:0.85rem;color:var(--slate-400);">What the patient sees after their results load</div>
+          </div>
+        </div>
+
+        <!-- MOCKUP CONTAINER -->
+        <div style="background:var(--slate-100);border-radius:16px;padding:24px;border:1px solid var(--slate-200);">
+          <!-- Simulated browser bar -->
+          <div style="background:var(--white);border-radius:10px 10px 0 0;padding:10px 16px;display:flex;align-items:center;gap:10px;border:1px solid var(--slate-200);border-bottom:none;">
+            <div style="display:flex;gap:6px;">
+              <span style="width:10px;height:10px;border-radius:50%;background:#ef4444;display:block;"></span>
+              <span style="width:10px;height:10px;border-radius:50%;background:#f97316;display:block;"></span>
+              <span style="width:10px;height:10px;border-radius:50%;background:#10b981;display:block;"></span>
+            </div>
+            <div style="flex:1;background:var(--slate-100);border-radius:6px;padding:5px 14px;font-size:0.78rem;color:var(--slate-400);font-family:'DM Mono',monospace;">hearingbenefitservices.com/hearingtest</div>
+          </div>
+          <!-- Page mockup -->
+          <div style="background:var(--white);border:1px solid var(--slate-200);border-radius:0 0 10px 10px;padding:28px 24px;overflow:hidden;">
+            <!-- Results badge mockup -->
+            <div style="text-align:center;margin-bottom:20px;">
+              <div style="font-family:'Lora',serif;font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:8px;">Your Hearing Profile</div>
+              <div style="display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border-radius:50px;background:rgba(255,193,7,0.12);color:#7a5200;border:2px solid rgba(255,193,7,0.3);font-weight:700;font-size:0.95rem;">
+                <i class="fas fa-exclamation-triangle"></i> Mild to Moderate Hearing Loss Detected
+              </div>
+            </div>
+            <!-- Fake audiogram placeholder -->
+            <div style="background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;height:120px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+              <span style="color:var(--slate-400);font-size:0.85rem;font-weight:600;"><i class="fas fa-chart-line" style="margin-right:8px;"></i> Audiogram Chart — visible on screen</span>
+            </div>
+            <!-- Product recommendation block -->
+            <div style="background:linear-gradient(135deg,#f8fafc,#f1f5f9);border:1px solid var(--slate-200);border-radius:12px;padding:18px;text-align:center;margin-bottom:24px;">
+              <div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;color:var(--blue);letter-spacing:0.06em;margin-bottom:4px;">Recommended for you</div>
+              <div style="font-family:'Lora',serif;font-weight:700;color:var(--navy);font-size:1.1rem;">Signia Silk Hearing Aids</div>
+            </div>
+
+            <!-- ★ THE FORM — OPTION A ★ -->
+            <div style="border:2px solid var(--blue);border-radius:14px;padding:24px;background:linear-gradient(135deg,#EBF3FC,#F8FAFC);position:relative;">
+              <div style="position:absolute;top:-12px;left:20px;background:var(--blue);color:#fff;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:4px 14px;border-radius:50px;">Form appears here</div>
+              <div style="text-align:center;margin-bottom:16px;padding-top:4px;">
+                <div style="font-size:1.6rem;margin-bottom:8px;"><i class="fas fa-hands-helping" style="color:var(--blue);"></i></div>
+                <div style="font-family:'Lora',serif;font-weight:700;font-size:1.15rem;color:var(--navy);margin-bottom:6px;">Need Help Understanding Your Results?</div>
+                <div style="font-size:0.9rem;color:var(--slate-500);">One of our licensed hearing specialists can walk you through your audiogram, answer your questions, and help you explore your options — at no cost.</div>
+              </div>
+              <!-- Form fields mockup -->
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;">
+                <div>
+                  <div style="font-size:0.75rem;font-weight:600;color:var(--slate-500);margin-bottom:4px;">First Name *</div>
+                  <div style="background:var(--white);border:1px solid var(--slate-200);border-radius:8px;padding:10px 14px;font-size:0.85rem;color:var(--slate-400);">Enter first name</div>
+                </div>
+                <div>
+                  <div style="font-size:0.75rem;font-weight:600;color:var(--slate-500);margin-bottom:4px;">Last Name *</div>
+                  <div style="background:var(--white);border:1px solid var(--slate-200);border-radius:8px;padding:10px 14px;font-size:0.85rem;color:var(--slate-400);">Enter last name</div>
+                </div>
+              </div>
+              <div style="margin-bottom:12px;">
+                <div style="font-size:0.75rem;font-weight:600;color:var(--slate-500);margin-bottom:4px;">Email Address *</div>
+                <div style="background:var(--white);border:1px solid var(--slate-200);border-radius:8px;padding:10px 14px;font-size:0.85rem;color:var(--slate-400);">Enter email address</div>
+              </div>
+              <div style="margin-bottom:16px;">
+                <div style="font-size:0.75rem;font-weight:600;color:var(--slate-500);margin-bottom:4px;">Phone Number (optional)</div>
+                <div style="background:var(--white);border:1px solid var(--slate-200);border-radius:8px;padding:10px 14px;font-size:0.85rem;color:var(--slate-400);">Enter phone number</div>
+              </div>
+              <div style="background:var(--gold);color:#000;text-align:center;font-weight:900;font-family:'Poppins',sans-serif;padding:14px;border-radius:50px;font-size:1rem;cursor:pointer;">
+                <i class="fas fa-paper-plane" style="margin-right:8px;"></i> Yes, I'd Like Help — Contact Me
+              </div>
+              <div style="text-align:center;margin-top:10px;font-size:0.78rem;color:var(--slate-400);">A specialist will reach out within 24 hours.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Option A: What the email looks like -->
+        <div style="margin-top:16px;background:var(--white);border:1px solid var(--slate-200);border-radius:12px;padding:18px 20px;">
+          <div style="font-size:0.78rem;font-weight:600;text-transform:uppercase;color:var(--slate-400);letter-spacing:0.06em;margin-bottom:8px;"><i class="fas fa-envelope" style="margin-right:6px;"></i> What the follow-up email says (Option A)</div>
+          <div style="font-size:0.92rem;color:var(--slate-700);line-height:1.7;">
+            <em>"Hi [Name], thanks for taking our free hearing screening and requesting help from our team. A licensed hearing specialist from Hearing Benefit Services will be in touch within 24 hours to review your results with you. In the meantime, here's what we offer..."</em>
+            <div style="margin-top:8px;font-size:0.85rem;color:var(--slate-400);">Email does NOT include their audiogram or dB values — because GHL has no access to the test data.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ── MOCKUP B ── -->
+      <div style="margin-bottom:20px;">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+          <div style="width:38px;height:38px;border-radius:50%;background:var(--gold-dark);color:#000;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:1rem;">B</div>
+          <div>
+            <div style="font-family:'Lora',serif;font-weight:700;font-size:1.2rem;color:var(--navy);">Option B — "Send My Results" Full Email</div>
+            <div style="font-size:0.85rem;color:var(--slate-400);">What the patient sees after their results load</div>
+          </div>
+        </div>
+
+        <!-- MOCKUP CONTAINER -->
+        <div style="background:var(--slate-100);border-radius:16px;padding:24px;border:1px solid var(--slate-200);">
+          <!-- Simulated browser bar -->
+          <div style="background:var(--white);border-radius:10px 10px 0 0;padding:10px 16px;display:flex;align-items:center;gap:10px;border:1px solid var(--slate-200);border-bottom:none;">
+            <div style="display:flex;gap:6px;">
+              <span style="width:10px;height:10px;border-radius:50%;background:#ef4444;display:block;"></span>
+              <span style="width:10px;height:10px;border-radius:50%;background:#f97316;display:block;"></span>
+              <span style="width:10px;height:10px;border-radius:50%;background:#10b981;display:block;"></span>
+            </div>
+            <div style="flex:1;background:var(--slate-100);border-radius:6px;padding:5px 14px;font-size:0.78rem;color:var(--slate-400);font-family:'DM Mono',monospace;">hearingbenefitservices.com/hearingtest</div>
+          </div>
+          <!-- Page mockup -->
+          <div style="background:var(--white);border:1px solid var(--slate-200);border-radius:0 0 10px 10px;padding:28px 24px;overflow:hidden;">
+            <!-- Results badge mockup -->
+            <div style="text-align:center;margin-bottom:20px;">
+              <div style="font-family:'Lora',serif;font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:8px;">Your Hearing Profile</div>
+              <div style="display:inline-flex;align-items:center;gap:8px;padding:10px 22px;border-radius:50px;background:rgba(239,68,68,0.1);color:#991b1b;border:2px solid rgba(239,68,68,0.25);font-weight:700;font-size:0.95rem;">
+                <i class="fas fa-exclamation-circle"></i> Significant Hearing Loss Detected
+              </div>
+            </div>
+            <!-- Fake audiogram placeholder -->
+            <div style="background:var(--slate-50);border:1px solid var(--slate-200);border-radius:10px;height:120px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;">
+              <span style="color:var(--slate-400);font-size:0.85rem;font-weight:600;"><i class="fas fa-chart-line" style="margin-right:8px;"></i> Audiogram Chart — visible on screen</span>
+            </div>
+            <!-- Product recommendation block -->
+            <div style="background:linear-gradient(135deg,#EBF3FC,#f1f5f9);border:1px solid rgba(42,100,167,0.2);border-radius:12px;padding:18px;text-align:center;margin-bottom:24px;">
+              <div style="font-size:0.75rem;font-weight:700;text-transform:uppercase;color:#ef4444;letter-spacing:0.06em;margin-bottom:4px;">Clinical recommendation</div>
+              <div style="font-family:'Lora',serif;font-weight:700;color:var(--navy);font-size:1.1rem;">Signia RIC Hearing Aids</div>
+            </div>
+
+            <!-- ★ THE FORM — OPTION B ★ -->
+            <div style="border:2px solid var(--gold-dark);border-radius:14px;padding:24px;background:linear-gradient(135deg,#FFF8E1,#FFFDF5);position:relative;">
+              <div style="position:absolute;top:-12px;left:20px;background:var(--gold-dark);color:#000;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;padding:4px 14px;border-radius:50px;">Form appears here</div>
+              <div style="text-align:center;margin-bottom:16px;padding-top:4px;">
+                <div style="font-size:1.6rem;margin-bottom:8px;"><i class="fas fa-envelope-open-text" style="color:var(--gold-dark);"></i></div>
+                <div style="font-family:'Lora',serif;font-weight:700;font-size:1.15rem;color:var(--navy);margin-bottom:6px;">Get Your Full Results Emailed to You</div>
+                <div style="font-size:0.9rem;color:var(--slate-500);">We'll send your complete audiogram, a plain-language interpretation, and a personalized hearing aid recommendation — directly to your inbox.</div>
+              </div>
+              <!-- Form fields mockup -->
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;">
+                <div>
+                  <div style="font-size:0.75rem;font-weight:600;color:var(--slate-500);margin-bottom:4px;">First Name *</div>
+                  <div style="background:var(--white);border:1px solid var(--slate-200);border-radius:8px;padding:10px 14px;font-size:0.85rem;color:var(--slate-400);">Enter first name</div>
+                </div>
+                <div>
+                  <div style="font-size:0.75rem;font-weight:600;color:var(--slate-500);margin-bottom:4px;">Last Name *</div>
+                  <div style="background:var(--white);border:1px solid var(--slate-200);border-radius:8px;padding:10px 14px;font-size:0.85rem;color:var(--slate-400);">Enter last name</div>
+                </div>
+              </div>
+              <div style="margin-bottom:12px;">
+                <div style="font-size:0.75rem;font-weight:600;color:var(--slate-500);margin-bottom:4px;">Email Address *</div>
+                <div style="background:var(--white);border:1px solid var(--slate-200);border-radius:8px;padding:10px 14px;font-size:0.85rem;color:var(--slate-400);">Enter email address</div>
+              </div>
+              <div style="margin-bottom:16px;">
+                <div style="font-size:0.75rem;font-weight:600;color:var(--slate-500);margin-bottom:4px;">Phone Number (optional)</div>
+                <div style="background:var(--white);border:1px solid var(--slate-200);border-radius:8px;padding:10px 14px;font-size:0.85rem;color:var(--slate-400);">Enter phone number</div>
+              </div>
+              <div style="background:var(--gold);color:#000;text-align:center;font-weight:900;font-family:'Poppins',sans-serif;padding:14px;border-radius:50px;font-size:1rem;cursor:pointer;">
+                <i class="fas fa-paper-plane" style="margin-right:8px;"></i> Send My Results
+              </div>
+              <div style="text-align:center;margin-top:10px;font-size:0.78rem;color:var(--slate-400);">Your results arrive in under 60 seconds.</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Option B: What the email looks like -->
+        <div style="margin-top:16px;background:var(--white);border:1px solid var(--slate-200);border-radius:12px;padding:18px 20px;">
+          <div style="font-size:0.78rem;font-weight:600;text-transform:uppercase;color:var(--slate-400);letter-spacing:0.06em;margin-bottom:8px;"><i class="fas fa-envelope" style="margin-right:6px;"></i> What the results email includes (Option B)</div>
+          <div style="font-size:0.92rem;color:var(--slate-700);line-height:1.7;">
+            <div style="display:flex;flex-direction:column;gap:10px;">
+              <div style="display:flex;align-items:flex-start;gap:10px;">
+                <i class="fas fa-check" style="color:var(--green);margin-top:4px;flex-shrink:0;"></i>
+                <span>Their result tier: <strong>"Significant Hearing Loss Detected"</strong></span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px;">
+                <i class="fas fa-check" style="color:var(--green);margin-top:4px;flex-shrink:0;"></i>
+                <span>Plain-language summary: <em>"Your left ear showed difficulty hearing higher-pitched sounds above 4,000 Hz…"</em></span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px;">
+                <i class="fas fa-check" style="color:var(--green);margin-top:4px;flex-shrink:0;"></i>
+                <span>Audiogram data table (dB thresholds per frequency per ear)</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px;">
+                <i class="fas fa-check" style="color:var(--green);margin-top:4px;flex-shrink:0;"></i>
+                <span>Personalized product recommendation based on severity</span>
+              </div>
+              <div style="display:flex;align-items:flex-start;gap:10px;">
+                <i class="fas fa-check" style="color:var(--green);margin-top:4px;flex-shrink:0;"></i>
+                <span>Booking link + phone number</span>
+              </div>
+            </div>
+            <div style="margin-top:14px;padding:12px 16px;background:var(--gold-light);border-radius:8px;border:1px solid rgba(255,193,7,0.3);font-size:0.85rem;color:#7a5200;">
+              <i class="fas fa-wrench" style="margin-right:6px;"></i> <strong>Development note:</strong> This option requires a custom web app hosted on a free server that captures the audiogram data from the browser, stores it, sends the results email (up to 3,000/month free), and pushes the contact to GHL via API. Rhett will handle the build after Option A is live.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SIDE-BY-SIDE SUMMARY BOX -->
+      <div style="background:var(--navy);border-radius:14px;padding:24px 28px;color:rgba(255,255,255,0.85);font-size:0.92rem;margin-top:8px;">
+        <div style="font-family:'Lora',serif;font-weight:700;color:#fff;font-size:1.1rem;margin-bottom:14px;"><i class="fas fa-scale-balanced" style="margin-right:10px;color:var(--gold);"></i> Quick Summary</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;">
+          <div>
+            <div style="color:var(--gold);font-weight:700;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;">Option A — Need Help?</div>
+            <div style="line-height:1.7;">
+              Launch fast. GHL-only. Email says "a specialist will call you" but doesn't include test results. Starts capturing leads in 2–3 days.
+            </div>
+          </div>
+          <div>
+            <div style="color:var(--gold);font-weight:700;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;">Option B — Send My Results</div>
+            <div style="line-height:1.7;">
+              More professional. Email includes their actual audiogram + recommendation. Hosted for free. Limited to 3,000 result emails/month.
+            </div>
+          </div>
+          <div>
+            <div style="color:var(--green);font-weight:700;font-size:0.85rem;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:8px;"><i class="fas fa-star" style="margin-right:4px;"></i> Option C — Both</div>
+            <div style="line-height:1.7;">
+              Best of both. Launch A now, upgrade to B after. No downtime, no risk. Same pipeline powers both.
+            </div>
+          </div>
+        </div>
+        <div style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(255,255,255,0.15);font-size:0.85rem;color:rgba(255,255,255,0.55);">
+          <i class="fas fa-lightbulb" style="color:var(--gold);margin-right:6px;"></i> <strong style="color:rgba(255,255,255,0.75);">Rhett's recommendation:</strong> Option C. We start generating leads immediately with Option A while Rhett builds the upgraded results email in the background. Once Option B is ready, it slots right in — no changes needed to the pipeline or workflow.
+        </div>
+      </div>
+
+      <!-- GHL FORM FIELDS (applies to both) -->
+      <div style="margin-top:28px;">
+        <div style="font-family:'Lora',serif;font-weight:700;font-size:1.15rem;color:var(--navy);margin-bottom:14px;"><i class="fas fa-wpforms" style="margin-right:10px;color:var(--blue);"></i> Form Fields (Both Options)</div>
+        <div class="form-fields-grid">
+          <div class="form-field-card">
+            <div class="form-field-name">First Name <span class="form-field-req">Required</span></div>
+            <div class="form-field-type">text field</div>
+            <div class="form-field-note">Standard GHL first name field.</div>
+          </div>
+          <div class="form-field-card">
+            <div class="form-field-name">Last Name <span class="form-field-req">Required</span></div>
+            <div class="form-field-type">text field</div>
+            <div class="form-field-note">Standard GHL last name field.</div>
+          </div>
+          <div class="form-field-card">
+            <div class="form-field-name">Email Address <span class="form-field-req">Required</span></div>
+            <div class="form-field-type">email field</div>
+            <div class="form-field-note">Used to send results or follow-up email sequence.</div>
+          </div>
+          <div class="form-field-card">
+            <div class="form-field-name">Phone Number</div>
+            <div class="form-field-type">phone field</div>
+            <div class="form-field-note">Optional — enables SMS follow-up if email bounces.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ EMAIL SEQUENCE ══ -->
+    <div class="section-block">
+      <div class="section-title">
+        <span class="section-title-icon"><i class="fas fa-envelope-open-text"></i></span>
+        Email Sequence (4 Emails)
+      </div>
+      <div class="section-sub">All 4 emails are fully automated. No action needed from Seteisha unless a lead replies.</div>
+
+      <div class="warn-box" style="margin-bottom:20px;">
+        <i class="fas fa-exclamation-triangle"></i>
+        <div><strong>Email 1 changes depending on the team's decision:</strong><br>
+        <strong>Option A:</strong> Email 1 is a welcome / value prop email — "thanks for requesting help, here's what we offer, a specialist will reach out."<br>
+        <strong>Option B / C:</strong> Email 1 delivers their actual audiogram data + plain-language interpretation + personalized recommendation. (Option C starts with A's email, then upgrades to B's email once the server is built.)<br>
+        Emails 2–4 are the same for all options.</div>
+      </div>
+
+      <div class="email-sequence">
+
+        <div class="email-card">
+          <div class="email-timing gold-bg">
+            <span class="big">Now</span>
+            Immediate
+          </div>
+          <div>
+            <div class="email-meta-label">Email 1 — Depends on Option A or B</div>
+            <div class="email-subject">Your Hearing Test Results from Hearing Benefit Services</div>
+            <div style="margin-bottom:12px;">
+              <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+                <span style="background:var(--blue);color:#fff;font-size:0.7rem;font-weight:700;padding:2px 10px;border-radius:50px;">If Option A / C at launch</span>
+                <span style="font-size:0.88rem;color:var(--slate-500);">Welcome email — thanks for requesting help, here's what HBS offers, a specialist will contact you soon. No audiogram data.</span>
+              </div>
+              <div style="display:flex;align-items:center;gap:8px;">
+                <span style="background:var(--gold-dark);color:#000;font-size:0.7rem;font-weight:700;padding:2px 10px;border-radius:50px;">If Option B / C after upgrade</span>
+                <span style="font-size:0.88rem;color:var(--slate-500);">Full results delivery — audiogram summary, dB values, plain-language interpretation, personalized product recommendation, booking link.</span>
+              </div>
+            </div>
+            <div><span class="email-cta"><i class="fas fa-link"></i> CTA: Book a Free Consult</span></div>
+          </div>
+        </div>
+
+        <div class="email-card">
+          <div class="email-timing">
+            <span class="big">+3</span>
+            Days
+          </div>
+          <div>
+            <div class="email-meta-label">Email 2 — Gentle Follow-Up</div>
+            <div class="email-subject">Did you get a chance to review your hearing results?</div>
+            <div class="email-angle">Friendly reminder. Reinforces the HBS value prop — remote fitting, home delivery, no clinic trip needed. Light touch, no pressure.</div>
+            <div><span class="email-cta"><i class="fas fa-link"></i> CTA: Schedule Your Free Consultation</span></div>
+          </div>
+        </div>
+
+        <div class="email-card">
+          <div class="email-timing">
+            <span class="big">+7</span>
+            Days
+          </div>
+          <div>
+            <div class="email-meta-label">Email 3 — Urgency + Offer</div>
+            <div class="email-subject">Your hearing health matters — and we have a limited offer for you</div>
+            <div class="email-angle">Introduces the 10% savings offer. Mentions the 3-year care plan included with every purchase. Adds gentle urgency that the offer is time-limited.</div>
+            <div><span class="email-cta"><i class="fas fa-link"></i> CTA: Claim Your 10% Savings</span></div>
+          </div>
+        </div>
+
+        <div class="email-card">
+          <div class="email-timing">
+            <span class="big">+14</span>
+            Days
+          </div>
+          <div>
+            <div class="email-meta-label">Email 4 — Final Soft Close</div>
+            <div class="email-subject">One last thought on your hearing test results…</div>
+            <div class="email-angle">Empathetic final message. Acknowledges that the timing may not be right. Keeps the door open — invites them to reach out whenever they're ready. Moves to Long-Term Nurture after this.</div>
+            <div><span class="email-cta"><i class="fas fa-link"></i> CTA: Reach Out Anytime</span></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ══ SETEISHA'S ROLE ══ -->
+    <div class="section-block">
+      <div class="section-title">
+        <span class="section-title-icon"><i class="fas fa-user-tie"></i></span>
+        Seteisha's Role in This Campaign
+      </div>
+      <div class="section-sub">Most of this runs on autopilot. Here's exactly when Seteisha steps in.</div>
+
+      <table class="workflow-table">
+        <thead>
+          <tr>
+            <th>Trigger</th>
+            <th>What Seteisha Sees</th>
+            <th>Action Required</th>
+            <th>Timing</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Lead replies to any email</td>
+            <td>Task notification in GHL + auto-reply SMS sent to lead</td>
+            <td>Call or text the lead back, qualify, book consult</td>
+            <td><strong>Within 1 hour</strong></td>
+          </tr>
+          <tr>
+            <td>Consult is booked</td>
+            <td>Appointment appears in GHL calendar</td>
+            <td>Move pipeline to <em>Consult Booked</em></td>
+            <td>Same day</td>
+          </tr>
+          <tr>
+            <td>Consult is completed</td>
+            <td>Appointment completed</td>
+            <td>Move to <em>Consult Completed</em>, send quote same day</td>
+            <td>Within 2 hours of consult</td>
+          </tr>
+          <tr>
+            <td>Quote sent</td>
+            <td>Quote email sent to lead</td>
+            <td>Move to <em>Quote Sent</em>. Follow up Day 1, 3, 5, 7</td>
+            <td>Per quote follow-up standard</td>
+          </tr>
+          <tr>
+            <td>Sale closed</td>
+            <td>Payment confirmed</td>
+            <td>Move to <em>Closed Won</em>, hand off to Andrea for fulfillment</td>
+            <td>Same day</td>
+          </tr>
+          <tr>
+            <td>Lead not interested</td>
+            <td>Reply or conversation indicates no interest</td>
+            <td>Move to <em>Closed Lost</em> or <em>Long-Term Nurture</em></td>
+            <td>As needed</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="info-box" style="margin-top:16px;">
+        <i class="fas fa-robot"></i>
+        <div>Everything before "Engaged / Replied" is fully hands-off. GHL sends all 4 emails, updates the pipeline, and applies the tag without any action from Seteisha. She only needs to act when a lead actually responds.</div>
+      </div>
+    </div>
+
+    <!-- ══ PENDING QUESTIONS ══ -->
+    <div class="section-block">
+      <div class="section-title">
+        <span class="section-title-icon" style="background:#FFF3E0; color:#92640a;"><i class="fas fa-question-circle"></i></span>
+        Pending Team Decisions
+      </div>
+      <div class="section-sub">These need to be confirmed before the full build is finalized. Rhett to discuss with team.</div>
+
+      <div class="questions-block">
+
+        <div class="question-card">
+          <div class="q-meta">
+            <div class="q-num">1</div>
+            <span class="q-status-badge q-status-pending">Pending — Primary Decision</span>
+            <span class="q-directed-to"><i class="fas fa-users" style="margin-right:4px;"></i> Whole Team</span>
+          </div>
+          <div class="question-text">Option A ("Need Help?"), Option B ("Send My Results"), or Option C (both — A first, then upgrade to B)?</div>
+          <div class="question-context">
+            See the mockups above for a visual comparison. <strong>Option A</strong> is GHL-only, launches in 2–3 days, but the email doesn't include the patient's actual results. <strong>Option B</strong> requires custom development (hosted on a free server, 3,000 emails/month free) but delivers a professional results email with audiogram data and personalized recommendations. <strong>Option C</strong> (Rhett's recommendation) launches Option A immediately and upgrades to Option B in the background — no downtime, no risk, same pipeline and workflow powers both.
+          </div>
+        </div>
+
+        <div class="question-card answered">
+          <div class="q-meta">
+            <div class="q-num answered"><i class="fas fa-check" style="font-size:0.7rem;"></i></div>
+            <span class="q-status-badge q-status-answered">Answered</span>
+            <span class="q-directed-to"><i class="fas fa-user" style="margin-right:4px;"></i> Rhett</span>
+          </div>
+          <div class="question-text">How many follow-up emails after the initial results email?</div>
+          <div class="answer-box">
+            <i class="fas fa-check-circle"></i>
+            <div><strong>Answer:</strong> 3 follow-ups — Day 3, Day 7, and Day 14. Total of 4 emails in the sequence including the initial results email.</div>
+          </div>
+        </div>
+
+        <div class="question-card answered">
+          <div class="q-meta">
+            <div class="q-num answered"><i class="fas fa-check" style="font-size:0.7rem;"></i></div>
+            <span class="q-status-badge q-status-answered">Answered</span>
+            <span class="q-directed-to"><i class="fas fa-user" style="margin-right:4px;"></i> Rhett</span>
+          </div>
+          <div class="question-text">Should this use the existing Custom Quote Leads pipeline or a new one?</div>
+          <div class="answer-box">
+            <i class="fas fa-check-circle"></i>
+            <div><strong>Answer:</strong> New dedicated pipeline — <em>Hearing Test Leads</em> — to keep hearing test traffic separate from custom quote leads for cleaner reporting.</div>
+          </div>
+        </div>
+
+        <div class="question-card answered">
+          <div class="q-meta">
+            <div class="q-num answered"><i class="fas fa-check" style="font-size:0.7rem;"></i></div>
+            <span class="q-status-badge q-status-answered">Answered</span>
+            <span class="q-directed-to"><i class="fas fa-user" style="margin-right:4px;"></i> Rhett</span>
+          </div>
+          <div class="question-text">What channel for follow-up — SMS, email, or both?</div>
+          <div class="answer-box">
+            <i class="fas fa-check-circle"></i>
+            <div><strong>Answer:</strong> Email only for the automated follow-up sequence. SMS is used only as an auto-reply when a contact responds.</div>
+          </div>
+        </div>
+
+        <div class="question-card">
+          <div class="q-meta">
+            <div class="q-num">2</div>
+            <span class="q-status-badge q-status-pending">Pending</span>
+            <span class="q-directed-to"><i class="fas fa-users" style="margin-right:4px;"></i> Rhett + Seteisha</span>
+          </div>
+          <div class="question-text">Should the results email include the actual audiogram data values or just a plain-language summary?</div>
+          <div class="question-context">
+            The hearing test page shows an audiogram chart to the user on-screen. The results email could either (A) include a plain-language summary like "Your results suggest mild hearing loss in your left ear" or (B) include actual dB threshold values per frequency. Option A is simpler and more actionable. Option B is more clinical and may increase perceived credibility.
+          </div>
+        </div>
+
+        <div class="question-card">
+          <div class="q-meta">
+            <div class="q-num">3</div>
+            <span class="q-status-badge q-status-pending">Pending</span>
+            <span class="q-directed-to"><i class="fas fa-users" style="margin-right:4px;"></i> Rhett + Seteisha</span>
+          </div>
+          <div class="question-text">Should the form also collect the hearing test result tier (Normal / Mild / Significant)?</div>
+          <div class="question-context">
+            The hearing test JavaScript already calculates a result tier when results display. If we pass this value as a hidden field in the GHL form, we could personalize the email sequence — e.g., leads with "Significant" loss get a more urgent email 1 pushing a specialist consult, while "Normal" leads get a lighter educational sequence. This would require a small code addition to the hearing test page. Worth doing if personalization is a priority.
+          </div>
+        </div>
+
+        <div class="question-card">
+          <div class="q-meta">
+            <div class="q-num">4</div>
+            <span class="q-status-badge q-status-pending">Pending</span>
+            <span class="q-directed-to"><i class="fas fa-user" style="margin-right:4px;"></i> Rhett</span>
+          </div>
+          <div class="question-text">Should existing customers who take the hearing test be excluded from this sequence?</div>
+          <div class="question-context">
+            If an existing contact in GHL (e.g., someone already in the 3-Year Upgrade pipeline) submits the hearing test form, they would enter the Hearing Test Leads pipeline as well. We need to decide: (A) let them enter both pipelines, (B) add an If/Else check in the workflow to skip contacts who already have the <code style="font-family:'DM Mono',monospace;">sold</code> tag, or (C) check for existing pipeline membership and route accordingly.
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- ══ BUILD CHECKLIST ══ -->
+    <div class="section-block">
+      <div class="section-title">
+        <span class="section-title-icon"><i class="fas fa-tasks"></i></span>
+        Build Checklist
+      </div>
+      <div class="section-sub">5 components to build in order. Do not skip ahead — each step depends on the previous.</div>
+
+      <div class="build-checklist">
+        <div class="checklist-item in-progress">
+          <div class="check-box pending"></div>
+          <div class="check-label">Step 0 — Team decides: <strong>Option A</strong> (simple form, GHL-only), <strong>Option B</strong> (full results email), or <strong>Option C</strong> (both — A first, then B)</div>
+          <span class="check-phase" style="background:var(--gold-light);color:#7a5200;">Decision</span>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box pending"></div>
+          <div class="check-label">Step 1 — Build the <em>Hearing Test Leads</em> pipeline (12 stages)</div>
+          <span class="check-phase">Phase 1</span>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box pending"></div>
+          <div class="check-label">Step 2 — Build the GHL form (4 fields + embed on hearing test page)</div>
+          <span class="check-phase">Phase 2</span>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box pending"></div>
+          <div class="check-label">Step 3 — Write and create the 4 email templates in GHL</div>
+          <span class="check-phase">Phase 3</span>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box pending"></div>
+          <div class="check-label">Step 4 — Build the <em>HBS — Hearing Test Form Submission Handler</em> workflow</div>
+          <span class="check-phase">Phase 4</span>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box pending"></div>
+          <div class="check-label">Step 5 — <strong>Option B/C only:</strong> Build free-hosted results app + email integration + GHL API handoff</div>
+          <span class="check-phase" style="background:var(--gold-light);color:#7a5200;">If Option B</span>
+        </div>
+        <div class="checklist-item">
+          <div class="check-box pending"></div>
+          <div class="check-label">Step 6 — End-to-end test (submit form → check pipeline → verify email received)</div>
+          <span class="check-phase">Final</span>
+        </div>
+      </div>
+
+      <div class="warn-box">
+        <i class="fas fa-exclamation-triangle"></i>
+        <div><strong>Blocked on Step 0:</strong> The team needs to decide Option A, B, or C before we build. Steps 1–4 are the same regardless. Step 5 only applies if the team picks Option B or C.</div>
+      </div>
+    </div>
+
+    <!-- ══ FOOTER ══ -->
+    <div class="page-footer">
+      <strong>Hearing Benefit Services</strong> — Internal Staff Training Document<br>
+      <a href="https://hearingbenefitservices.com">hearingbenefitservices.com</a> &nbsp;·&nbsp; 808-435-7002 &nbsp;·&nbsp; Honolulu, HI<br>
+      <span style="margin-top:8px;display:block;">Built by Rhett &nbsp;·&nbsp; Version 1.0 &nbsp;·&nbsp; June 2026 &nbsp;·&nbsp; Do not distribute externally</span>
+    </div>
+
+  </div>
+</body>
+</html>
