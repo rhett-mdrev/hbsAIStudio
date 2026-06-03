@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Feedback Form Reference | Hearing Benefit Services</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #f0f4f8;
+      color: #1a202c;
+      line-height: 1.7;
+    }
+
+    /* ── LOGIN ── */
+    #login-overlay {
+      position: fixed; inset: 0;
+      background: linear-gradient(135deg, #0a1628 0%, #1a3a5c 100%);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 9999;
+    }
+    .login-box {
+      background: #fff; border-radius: 16px;
+      padding: 48px 40px; width: min(420px, 92vw);
+      box-shadow: 0 24px 64px rgba(0,0,0,.35);
+      text-align: center;
+    }
+    .login-logo { font-family: 'Lora', serif; font-size: 1.1rem; font-weight: 700; color: #0a1628; margin-bottom: 6px; }
+    .login-box h2 { font-family: 'Lora', serif; font-size: 1.5rem; color: #0a1628; margin-bottom: 6px; }
+    .login-box p  { font-size: .9rem; color: #718096; margin-bottom: 28px; }
+    .login-divider { width: 48px; height: 3px; background: linear-gradient(90deg, #b8972a, #d4af37); border-radius: 2px; margin: 0 auto 24px; }
+    .login-box input {
+      width: 100%; padding: 12px 16px;
+      border: 1.5px solid #cbd5e0; border-radius: 8px;
+      font-family: 'Poppins', sans-serif; font-size: 1rem; margin-bottom: 14px;
+      transition: border-color .2s;
+    }
+    .login-box input:focus { outline: none; border-color: #b8972a; }
+    .login-box button {
+      width: 100%; padding: 13px;
+      background: linear-gradient(135deg, #0a1628, #1a3a5c);
+      color: #fff; border: none; border-radius: 8px;
+      font-family: 'Poppins', sans-serif; font-size: 1rem; font-weight: 600; cursor: pointer;
+      transition: opacity .2s;
+    }
+    .login-box button:hover { opacity: .88; }
+    #login-error { color: #e53e3e; font-size: .85rem; margin-top: 10px; display: none; }
+
+    /* ── MAIN ── */
+    #main-content { display: none; }
+
+    /* ── HEADER ── */
+    header {
+      background: linear-gradient(135deg, #0a1628 0%, #1a3a5c 100%);
+      color: #fff; padding: 56px 24px 48px; text-align: center;
+      border-bottom: 4px solid #b8972a;
+    }
+    header .eyebrow { font-size: .8rem; font-weight: 600; letter-spacing: .15em; text-transform: uppercase; color: #b8972a; margin-bottom: 12px; }
+    header h1 { font-family: 'Lora', serif; font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 700; margin-bottom: 12px; }
+    header p  { font-size: 1rem; opacity: .82; max-width: 600px; margin: 0 auto; }
+
+    /* ── NAV ── */
+    nav.sticky {
+      position: sticky; top: 0; z-index: 100;
+      background: #0a1628; padding: 0 16px;
+      overflow-x: auto; white-space: nowrap;
+      box-shadow: 0 2px 12px rgba(0,0,0,.3);
+      border-bottom: 2px solid #b8972a;
+    }
+    nav.sticky a {
+      display: inline-block; color: rgba(255,255,255,.72);
+      text-decoration: none; padding: 14px 16px;
+      font-size: .82rem; font-weight: 500; letter-spacing: .03em;
+      transition: color .2s, background .2s;
+    }
+    nav.sticky a:hover { color: #d4af37; background: rgba(255,255,255,.06); }
+
+    /* ── LAYOUT ── */
+    .container { max-width: 980px; margin: 0 auto; padding: 40px 20px 80px; }
+
+    /* ── CARDS ── */
+    section {
+      background: #fff; border-radius: 14px;
+      padding: 36px 32px; margin-bottom: 28px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.07);
+    }
+    section h2 {
+      font-family: 'Lora', serif; font-size: 1.3rem; font-weight: 700;
+      color: #0a1628; margin-bottom: 16px; padding-bottom: 12px;
+      border-bottom: 2px solid #b8972a;
+    }
+    section h3 { font-size: 1rem; font-weight: 600; color: #1a3a5c; margin: 22px 0 8px; }
+    section p  { margin-bottom: 12px; color: #2d3748; font-size: .95rem; }
+
+    /* ── TABLES ── */
+    .ref-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: .88rem; }
+    .ref-table th {
+      background: #0a1628; color: #fff;
+      padding: 12px 14px; text-align: left;
+      font-weight: 600; letter-spacing: .03em;
+    }
+    .ref-table th:first-child { border-radius: 8px 0 0 0; }
+    .ref-table th:last-child  { border-radius: 0 8px 0 0; }
+    .ref-table td { padding: 12px 14px; border-bottom: 1px solid #e2e8f0; vertical-align: top; color: #2d3748; }
+    .ref-table tr:nth-child(even) td { background: #f8faff; }
+    .ref-table tr.row-green td { background: #f0fdf4; }
+    .ref-table tr.row-blue  td { background: #eff6ff; }
+    .ref-table tr.row-red   td { background: #fef2f2; }
+
+    /* ── TAGS ── */
+    .tag {
+      display: inline-block; border-radius: 4px;
+      padding: 2px 9px; font-size: .73rem; font-weight: 600;
+      font-family: 'Poppins', monospace; margin: 2px; letter-spacing: .03em;
+    }
+    .tag-add    { background: #16a34a; color: #fff; }
+    .tag-manual { background: #b8972a; color: #fff; }
+    .tag-remove { background: #fef2f2; color: #991b1b; border: 1px dashed #fca5a5; }
+
+    /* ── CHIPS ── */
+    .chip { display: inline-block; padding: 3px 12px; border-radius: 20px; font-size: .75rem; font-weight: 600; margin: 2px; }
+    .chip-green  { background: #f0fdf4; color: #14532d; border: 1px solid #bbf7d0; }
+    .chip-red    { background: #fef2f2; color: #7f1d1d; border: 1px solid #fecaca; }
+    .chip-blue   { background: #eff6ff; color: #1e3a5f; border: 1px solid #b5d4f4; }
+    .chip-amber  { background: #faeeda; color: #854f0b; border: 1px solid #fac775; }
+    .chip-navy   { background: #e8f0fb; color: #0a1628; border: 1px solid #b8c9e8; }
+
+    /* ── FIELD NUMBER BADGE ── */
+    .field-num {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 28px; height: 28px; border-radius: 50%;
+      background: #0a1628; color: #d4af37;
+      font-weight: 700; font-size: .82rem; flex-shrink: 0;
+    }
+
+    /* ── INFO BOXES ── */
+    .info-box, .warn-box, .success-box, .gold-box {
+      border-radius: 10px; padding: 16px 20px; margin: 16px 0; font-size: .92rem;
+    }
+    .info-box    { background: #eff6ff; border-left: 4px solid #2563eb; color: #1e3a5f; }
+    .warn-box    { background: #fff7ed; border-left: 4px solid #d97706; color: #92400e; }
+    .success-box { background: #f0fdf4; border-left: 4px solid #16a34a; color: #14532d; }
+    .gold-box    { background: #fefce8; border-left: 4px solid #b8972a; color: #713f12; }
+
+    /* ── LEGEND ── */
+    .legend {
+      display: flex; flex-wrap: wrap; gap: 10px;
+      margin-bottom: 20px; padding: 16px 20px;
+      background: #f8faff; border-radius: 10px;
+      border: 1px solid #e2e8f0;
+    }
+    .legend-item { display: flex; align-items: center; gap: 6px; font-size: .82rem; font-weight: 500; color: #4a5568; }
+    .legend-dot  { width: 14px; height: 14px; border-radius: 3px; flex-shrink: 0; }
+
+    /* ── WORKFLOW FLOW ── */
+    .flow-row {
+      display: flex; align-items: stretch; gap: 0;
+      margin-bottom: 12px; border-radius: 10px; overflow: hidden;
+      border: 1px solid #e2e8f0;
+    }
+    .flow-condition {
+      width: 220px; flex-shrink: 0;
+      padding: 14px 16px;
+      font-size: .88rem; font-weight: 600;
+      display: flex; align-items: center;
+    }
+    .flow-arrow {
+      width: 32px; flex-shrink: 0;
+      background: #f1efe8;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.1rem; color: #b8972a;
+    }
+    .flow-action {
+      flex: 1; padding: 14px 16px;
+      font-size: .88rem; color: #2d3748;
+      background: #fff;
+      display: flex; flex-direction: column; justify-content: center; gap: 4px;
+    }
+    .flow-green .flow-condition { background: #f0fdf4; color: #14532d; }
+    .flow-red   .flow-condition { background: #fef2f2; color: #7f1d1d; }
+    .flow-blue  .flow-condition { background: #eff6ff; color: #1e3a5f; }
+
+    /* ── FOOTER ── */
+    footer { text-align: center; padding: 32px 16px; font-size: .82rem; color: #718096; border-top: 1px solid #e2e8f0; background: #fff; }
+
+    @media (max-width: 640px) {
+      section { padding: 24px 18px; }
+      .login-box { padding: 36px 24px; }
+      .ref-table { font-size: .8rem; }
+      .ref-table td, .ref-table th { padding: 10px 10px; }
+      .flow-condition { width: 140px; font-size: .8rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="login-overlay">
+  <div class="login-box">
+    <div class="login-logo">Hearing Benefit Services</div>
+    <div class="login-divider"></div>
+    <h2>Staff Portal</h2>
+    <p>Internal use only — please sign in to continue</p>
+    <input type="text"     id="uname" placeholder="Username" autocomplete="username" />
+    <input type="password" id="pword" placeholder="Password" autocomplete="current-password" />
+    <button onclick="checkLogin()">Sign In</button>
+    <p id="login-error">Incorrect username or password. Please try again.</p>
+  </div>
+</div>
+
+<!-- MAIN -->
+<div id="main-content">
+
+  <header>
+    <div class="eyebrow">Internal Reference Document</div>
+    <h1>HBS Hearing Aid Feedback Form</h1>
+    <p>Complete field reference and workflow logic for building and managing the feedback form in GHL.</p>
+  </header>
+
+  <nav class="sticky">
+    <a href="#overview">Overview</a>
+    <a href="#legend">Tag Colors</a>
+    <a href="#fields">Form Fields</a>
+    <a href="#hidden">Hidden Fields</a>
+    <a href="#workflow">Workflow Logic</a>
+    <a href="#seteisha">Seteisha Notes</a>
+    <a href="#preview">Form Preview</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- OVERVIEW -->
+    <section id="overview">
+      <h2>📋 Overview</h2>
+      <p>The HBS Hearing Aid Feedback Form is sent to every customer on <strong>Day 21 after delivery</strong>. It collects their satisfaction score and follow-up preference, which the GHL workflow uses to determine whether a review request should be sent.</p>
+
+      <div class="gold-box">
+        <strong>Form Name in GHL:</strong> HBS Hearing Aid Feedback Form<br>
+        <strong>Sent:</strong> Day 21 after delivery via automated SMS and email<br>
+        <strong>Key Field:</strong> <span class="tag tag-add">overall_rating</span> — this is what the workflow reads to trigger the review gate<br>
+        <strong>Review sent if:</strong> overall_rating = 3, 4, or 5 stars — 1 day after submission<br>
+        <strong>Review blocked if:</strong> overall_rating = 1 or 2 stars — Seteisha task assigned instead
+      </div>
+    </section>
+
+    <!-- TAG LEGEND -->
+    <section id="legend">
+      <h2>🏷️ Tag Color Key</h2>
+      <p>Tags throughout this document are color coded so you can tell at a glance whether an action is automatic or manual.</p>
+
+      <table class="ref-table">
+        <thead>
+          <tr><th>Color</th><th>Meaning</th><th>Action Required</th></tr>
+        </thead>
+        <tbody>
+          <tr class="row-green">
+            <td><span class="tag tag-add">green tag</span></td>
+            <td>Tag added <strong>automatically</strong> by GHL workflow</td>
+            <td>No manual action needed — GHL handles it</td>
+          </tr>
+          <tr>
+            <td><span class="tag tag-manual">amber tag</span></td>
+            <td>Tag added <strong>manually</strong> by Seteisha or Andrea</td>
+            <td>Requires a manual action in GHL by the team member</td>
+          </tr>
+          <tr class="row-red">
+            <td><span class="tag tag-remove">red dashed tag</span></td>
+            <td>Tag <strong>removed</strong> at this stage</td>
+            <td>Applied automatically by the workflow</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- FORM FIELDS -->
+    <section id="fields">
+      <h2>📝 Form Fields</h2>
+      <p>Build these fields in the GHL form builder in the order listed below. Field 7 requires conditional logic — see the note below the table.</p>
+
+      <table class="ref-table">
+        <thead>
+          <tr>
+            <th style="width:40px;">#</th>
+            <th>Field Label &amp; Options</th>
+            <th>Field Type</th>
+            <th>Field Key</th>
+            <th>Required</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="row-green">
+            <td><span class="field-num">1</span></td>
+            <td>
+              <strong>How would you rate your overall experience with Hearing Benefit Services?</strong><br>
+              <span style="font-size:.8rem;color:#16a34a;font-weight:600;">⭐ This is the field the workflow reads to trigger the review gate</span>
+            </td>
+            <td><span class="chip chip-navy">Star Rating 1–5</span></td>
+            <td><span class="tag tag-add">overall_rating</span></td>
+            <td><span style="color:#16a34a;font-weight:600;">Yes</span></td>
+          </tr>
+          <tr>
+            <td><span class="field-num">2</span></td>
+            <td>
+              <strong>How satisfied are you with the sound quality of your hearing aids?</strong><br>
+              <span style="font-size:.8rem;color:#718096;">Very Satisfied &nbsp;/&nbsp; Satisfied &nbsp;/&nbsp; Neutral &nbsp;/&nbsp; Unsatisfied &nbsp;/&nbsp; Very Unsatisfied</span>
+            </td>
+            <td><span class="chip chip-navy">Dropdown</span></td>
+            <td><span class="tag tag-add">sound_quality_rating</span></td>
+            <td><span style="color:#16a34a;font-weight:600;">Yes</span></td>
+          </tr>
+          <tr>
+            <td><span class="field-num">3</span></td>
+            <td>
+              <strong>How comfortable are your hearing aids to wear?</strong><br>
+              <span style="font-size:.8rem;color:#718096;">Very Comfortable &nbsp;/&nbsp; Comfortable &nbsp;/&nbsp; Somewhat Uncomfortable &nbsp;/&nbsp; Very Uncomfortable</span>
+            </td>
+            <td><span class="chip chip-navy">Dropdown</span></td>
+            <td><span class="tag tag-add">comfort_rating</span></td>
+            <td><span style="color:#16a34a;font-weight:600;">Yes</span></td>
+          </tr>
+          <tr>
+            <td><span class="field-num">4</span></td>
+            <td>
+              <strong>How easy was it to set up and start using your hearing aids?</strong><br>
+              <span style="font-size:.8rem;color:#718096;">Very Easy &nbsp;/&nbsp; Easy &nbsp;/&nbsp; Difficult &nbsp;/&nbsp; Very Difficult</span>
+            </td>
+            <td><span class="chip chip-navy">Dropdown</span></td>
+            <td><span class="tag tag-add">setup_rating</span></td>
+            <td><span style="color:#16a34a;font-weight:600;">Yes</span></td>
+          </tr>
+          <tr>
+            <td><span class="field-num">5</span></td>
+            <td>
+              <strong>How would you rate your experience with our team?</strong><br>
+              <span style="font-size:.8rem;color:#718096;">Excellent &nbsp;/&nbsp; Good &nbsp;/&nbsp; Fair &nbsp;/&nbsp; Poor</span>
+            </td>
+            <td><span class="chip chip-navy">Dropdown</span></td>
+            <td><span class="tag tag-add">team_rating</span></td>
+            <td><span style="color:#16a34a;font-weight:600;">Yes</span></td>
+          </tr>
+          <tr>
+            <td><span class="field-num">6</span></td>
+            <td>
+              <strong>Would you like a member of our team to contact you?</strong><br>
+              <span style="font-size:.8rem;color:#718096;">Yes, please contact me &nbsp;/&nbsp; No, I'm all good</span>
+            </td>
+            <td><span class="chip chip-navy">Radio Button</span></td>
+            <td><span class="tag tag-add">wants_followup</span></td>
+            <td><span style="color:#16a34a;font-weight:600;">Yes</span></td>
+          </tr>
+          <tr class="row-blue">
+            <td><span class="field-num" style="background:#185fa5;">7</span></td>
+            <td>
+              <strong>What is the best time to reach you?</strong><br>
+              <span style="font-size:.8rem;color:#185fa5;font-weight:600;">⚡ Conditional — only shows if Field 6 = "Yes, please contact me"</span><br>
+              <span style="font-size:.8rem;color:#718096;">Morning (9am–12pm HST) &nbsp;/&nbsp; Afternoon (12pm–3pm HST) &nbsp;/&nbsp; Late Afternoon (3pm–6pm HST)</span>
+            </td>
+            <td><span class="chip chip-navy">Dropdown</span></td>
+            <td><span class="tag tag-add">best_time_to_call</span></td>
+            <td><span style="color:#185fa5;font-weight:600;">Conditional</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="info-box" style="margin-top:16px;">
+        ⚡ <strong>Setting up Field 7 conditional logic in GHL:</strong> In the GHL form builder, add Field 7 then click on it → go to <strong>Conditional Logic</strong> → set condition: show this field when <code>wants_followup</code> equals <code>Yes, please contact me</code>.
+      </div>
+    </section>
+
+    <!-- HIDDEN FIELDS -->
+    <section id="hidden">
+      <h2>🔒 Hidden Fields</h2>
+      <p>Add these fields to the form and mark them as <strong>hidden</strong>. GHL pre-populates them automatically when the form link is sent to the customer via the workflow. The customer will not see them.</p>
+
+      <table class="ref-table">
+        <thead>
+          <tr><th>Field Key</th><th>Purpose</th><th>How it's filled</th></tr>
+        </thead>
+        <tbody>
+          <tr class="row-green">
+            <td><span class="tag tag-add">contact_id</span></td>
+            <td>Links the form submission back to the correct contact record in GHL</td>
+            <td>GHL workflow passes the contact ID automatically via the form URL</td>
+          </tr>
+          <tr class="row-green">
+            <td><span class="tag tag-add">first_name</span></td>
+            <td>Pre-fills so submissions are identifiable by name</td>
+            <td>GHL passes <code>{{contact.first_name}}</code> via the form URL</td>
+          </tr>
+          <tr class="row-green">
+            <td><span class="tag tag-add">email</span></td>
+            <td>Pre-fills for contact record matching</td>
+            <td>GHL passes <code>{{contact.email}}</code> via the form URL</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="success-box" style="margin-top:16px;">
+        ✅ All hidden fields are filled automatically — no action needed from Seteisha or Andrea.
+      </div>
+    </section>
+
+    <!-- WORKFLOW LOGIC -->
+    <section id="workflow">
+      <h2>⚙️ Workflow Logic After Submission</h2>
+      <p>When the customer submits the feedback form, the GHL workflow reads <span class="tag tag-add">overall_rating</span> and branches into the appropriate path. There are three possible conditions:</p>
+
+      <div class="flow-row flow-green">
+        <div class="flow-condition">⭐ overall_rating<br>= 3, 4, or 5 stars</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-action">
+          Add tag <span class="tag tag-add">feedback-positive</span><br>
+          <span style="font-size:.85rem;color:#4a5568;">Queue review request — sends automatically 1 day later to Google, Facebook, and HBS website testimonials</span>
+        </div>
+      </div>
+
+      <div class="flow-row flow-red">
+        <div class="flow-condition">⭐ overall_rating<br>= 1 or 2 stars</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-action">
+          Add tag <span class="tag tag-manual">feedback-negative</span><br>
+          <span style="font-size:.85rem;color:#4a5568;">Assign task to Seteisha — do NOT send review request. Seteisha must follow up within 24 hours.</span>
+        </div>
+      </div>
+
+      <div class="flow-row flow-blue">
+        <div class="flow-condition">wants_followup<br>= Yes, please<br>contact me</div>
+        <div class="flow-arrow">→</div>
+        <div class="flow-action">
+          Assign task to Seteisha with <span class="tag tag-add">best_time_to_call</span> in task notes<br>
+          <span style="font-size:.85rem;color:#4a5568;">Applies regardless of star rating — even happy customers who want a call get this task</span>
+        </div>
+      </div>
+
+      <div class="info-box" style="margin-top:16px;">
+        💡 <strong>Note:</strong> A customer can trigger both the blue and green paths simultaneously — e.g. 5 stars AND wants a follow-up call. In that case Seteisha gets a task AND the review request is queued.
+      </div>
+
+      <h3>Tags Applied by This Workflow</h3>
+      <table class="ref-table" style="margin-top:8px;">
+        <thead>
+          <tr><th>Tag</th><th>When Applied</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr class="row-green">
+            <td><span class="tag tag-add">feedback-positive</span></td>
+            <td>overall_rating = 3, 4, or 5</td>
+            <td>Triggers review request queue — sends 1 day later</td>
+          </tr>
+          <tr class="row-red">
+            <td><span class="tag tag-manual">feedback-negative</span></td>
+            <td>overall_rating = 1 or 2</td>
+            <td>Flags contact for Seteisha follow-up — blocks review request</td>
+          </tr>
+          <tr class="row-green">
+            <td><span class="tag tag-add">review-request-sent</span></td>
+            <td>1 day after feedback-positive</td>
+            <td>Confirms review request was sent — contact moves to Current Client pipeline</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- SETEISHA NOTES -->
+    <section id="seteisha">
+      <h2>📌 Notes for Seteisha</h2>
+
+      <div class="warn-box">
+        ⚠️ <strong>feedback-negative task received:</strong> Reach out to the customer within <strong>24 hours</strong> at their preferred time (<span class="tag tag-add">best_time_to_call</span>). Understand their concern and resolve it completely before considering any review request. <strong>Never ask a dissatisfied customer for a public review.</strong>
+      </div>
+
+      <div class="info-box" style="margin-top:16px;">
+        💡 <strong>wants_followup task received:</strong> Check the task notes for the customer's preferred time to be reached (<span class="tag tag-add">best_time_to_call</span>). Call or SMS them at that time. The goal is a personal check-in — not a sales call.
+      </div>
+
+      <div class="success-box" style="margin-top:16px;">
+        ✅ <strong>No action needed for happy customers (3–5 stars, no follow-up):</strong> The review request is fully automated. GHL sends it 1 day after the positive feedback is submitted. You do not need to do anything.
+      </div>
+
+      <h3>How to Find Your Tasks in GHL</h3>
+      <ol style="padding-left:20px;margin-top:8px;">
+        <li style="margin-bottom:8px;color:#2d3748;font-size:.93rem;">Log into GHL → click <strong>Tasks</strong> in the left sidebar</li>
+        <li style="margin-bottom:8px;color:#2d3748;font-size:.93rem;">Filter by <strong>Assigned to Me</strong> to see only your tasks</li>
+        <li style="margin-bottom:8px;color:#2d3748;font-size:.93rem;">Tasks from the feedback workflow will be titled: <em>"Feedback follow-up required — [Customer Name]"</em></li>
+        <li style="margin-bottom:8px;color:#2d3748;font-size:.93rem;">Click the task to see the customer's rating, feedback details, and preferred call time</li>
+        <li style="margin-bottom:0;color:#2d3748;font-size:.93rem;">Mark the task complete after you've followed up with the customer</li>
+      </ol>
+    </section>
+
+    <!-- FORM PREVIEW -->
+    <section id="preview">
+      <h2>👁️ What the Customer Sees</h2>
+      <p>This is a visual representation of how the form will appear to customers. The actual form is built in GHL.</p>
+
+      <div style="background:#f8faff;border:1px solid #e2e8f0;border-radius:12px;padding:32px;max-width:580px;margin:0 auto;">
+        <div style="text-align:center;margin-bottom:24px;">
+          <div style="font-family:'Lora',serif;font-size:1.3rem;font-weight:700;color:#0a1628;margin-bottom:6px;">How did we do?</div>
+          <div style="font-size:.9rem;color:#718096;">Your feedback helps us serve you better</div>
+          <div style="width:40px;height:3px;background:linear-gradient(90deg,#b8972a,#d4af37);border-radius:2px;margin:12px auto 0;"></div>
+        </div>
+
+        <!-- Field 1 -->
+        <div style="margin-bottom:20px;">
+          <label style="display:block;font-size:.88rem;font-weight:600;color:#1a202c;margin-bottom:8px;">How would you rate your overall experience with Hearing Benefit Services? <span style="color:#e53e3e;">*</span></label>
+          <div style="display:flex;gap:6px;font-size:1.6rem;">
+            <span style="color:#d4af37;">★</span><span style="color:#d4af37;">★</span><span style="color:#d4af37;">★</span><span style="color:#d4af37;">★</span><span style="color:#d3d1c7;">★</span>
+          </div>
+          <div style="font-size:.75rem;color:#718096;margin-top:4px;">1 = Poor &nbsp; 5 = Excellent</div>
+        </div>
+
+        <!-- Field 2 -->
+        <div style="margin-bottom:16px;">
+          <label style="display:block;font-size:.88rem;font-weight:600;color:#1a202c;margin-bottom:6px;">How satisfied are you with the sound quality? <span style="color:#e53e3e;">*</span></label>
+          <select style="width:100%;padding:10px 12px;border:1.5px solid #cbd5e0;border-radius:8px;font-family:'Poppins',sans-serif;font-size:.88rem;color:#1a202c;background:#fff;">
+            <option>Very Satisfied</option>
+          </select>
+        </div>
+
+        <!-- Field 3 -->
+        <div style="margin-bottom:16px;">
+          <label style="display:block;font-size:.88rem;font-weight:600;color:#1a202c;margin-bottom:6px;">How comfortable are your hearing aids to wear? <span style="color:#e53e3e;">*</span></label>
+          <select style="width:100%;padding:10px 12px;border:1.5px solid #cbd5e0;border-radius:8px;font-family:'Poppins',sans-serif;font-size:.88rem;color:#1a202c;background:#fff;">
+            <option>Very Comfortable</option>
+          </select>
+        </div>
+
+        <!-- Field 4 -->
+        <div style="margin-bottom:16px;">
+          <label style="display:block;font-size:.88rem;font-weight:600;color:#1a202c;margin-bottom:6px;">How easy was it to set up and start using your hearing aids? <span style="color:#e53e3e;">*</span></label>
+          <select style="width:100%;padding:10px 12px;border:1.5px solid #cbd5e0;border-radius:8px;font-family:'Poppins',sans-serif;font-size:.88rem;color:#1a202c;background:#fff;">
+            <option>Very Easy</option>
+          </select>
+        </div>
+
+        <!-- Field 5 -->
+        <div style="margin-bottom:16px;">
+          <label style="display:block;font-size:.88rem;font-weight:600;color:#1a202c;margin-bottom:6px;">How would you rate your experience with our team? <span style="color:#e53e3e;">*</span></label>
+          <select style="width:100%;padding:10px 12px;border:1.5px solid #cbd5e0;border-radius:8px;font-family:'Poppins',sans-serif;font-size:.88rem;color:#1a202c;background:#fff;">
+            <option>Excellent</option>
+          </select>
+        </div>
+
+        <!-- Field 6 -->
+        <div style="margin-bottom:16px;">
+          <label style="display:block;font-size:.88rem;font-weight:600;color:#1a202c;margin-bottom:8px;">Would you like a member of our team to contact you? <span style="color:#e53e3e;">*</span></label>
+          <div style="display:flex;flex-direction:column;gap:8px;">
+            <label style="display:flex;align-items:center;gap:8px;font-size:.88rem;color:#2d3748;cursor:pointer;">
+              <input type="radio" name="preview_followup" value="yes" onchange="toggleTimeField(true)" style="accent-color:#b8972a;"> Yes, please contact me
+            </label>
+            <label style="display:flex;align-items:center;gap:8px;font-size:.88rem;color:#2d3748;cursor:pointer;">
+              <input type="radio" name="preview_followup" value="no" onchange="toggleTimeField(false)" checked style="accent-color:#b8972a;"> No, I'm all good
+            </label>
+          </div>
+        </div>
+
+        <!-- Field 7 (conditional) -->
+        <div id="time-field" style="margin-bottom:16px;display:none;background:#eff6ff;border-radius:8px;padding:14px;">
+          <label style="display:block;font-size:.88rem;font-weight:600;color:#185fa5;margin-bottom:6px;">What is the best time to reach you? <span style="color:#e53e3e;">*</span></label>
+          <select style="width:100%;padding:10px 12px;border:1.5px solid #93c5fd;border-radius:8px;font-family:'Poppins',sans-serif;font-size:.88rem;color:#1a202c;background:#fff;">
+            <option>Morning (9am–12pm HST)</option>
+            <option>Afternoon (12pm–3pm HST)</option>
+            <option>Late Afternoon (3pm–6pm HST)</option>
+          </select>
+          <div style="font-size:.75rem;color:#185fa5;margin-top:4px;">⚡ This field appears only when "Yes" is selected above</div>
+        </div>
+
+        <button style="width:100%;padding:13px;background:linear-gradient(135deg,#0a1628,#1a3a5c);color:#fff;border:none;border-radius:8px;font-family:'Poppins',sans-serif;font-size:1rem;font-weight:600;cursor:pointer;margin-top:8px;">Submit Feedback</button>
+      </div>
+
+      <div class="info-box" style="margin-top:20px;">
+        💡 The form preview above is interactive — try clicking "Yes, please contact me" to see Field 7 appear. This is exactly how the conditional logic will work in GHL.
+      </div>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>Hearing Benefit Services — Internal Staff Portal &nbsp;|&nbsp; Confidential &nbsp;|&nbsp; April 2026</p>
+  </footer>
+
+</div>
+
+<script>
+  function checkLogin() {
+    var u = document.getElementById('uname').value.trim();
+    var p = document.getElementById('pword').value.trim();
+    if (u === 'training' && p === 'l8ZiBguc6I4CW8') {
+      document.getElementById('login-overlay').style.display = 'none';
+      document.getElementById('main-content').style.display  = 'block';
+    } else {
+      document.getElementById('login-error').style.display = 'block';
+    }
+  }
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') checkLogin();
+  });
+
+  function toggleTimeField(show) {
+    document.getElementById('time-field').style.display = show ? 'block' : 'none';
+  }
+</script>
+
+</body>
+</html>
