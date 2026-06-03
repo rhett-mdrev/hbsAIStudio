@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Custom Quote Training | Hearing Benefit Services</title>
+  <style>
+    /* ── RESET & BASE ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #f0f4f8;
+      color: #1a202c;
+      line-height: 1.7;
+    }
+
+    /* ── LOGIN OVERLAY ── */
+    #login-overlay {
+      position: fixed; inset: 0;
+      background: linear-gradient(135deg, #0a3d62 0%, #1e6fa8 100%);
+      display: flex; align-items: center; justify-content: center;
+      z-index: 9999;
+    }
+    .login-box {
+      background: #fff;
+      border-radius: 16px;
+      padding: 48px 40px;
+      width: min(420px, 92vw);
+      box-shadow: 0 24px 64px rgba(0,0,0,.25);
+      text-align: center;
+    }
+    .login-box img { width: 80px; margin-bottom: 16px; }
+    .login-box h2 { font-size: 1.5rem; color: #0a3d62; margin-bottom: 6px; }
+    .login-box p  { font-size: .9rem; color: #718096; margin-bottom: 28px; }
+    .login-box input {
+      width: 100%; padding: 12px 16px;
+      border: 1.5px solid #cbd5e0; border-radius: 8px;
+      font-size: 1rem; margin-bottom: 14px;
+      transition: border-color .2s;
+    }
+    .login-box input:focus { outline: none; border-color: #1e6fa8; }
+    .login-box button {
+      width: 100%; padding: 13px;
+      background: linear-gradient(135deg, #0a3d62, #1e6fa8);
+      color: #fff; border: none; border-radius: 8px;
+      font-size: 1rem; font-weight: 600; cursor: pointer;
+      transition: opacity .2s;
+    }
+    .login-box button:hover { opacity: .88; }
+    #login-error {
+      color: #e53e3e; font-size: .85rem;
+      margin-top: 10px; display: none;
+    }
+
+    /* ── MAIN CONTENT (hidden until login) ── */
+    #main-content { display: none; }
+
+    /* ── TOP HEADER ── */
+    header {
+      background: linear-gradient(135deg, #0a3d62 0%, #1e6fa8 100%);
+      color: #fff; padding: 48px 24px; text-align: center;
+    }
+    header h1 { font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 700; }
+    header p  { margin-top: 10px; font-size: 1.05rem; opacity: .88; }
+
+    /* ── STICKY NAV ── */
+    nav.sticky {
+      position: sticky; top: 0; z-index: 100;
+      background: #0a3d62; padding: 0 16px;
+      overflow-x: auto; white-space: nowrap;
+      box-shadow: 0 2px 8px rgba(0,0,0,.3);
+    }
+    nav.sticky a {
+      display: inline-block; color: #bee3f8;
+      text-decoration: none; padding: 14px 18px;
+      font-size: .88rem; font-weight: 500;
+      transition: color .2s, background .2s;
+    }
+    nav.sticky a:hover { color: #fff; background: rgba(255,255,255,.1); }
+
+    /* ── LAYOUT ── */
+    .container { max-width: 960px; margin: 0 auto; padding: 40px 20px 80px; }
+
+    /* ── SECTION CARDS ── */
+    section {
+      background: #fff;
+      border-radius: 14px;
+      padding: 36px 32px;
+      margin-bottom: 32px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.07);
+    }
+    section h2 {
+      font-size: 1.35rem; font-weight: 700;
+      color: #0a3d62; margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #bee3f8;
+    }
+    section h3 {
+      font-size: 1.05rem; font-weight: 700;
+      color: #1e6fa8; margin: 22px 0 8px;
+    }
+    section p  { margin-bottom: 12px; color: #2d3748; }
+    section ul, section ol {
+      padding-left: 20px; margin-bottom: 12px;
+    }
+    section li { margin-bottom: 6px; color: #2d3748; }
+
+    /* ── PROGRESS TIMELINE ── */
+    .timeline { position: relative; padding-left: 32px; margin-top: 8px; }
+    .timeline::before {
+      content: ''; position: absolute; left: 10px; top: 0; bottom: 0;
+      width: 3px; background: #bee3f8; border-radius: 2px;
+    }
+    .timeline-item { position: relative; margin-bottom: 24px; }
+    .timeline-item::before {
+      content: '';
+      position: absolute; left: -26px; top: 4px;
+      width: 14px; height: 14px;
+      border-radius: 50%;
+      background: #1e6fa8;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 2px #1e6fa8;
+    }
+    .timeline-item strong { color: #0a3d62; display: block; margin-bottom: 2px; }
+
+    /* ── STEP BADGES ── */
+    .step-badge {
+      display: inline-block;
+      background: #ebf8ff;
+      color: #1e6fa8;
+      border: 1px solid #bee3f8;
+      border-radius: 20px;
+      font-size: .78rem; font-weight: 700;
+      padding: 2px 10px;
+      margin-right: 6px;
+    }
+
+    /* ── STATUS CHIPS ── */
+    .chip {
+      display: inline-block;
+      padding: 3px 12px;
+      border-radius: 12px;
+      font-size: .78rem; font-weight: 700;
+      margin: 2px;
+    }
+    .chip-blue   { background: #ebf8ff; color: #1e6fa8; }
+    .chip-green  { background: #f0fff4; color: #276749; }
+    .chip-yellow { background: #fffff0; color: #744210; }
+    .chip-red    { background: #fff5f5; color: #c53030; }
+    .chip-purple { background: #faf5ff; color: #553c9a; }
+
+    /* ── INFO / WARNING BOXES ── */
+    .info-box, .warn-box, .success-box {
+      border-radius: 10px;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: .93rem;
+    }
+    .info-box    { background: #ebf8ff; border-left: 4px solid #1e6fa8; color: #1a365d; }
+    .warn-box    { background: #fffbeb; border-left: 4px solid #d69e2e; color: #744210; }
+    .success-box { background: #f0fff4; border-left: 4px solid #38a169; color: #22543d; }
+
+    /* ── ACTION TABLE ── */
+    .action-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: .92rem; }
+    .action-table th {
+      background: #0a3d62; color: #fff;
+      padding: 10px 14px; text-align: left;
+    }
+    .action-table td { padding: 10px 14px; border-bottom: 1px solid #e2e8f0; }
+    .action-table tr:nth-child(even) td { background: #f7fafc; }
+
+    /* ── CHECKLIST ── */
+    .checklist { list-style: none; padding: 0; }
+    .checklist li {
+      padding: 8px 0 8px 32px;
+      position: relative;
+      border-bottom: 1px solid #f0f4f8;
+      color: #2d3748;
+    }
+    .checklist li::before {
+      content: '☐';
+      position: absolute; left: 0;
+      font-size: 1.1rem; color: #1e6fa8;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      text-align: center; padding: 32px 16px;
+      font-size: .82rem; color: #718096;
+    }
+    footer a { color: #1e6fa8; text-decoration: none; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      section { padding: 24px 18px; }
+      .login-box { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════════════════════════════════════
+     LOGIN OVERLAY
+════════════════════════════════════════ -->
+<div id="login-overlay">
+  <div class="login-box">
+    <h2>🎧 Staff Training Portal</h2>
+    <p>Hearing Benefit Services — Internal Use Only</p>
+    <input type="text"     id="uname"    placeholder="Username" autocomplete="username" />
+    <input type="password" id="pword"    placeholder="Password" autocomplete="current-password" />
+    <button onclick="checkLogin()">Sign In</button>
+    <p id="login-error">Incorrect username or password. Please try again.</p>
+  </div>
+</div>
+
+<!-- ════════════════════════════════════════
+     MAIN CONTENT
+════════════════════════════════════════ -->
+<div id="main-content">
+
+  <header>
+    <h1>🎧 Custom Quote Lead Lifecycle — Staff Training Guide</h1>
+    <p>Everything Seteisha needs to know about the Custom Quote workflow from start to finish.</p>
+  </header>
+
+  <nav class="sticky">
+    <a href="#overview">Overview</a>
+    <a href="#triggers">How It Starts</a>
+    <a href="#tagging">Auto-Tagging</a>
+    <a href="#notifications">Your Notifications</a>
+    <a href="#insurance">Insurance Check</a>
+    <a href="#followup">Follow-Up Sequence</a>
+    <a href="#goal">Consultation Booked</a>
+    <a href="#pipeline">Pipeline Stages</a>
+    <a href="#sms-email">SMS &amp; Emails Sent</a>
+    <a href="#checklist">Daily Checklist</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- ── OVERVIEW ── -->
+    <section id="overview">
+      <h2>📋 Overview — What Is This Workflow?</h2>
+      <p>
+        The <strong>Custom Quote Lead Lifecycle</strong> is an automated workflow inside GoHighLevel (GHL)
+        that manages every person who fills out the <strong>Custom Quote form</strong> on the Hearing Benefit Services website
+        (<a href="https://hearingbenefitservices.com/custom-quote" target="_blank">hearingbenefitservices.com/custom-quote</a>).
+      </p>
+      <p>
+        When someone submits the form, GHL automatically tags them, adds them to the sales pipeline, notifies you,
+        sends them personalised SMS and email messages, checks their insurance status, and follows up over 11+ days —
+        all without you having to do anything until a consultation is booked.
+      </p>
+      <div class="success-box">
+        ✅ <strong>Your role:</strong> Review the task assigned to you in GHL, call or follow up with the lead within 24 hours of their quote submission, and mark the task complete once you've made contact.
+      </div>
+      <h3>At-a-Glance Timeline</h3>
+      <div class="timeline">
+        <div class="timeline-item">
+          <strong>Minute 0 — Form submitted</strong>
+          Auto-tagging, pipeline entry, and your task notification happen instantly.
+        </div>
+        <div class="timeline-item">
+          <strong>Minute 0–60 — Insurance wait</strong>
+          If the contact is an insurance lead, the workflow waits 1 hour before sending an insurance-specific SMS.
+        </div>
+        <div class="timeline-item">
+          <strong>Day 1 — Quote Delivered</strong>
+          Automated SMS + email with the personalised quote is sent to the contact.
+        </div>
+        <div class="timeline-item">
+          <strong>Day 4 — Consultation Push</strong>
+          Second SMS + email nudging the contact to book a free consultation call.
+        </div>
+        <div class="timeline-item">
+          <strong>Day 11 — Final Nudge</strong>
+          Third and final SMS + email — friendly, no-pressure reminder.
+        </div>
+        <div class="timeline-item">
+          <strong>Any Time — Consultation Booked</strong>
+          If the contact books at any point, the workflow stops all follow-ups, moves the pipeline stage to
+          <em>Consultation Booked</em>, and assigns a new task to you to prepare for their appointment.
+        </div>
+      </div>
+    </section>
+
+    <!-- ── TRIGGERS ── -->
+    <section id="triggers">
+      <h2>🚀 How the Workflow Starts (Triggers)</h2>
+      <p>The workflow has <strong>three triggers</strong>. It fires when <em>any one</em> of the following happens:</p>
+      <table class="action-table">
+        <thead><tr><th>#</th><th>Trigger</th><th>What it means</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Form Submitted — Custom Quote</td><td>Someone fills out the Custom Quote form on the website.</td></tr>
+          <tr><td>2</td><td>Customer Booked Appointment</td><td>Someone books directly (e.g. from a link) without filling the form.</td></tr>
+          <tr><td>3</td><td>Payment Received</td><td>A payment is recorded in GHL for this contact.</td></tr>
+        </tbody>
+      </table>
+      <div class="info-box">
+        💡 <strong>Most leads enter via Trigger 1</strong> (the Custom Quote form). Triggers 2 and 3 exist as safety nets so no lead is missed.
+      </div>
+    </section>
+
+    <!-- ── TAGGING ── -->
+    <section id="tagging">
+      <h2>🏷️ Automatic Tagging — What Gets Applied & Why</h2>
+      <p>
+        Immediately after a contact enters the workflow, GHL automatically applies a series of tags based on their form answers.
+        These tags drive how the workflow branches and personalises the follow-up.
+        <strong>You do not need to apply tags manually.</strong>
+      </p>
+
+      <h3>Insurance Status Tag</h3>
+      <p>One of the following is applied:</p>
+      <ul>
+        <li><span class="chip chip-blue">insurance lead</span> — Contact indicated they have hearing insurance coverage.</li>
+        <li><span class="chip chip-yellow">no insurance</span> — Contact has no insurance or did not indicate coverage.</li>
+      </ul>
+
+      <h3>Veteran / Federal Affiliation Tag</h3>
+      <ul>
+        <li><span class="chip chip-purple">veteran lead</span> — Contact is a veteran (may qualify for VA benefits).</li>
+        <li><span class="chip chip-purple">federal lead</span> — Contact is a federal employee (may qualify for FEHB coverage).</li>
+        <li>Neither tag — Contact has no military or federal affiliation.</li>
+      </ul>
+
+      <h3>Budget Tag</h3>
+      <p>Applied based on the budget range the contact selected on the form.</p>
+
+      <h3>Hearing Difficulty Tag</h3>
+      <p>Applied based on the type/severity of hearing difficulty indicated on the form.</p>
+
+      <div class="warn-box">
+        ⚠️ <strong>Important:</strong> Never manually remove the <code>insurance lead</code>, <code>veteran lead</code>, or <code>federal lead</code> tags — they control which follow-up branch the contact receives.
+      </div>
+    </section>
+
+    <!-- ── NOTIFICATIONS ── -->
+    <section id="notifications">
+      <h2>🔔 Your Notifications — What to Expect</h2>
+      <p>
+        Every time a new lead enters the workflow, you will receive <strong>two notifications simultaneously:</strong>
+      </p>
+
+      <h3>1. Internal SMS to the Team</h3>
+      <p>
+        An SMS is sent to the internal team number alerting you that a new quote request has been submitted.
+        This is your first heads-up that a new lead is in the system.
+      </p>
+
+      <h3>2. Task Assigned to You in GHL</h3>
+      <p>
+        A task is automatically created and assigned to <strong>Seteisha Hall</strong> inside GHL. You will see it in your
+        <strong>Tasks</strong> view in the left sidebar.
+      </p>
+      <table class="action-table">
+        <thead><tr><th>Field</th><th>Value</th></tr></thead>
+        <tbody>
+          <tr><td>Title</td><td>{{contact.first_name}} {{contact.last_name}} has submitted a Custom Quote</td></tr>
+          <tr><td>Description</td><td>A new custom quote has been submitted. Please review the contact's details and follow up within 24 hours.</td></tr>
+          <tr><td>Assigned to</td><td>Seteisha Hall</td></tr>
+          <tr><td>Due date</td><td>1 day after submission at 9:00 AM</td></tr>
+        </tbody>
+      </table>
+
+      <div class="success-box">
+        ✅ <strong>Your action:</strong> Open the task in GHL → review the contact's form responses → call or text them to introduce yourself and let them know their quote is being prepared. Mark the task complete after you've made contact.
+      </div>
+
+      <h3>What the Contact Receives at Entry</h3>
+      <p>Simultaneously, the contact automatically receives:</p>
+      <ul>
+        <li><strong>Branded SMS</strong> — A warm, personalised welcome text acknowledging receipt of their quote request.</li>
+        <li><strong>Branded Email</strong> — A confirmation email with next-steps and your contact details.</li>
+      </ul>
+      <p>You do <strong>not</strong> need to send these manually — they go out automatically.</p>
+    </section>
+
+    <!-- ── INSURANCE CHECK ── -->
+    <section id="insurance">
+      <h2>🩺 Insurance Status Check — The Workflow Branch</h2>
+      <p>
+        After the initial notifications, the workflow checks whether the contact has any insurance-related tags.
+        Based on this, the contact goes down one of two paths:
+      </p>
+
+      <h3>✅ Insurance Indicated Path (Left Branch)</h3>
+      <p>
+        Triggered if the contact has <em>any</em> of the following tags:
+        <span class="chip chip-blue">insurance lead</span>
+        <span class="chip chip-purple">federal lead</span>
+        <span class="chip chip-purple">veteran lead</span>
+      </p>
+      <p>
+        The workflow <strong>waits 1 hour</strong> (to allow time for an internal insurance check), then sends
+        a personalised SMS to the contact:
+      </p>
+      <blockquote style="background:#f7fafc;border-left:4px solid #1e6fa8;padding:12px 16px;border-radius:6px;font-style:italic;color:#2d3748;">
+        "Hi [First Name], great news — many insurance plans cover hearing aids at little or no cost.
+        We're checking your benefits right now and will include everything in your personalised quote.
+        — Hearing Benefit Services"
+      </blockquote>
+
+      <h3>❌ None Path (Right Branch)</h3>
+      <p>
+        If no insurance, federal, or veteran tags are present, the contact bypasses the insurance SMS
+        and moves directly to the shared follow-up sequence.
+      </p>
+
+      <div class="info-box">
+        💡 Both branches <strong>merge</strong> into the same shared follow-up sequence after this point.
+        No action is needed from you for this step — it's fully automated.
+      </div>
+    </section>
+
+    <!-- ── FOLLOW-UP SEQUENCE ── -->
+    <section id="followup">
+      <h2>📅 Automated Follow-Up Sequence (Both Branches)</h2>
+      <p>
+        After the insurance check (whether insurance or no insurance), every contact goes through the
+        same follow-up sequence. Here's exactly what happens and when:
+      </p>
+
+      <h3>Step 1 — Update Pipeline Stage: Insurance Check In Progress</h3>
+      <p>The contact's pipeline stage is updated immediately to reflect they are in review.</p>
+
+      <h3>Step 2 — Wait 24 Hours → Send Quote Ready SMS + Email</h3>
+      <p>After 24 hours, the contact receives:</p>
+      <ul>
+        <li>
+          <strong>SMS:</strong> "Hi [First Name], your personalised hearing aid quote is ready!
+          Check your email for the full details. Questions? Call or text us at (808) 435-7002.
+          — Hearing Benefit Services"
+        </li>
+        <li>
+          <strong>Email Subject:</strong> <em>Your Personalised Hearing Aid Quote is Ready 🎧</em><br>
+          Includes quote details, model recommendations, pricing, insurance check summary, and a CTA to book a free consultation.
+        </li>
+      </ul>
+      <p>The pipeline stage is then updated to <span class="chip chip-blue">Quote Sent</span>.</p>
+
+      <h3>Step 3 — Wait 72 Hours (3 Days) → Send Consultation Push SMS + Email</h3>
+      <p>Three days after the quote is sent, the contact receives a follow-up:</p>
+      <ul>
+        <li>
+          <strong>SMS:</strong> "Hi [First Name], just checking in — have you had a chance to review your
+          hearing aid quote? We'd love to answer any questions. Book a free 15‑minute call here:
+          hearingbenefitservices.com/appointment — Hearing Benefit Services"
+        </li>
+        <li>
+          <strong>Email Subject:</strong> <em>Have Questions About Your Hearing Aid Quote?</em><br>
+          Warm follow-up with an invitation to book a free specialist call.
+        </li>
+      </ul>
+      <p>The pipeline stage is then updated to <span class="chip chip-yellow">Follow-Up Scheduled</span>.</p>
+
+      <h3>Step 4 — Wait 7 Days → Send Final Nudge SMS + Email</h3>
+      <p>Seven days after the consultation push, a final, no-pressure reminder is sent:</p>
+      <ul>
+        <li>
+          <strong>SMS:</strong> "Hi [First Name], your personalised hearing aid quote is still waiting for you!
+          Whenever you're ready, we're here — no pressure at all. Book a free call here:
+          hearingbenefitservices.com/appointment — Hearing Benefit Services"
+        </li>
+        <li>
+          <strong>Email Subject:</strong> <em>Still Thinking It Over? We're Here When You're Ready.</em><br>
+          Gentle reminder that the quote is still available with no pressure.
+        </li>
+      </ul>
+
+      <div class="warn-box">
+        ⚠️ <strong>Note:</strong> If the contact books a consultation at <em>any point</em> during this sequence,
+        the workflow automatically stops all pending follow-ups and routes them to the Consultation Booked goal.
+        No duplicate messages will be sent.
+      </div>
+    </section>
+
+    <!-- ── GOAL ── -->
+    <section id="goal">
+      <h2>🎯 Consultation Booked — The Goal</h2>
+      <p>
+        At any point during the workflow, if the contact <strong>books a confirmed appointment</strong>,
+        the <strong>Consultation Booked Goal</strong> is triggered. This immediately stops all pending
+        follow-up steps and runs the following actions:
+      </p>
+
+      <table class="action-table">
+        <thead><tr><th>Action</th><th>Details</th></tr></thead>
+        <tbody>
+          <tr>
+            <td>Update Opportunity Stage</td>
+            <td>Moves to <span class="chip chip-green">Consultation Booked</span>, Status: <strong>Won</strong></td>
+          </tr>
+          <tr>
+            <td>Add Contact Tag</td>
+            <td>Applies tag: <span class="chip chip-green">consultation booked</span></td>
+          </tr>
+          <tr>
+            <td>Assign Task to You</td>
+            <td>
+              Title: "[First Name] [Last Name] has booked a consultation"<br>
+              Description: "Workflow complete. Contact has booked a consultation. Please prepare for the appointment."<br>
+              Due: 1 day at 9:00 AM
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="success-box">
+        ✅ <strong>Your action when this task appears:</strong>
+        <ol style="margin-top:8px; padding-left:20px;">
+          <li>Open the contact in GHL and review all their form responses and tags.</li>
+          <li>Confirm their appointment details (date, time, type).</li>
+          <li>Prepare their personalised hearing aid recommendation notes.</li>
+          <li>Send a personal confirmation message if needed.</li>
+          <li>Mark the task complete once you're prepared.</li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ── PIPELINE STAGES ── -->
+    <section id="pipeline">
+      <h2>📊 Pipeline Stages — What Each Stage Means</h2>
+      <p>
+        All contacts are managed in the <strong>Custom Quote Leads</strong> pipeline in GHL.
+        Here's what each stage means and what you should do at that stage:
+      </p>
+      <table class="action-table">
+        <thead><tr><th>Stage</th><th>Meaning</th><th>Your Action</th></tr></thead>
+        <tbody>
+          <tr>
+            <td><span class="chip chip-blue">New Quote Request</span></td>
+            <td>Contact just submitted the form.</td>
+            <td>Review their details and complete your initial follow-up task.</td>
+          </tr>
+          <tr>
+            <td><span class="chip chip-blue">Insurance Check In Progress</span></td>
+            <td>Workflow is processing their insurance status.</td>
+            <td>No action needed — automated.</td>
+          </tr>
+          <tr>
+            <td><span class="chip chip-blue">Quote Sent</span></td>
+            <td>24-hour quote email and SMS have been sent to the contact.</td>
+            <td>Be ready to answer calls/texts about their quote.</td>
+          </tr>
+          <tr>
+            <td><span class="chip chip-yellow">Follow-Up Scheduled</span></td>
+            <td>The 3-day consultation push has been sent.</td>
+            <td>If the contact replies, assist them in booking.</td>
+          </tr>
+          <tr>
+            <td><span class="chip chip-green">Consultation Booked</span></td>
+            <td>Contact has booked their consultation. Status: Won.</td>
+            <td>Prepare for the appointment. Complete the task in GHL.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ── SMS & EMAIL LOG ── -->
+    <section id="sms-email">
+      <h2>💬 SMS & Emails — Full List of What's Sent Automatically</h2>
+      <p>Here is every automated message sent during the workflow. You <strong>do not send these</strong> — GHL sends them automatically.</p>
+      <table class="action-table">
+        <thead><tr><th>#</th><th>Message</th><th>Sent When</th><th>Type</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Internal Team Alert SMS</td><td>Immediately on form submission</td><td>Internal SMS</td></tr>
+          <tr><td>2</td><td>Branded Welcome SMS to Patient</td><td>Immediately on form submission</td><td>SMS to Contact</td></tr>
+          <tr><td>3</td><td>Branded Welcome Email to Patient</td><td>Immediately on form submission</td><td>Email to Contact</td></tr>
+          <tr><td>4</td><td>Insurance Update SMS (Insurance Leads only)</td><td>1 hour after form submission</td><td>SMS to Contact</td></tr>
+          <tr><td>5</td><td>Quote Ready SMS</td><td>24 hours after form submission</td><td>SMS to Contact</td></tr>
+          <tr><td>6</td><td>Quote Ready Email ("Your Personalised Hearing Aid Quote is Ready 🎧")</td><td>24 hours after form submission</td><td>Email to Contact</td></tr>
+          <tr><td>7</td><td>Consultation Push SMS</td><td>4 days after form submission</td><td>SMS to Contact</td></tr>
+          <tr><td>8</td><td>Consultation Push Email ("Have Questions About Your Hearing Aid Quote?")</td><td>4 days after form submission</td><td>Email to Contact</td></tr>
+          <tr><td>9</td><td>Final Nudge SMS</td><td>11 days after form submission</td><td>SMS to Contact</td></tr>
+          <tr><td>10</td><td>Final Nudge Email ("Still Thinking It Over? We're Here When You're Ready.")</td><td>11 days after form submission</td><td>Email to Contact</td></tr>
+        </tbody>
+      </table>
+      <div class="info-box">
+        💡 All messages use <strong>{{contact.first_name}}</strong> to personalise with the contact's first name automatically.
+      </div>
+    </section>
+
+    <!-- ── DAILY CHECKLIST ── -->
+    <section id="checklist">
+      <h2>✅ Your Daily Checklist</h2>
+      <p>Use this checklist every day when you log into GHL:</p>
+      <ul class="checklist">
+        <li>Log in to GHL and check your <strong>Tasks</strong> — complete any overdue tasks.</li>
+        <li>Check the <strong>Custom Quote Leads pipeline</strong> — review any contacts in "New Quote Request" or "Quote Sent".</li>
+        <li>If a contact is in "Follow-Up Scheduled" and has replied, assist them in booking a consultation.</li>
+        <li>If a new "Consultation Booked" task is assigned, review the contact, confirm their appointment, and prepare your notes.</li>
+        <li>Check your <strong>SMS inbox</strong> — reply to any inbound texts from leads within 2 hours.</li>
+        <li>Mark all completed tasks as done to keep the pipeline clean.</li>
+      </ul>
+      <div class="warn-box">
+        ⚠️ <strong>Never manually move a contact's pipeline stage backward</strong> — this can interfere with the automated workflow logic.
+      </div>
+    </section>
+
+    <!-- ── FAQ ── -->
+    <section id="faq">
+      <h2>❓ Frequently Asked Questions</h2>
+
+      <h3>Q: Will I get notified every time someone submits the form?</h3>
+      <p>Yes — you receive both an internal SMS and a task in GHL every time a new quote is submitted.</p>
+
+      <h3>Q: What if a contact books before the 24-hour quote email goes out?</h3>
+      <p>
+        The Consultation Booked Goal fires immediately and stops the workflow. The contact will not receive
+        the quote email or any further follow-ups — just the task assigned to you to prepare.
+      </p>
+
+      <h3>Q: Should I send any SMS or email manually?</h3>
+      <p>
+        No — all 10 automated messages are handled by the workflow. Your job is to respond to any
+        <em>inbound</em> replies from contacts, and to complete your assigned tasks (initial call, appointment prep).
+      </p>
+
+      <h3>Q: What happens if a contact doesn't book after 11 days?</h3>
+      <p>
+        The workflow ends after the Day 7 Final Nudge Email. The contact remains in the pipeline at
+        "Follow-Up Scheduled". You can manually reach out to cold leads periodically or re-enrol them
+        in a reactivation campaign in the future.
+      </p>
+
+      <h3>Q: Can I manually add a tag to override the insurance check?</h3>
+      <p>
+        Please check with the admin before adding or removing any workflow-related tags
+        (<code>insurance lead</code>, <code>federal lead</code>, <code>veteran lead</code>, <code>consultation booked</code>).
+        Modifying these can affect which automated messages are sent.
+      </p>
+
+      <h3>Q: Where do I find the Custom Quote form responses?</h3>
+      <p>
+        Open the contact in GHL → scroll down to the <strong>Notes / Submissions</strong> section →
+        click <strong>Form Submissions</strong> to view their Custom Quote answers.
+      </p>
+
+      <h3>Q: Who do I contact if something looks wrong in the workflow?</h3>
+      <p>
+        Contact the workflow admin (Rhett) via the internal team channel or by SMS to the internal team number.
+      </p>
+    </section>
+
+  </div><!-- /.container -->
+
+  <footer>
+    <p>Hearing Benefit Services — Internal Staff Training Portal &nbsp;|&nbsp; Confidential</p>
+  </footer>
+
+</div><!-- /#main-content -->
+
+<!-- ════════════════════════════════════════
+     LOGIN SCRIPT
+════════════════════════════════════════ -->
+<script>
+  function checkLogin() {
+    var u = document.getElementById('uname').value.trim();
+    var p = document.getElementById('pword').value.trim();
+    if (u === 'training' && p === 'l8ZiBguc6I4CW8') {
+      document.getElementById('login-overlay').style.display = 'none';
+      document.getElementById('main-content').style.display  = 'block';
+    } else {
+      document.getElementById('login-error').style.display = 'block';
+    }
+  }
+  // Allow Enter key to submit
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') checkLogin();
+  });
+</script>
+
+</body>
+</html>
