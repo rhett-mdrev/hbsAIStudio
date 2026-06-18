@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HBS — Cold Call Campaign Training</title>
+<style>
+  :root {
+    --navy: #0f2942;
+    --teal: #1a7a8a;
+    --gold: #d4a017;
+    --light-bg: #f6f8fa;
+    --automated-blue: #2563eb;
+    --automated-bg: #eaf1ff;
+    --manual-orange: #c2622a;
+    --manual-bg: #fdf0e6;
+    --gray-text: #555;
+    --border: #e0e4e8;
+  }
+  * { box-sizing: border-box; }
+  body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background: var(--light-bg);
+    color: #222;
+    line-height: 1.55;
+  }
+  .header {
+    background: linear-gradient(135deg, var(--navy), #143a5c);
+    color: white;
+    padding: 40px 24px 32px;
+    text-align: center;
+  }
+  .header h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    letter-spacing: 0.3px;
+  }
+  .header p {
+    margin: 0;
+    color: #c8d6e5;
+    font-size: 15px;
+  }
+  .container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 28px 20px 60px;
+  }
+  .card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 24px 26px;
+    margin-bottom: 24px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .card h2 {
+    color: var(--navy);
+    font-size: 21px;
+    margin-top: 0;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 10px;
+  }
+  .card h3 {
+    color: var(--teal);
+    font-size: 17px;
+    margin-top: 22px;
+  }
+  .legend {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin: 14px 0;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .dot-auto { background: var(--automated-blue); }
+  .dot-manual { background: var(--manual-orange); }
+
+  .step {
+    display: flex;
+    gap: 14px;
+    padding: 14px 16px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border-left: 4px solid transparent;
+    align-items: flex-start;
+  }
+  .step.automated { background: var(--automated-bg); border-left-color: var(--automated-blue); }
+  .step.manual { background: var(--manual-bg); border-left-color: var(--manual-orange); }
+  .step .tag {
+    flex-shrink: 0;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 4px 9px;
+    border-radius: 5px;
+    color: white;
+    white-space: nowrap;
+    margin-top: 2px;
+  }
+  .tag.auto-tag { background: var(--automated-blue); }
+  .tag.manual-tag { background: var(--manual-orange); }
+  .step .step-content strong { display: block; margin-bottom: 3px; font-size: 15px; }
+  .step .step-content span.detail { font-size: 13.5px; color: var(--gray-text); }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 14px 0;
+    font-size: 14px;
+  }
+  th, td {
+    border: 1px solid var(--border);
+    padding: 9px 12px;
+    text-align: left;
+    vertical-align: top;
+  }
+  th {
+    background: var(--navy);
+    color: white;
+    font-weight: 600;
+    font-size: 13px;
+  }
+  tr:nth-child(even) td { background: #fafbfc; }
+
+  .pipeline-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 16px 0;
+  }
+  .pipeline-stage {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    border-radius: 6px;
+    background: #f0f3f6;
+    border: 1px solid var(--border);
+    font-size: 14px;
+  }
+  .pipeline-stage .num {
+    background: var(--navy);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+  .pipeline-stage.terminal-good { background: #e7f5ec; border-color: #8ec9a3; }
+  .pipeline-stage.terminal-bad { background: #fbe9e7; border-color: #e3a99e; }
+  .pipeline-stage .arrow { color: #999; margin-left: auto; font-size: 12px; }
+
+  .disposition-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+    margin: 16px 0;
+  }
+  .disposition-card {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 14px 16px;
+    background: #fafbfc;
+  }
+  .disposition-card h4 {
+    margin: 0 0 6px;
+    font-size: 15px;
+    color: var(--navy);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .disposition-card p { margin: 4px 0; font-size: 13.5px; color: var(--gray-text); }
+  .disposition-card .result {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--teal);
+  }
+
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 4px;
+    color: white;
+  }
+  .badge.attempt { background: #8a8d91; }
+  .badge.connected { background: var(--teal); }
+  .badge.closed { background: #b03a2e; }
+
+  .callout {
+    background: #fff8e6;
+    border: 1px solid #e8cf8a;
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  .callout strong { color: #8a6816; }
+
+  .checklist-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .checklist-item:last-child { border-bottom: none; }
+  .checklist-item .check {
+    width: 18px;
+    height: 18px;
+    border: 2px solid var(--manual-orange);
+    border-radius: 4px;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+
+  .flow-diagram {
+    background: #fafbfc;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 16px 0;
+    text-align: center;
+    font-size: 14px;
+  }
+  .flow-box {
+    display: inline-block;
+    padding: 10px 16px;
+    border-radius: 6px;
+    margin: 4px;
+    font-weight: 600;
+    font-size: 13px;
+  }
+  .flow-box.auto { background: var(--automated-bg); border: 1.5px solid var(--automated-blue); color: var(--automated-blue); }
+  .flow-box.manual { background: var(--manual-bg); border: 1.5px solid var(--manual-orange); color: var(--manual-orange); }
+  .flow-arrow { font-size: 18px; color: #999; margin: 0 4px; }
+
+  .footer-note {
+    text-align: center;
+    color: #999;
+    font-size: 12.5px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+  }
+
+  @media (max-width: 600px) {
+    .header h1 { font-size: 22px; }
+    .card { padding: 18px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>📞 Cold Call Campaign — Training Guide</h1>
+  <p>Hearing Benefit Services · How the pipeline, dialer, and dispositions work together</p>
+</div>
+
+<div class="container">
+
+  <!-- OVERVIEW -->
+  <div class="card">
+    <h2>What This Campaign Does</h2>
+    <p>This system gives Seteisha a ready-to-dial call queue inside GHL's Power Dialer, and automatically moves each contact through the pipeline based on the outcome she selects after every call — no manual stage updates required.</p>
+    <p><strong>Two sources feed this campaign:</strong> old/inactive leads already sitting in GHL, and fresh uploaded lists. Both get the tag <code>cold_call</code>, which is all it takes to enter someone into the system.</p>
+
+    <div class="legend">
+      <div class="legend-item"><span class="dot dot-auto"></span> AUTOMATED — GHL handles this</div>
+      <div class="legend-item"><span class="dot dot-manual"></span> MANUAL — SETEISHA does this</div>
+    </div>
+  </div>
+
+  <!-- THE BIG PICTURE FLOW -->
+  <div class="card">
+    <h2>The Big Picture — How a Call Happens</h2>
+    <div class="flow-diagram">
+      <span class="flow-box auto">Contact tagged cold_call</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-box auto">Added to Seteisha's call queue</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-box manual">Seteisha dials from queue</span>
+      <br><br>
+      <span class="flow-box manual">Seteisha picks a disposition at call end</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-box auto">Pipeline stage updates automatically</span>
+      <span class="flow-arrow">→</span>
+      <span class="flow-box auto">Tags + follow-up tasks created automatically</span>
+    </div>
+    <div class="callout">
+      <strong>The one thing Seteisha actually has to remember:</strong> pick the right disposition every time, right when the call ends. That single click is what drives everything else — the stage move, the tags, the next task. If she skips it or picks the wrong one, the contact gets stuck or routed incorrectly.
+    </div>
+  </div>
+
+  <!-- PIPELINE -->
+  <div class="card">
+    <h2>The Pipeline — Cold Call Campaign</h2>
+    <p>Every contact tagged <code>cold_call</code> gets an opportunity created in this pipeline. The stage tells you and Rhett exactly where that person is at a glance — no need to dig through call logs.</p>
+
+    <div class="pipeline-flow">
+      <div class="pipeline-stage"><span class="num">1</span> New — Not Yet Called <span class="arrow">awaiting first dial</span></div>
+      <div class="pipeline-stage"><span class="num">2</span> Attempt 1 — No Answer <span class="badge attempt">ATTEMPT</span></div>
+      <div class="pipeline-stage"><span class="num">3</span> Attempt 2 — No Answer <span class="badge attempt">ATTEMPT</span></div>
+      <div class="pipeline-stage"><span class="num">4</span> Attempt 3 — No Answer (Final) <span class="badge attempt">FINAL ATTEMPT</span></div>
+      <div class="pipeline-stage"><span class="num">5</span> Connected — Not Interested <span class="badge connected">CONNECTED</span></div>
+      <div class="pipeline-stage"><span class="num">6</span> Connected — Call Back Later <span class="badge connected">CONNECTED</span></div>
+      <div class="pipeline-stage"><span class="num">7</span> Connected — Interested <span class="badge connected">CONNECTED</span></div>
+      <div class="pipeline-stage"><span class="num">8</span> Consult Booked</div>
+      <div class="pipeline-stage"><span class="num">9</span> Quote Sent</div>
+      <div class="pipeline-stage"><span class="num">10</span> Payment Pending</div>
+      <div class="pipeline-stage terminal-good"><span class="num">11</span> Closed Won 🎉</div>
+      <div class="pipeline-stage terminal-bad"><span class="num">12</span> Closed Lost / Do Not Call</div>
+    </div>
+
+    <div class="callout">
+      <strong>Why stages 2–4 exist:</strong> they let you see how "worked" the list is at a glance. Anyone sitting in stage 4 has used up all 3 attempts with no pickup — that's your signal to either let them rest for a recycle list later, or move them to Closed Lost.
+    </div>
+
+    <div class="callout">
+      <strong>Two ways into Consult Booked:</strong> if Seteisha picks <strong>Interested</strong>, the contact lands in stage 7 and gets a follow-up task to book the consult separately. If she picks <strong>Requested Appointment</strong> instead — meaning the consult got booked live on the call — the contact skips straight to stage 8, no extra task needed.
+    </div>
+
+    <h3>What happens once someone's "Interested"</h3>
+    <p>Stages 8–11 mirror your existing sales process. Once a contact reaches <strong>Consult Booked</strong>, this cold-call pipeline has done its job — that opportunity then flows into the same Quote → Payment → Closed Won steps you already use elsewhere, so we're not duplicating logic that already exists.</p>
+  </div>
+
+  <!-- DISPOSITIONS -->
+  <div class="card">
+    <h2>Call Dispositions — What Seteisha Picks After Every Call</h2>
+    <p>Right after a call ends in the dialer, GHL shows a short list of outcomes. Seteisha picks <strong>one</strong> — this single choice is what moves the pipeline stage automatically.</p>
+
+    <div class="disposition-grid">
+      <div class="disposition-card">
+        <h4>📵 No Answer</h4>
+        <p>Phone rang, nobody picked up.</p>
+        <p class="result">→ Moves to next attempt stage. A new call task is created for the following day.</p>
+      </div>
+      <div class="disposition-card">
+        <h4>📩 Voicemail Left</h4>
+        <p>Reached voicemail, left a message.</p>
+        <p class="result">→ Same as No Answer — counts toward the 3-attempt limit, new task created.</p>
+      </div>
+      <div class="disposition-card">
+        <h4>🚫 Not Interested</h4>
+        <p>Connected, but they declined.</p>
+        <p class="result">→ Moves to Closed Lost. Tagged Do Not Call. No further attempts.</p>
+      </div>
+      <div class="disposition-card">
+        <h4>✅ Interested</h4>
+        <p>Connected, wants more info or pricing — but hasn't committed to a time yet.</p>
+        <p class="result">→ Moves to Connected — Interested. Creates a task for Seteisha to follow up and book the consult.</p>
+      </div>
+      <div class="disposition-card">
+        <h4>📅 Requested Appointment</h4>
+        <p>Connected, and the consult got booked right there on the call.</p>
+        <p class="result">→ Skips straight to Consult Booked stage. No follow-up task needed — appointment is already locked in.</p>
+      </div>
+      <div class="disposition-card">
+        <h4>🕒 Call Back Later</h4>
+        <p>Connected, asked for a different time.</p>
+        <p class="result">→ Moves to Call Back Later stage. Tagged for callback — creates a reminder task.</p>
+      </div>
+      <div class="disposition-card">
+        <h4>❌ Bad Number</h4>
+        <p>Disconnected line or wrong number.</p>
+        <p class="result">→ Moves to Closed Lost. Tagged Do Not Call so the number isn't dialed again.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <strong>Important:</strong> 7 dispositions are live on the account right now, out of a possible 10. If a call doesn't cleanly fit one of these, pick the closest match and add a note on the call — don't leave it blank. Rhett can add more dispositions later if a real gap shows up.
+    </div>
+  </div>
+
+  <!-- WORKFLOW STEPS -->
+  <div class="card">
+    <h2>What Happens Behind the Scenes (Workflow Steps)</h2>
+    <p>This is the automation Rhett builds in GHL. Seteisha doesn't need to touch any of this — it's here so everyone understands what's firing when.</p>
+
+    <h3>1. Entry — Getting Into the Queue</h3>
+    <div class="step automated">
+      <span class="tag auto-tag">Auto</span>
+      <div class="step-content"><strong>Tag cold_call added</strong><span class="detail">Workflow triggers, creates an opportunity in the Cold Call Campaign pipeline at stage "New — Not Yet Called."</span></div>
+    </div>
+    <div class="step automated">
+      <span class="tag auto-tag">Auto</span>
+      <div class="step-content"><strong>Manual Action to Call step adds contact to queue</strong><span class="detail">Contact now appears under Conversations → Manual Actions, ready for Seteisha to dial.</span></div>
+    </div>
+
+    <h3>2. Working the Queue</h3>
+    <div class="step manual">
+      <span class="tag manual-tag">Manual</span>
+      <div class="step-content"><strong>Seteisha opens Manual Actions and dials</strong><span class="detail">Click "Let's Start" on the next contact in queue. The dialer connects the call through the browser.</span></div>
+    </div>
+    <div class="step manual">
+      <span class="tag manual-tag">Manual</span>
+      <div class="step-content"><strong>Seteisha selects a disposition when the call ends</strong><span class="detail">This is the one click that drives everything downstream — pick the outcome that matches what actually happened on the call.</span></div>
+    </div>
+
+    <h3>3. After the Disposition Is Picked</h3>
+    <div class="step automated">
+      <span class="tag auto-tag">Auto</span>
+      <div class="step-content"><strong>Disposition-handler workflow fires</strong><span class="detail">A separate workflow listens for each specific disposition (Call Details → Custom Disposition trigger), finds the opportunity, and updates its stage — plus applies tags and creates follow-up tasks as needed.</span></div>
+    </div>
+    <div class="step automated">
+      <span class="tag auto-tag">Auto</span>
+      <div class="step-content"><strong>Follow-up task created (where applicable)</strong><span class="detail">No Answer / Voicemail → next-attempt task. Interested → consult-booking task. Call Back Later → reminder task at requested time.</span></div>
+    </div>
+  </div>
+
+  <!-- SETEISHA CHECKLIST -->
+  <div class="card">
+    <h2>👋 Seteisha — What You Actually Need to Do</h2>
+    <p>Everything above happens automatically once you do these two things:</p>
+
+    <div class="checklist-item"><span class="check"></span> <span>Open <strong>Conversations → Manual Actions</strong> to see your call queue for the day.</span></div>
+    <div class="checklist-item"><span class="check"></span> <span>Click <strong>Let's Start</strong> on the next contact and dial.</span></div>
+    <div class="checklist-item"><span class="check"></span> <span>When the call ends, pick the <strong>disposition</strong> that matches what happened — don't skip this step.</span></div>
+    <div class="checklist-item"><span class="check"></span> <span>If someone says they're interested, the system creates your task to follow up and book the consult — check your tasks daily.</span></div>
+    <div class="checklist-item"><span class="check"></span> <span>If a contact requests a specific callback time, mention it in the call notes even though the tag handles the reminder — extra context helps future-you.</span></div>
+
+    <div class="callout">
+      <strong>Daily habit:</strong> work through the Manual Actions queue at a consistent time each day so attempts stay spaced out properly and no one falls through the cracks.
+    </div>
+  </div>
+
+  <!-- TAGS REFERENCE -->
+  <div class="card">
+    <h2>Tags Used in This Campaign</h2>
+    <table>
+      <tr><th>Tag</th><th>Purpose</th></tr>
+      <tr><td><code>cold_call</code></td><td>Entry tag — adding this starts the whole process for a contact</td></tr>
+      <tr><td><code>cold_call_source_old</code></td><td>Applied when pulled from existing inactive GHL contacts</td></tr>
+      <tr><td><code>cold_call_source_new</code></td><td>Applied when pulled from a freshly uploaded list</td></tr>
+      <tr><td><code>cold_call_dnc</code></td><td>Do Not Call — applied automatically after Not Interested or Bad Number</td></tr>
+      <tr><td><code>cold_call_callback</code></td><td>Applied when a contact requests a specific callback time</td></tr>
+    </table>
+  </div>
+
+  <div class="footer-note">
+    Hearing Benefit Services · hearingbenefitservices.com · Honolulu, HI<br>
+    Cold Call Campaign Training — for internal use
+  </div>
+
+</div>
+
+</body>
+</html>
