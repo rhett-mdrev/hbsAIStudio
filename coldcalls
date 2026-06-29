@@ -93,7 +93,7 @@
     <div class="flow-diagram">
       <span class="flow-box auto">Contact tagged cold_call</span>
       <span class="flow-arrow">→</span>
-      <span class="flow-box auto">Added to Seteisha's call queue</span>
+      <span class="flow-box auto">Added to Hearing Professional's call queue</span>
       <span class="flow-arrow">→</span>
       <span class="flow-box manual">Seteisha dials from queue</span>
       <br><br>
@@ -104,7 +104,7 @@
       <span class="flow-box auto">Tags + follow-up tasks + SMS handled automatically</span>
     </div>
     <div class="callout">
-      <strong>The one thing Seteisha actually has to remember:</strong> pick the right disposition every time, right when the call ends. That single click drives the stage move, the tags, the follow-up task, and (for No Answer / Voicemail Left) a warm-up SMS to the contact. If she skips it or picks the wrong one, the contact gets stuck or routed incorrectly.
+      <strong>The one thing the Hearing Professional actually has to remember:</strong> pick the right disposition every time, right when the call ends. That single click drives the stage move, the tags, the follow-up task, and (for No Answer / Voicemail Left) a warm-up SMS to the contact. If she skips it or picks the wrong one, the contact gets stuck or routed incorrectly.
     </div>
   </div>
 
