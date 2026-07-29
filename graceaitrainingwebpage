@@ -178,6 +178,15 @@
   .rules .do li::before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:700}
   .rules .dont li::before{content:"✕";position:absolute;left:2px;color:#C2483C;font-weight:700}
 
+  /* ---- Workflow list ---- */
+  .wflist{display:grid;gap:14px}
+  .wf{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 22px;border-left:4px solid var(--teal)}
+  .wf.stop{border-left-color:#C2483C}
+  .wf.warn{border-left-color:var(--amber)}
+  .wf.ok{border-left-color:var(--ok)}
+  .wf .wfname{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:16px;color:var(--ink)}
+  .wf .wfdesc{font-size:14.5px;color:var(--muted);margin-top:5px}
+
   /* ---- Footer ---- */
   footer{padding:40px 0 60px;color:var(--muted);font-size:13.5px}
   footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center}
@@ -377,6 +386,13 @@
     <div class="tasks">
 
       <div class="task">
+        <div class="flag">Automatic · Written for you</div>
+        <h3>Every call is written up for you</h3>
+        <p>Whenever Grace, John, or Mary handles a call, a note with the full summary and transcript is saved to the patient's record automatically — and Seteisha gets a task to review it. You never type these notes yourself.</p>
+        <div class="doline"><b>What to do:</b> Skim the summary on the task or the record, and call the patient back only if it needs a follow-up.</div>
+      </div>
+
+      <div class="task">
         <div class="flag">Heads-up · No action</div>
         <h3>New consultation booked</h3>
         <p>A notification tells Seteisha a consult was booked and when. The confirmation and reminders are already handled.</p>
@@ -462,9 +478,35 @@
   </div>
 </section>
 
-<section id="rules">
+<section id="workflows">
   <div class="wrap">
     <div class="snum">08</div>
+    <h2>Workflows running behind the scenes</h2>
+    <p class="sintro">You don't manage these directly — they run on their own. Here's each automation and what it does, so you know what's handling things for you.</p>
+    <div class="wflist">
+      <div class="wf">
+        <div class="wfname">HBS — Booking Confirmation &amp; Reminders</div>
+        <div class="wfdesc">Runs the moment any consultation is booked, from any source. Creates the pipeline record, tags how the booking came in, gives Seteisha a heads-up, and sends the confirmation email plus the 24-hour and 1-hour reminders by text and email.</div>
+      </div>
+      <div class="wf stop">
+        <div class="wfname">HBS — Booking Cancellation Handler</div>
+        <div class="wfdesc">Runs when an appointment is cancelled. Stops the pending reminders so nothing goes out for a cancelled visit, marks the booking Cancelled in the pipeline, and creates a follow-up task for Seteisha to call the patient.</div>
+      </div>
+      <div class="wf warn">
+        <div class="wfname">HBS — Booking Reschedule Handler</div>
+        <div class="wfdesc">Runs when an appointment's time is changed. Notes the reschedule and lets the reminder system restart on its own against the new time — no reminders are ever sent for the old time.</div>
+      </div>
+      <div class="wf ok">
+        <div class="wfname">HBS — Voice AI Post-Call Handler</div>
+        <div class="wfdesc">Runs after every AI call. Writes a note with the full call summary and transcript to the patient's record, and creates a review task for Seteisha.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="rules">
+  <div class="wrap">
+    <div class="snum">09</div>
     <h2>Quick rules</h2>
     <p class="sintro">The short version to keep the system clean and the patients happy.</p>
     <div class="rules">
