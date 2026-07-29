@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Phone Team — Phase 2 & 3 Proposal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#10333A; --teal:#1C6E7D; --teal-soft:#E4EEEF;
+    --amber:#D9861F; --amber-soft:#FBEED8;
+    --ok:#2E7D5B; --ok-soft:#E3F0EA;
+    --paper:#F4F6F5; --card:#FFFFFF; --muted:#5C6B6E; --line:#DFE7E5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  body{font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+  /* header */
+  header.site{background:var(--ink);color:#fff;padding:14px 0;position:sticky;top:0;z-index:50;border-bottom:3px solid var(--amber)}
+  header.site .wrap{display:flex;align-items:center;gap:14px}
+  header.site img{height:34px;width:auto;display:block;filter:brightness(0) invert(1);opacity:.95}
+  header.site .htxt{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:15px}
+  header.site .htag{margin-left:auto;font-size:12px;color:#9FC2C6;letter-spacing:.5px;text-transform:uppercase}
+
+  /* hero */
+  .hero{background:var(--ink);color:#fff;padding:66px 0 58px;position:relative;overflow:hidden}
+  .hero .eyebrow{font-size:13px;letter-spacing:3px;text-transform:uppercase;color:#9FC2C6;font-weight:600;margin-bottom:18px}
+  .hero h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(34px,6vw,52px);line-height:1.03;letter-spacing:-.5px;max-width:16ch}
+  .hero p{font-size:18px;color:#CFE0E1;margin-top:20px;max-width:60ch}
+  .wave{display:flex;align-items:flex-end;gap:5px;height:44px;margin-top:32px}
+  .wave span{width:5px;background:#2E7f8c;border-radius:3px;opacity:.6;animation:pulse 1.8s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scaleY(.4)}50%{transform:scaleY(1)}}
+  .wave span:nth-child(1){height:40%}.wave span:nth-child(2){height:70%;animation-delay:.1s}
+  .wave span:nth-child(3){height:100%;animation-delay:.2s;background:var(--amber);opacity:.85}
+  .wave span:nth-child(4){height:60%;animation-delay:.3s}.wave span:nth-child(5){height:85%;animation-delay:.4s}
+  .wave span:nth-child(6){height:35%;animation-delay:.5s}.wave span:nth-child(7){height:55%;animation-delay:.6s}
+  .wave span:nth-child(8){height:90%;animation-delay:.7s;background:var(--amber);opacity:.85}
+  .wave span:nth-child(9){height:45%;animation-delay:.8s}.wave span:nth-child(10){height:65%;animation-delay:.9s}
+
+  section{padding:54px 0;border-bottom:1px solid var(--line)}
+  .eyebrow2{font-size:12.5px;letter-spacing:2px;text-transform:uppercase;font-weight:700;margin-bottom:10px}
+  .eyebrow2.inbound{color:var(--amber)}.eyebrow2.outbound{color:var(--teal)}.eyebrow2.first{color:var(--amber)}
+  h2{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:clamp(25px,4vw,34px);letter-spacing:-.3px;margin-bottom:8px}
+  .sintro{color:var(--muted);font-size:17px;max-width:66ch;margin-bottom:30px}
+
+  /* current-state mini cards */
+  .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media(max-width:820px){.grid4{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.grid4{grid-template-columns:1fr}}
+  .mini{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 20px;border-top:4px solid var(--teal)}
+  .mini.amber{border-top-color:var(--amber)}
+  .mini h4{font-family:"Bricolage Grotesque",sans-serif;font-size:17px;color:var(--ink);margin-bottom:6px}
+  .mini p{font-size:13.5px;color:var(--muted)}
+
+  /* two-track */
+  .tracks{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:24px}
+  @media(max-width:720px){.tracks{grid-template-columns:1fr}}
+  .track{border-radius:14px;padding:24px}
+  .track.p2{background:var(--ink);color:#fff}
+  .track.p3{background:var(--teal);color:#fff}
+  .track .tk{font-size:13px;letter-spacing:2px;text-transform:uppercase;font-weight:700;color:#9FC2C6;margin-bottom:8px}
+  .track.p3 .tk{color:#CFE9EC}
+  .track h3{font-family:"Bricolage Grotesque",sans-serif;font-size:21px;margin-bottom:10px}
+  .track p{font-size:14px;color:#DCE9EA}
+
+  /* project cards */
+  .projgrid{display:grid;gap:18px}
+  .projgrid.c3{grid-template-columns:repeat(3,1fr)}
+  .projgrid.c2{grid-template-columns:1fr 1fr}
+  @media(max-width:820px){.projgrid.c3{grid-template-columns:1fr}.projgrid.c2{grid-template-columns:1fr}}
+  .pcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px}
+  .pcard .phead{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+  .pnum{flex:0 0 34px;height:34px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:15px}
+  .pnum.teal{background:var(--teal-soft);color:var(--teal)}
+  .pnum.ok{background:var(--ok-soft);color:var(--ok)}
+  .pcard h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:18px;color:var(--ink)}
+  .wf{padding:9px 0;border-top:1px solid var(--line)}
+  .wf:first-of-type{border-top:none;padding-top:2px}
+  .wf .wt{font-weight:600;font-size:14.5px}
+  .wf .wt.teal{color:var(--teal)}.wf .wt.ok{color:var(--ok)}.wf .wt.ink{color:var(--ink)}
+  .wf .wd{font-size:13px;color:var(--muted);margin-top:2px}
+
+  /* outbound agent cards */
+  .agentcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:0 24px 20px;overflow:hidden}
+  .agentcard .top{height:6px;margin:0 -24px 16px}
+  .agentcard .top.teal{background:var(--teal)}.agentcard .top.amber{background:var(--amber)}.agentcard .top.ok{background:var(--ok)}
+  .agentcard .nm{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:22px;color:var(--ink);margin:14px 0 12px}
+
+  /* marketing */
+  .mkgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media(max-width:820px){.mkgrid{grid-template-columns:1fr 1fr}}
+  @media(max-width:520px){.mkgrid{grid-template-columns:1fr}}
+  .mk{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px}
+  .mk .mnum{width:32px;height:32px;border-radius:50%;background:var(--amber-soft);color:var(--amber);display:flex;align-items:center;justify-content:center;font-weight:700;font-family:"Bricolage Grotesque",sans-serif;margin-bottom:14px}
+  .mk h4{font-family:"Bricolage Grotesque",sans-serif;font-size:15.5px;color:var(--ink);margin-bottom:6px}
+  .mk p{font-size:13px;color:var(--muted)}
+
+  .callout{border-radius:12px;padding:18px 22px;margin-top:24px;font-size:14.5px}
+  .callout.amber{background:var(--amber);color:#3A2A08;font-weight:600}
+  .callout.ink{background:var(--ink);color:#CFE0E1}
+  .callout.ink b{color:#fff;font-family:"Bricolage Grotesque",sans-serif}
+
+  .section-teal{background:var(--teal)}
+  .section-teal h2,.section-teal .sintro{color:#fff}
+  .section-teal .sintro{color:#EAF4F5}
+  .section-teal .eyebrow2{color:#CFE9EC}
+
+  /* steps */
+  .steps{display:grid;gap:16px}
+  .step{display:flex;gap:18px;background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px}
+  .step .snum{flex:0 0 40px;height:40px;border-radius:50%;background:var(--amber);color:var(--ink);display:flex;align-items:center;justify-content:center;font-weight:700;font-family:"Bricolage Grotesque",sans-serif;font-size:16px}
+  .step h3{font-family:"Bricolage Grotesque",sans-serif;font-size:18px;margin-bottom:3px}
+  .step p{font-size:14px;color:var(--muted)}
+
+  footer{padding:36px 0 60px;color:var(--muted);font-size:13px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <img src="https://assets.cdn.filesafe.space/UDKdmJIdT4xB1V6Lye64/media/68f7cb4d3a4642fd12cdeaab.png" alt="Hearing Benefit Services">
+    <span class="htxt">AI Phone Team — Phase 2 &amp; 3 Proposal</span>
+    <span class="htag">Team review</span>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Phase 2 &amp; 3 · Proposal</div>
+    <h1>Growing the AI Phone Team</h1>
+    <p>What Grace, John, and Mary could do next — and the outbound + marketing track that follows.</p>
+    <div class="wave" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></div>
+  </div>
+</div>
+
+<!-- WHERE WE ARE -->
+<section>
+  <div class="wrap">
+    <h2>Where we are today</h2>
+    <p class="sintro">The phone system already runs itself for inbound calls. These two phases build on top of it.</p>
+    <div class="grid4">
+      <div class="mini"><h4>Grace</h4><p>Answers overflow &amp; after-hours calls, books consultations, takes messages.</p></div>
+      <div class="mini"><h4>John</h4><p>Handles Bluetooth, app, and device troubleshooting over the phone.</p></div>
+      <div class="mini"><h4>Mary</h4><p>Explains Cherry, Klarna &amp; CareCredit and sends the application link.</p></div>
+      <div class="mini amber"><h4>Automatic</h4><p>Booking confirmations, 24h + 1h reminders, and a note on every call.</p></div>
+    </div>
+    <div class="tracks">
+      <div class="track p2">
+        <div class="tk">Phase 2</div>
+        <h3>More they can do — inbound</h3>
+        <p>New jobs for John and Mary on calls patients make to us. Buildable now — same rules as today's inbound setup.</p>
+      </div>
+      <div class="track p3">
+        <div class="tk">Phase 3</div>
+        <h3>Outbound + marketing</h3>
+        <p>The AI calls patients — repair updates, financing follow-ups, and campaign offers. Needs a compliance sign-off first.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHASE 2 JOHN -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow2 inbound">Phase 2 · Inbound</div>
+    <h2>What else John could do</h2>
+    <p class="sintro">John already troubleshoots. These turn a resolved — or unresolved — call into follow-through.</p>
+    <div class="projgrid c3">
+      <div class="pcard">
+        <div class="phead"><span class="pnum teal">1</span><h3>Repair &amp; warranty</h3></div>
+        <div class="wf"><div class="wt teal">HBS — Repair Intake (John)</div><div class="wd">Logs a repair request from the call so nothing slips and Set has what she needs to act.</div></div>
+        <div class="wf"><div class="wt teal">HBS — Warranty Verification</div><div class="wd">Hands Set the serial to confirm on Signia, settling coverage before any repair moves.</div></div>
+        <div class="wf"><div class="wt teal">HBS — Repair Status Updates</div><div class="wd">Keeps the patient posted at each step, cutting anxious calls while the device is out.</div></div>
+      </div>
+      <div class="pcard">
+        <div class="phead"><span class="pnum teal">2</span><h3>Proactive support</h3></div>
+        <div class="wf"><div class="wt teal">HBS — Post-Fix Follow-Up</div><div class="wd">Checks a day later that the fix held, catching problems early and building trust.</div></div>
+        <div class="wf"><div class="wt teal">HBS — Care Guide Send</div><div class="wd">Texts the pairing or cleaning steps in writing so the patient can refer back.</div></div>
+        <div class="wf"><div class="wt teal">HBS — Resupply Reminder</div><div class="wd">Prompts wax-guard and dome swaps on time, keeping devices working well.</div></div>
+      </div>
+      <div class="pcard">
+        <div class="phead"><span class="pnum teal">3</span><h3>Safety net</h3></div>
+        <div class="wf"><div class="wt teal">HBS — Tech Callback Booking</div><div class="wd">Books a human callback when John can't resolve it, so no one is left stuck.</div></div>
+        <div class="wf"><div class="wt teal">HBS — Repeat Issue Flag</div><div class="wd">Flags a patient calling again and again so a person steps in before they churn.</div></div>
+        <div class="wf"><div class="wt teal">HBS — Urgent Escalation</div><div class="wd">Sends urgent issues straight to the team so they don't wait in a queue.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHASE 2 MARY -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow2 inbound">Phase 2 · Inbound</div>
+    <h2>What else Mary could do</h2>
+    <p class="sintro">Mary explains financing. These make sure an interested patient actually crosses the line.</p>
+    <div class="projgrid c2">
+      <div class="pcard">
+        <div class="phead"><span class="pnum ok">1</span><h3>Application lifecycle</h3></div>
+        <div class="wf"><div class="wt ok">HBS — Financing Application Sent</div><div class="wd">Tags the lead, alerts Set, and starts a gentle follow-up the moment the Cherry link goes out.</div></div>
+        <div class="wf"><div class="wt ok">HBS — Financing Follow-Up</div><div class="wd">Nudges patients who started but didn't finish, recovering applications that would stall.</div></div>
+        <div class="wf"><div class="wt ok">HBS — Financing Approved</div><div class="wd">Hands an approved patient to Set to close, turning a yes from Cherry into a completed sale.</div></div>
+        <div class="wf"><div class="wt ok">HBS — Financing Declined</div><div class="wd">Softly re-engages a declined patient with the other options, so one no doesn't end it.</div></div>
+      </div>
+      <div class="pcard">
+        <div class="phead"><span class="pnum ok">2</span><h3>Sales assist</h3></div>
+        <div class="wf"><div class="wt ok">HBS — Payment Plan Explainer</div><div class="wd">Texts a clear plan breakdown in writing, so the cost feels manageable after the call.</div></div>
+        <div class="wf"><div class="wt ok">HBS — Cost Objection Nurture</div><div class="wd">Gently follows up with patients who balked at price, keeping warm leads from going cold.</div></div>
+        <div class="wf"><div class="wt ok">HBS — Insurance Benefit Check</div><div class="wd">Routes a coverage question to Set to verify, so the patient gets a real answer, not a guess.</div></div>
+        <div class="wf"><div class="wt ok">HBS — Financing Warm Handoff</div><div class="wd">Passes a financing-ready patient to the team at the right moment to close the sale.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PHASE 3 OUTBOUND -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow2 outbound">Phase 3 · Outbound</div>
+    <h2>The AI calls the patient</h2>
+    <p class="sintro">Same three voices, now reaching out — not just answering. Useful when the patient is waiting on us.</p>
+    <div class="projgrid c3">
+      <div class="agentcard">
+        <div class="top teal"></div>
+        <div class="nm">Grace</div>
+        <div class="wf"><div class="wt ink">HBS — Appointment Confirmation Calls</div><div class="wd">Adds a voice confirmation to the reminders.</div></div>
+        <div class="wf"><div class="wt ink">HBS — No-Show Recovery Call</div><div class="wd">Same-day call to rebook a no-show.</div></div>
+        <div class="wf"><div class="wt ink">HBS — Lapsed Patient Reactivation</div><div class="wd">Wins back quiet or lapsed patients.</div></div>
+      </div>
+      <div class="agentcard">
+        <div class="top amber"></div>
+        <div class="nm">John</div>
+        <div class="wf"><div class="wt ink">HBS — Repair-Ready Callback</div><div class="wd">Calls when the repaired device ships back.</div></div>
+        <div class="wf"><div class="wt ink">HBS — Post-Repair Check-In</div><div class="wd">Confirms days later that the fix held.</div></div>
+        <div class="wf"><div class="wt ink">HBS — Warranty Result Callback</div><div class="wd">Shares the coverage result once verified.</div></div>
+      </div>
+      <div class="agentcard">
+        <div class="top ok"></div>
+        <div class="nm">Mary</div>
+        <div class="wf"><div class="wt ink">HBS — Financing Follow-Up Call</div><div class="wd">Helps finish a stalled application.</div></div>
+        <div class="wf"><div class="wt ink">HBS — Approval Callback</div><div class="wd">Delivers the approval and next step.</div></div>
+        <div class="wf"><div class="wt ink">HBS — Cost Re-Engagement Call</div><div class="wd">Revisits options after a cost objection.</div></div>
+      </div>
+    </div>
+    <div class="callout ink"><b>And the big one →</b>&nbsp; Outbound also powers marketing campaigns by phone — the AI calls patients with an offer whenever we launch one.</div>
+  </div>
+</section>
+
+<!-- PHASE 3 MARKETING -->
+<section class="section-teal">
+  <div class="wrap">
+    <div class="eyebrow2">Phase 3 · Spotlight</div>
+    <h2>Marketing campaigns by phone</h2>
+    <p class="sintro">Trigger a campaign, and the AI places the calls — the same way our SMS and email campaigns fire today, but as a voice call.</p>
+    <div class="mkgrid">
+      <div class="mk"><div class="mnum">1</div><h4>HBS — Upgrade Offer Campaign</h4><p>Call patients on older devices about a newer model or saving.</p></div>
+      <div class="mk"><div class="mnum">2</div><h4>HBS — Reactivation Campaign</h4><p>Reach lapsed or long-quiet patients with a reason to return.</p></div>
+      <div class="mk"><div class="mnum">3</div><h4>HBS — Seasonal Promo Campaign</h4><p>Announce a promotion, event, or benefit window to a segment.</p></div>
+      <div class="mk"><div class="mnum">4</div><h4>HBS — Warranty-Expiring Campaign</h4><p>Heads-up before coverage ends, with next steps.</p></div>
+    </div>
+    <div class="callout amber">Marketing calls carry the most compliance weight — consent and calling rules matter most here. See below.</div>
+  </div>
+</section>
+
+<!-- COMPLIANCE -->
+<section>
+  <div class="wrap">
+    <div class="eyebrow2 first">Sort this first</div>
+    <h2>Outbound needs a compliance sign-off</h2>
+    <p class="sintro">Inbound is light — the patient dialed us. Outbound to patients is a different rulebook, so this gates Phase 3.</p>
+    <div class="grid4">
+      <div class="mini amber"><h4 style="color:var(--amber)">Consent</h4><p>Confirm we have permission to place automated calls to each patient.</p></div>
+      <div class="mini amber"><h4 style="color:var(--amber)">Calling hours</h4><p>Respect allowed call windows and time zones.</p></div>
+      <div class="mini amber"><h4 style="color:var(--amber)">Identify the AI</h4><p>The call should make clear it's an automated assistant.</p></div>
+      <div class="mini amber"><h4 style="color:var(--amber)">Do-not-call</h4><p>Honor opt-outs and keep a clean suppression list.</p></div>
+    </div>
+    <div class="callout ink"><b>One more, specific to us.</b>&nbsp; Our patients skew older and hard-of-hearing. An unexpected AI voice calling them lands differently than one answering when they call us. We should choose outbound moments that clearly help the patient — a repair-ready callback — over anything that feels like telemarketing.</div>
+  </div>
+</section>
+
+<!-- RECOMMENDATION -->
+<section style="border-bottom:none">
+  <div class="wrap">
+    <div class="eyebrow2 outbound">Recommendation</div>
+    <h2>Where to go from here</h2>
+    <div class="steps" style="margin-top:26px">
+      <div class="step"><span class="snum">1</span><div><h3>Green-light Phase 2 now</h3><p>It runs on the same rules as today's inbound system — no new compliance work to start building.</p></div></div>
+      <div class="step"><span class="snum">2</span><div><h3>Scope compliance for Phase 3</h3><p>Sort consent, calling hours, AI disclosure, and opt-outs before any outbound call — marketing especially.</p></div></div>
+      <div class="step"><span class="snum">3</span><div><h3>Pick the first wins</h3><p>Choose two or three projects from each phase to build first, so we ship value instead of boiling the ocean.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>Hearing Benefit Services · Honolulu, HI · Internal proposal</div>
+    <div>Prepared for team review</div>
+  </div>
+</footer>
+
+</body>
+</html>
