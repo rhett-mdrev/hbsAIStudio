@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HBS Phone System — Staff Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#10333A;
+    --teal:#1C6E7D;
+    --teal-soft:#E4EEEF;
+    --amber:#E0912B;
+    --amber-soft:#FBEED8;
+    --paper:#F4F6F5;
+    --card:#FFFFFF;
+    --muted:#5C6B6E;
+    --line:#DFE7E5;
+    --ok:#2E7D5B;
+    --ok-soft:#E3F0EA;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  body{
+    font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;
+    color:var(--ink);
+    background:var(--paper);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:920px;margin:0 auto;padding:0 24px}
+
+  /* ---- Header ---- */
+  header.site{
+    background:var(--ink);
+    color:#fff;
+    padding:14px 0;
+    position:sticky;top:0;z-index:50;
+    border-bottom:3px solid var(--amber);
+  }
+  header.site .wrap{display:flex;align-items:center;gap:14px}
+  header.site img{height:34px;width:auto;display:block;filter:brightness(0) invert(1);opacity:.95}
+  header.site .htxt{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:15px;letter-spacing:.2px}
+  header.site .htag{margin-left:auto;font-size:12px;color:#9FC2C6;letter-spacing:.5px;text-transform:uppercase}
+
+  /* ---- Hero ---- */
+  .hero{padding:64px 0 40px}
+  .eyebrow{font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:18px}
+  .hero h1{
+    font-family:"Bricolage Grotesque",sans-serif;
+    font-weight:800;
+    font-size:clamp(34px,6vw,54px);
+    line-height:1.02;
+    letter-spacing:-.5px;
+    max-width:16ch;
+  }
+  .hero p.lede{font-size:19px;color:var(--muted);margin-top:20px;max-width:60ch}
+
+  /* soundwave motif */
+  .wave{display:flex;align-items:flex-end;gap:5px;height:46px;margin-top:34px}
+  .wave span{width:5px;background:var(--teal);border-radius:3px;opacity:.55;animation:pulse 1.8s ease-in-out infinite}
+  @keyframes pulse{0%,100%{transform:scaleY(.4)}50%{transform:scaleY(1)}}
+  .wave span:nth-child(1){height:40%;animation-delay:0s}
+  .wave span:nth-child(2){height:70%;animation-delay:.1s}
+  .wave span:nth-child(3){height:100%;animation-delay:.2s;background:var(--amber);opacity:.8}
+  .wave span:nth-child(4){height:60%;animation-delay:.3s}
+  .wave span:nth-child(5){height:85%;animation-delay:.4s}
+  .wave span:nth-child(6){height:35%;animation-delay:.5s}
+  .wave span:nth-child(7){height:55%;animation-delay:.6s}
+  .wave span:nth-child(8){height:90%;animation-delay:.7s;background:var(--amber);opacity:.8}
+  .wave span:nth-child(9){height:45%;animation-delay:.8s}
+  .wave span:nth-child(10){height:65%;animation-delay:.9s}
+
+  /* ---- Nav ---- */
+  nav.toc{position:sticky;top:64px;z-index:40;background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:12px 0}
+  nav.toc .wrap{display:flex;gap:8px;flex-wrap:wrap}
+  nav.toc a{font-size:13px;color:var(--muted);text-decoration:none;padding:5px 12px;border-radius:20px;border:1px solid var(--line);background:var(--card);transition:all .15s}
+  nav.toc a:hover,nav.toc a:focus{color:var(--teal);border-color:var(--teal);outline:none}
+
+  /* ---- Sections ---- */
+  section{padding:52px 0;border-bottom:1px solid var(--line)}
+  .snum{font-family:"Bricolage Grotesque",sans-serif;font-size:13px;font-weight:600;color:var(--amber);letter-spacing:1px}
+  h2{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:clamp(24px,4vw,32px);letter-spacing:-.3px;margin:8px 0 6px}
+  .sintro{color:var(--muted);font-size:17px;max-width:64ch;margin-bottom:32px}
+  h3{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:19px;margin-bottom:6px}
+
+  /* ---- Agent cards ---- */
+  .agents{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  @media(max-width:720px){.agents{grid-template-columns:1fr}}
+  .agent{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:24px;position:relative;overflow:hidden}
+  .agent::before{content:"";position:absolute;top:0;left:0;width:100%;height:4px;background:var(--teal)}
+  .agent.john::before{background:var(--amber)}
+  .agent.mary::before{background:var(--ok)}
+  .agent .role{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);margin-bottom:14px}
+  .agent .nm{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:26px;margin-bottom:2px}
+  .agent ul{list-style:none;margin-top:14px;font-size:14.5px}
+  .agent li{padding:4px 0 4px 20px;position:relative;color:var(--ink)}
+  .agent li::before{content:"";position:absolute;left:0;top:12px;width:7px;height:7px;border-radius:50%;background:var(--teal)}
+  .agent.john li::before{background:var(--amber)}
+  .agent.mary li::before{background:var(--ok)}
+
+  /* ---- Routing diagram (signature) ---- */
+  .flow{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:36px 28px;margin-top:8px}
+  .node{display:block;margin:0 auto;text-align:center}
+  .caller{background:var(--ink);color:#fff;border-radius:12px;padding:12px 20px;font-size:14px;font-weight:500;max-width:320px}
+  .caller .ph{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:18px;letter-spacing:.5px}
+  .connector{width:2px;height:26px;background:var(--line);margin:0 auto}
+  .grace{background:var(--teal);color:#fff;border-radius:12px;padding:16px 22px;max-width:340px;text-align:center}
+  .grace .nm{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:22px}
+  .grace .sub{font-size:13px;opacity:.9;margin-top:2px}
+  .fanwrap{margin-top:6px}
+  .fanline{height:26px;display:flex;justify-content:center}
+  .fanline::before{content:"";width:2px;background:var(--line)}
+  .branches{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:0}
+  @media(max-width:640px){.branches{grid-template-columns:1fr}}
+  .branch{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px;text-align:center}
+  .branch .who{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:17px;margin-bottom:2px}
+  .branch .when{font-size:13px;color:var(--muted)}
+  .branch.tech{border-top:3px solid var(--amber)}
+  .branch.fin{border-top:3px solid var(--ok)}
+  .branch.human{border-top:3px solid var(--ink)}
+  .flowcap{text-align:center;font-size:13.5px;color:var(--muted);margin-top:22px;font-style:italic}
+
+  /* ---- Timeline ---- */
+  .timeline{position:relative;margin-top:8px;padding-left:8px}
+  .tstep{display:flex;gap:18px;padding-bottom:22px;position:relative}
+  .tstep:not(:last-child)::before{content:"";position:absolute;left:15px;top:34px;bottom:-4px;width:2px;background:var(--line)}
+  .tdot{flex:0 0 32px;height:32px;border-radius:50%;background:var(--teal-soft);color:var(--teal);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;font-family:"Bricolage Grotesque",sans-serif;border:2px solid var(--teal);z-index:1}
+  .tbody{padding-top:2px}
+  .tbody .tt{font-weight:600;font-size:16px}
+  .tbody .td{font-size:14.5px;color:var(--muted)}
+  .tbody .chan{display:inline-block;font-size:11px;letter-spacing:.5px;text-transform:uppercase;background:var(--teal-soft);color:var(--teal);border-radius:5px;padding:2px 8px;margin-right:6px;margin-top:6px;font-weight:600}
+
+  /* ---- Pipeline ---- */
+  .pipe-group{margin-bottom:26px}
+  .pipe-label{font-size:12.5px;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:12px}
+  .pipe-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+  .pipe-row.outcomes{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:640px){.pipe-row,.pipe-row.outcomes{grid-template-columns:1fr}}
+  .stage{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;border-top:3px solid var(--teal)}
+  .stage .sst{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--teal-soft);color:var(--teal);font-weight:700;font-size:13px;font-family:"Bricolage Grotesque",sans-serif;margin-bottom:8px}
+  .stage .snm{font-weight:600;font-size:15px;font-family:"Bricolage Grotesque",sans-serif}
+  .stage .sds{font-size:13px;color:var(--muted);margin-top:2px}
+  .stage.ok{border-top-color:var(--ok)}.stage.ok .sst{background:var(--ok-soft);color:var(--ok)}
+  .stage.warn{border-top-color:var(--amber)}.stage.warn .sst{background:var(--amber-soft);color:var(--amber)}
+  .stage.stop{border-top-color:#C2483C}.stage.stop .sst{background:#F6E1DE;color:#C2483C}
+
+  /* ---- Task cards ---- */
+  .tasks{display:grid;gap:16px}
+  .task{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px 24px;border-left:5px solid var(--teal)}
+  .task.act{border-left-color:var(--amber);background:linear-gradient(0deg,var(--amber-soft),var(--card) 60%)}
+  .task .flag{font-size:11.5px;letter-spacing:1px;text-transform:uppercase;font-weight:700;color:var(--teal);margin-bottom:6px}
+  .task.act .flag{color:var(--amber)}
+  .task h3{margin-bottom:8px}
+  .task .doline{font-size:14.5px;margin-top:10px;padding:10px 14px;border-radius:9px;background:var(--paper);border:1px solid var(--line)}
+  .task .doline b{color:var(--ink)}
+
+  /* ---- Tag glossary ---- */
+  .tags{width:100%;border-collapse:collapse;font-size:14.5px;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  .tags th{text-align:left;background:var(--ink);color:#fff;font-weight:600;padding:12px 16px;font-size:13px;letter-spacing:.3px}
+  .tags td{padding:12px 16px;border-top:1px solid var(--line);vertical-align:top}
+  .tags code{font-family:"IBM Plex Mono",ui-monospace,monospace;background:var(--teal-soft);color:var(--teal);padding:2px 7px;border-radius:5px;font-size:13px;white-space:nowrap}
+  @media(max-width:640px){.tags code{white-space:normal}}
+
+  /* ---- Do / Don't ---- */
+  .rules{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:640px){.rules{grid-template-columns:1fr}}
+  .rules .col{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .rules .col.do{border-top:4px solid var(--ok)}
+  .rules .col.dont{border-top:4px solid #C2483C}
+  .rules h3{margin-bottom:12px}
+  .rules ul{list-style:none;font-size:14.5px}
+  .rules li{padding:7px 0 7px 26px;position:relative;border-top:1px solid var(--line)}
+  .rules li:first-of-type{border-top:none}
+  .rules .do li::before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:700}
+  .rules .dont li::before{content:"✕";position:absolute;left:2px;color:#C2483C;font-weight:700}
+
+  /* ---- Footer ---- */
+  footer{padding:40px 0 60px;color:var(--muted);font-size:13.5px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;align-items:center}
+  footer a{color:var(--teal);text-decoration:none}
+  .callbox{background:var(--ink);color:#fff;border-radius:14px;padding:20px 24px;margin-top:8px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+  .callbox .ph{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:22px;color:var(--amber)}
+  .callbox .lb{font-size:14px;color:#B9D2D5}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <img src="https://assets.cdn.filesafe.space/UDKdmJIdT4xB1V6Lye64/media/68f7cb4d3a4642fd12cdeaab.png" alt="Hearing Benefit Services">
+    <span class="htxt">Phone System — Staff Guide</span>
+    <span class="htag">For Seteisha &amp; Andrea</span>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">How our AI answers the phone</div>
+    <h1>Your automated phone team, and what it needs from you.</h1>
+    <p class="lede">Three AI assistants now answer calls, book consultations, and send reminders on their own. This guide explains what they handle without you, and the few moments where a patient still needs a real person — you.</p>
+    <div class="wave" aria-hidden="true">
+      <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+    </div>
+  </div>
+</div>
+
+<nav class="toc" aria-label="Sections">
+  <div class="wrap">
+    <a href="#team">The team</a>
+    <a href="#flow">How a call flows</a>
+    <a href="#booking">Booking &amp; reminders</a>
+    <a href="#todo">What you'll do</a>
+    <a href="#tags">Tags explained</a>
+    <a href="#rules">Quick rules</a>
+  </div>
+</nav>
+
+<section id="team">
+  <div class="wrap">
+    <div class="snum">01</div>
+    <h2>Meet the phone team</h2>
+    <p class="sintro">You and Andrea ring first on every call. Grace only picks up when no one answers — as overflow or after hours. From there, she hands specialized calls to John or Mary, or takes a message for you.</p>
+    <div class="agents">
+      <div class="agent grace-card">
+        <div class="role">Overflow &amp; after-hours</div>
+        <div class="nm">Grace</div>
+        <ul>
+          <li>Picks up only when no one answers live</li>
+          <li>Greets callers and answers general questions</li>
+          <li>Books, reschedules, and cancels consultations</li>
+          <li>Takes names, numbers, and the reason for calling</li>
+          <li>Routes the caller to the right place</li>
+        </ul>
+      </div>
+      <div class="agent john">
+        <div class="role">Technical support</div>
+        <div class="nm">John</div>
+        <ul>
+          <li>Bluetooth and phone pairing problems</li>
+          <li>Signia app not working</li>
+          <li>No sound, charging, or connection issues</li>
+          <li>Takes repair details when a fix isn't possible</li>
+        </ul>
+      </div>
+      <div class="agent mary">
+        <div class="role">Financing</div>
+        <div class="nm">Mary</div>
+        <ul>
+          <li>Explains Cherry, Klarna, and CareCredit</li>
+          <li>Which option tends to fit best</li>
+          <li>Texts the financing application link</li>
+          <li>Sends pricing questions to you</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="flow">
+  <div class="wrap">
+    <div class="snum">02</div>
+    <h2>How a call flows</h2>
+    <p class="sintro">Calls ring you and Andrea first. If no one answers, Grace picks up and either handles the call or transfers it — John and Mary are available any hour, while a live transfer back to you happens only during business hours when the caller asks for a person.</p>
+    <div class="flow">
+      <div class="node caller">
+        <div>A caller dials</div>
+        <div class="ph">1-808-435-7002</div>
+      </div>
+      <div class="connector"></div>
+      <div class="node caller" style="background:var(--teal);max-width:340px">
+        <div class="ph" style="font-size:16px">A Hearing Professional rings first</div>
+        <div style="font-size:13px;opacity:.9;margin-top:2px">A real person always gets the first chance to answer</div>
+      </div>
+      <div class="connector"></div>
+      <div class="node grace">
+        <div class="nm">Grace</div>
+        <div class="sub">picks up only if no one answers · books · takes messages</div>
+      </div>
+      <div class="fanwrap">
+        <div class="fanline"></div>
+        <div class="branches">
+          <div class="branch tech">
+            <div class="who">→ John</div>
+            <div class="when">Device or Bluetooth problem. Any hour.</div>
+          </div>
+          <div class="branch fin">
+            <div class="who">→ Mary</div>
+            <div class="when">Financing or payment plans. Any hour.</div>
+          </div>
+          <div class="branch human">
+            <div class="who">→ You</div>
+            <div class="when">Caller asks for a person, business hours only.</div>
+          </div>
+        </div>
+      </div>
+      <div class="flowcap">If no one is reached live, Grace takes a message and a callback task lands on Seteisha's list.</div>
+    </div>
+  </div>
+</section>
+
+<section id="booking">
+  <div class="wrap">
+    <div class="snum">03</div>
+    <h2>Booking &amp; reminders happen on their own</h2>
+    <p class="sintro">The moment any consultation is booked — by Grace, through the website, or by hand — the system runs this sequence automatically. You do not need to send any of these. Please don't send your own reminders on top; the patient would get doubles.</p>
+    <div class="timeline">
+      <div class="tstep">
+        <div class="tdot">1</div>
+        <div class="tbody">
+          <div class="tt">The moment it's booked</div>
+          <div class="td">A confirmation email goes out to the patient, and Seteisha gets a heads-up that a consult was booked.</div>
+          <span class="chan">Email</span>
+        </div>
+      </div>
+      <div class="tstep">
+        <div class="tdot">2</div>
+        <div class="tbody">
+          <div class="tt">24 hours before</div>
+          <div class="td">A reminder text and email go out with the appointment time and the number to call if they need to change it.</div>
+          <span class="chan">Text</span><span class="chan">Email</span>
+        </div>
+      </div>
+      <div class="tstep">
+        <div class="tdot">3</div>
+        <div class="tbody">
+          <div class="tt">1 hour before</div>
+          <div class="td">A final text and email let the patient know a specialist will call them shortly.</div>
+          <span class="chan">Text</span><span class="chan">Email</span>
+        </div>
+      </div>
+    </div>
+    <div class="callbox">
+      <div>
+        <div class="lb">Patients are told to call this number to reschedule</div>
+        <div class="ph">1-808-435-7002</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pipeline">
+  <div class="wrap">
+    <div class="snum">04</div>
+    <h2>Where a booking sits</h2>
+    <p class="sintro">Every consultation moves through the <strong>AI - Consultations Bookings</strong> pipeline. The first four stages happen automatically as the appointment approaches — you can watch a booking move along them. The last three record how it turned out.</p>
+
+    <div class="pipe-group">
+      <div class="pipe-label">Automatic · as the appointment approaches</div>
+      <div class="pipe-row">
+        <div class="stage"><span class="sst">1</span><div class="snm">Appointment Booked</div><div class="sds">The consult is on the calendar.</div></div>
+        <div class="stage"><span class="sst">2</span><div class="snm">Confirmation Sent</div><div class="sds">Confirmation email has gone out.</div></div>
+        <div class="stage"><span class="sst">3</span><div class="snm">24-Hour Reminder Sent</div><div class="sds">Day-before text and email sent.</div></div>
+        <div class="stage"><span class="sst">4</span><div class="snm">1-Hour Reminder Sent</div><div class="sds">Final text and email sent.</div></div>
+      </div>
+    </div>
+
+    <div class="pipe-group">
+      <div class="pipe-label">The outcome · after the appointment</div>
+      <div class="pipe-row outcomes">
+        <div class="stage ok"><span class="sst">&check;</span><div class="snm">Completed</div><div class="sds">The consultation took place.</div></div>
+        <div class="stage warn"><span class="sst">!</span><div class="snm">No-Show</div><div class="sds">The patient didn't attend.</div></div>
+        <div class="stage stop"><span class="sst">&times;</span><div class="snm">Cancelled</div><div class="sds">The booking was cancelled — reminders stopped.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="todo">
+  <div class="wrap">
+    <div class="snum">05</div>
+    <h2>What you'll see, and what to do</h2>
+    <p class="sintro">Most of the system runs quietly. These are the moments a task or note appears for you. Anything marked in amber needs you to act.</p>
+    <div class="tasks">
+
+      <div class="task">
+        <div class="flag">Heads-up · No action</div>
+        <h3>New consultation booked</h3>
+        <p>A notification tells Seteisha a consult was booked and when. The confirmation and reminders are already handled.</p>
+        <div class="doline"><b>What to do:</b> Nothing required — just be ready for the appointment. Reminders will reach the patient automatically.</div>
+      </div>
+
+      <div class="task act">
+        <div class="flag">Action needed</div>
+        <h3>Appointment cancelled — follow-up call</h3>
+        <p>When a patient cancels, reminders stop on their own and a task appears for Seteisha to reach out. This is a chance to win the booking back.</p>
+        <div class="doline"><b>What to do:</b> Call the patient, find out why they cancelled, and offer to rebook. The task is due the next business day.</div>
+      </div>
+
+      <div class="task">
+        <div class="flag">Heads-up · Usually no action</div>
+        <h3>Appointment rescheduled</h3>
+        <p>When a patient moves their appointment, the reminders automatically restart against the new time. A task notes the change for Seteisha.</p>
+        <div class="doline"><b>What to do:</b> Nothing required. Call the patient only if you'd like to confirm the new time personally.</div>
+      </div>
+
+      <div class="task act">
+        <div class="flag">Action needed</div>
+        <h3>Callback task from Grace, John, or Mary</h3>
+        <p>When the team can't reach a caller live, or a caller asks to be called back, a task is created with their name, number, and reason for calling.</p>
+        <div class="doline"><b>What to do:</b> Call back within 15 minutes during business hours. The reason for the call is saved in the contact's notes.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="reschedule">
+  <div class="wrap">
+    <div class="snum">06</div>
+    <h2>Moving an appointment yourself</h2>
+    <p class="sintro">If a patient calls and asks to move their consult, you can change it right on the Appointment Calendar. The key is <em>how</em> you change it — edit the existing appointment, don't delete it and start over.</p>
+    <div class="rules">
+      <div class="col do">
+        <h3>You can</h3>
+        <ul>
+          <li>Open the appointment on the calendar and change its time.</li>
+          <li>Move it to any open slot that works for the patient.</li>
+          <li>Trust that the reminders will follow the new time on their own.</li>
+          <li>Skip resending anything — no tags to touch, no manual texts.</li>
+        </ul>
+      </div>
+      <div class="col dont">
+        <h3>Please don't</h3>
+        <ul>
+          <li>Delete the appointment and create a brand-new one.</li>
+          <li>Deleting reads as a cancellation plus a separate new booking.</li>
+          <li>It wrongly marks the patient cancelled and creates a false follow-up task.</li>
+          <li>Send your own reminder for the new time — the system already will.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="callbox" style="margin-top:22px">
+      <div>
+        <div class="lb">When you edit the time, the patient automatically gets</div>
+        <div style="font-size:15px;color:#fff;margin-top:4px">A fresh confirmation for the new time, then reminders 24 hours and 1 hour before it.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tags">
+  <div class="wrap">
+    <div class="snum">07</div>
+    <h2>Tags you'll see on a contact</h2>
+    <p class="sintro">These labels appear on a patient's record and tell you how the booking came in and where it stands. You don't add or remove them — the system does — but knowing what they mean helps you read a record at a glance.</p>
+    <table class="tags">
+      <thead>
+        <tr><th>Tag</th><th>What it means</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>source_voice_ai</code></td><td>This booking was made by Grace over the phone.</td></tr>
+        <tr><td><code>source_online_booking</code></td><td>This booking came through the website link or was entered by hand.</td></tr>
+        <tr><td><code>appt_reminder_active</code></td><td>This patient is in a live reminder sequence. Reminders are scheduled to send.</td></tr>
+        <tr><td><code>appt_cancelled</code></td><td>This appointment was cancelled and reminders were stopped.</td></tr>
+        <tr><td><code>appt_rescheduled</code></td><td>This appointment was moved; reminders restarted against the new time.</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section id="rules">
+  <div class="wrap">
+    <div class="snum">08</div>
+    <h2>Quick rules</h2>
+    <p class="sintro">The short version to keep the system clean and the patients happy.</p>
+    <div class="rules">
+      <div class="col do">
+        <h3>Do</h3>
+        <ul>
+          <li>Trust the reminders — they send on their own for every booking.</li>
+          <li>Act on cancellation and callback tasks the same or next business day.</li>
+          <li>Read the contact's notes before calling — the reason is saved there.</li>
+          <li>Point patients to 1-808-435-7002 to reschedule or cancel.</li>
+        </ul>
+      </div>
+      <div class="col dont">
+        <h3>Don't</h3>
+        <ul>
+          <li>Send your own confirmation or reminder texts — patients would get doubles.</li>
+          <li>Turn the calendar's built-in reminders back on.</li>
+          <li>Manually add or remove the appointment tags.</li>
+          <li>Assume a rescheduled patient missed their reminders — they didn't.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>Hearing Benefit Services · Honolulu, HI · Staff reference</div>
+    <div>Questions about the system? Ask Rhett.</div>
+  </div>
+</footer>
+
+</body>
+</html>
