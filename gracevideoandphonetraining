@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Phone &amp; Video Consultations — Staff Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#10333A; --teal:#1C6E7D; --teal-soft:#E4EEEF;
+    --amber:#D9861F; --amber-soft:#FBEED8;
+    --ok:#2E7D5B; --ok-soft:#E3F0EA;
+    --violet:#5B5B9F; --violet-soft:#E9E9F5;
+    --paper:#F4F6F5; --card:#FFFFFF; --muted:#5C6B6E; --line:#DFE7E5;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+  body{font-family:"IBM Plex Sans",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+
+  header.site{background:var(--ink);color:#fff;padding:14px 0;position:sticky;top:0;z-index:50;border-bottom:3px solid var(--amber)}
+  header.site .wrap{display:flex;align-items:center;gap:14px}
+  header.site img{height:34px;width:auto;display:block;filter:brightness(0) invert(1);opacity:.95}
+  header.site .htxt{font-family:"Bricolage Grotesque",sans-serif;font-weight:600;font-size:15px}
+  header.site .htag{margin-left:auto;font-size:12px;color:#9FC2C6;letter-spacing:.5px;text-transform:uppercase}
+
+  .hero{padding:60px 0 40px}
+  .eyebrow{font-size:12.5px;letter-spacing:2px;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:16px}
+  .hero h1{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:clamp(32px,5.5vw,50px);line-height:1.03;letter-spacing:-.5px;max-width:18ch}
+  .hero p.lede{font-size:19px;color:var(--muted);margin-top:20px;max-width:60ch}
+
+  section{padding:50px 0;border-bottom:1px solid var(--line)}
+  .snum{font-family:"Bricolage Grotesque",sans-serif;font-size:13px;font-weight:600;color:var(--amber);letter-spacing:1px}
+  h2{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:clamp(24px,4vw,32px);letter-spacing:-.3px;margin:8px 0 6px}
+  .sintro{color:var(--muted);font-size:17px;max-width:64ch;margin-bottom:30px}
+
+  /* routing diagram */
+  .flow{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:34px 28px}
+  .node{display:block;margin:0 auto;text-align:center}
+  .caller{background:var(--ink);color:#fff;border-radius:12px;padding:12px 20px;font-size:14px;max-width:340px}
+  .caller .ph{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:16px}
+  .connector{width:2px;height:24px;background:var(--line);margin:0 auto}
+  .grace{background:var(--teal);color:#fff;border-radius:12px;padding:15px 22px;max-width:420px;text-align:center}
+  .grace .nm{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:20px}
+  .grace .sub{font-size:13px;opacity:.92;margin-top:3px}
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+  @media(max-width:600px){.split{grid-template-columns:1fr}}
+  .path{border:1px solid var(--line);border-radius:12px;padding:18px;text-align:center;background:var(--paper)}
+  .path.phone{border-top:4px solid var(--teal)}
+  .path.video{border-top:4px solid var(--violet)}
+  .path .who{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:16px}
+  .path .cal{font-size:12.5px;color:var(--muted);margin-top:2px}
+  .path .res{font-size:13px;color:var(--ink);margin-top:10px;background:var(--card);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+
+  /* comparison cards */
+  .compare{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+  @media(max-width:600px){.compare{grid-template-columns:1fr}}
+  .col{background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+  .col .top{padding:16px 22px;color:#fff}
+  .col.phone .top{background:var(--teal)}
+  .col.video .top{background:var(--violet)}
+  .col .top .t{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:20px}
+  .col .top .s{font-size:13px;opacity:.9}
+  .col ul{list-style:none;padding:18px 22px}
+  .col li{padding:8px 0 8px 22px;position:relative;font-size:14.5px;border-top:1px solid var(--line)}
+  .col li:first-child{border-top:none}
+  .col.phone li::before{content:"";position:absolute;left:0;top:15px;width:8px;height:8px;border-radius:50%;background:var(--teal)}
+  .col.video li::before{content:"";position:absolute;left:0;top:15px;width:8px;height:8px;border-radius:50%;background:var(--violet)}
+
+  /* steps / info cards */
+  .cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+  @media(max-width:600px){.cards{grid-template-columns:1fr}}
+  .infocard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 22px;border-left:4px solid var(--teal)}
+  .infocard.act{border-left-color:var(--amber);background:linear-gradient(0deg,var(--amber-soft),var(--card) 60%)}
+  .infocard h3{font-family:"Bricolage Grotesque",sans-serif;font-size:17px;margin-bottom:6px}
+  .infocard p{font-size:14px;color:var(--muted)}
+  .infocard .flag{font-size:11px;letter-spacing:1px;text-transform:uppercase;font-weight:700;color:var(--amber);margin-bottom:6px}
+
+  .callout{border-radius:12px;padding:18px 22px;margin-top:24px;font-size:14.5px}
+  .callout.ink{background:var(--ink);color:#CFE0E1}
+  .callout.ink b{color:#fff;font-family:"Bricolage Grotesque",sans-serif}
+
+  footer{padding:34px 0 60px;color:var(--muted);font-size:13px}
+  footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <img src="https://assets.cdn.filesafe.space/UDKdmJIdT4xB1V6Lye64/media/68f7cb4d3a4642fd12cdeaab.png" alt="Hearing Benefit Services">
+    <span class="htxt">Phone &amp; Video Consultations — Staff Guide</span>
+    <span class="htag">Team update</span>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="wrap">
+    <div class="eyebrow">New: two ways to meet</div>
+    <h1>Patients can now book a phone or a video consultation.</h1>
+    <p class="lede">Grace asks which the patient prefers and books them into the right calendar automatically — each with its own confirmation and reminders. Here's how it works and what it means for you.</p>
+  </div>
+</div>
+
+<!-- HOW GRACE DECIDES -->
+<section>
+  <div class="wrap">
+    <div class="snum">01</div>
+    <h2>How Grace decides phone vs video</h2>
+    <p class="sintro">On the call, Grace listens for how the patient wants to meet. If they don't say, she gently asks — and defaults to a phone call when it's unclear, since that suits most of our patients.</p>
+    <div class="flow">
+      <div class="node caller"><div>A caller reaches Grace</div><div class="ph">and wants to book a consultation</div></div>
+      <div class="connector"></div>
+      <div class="node grace"><div class="nm">Grace asks: phone or video?</div><div class="sub">books into the matching calendar automatically</div></div>
+      <div class="split">
+        <div class="path phone">
+          <div class="who">📞 Phone consultation</div>
+          <div class="cal">Appointment Calendar</div>
+          <div class="res">A specialist calls the patient at the scheduled time.</div>
+        </div>
+        <div class="path video">
+          <div class="who">💻 Video consultation</div>
+          <div class="cal">Video Appointments</div>
+          <div class="res">The patient gets a Google Meet link to join online.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SIDE BY SIDE -->
+<section>
+  <div class="wrap">
+    <div class="snum">02</div>
+    <h2>What the patient gets, either way</h2>
+    <p class="sintro">Both types run through the same automatic confirmation and reminder system — the only difference is how the patient attends. Nobody on the team has to send any of this.</p>
+    <div class="compare">
+      <div class="col phone">
+        <div class="top"><div class="t">📞 Phone</div><div class="s">Appointment Calendar</div></div>
+        <ul>
+          <li>Confirmation email — "your phone consultation is confirmed"</li>
+          <li>Reminder 24 hours before (text + email)</li>
+          <li>Reminder 1 hour before (text + email)</li>
+          <li>Every message says a specialist will call them</li>
+        </ul>
+      </div>
+      <div class="col video">
+        <div class="top"><div class="t">💻 Video</div><div class="s">Video Appointments</div></div>
+        <ul>
+          <li>Confirmation email — "your video consultation is confirmed"</li>
+          <li>Reminder 24 hours before (text + email)</li>
+          <li>Reminder 1 hour before (text + email)</li>
+          <li>Every message includes the Google Meet join link</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT THE TEAM DOES -->
+<section>
+  <div class="wrap">
+    <div class="snum">03</div>
+    <h2>What this means for you</h2>
+    <p class="sintro">Most of it is automatic. There's one setup step for anyone taking video calls, and one habit for checking your schedule.</p>
+    <div class="cards">
+      <div class="infocard">
+        <h3>You'll see both in one calendar view</h3>
+        <p>Phone and video bookings both appear in your GHL calendar — just toggle both calendars on. No need to check them separately.</p>
+      </div>
+      <div class="infocard">
+        <h3>Video links are created for you</h3>
+        <p>When a video consult is booked, a Google Meet link is generated automatically and attached to the appointment. You'll see a "Join Meeting" button on it.</p>
+      </div>
+      <div class="infocard act">
+        <div class="flag">Action needed</div>
+        <h3>Connect your Google calendar</h3>
+        <p>To take video calls, connect your Google calendar in GHL under Settings → My Profile → Video Conferencing. Without it, your video bookings won't generate a join link.</p>
+      </div>
+      <div class="infocard">
+        <h3>Cancellations &amp; reschedules — handled</h3>
+        <p>If a patient cancels or moves a video appointment, reminders stop or shift to the new time automatically, and you're notified — same as phone.</p>
+      </div>
+    </div>
+    <div class="callout ink"><b>The short version.</b>&nbsp; Grace decides phone or video based on what the patient wants, books the right calendar, and the system sends the right confirmation and reminders — with a Meet link for video. You just show up to the appointment, by phone or on screen.</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>Hearing Benefit Services · Honolulu, HI · Staff reference</div>
+    <div>Questions about the system? Ask Rhett.</div>
+  </div>
+</footer>
+
+</body>
+</html>
