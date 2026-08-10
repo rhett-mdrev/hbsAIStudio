@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HBS — Inbound Call Dispositions Training</title>
+<style>
+  :root {
+    --navy: #0f2942;
+    --teal: #1a7a8a;
+    --light-bg: #f6f8fa;
+    --automated-blue: #2563eb;
+    --automated-bg: #eaf1ff;
+    --manual-orange: #c2622a;
+    --manual-bg: #fdf0e6;
+    --gray-text: #555;
+    --border: #e0e4e8;
+    --dev-purple: #7c3aed;
+    --dev-bg: #f3ecff;
+  }
+  * { box-sizing: border-box; }
+  body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; background: var(--light-bg); color: #222; line-height: 1.55; }
+  .header { background: linear-gradient(135deg, var(--navy), #143a5c); color: white; padding: 40px 24px 32px; text-align: center; }
+  .header h1 { margin: 0 0 8px; font-size: 28px; letter-spacing: 0.3px; }
+  .header p { margin: 0; color: #c8d6e5; font-size: 15px; }
+  .container { max-width: 980px; margin: 0 auto; padding: 28px 20px 60px; }
+  .card { background: white; border: 1px solid var(--border); border-radius: 10px; padding: 24px 26px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .card h2 { color: var(--navy); font-size: 21px; margin-top: 0; border-bottom: 2px solid var(--border); padding-bottom: 10px; }
+  .card h3 { color: var(--teal); font-size: 17px; margin-top: 22px; }
+  .legend { display: flex; gap: 16px; flex-wrap: wrap; margin: 14px 0; }
+  .legend-item { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; }
+  .dot { width: 12px; height: 12px; border-radius: 50%; display: inline-block; }
+  .dot-auto { background: var(--automated-blue); }
+  .dot-manual { background: var(--manual-orange); }
+  .dot-dev { background: var(--dev-purple); }
+  .disposition-block { border: 1px solid var(--border); border-radius: 8px; margin: 14px 0; overflow: hidden; }
+  .disposition-head { background: var(--navy); color: white; padding: 12px 16px; font-size: 16px; font-weight: 600; display: flex; align-items: center; justify-content: space-between; }
+  .disposition-head .tagname { font-size: 12px; font-weight: 500; background: rgba(255,255,255,0.15); padding: 3px 10px; border-radius: 4px; font-family: monospace; }
+  .disposition-body { padding: 16px; }
+  .disposition-body .when { font-size: 14px; margin: 0 0 12px; }
+  .disposition-body .when strong { color: var(--navy); }
+  .action-row { display: flex; gap: 10px; align-items: flex-start; padding: 8px 0; border-top: 1px solid #eef1f4; font-size: 13.5px; }
+  .action-row:first-of-type { border-top: none; }
+  .action-badge { flex-shrink: 0; font-size: 10px; font-weight: 700; text-transform: uppercase; padding: 3px 8px; border-radius: 4px; color: white; white-space: nowrap; margin-top: 1px; }
+  .badge-auto { background: var(--automated-blue); }
+  .badge-manual { background: var(--manual-orange); }
+  .badge-dev { background: var(--dev-purple); }
+  .callout { background: #fff8e6; border: 1px solid #e8cf8a; border-radius: 8px; padding: 14px 18px; margin: 16px 0; font-size: 14px; }
+  .callout strong { color: #8a6816; }
+  .dev-callout { background: var(--dev-bg); border: 1px solid #c4b5fd; border-left: 4px solid var(--dev-purple); border-radius: 8px; padding: 14px 18px; margin: 12px 0; font-size: 13.5px; }
+  .dev-callout strong { color: #5b21b6; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: 14px; }
+  th, td { border: 1px solid var(--border); padding: 9px 12px; text-align: left; vertical-align: top; }
+  th { background: var(--navy); color: white; font-weight: 600; font-size: 13px; }
+  tr:nth-child(even) td { background: #fafbfc; }
+  .tree { margin: 16px 0; }
+  .tree-node { background: #fafbfc; border: 1px solid var(--border); border-radius: 8px; padding: 12px 16px; margin: 8px 0; font-size: 14px; }
+  .tree-node.q { background: #eaf1ff; border-color: #93b4f5; font-weight: 600; color: var(--navy); }
+  .tree-node.a { margin-left: 24px; }
+  .tree-node .arrow { color: var(--teal); font-weight: 700; }
+  code { background: #f0f3f6; padding: 1px 6px; border-radius: 4px; font-size: 13px; }
+  .footer-note { text-align: center; color: #999; font-size: 12.5px; margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--border); }
+  @media (max-width: 600px) { .header h1 { font-size: 22px; } .card { padding: 18px; } }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>Inbound Call Dispositions — Training Guide</h1>
+  <p>Hearing Benefit Services · For the Hearing Professional answering incoming calls</p>
+</div>
+
+<div class="container">
+
+  <div class="card">
+    <h2>How Inbound Dispositions Work</h2>
+    <p>When you answer an incoming call, the caller already has a reason for reaching out. After the call ends, you pick a <strong>disposition</strong> that captures <em>why they called</em>. That single choice automatically records the call, tags the contact, moves them in the pipeline, and — where needed — creates a follow-up task for you.</p>
+    <p>Most inbound outcomes route to the <strong>Hearing Professional</strong> to decide next steps, because incoming calls need a human judgment that automation can't make. Your job is to pick the right disposition every time, then act on any task or tag it creates.</p>
+
+    <div class="legend">
+      <div class="legend-item"><span class="dot dot-auto"></span> AUTOMATED — GHL handles this</div>
+      <div class="legend-item"><span class="dot dot-manual"></span> MANUAL — Hearing Professional does this</div>
+      <div class="legend-item"><span class="dot dot-dev"></span> IN DEVELOPMENT — coming soon</div>
+    </div>
+
+    <div class="callout">
+      <strong>The golden rule:</strong> always pick a disposition after every call — never leave it blank. The disposition is what tags the contact and records the call. If you skip it, nothing is logged and the contact isn't tracked.
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>The 10 Inbound Dispositions</h2>
+
+    <!-- 1 -->
+    <div class="disposition-block">
+      <div class="disposition-head"><span>1. New Sales Inquiry</span><span class="tagname">inbound_sales</span></div>
+      <div class="disposition-body">
+        <p class="when"><strong>When to pick it:</strong> A new prospect calls interested in buying hearing aids or learning about options.</p>
+        <div class="action-row"><span class="action-badge badge-auto">Auto</span><span>Contact tagged <code>inbound_sales</code>, call logged with a note, moved to "Sales Inquiry — Routed."</span></div>
+        <div class="action-row"><span class="action-badge badge-manual">Manual</span><span>You decide what happens next with this call — qualify them, quote, or book a consult. The tag simply flags them as an inbound sales lead so nothing is lost.</span></div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="disposition-block">
+      <div class="disposition-head"><span>2. Existing Customer — Support</span><span class="tagname">inbound_support</span></div>
+      <div class="disposition-body">
+        <p class="when"><strong>When to pick it:</strong> An existing customer calls needing general help — fitting questions, how-to, device settings, anything that isn't a physical repair.</p>
+        <div class="action-row"><span class="action-badge badge-auto">Auto</span><span>Contact tagged <code>inbound_support</code>, note logged, moved to "Support / Repair — Routed," and a task is created for you.</span></div>
+        <div class="action-row"><span class="action-badge badge-manual">Manual</span><span>You own this — handle the support request or follow up via the task.</span></div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="disposition-block">
+      <div class="disposition-head"><span>3. Repair Request</span><span class="tagname">inbound_repair</span></div>
+      <div class="disposition-body">
+        <p class="when"><strong>When to pick it:</strong> A customer's device needs a physical repair.</p>
+        <div class="action-row"><span class="action-badge badge-auto">Auto</span><span>Contact tagged <code>inbound_repair</code>, note logged, moved to "Support / Repair — Routed," and a task is created for you.</span></div>
+        <div class="action-row"><span class="action-badge badge-manual">Manual</span><span>You'll select the appropriate repair workflow to start the repair process. Check the device serial numbers and warranty status on the contact record first.</span></div>
+        <div class="dev-callout"><strong>In development:</strong> The dedicated repair workflow is still being built. For now, handle repairs through your existing process and use the task as your reminder.</div>
+      </div>
+    </div>
+
+    <!-- 4 -->
+    <div class="disposition-block">
+      <div class="disposition-head"><span>4. Warranty / Insurance Question</span><span class="tagname">inbound_warranty</span></div>
+      <div class="disposition-body">
+        <p class="when"><strong>When to pick it:</strong> The caller asks about warranty coverage, warranty status, or insurance benefits.</p>
+        <div class="action-row"><span class="action-badge badge-auto">Auto</span><span>Contact tagged <code>inbound_warranty</code>, note logged, moved to "Warranty / Insurance — Routed," and a task is created for you.</span></div>
+        <div class="action-row"><span class="action-badge badge-manual">Manual</span><span>Verify warranty status in the Signia portal, then follow the decision tree below to tag them correctly.</span></div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="disposition-block">
+      <div class="disposition-head"><span>5. Order Status</span><span class="tagname">inbound_order_status</span></div>
+      <div class="disposition-body">
+        <p class="when"><strong>When to pick it:</strong> A customer asks "where's my hearing aid?" or checks on an order in progress.</p>
+        <div class="action-row"><span class="action-badge badge-auto">Auto</span><span>Contact tagged <code>inbound_order_status</code>, note logged, moved to "Order Status — Routed," and a task is created for you.</span></div>
+        <div class="action-row"><span class="action-badge badge-manual">Manual</span><span>Check fulfillment/shipping status and update the customer.</span></div>
+        <div class="dev-callout"><strong>Being decided:</strong> A reminder/escalation workflow for order-status requests is under consideration (so a "where's my order?" request never gets dropped). Two options on the table: a simple task, or a task plus a 1-business-day escalation reminder if it's not resolved. Final approach to be confirmed.</div>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="disposition-block">
+      <div class="disposition-head"><span>6. Appointment (Book / Reschedule / Cancel)</span><span class="tagname">inbound_appointment</span></div>
+      <div class="disposition-body">
+        <p class="when"><strong>When to pick it:</strong> The call is about scheduling — booking a new consult, rescheduling, or cancelling.</p>
+        <div class="action-row"><span class="action-badge badge-auto">Auto</span><span>Contact tagged <code>inbound_appointment</code> and note logged — this records that an appointment matter was handled.</span></div>
+        <div class="action-row"><span class="action-badge badge-manual">Manual</span><span>Handle the actual booking/reschedule/cancel live in the calendar during the call. Then <strong>manually add the matching sub-tag</strong> so the right confirmation and reminder automation fires:</span></div>
+        <table>
+          <tr><th>What happened</th><th>Add this tag</th></tr>
+          <tr><td>Booked a new appointment</td><td><code>appt_booked</code></td></tr>
+          <tr><td>Rescheduled an existing one</td><td><code>appt_rescheduled</code></td></tr>
+          <tr><td>Cancelled an appointment</td><td><code>appt_cancelled</code></td></tr>
+        </table>
+        <div class="dev-callout"><strong>In development:</strong> These sub-tags will trigger automatic confirmation and reminder workflows so you don't have to send confirmations or remember to remind customers manually. The exact tag names and triggers are being aligned with the existing Voice AI appointment automation to avoid duplicate reminders — until that's confirmed, treat the tags as records only.</div>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="disposition-block">
+      <div class="disposition-head"><span>7. Billing / Payment</span><span class="tagname">inbound_billing</span></div>
+      <div class="disposition-body">
+        <p class="when"><strong>When to pick it:</strong> The caller asks about payments, financing (Cherry, Klarna, CareCredit), or billing.</p>
+        <div class="action-row"><span class="action-badge badge-auto">Auto</span><span>Contact tagged <code>inbound_billing</code>, note logged, moved to "Billing / Financing — Routed." Recorded for your records.</span></div>
+        <div class="action-row"><span class="action-badge badge-manual">Manual</span><span>You handle the billing/financing question. The tag and note record that it was handled.</span></div>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="disposition-block">
+      <div class="disposition-head"><span>8. Spanish</span><span class="tagname">spanish_request</span></div>
+      <div class="disposition-body">
+        <p class="when"><strong>When to pick it:</strong> The caller is a Spanish speaker who needs to be served in Spanish.</p>
+        <div class="action-row"><span class="action-badge badge-auto">Auto</span><span>Contact tagged <code>spanish_request</code> and note logged, so we have a record of Spanish-language demand.</span></div>
+        <div class="dev-callout"><strong>In development:</strong> A Spanish-language Voice AI is being built to handle these calls. Until it's live, tag the contact and handle the call as best you can, or take a message for a Spanish-speaking follow-up.</div>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="disposition-block">
+      <div class="disposition-head"><span>9. Not Relevant / Spam</span><span class="tagname">inbound_spam</span></div>
+      <div class="disposition-body">
+        <p class="when"><strong>When to pick it:</strong> Wrong number, solicitation, robocall, or anything not a genuine HBS inquiry.</p>
+        <div class="action-row"><span class="action-badge badge-auto">Auto</span><span>Contact tagged <code>inbound_spam</code> and note logged. No task — this is a closed outcome.</span></div>
+        <div class="dev-callout"><strong>Planned:</strong> An option to automatically block repeat spam callers is being planned.</div>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="disposition-block">
+      <div class="disposition-head"><span>10. No Answer / Voicemail Left</span><span class="tagname">inbound_callback</span></div>
+      <div class="disposition-body">
+        <p class="when"><strong>When to pick it:</strong> You are <strong>returning a call</strong> to someone who recently phoned in (a warm lead), and they don't pick up — either it rang out (No Answer) or you left a message (Voicemail Left).</p>
+        <div class="action-row"><span class="action-badge badge-auto">Auto</span><span>Contact tagged <code>inbound_callback</code>, note logged, and a warm callback follow-up is triggered — with softer messaging that does NOT treat them like a cold call.</span></div>
+        <div class="action-row"><span class="action-badge badge-manual">Manual</span><span>Nothing extra needed — the callback follow-up handles the next touch. Just work any callback task it creates.</span></div>
+        <div class="callout" style="margin-top:12px;"><strong>Important — this is different from a cold call:</strong> these two dispositions (No Answer / Voicemail Left) are shared with the cold-call system. What makes this the <em>inbound</em> version is that the contact is a warm lead who called YOU first. Because they're tagged as an inbound/warm contact, they get the gentle callback flow — not the cold-call "sorry we missed you" recall sequence.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- WARRANTY DECISION TREE -->
+  <div class="card">
+    <h2>Warranty / Insurance — Decision Tree</h2>
+    <p>When you pick the <strong>Warranty / Insurance Question</strong> disposition, use this to decide how to handle and tag the caller after checking their status in the Signia portal:</p>
+
+    <div class="tree">
+      <div class="tree-node q">Step 1 — Look up the customer's warranty status in the Signia portal.</div>
+      <div class="tree-node q">Step 2 — Is the device still under warranty?</div>
+      <div class="tree-node a"><span class="arrow">→ YES, in warranty:</span> Explain their coverage and handle the request (repair under warranty, etc.). Follow the repair path if a repair is needed.</div>
+      <div class="tree-node a"><span class="arrow">→ NO, out of warranty:</span> This customer is a candidate for the existing <strong>Out-of-Warranty (OOW) Campaign</strong>. Apply the OOW campaign entry tag so they enter that nurture sequence, and explain their options (upgrade, out-of-warranty repair, etc.).</div>
+      <div class="tree-node q">Step 3 — Insurance question? Explain HBS benefit-check support and route to the appropriate follow-up.</div>
+    </div>
+
+    <div class="callout">
+      <strong>Reference:</strong> The Out-of-Warranty Campaign has its own training and automation. See the OOW campaign training for the full flow and the correct entry tag: <br><code>training.hearingbenefitservices.com/oowcampaign</code>
+    </div>
+  </div>
+
+  <!-- SEPARATE HANDLER -->
+  <div class="card">
+    <h2>Missed Inbound Calls — Handled Automatically (No Disposition Needed)</h2>
+    <p>When someone calls HBS and <em>nobody answers</em>, there's no live call to disposition — so no picker appears, and there's nothing for you to select. This is a different situation from disposition #10 (which is for when YOU call someone back and they don't answer). Missed inbound calls are handled entirely by automation:</p>
+    <div class="action-row"><span class="action-badge badge-auto">Auto</span><span>A missed inbound call automatically sends the caller a text-back message and creates a callback task, so no missed call goes unnoticed.</span></div>
+    <div class="dev-callout"><strong>Note:</strong> This missed-call handling is event-triggered automation — you don't need to do anything to start it. Just work the callback tasks it creates.</div>
+  </div>
+
+  <!-- HP CHECKLIST -->
+  <div class="card">
+    <h2>Hearing Professional — What You Actually Need to Do</h2>
+    <table>
+      <tr><th>Step</th><th>What to do</th></tr>
+      <tr><td>1</td><td>Answer the call and help the caller.</td></tr>
+      <tr><td>2</td><td>When the call ends, <strong>pick the disposition</strong> that matches why they called.</td></tr>
+      <tr><td>3</td><td>For appointments: handle the calendar action live, then <strong>manually add</strong> the <code>appt_booked</code> / <code>appt_rescheduled</code> / <code>appt_cancelled</code> sub-tag.</td></tr>
+      <tr><td>4</td><td>For warranty/insurance: check the Signia portal and follow the decision tree.</td></tr>
+      <tr><td>5</td><td>Add your own note with the conversation details — the automatic note only records what the system did, not what was said.</td></tr>
+      <tr><td>6</td><td>Check your tasks daily — that's where support, repair, order, warranty, and billing follow-ups appear.</td></tr>
+    </table>
+  </div>
+
+  <!-- TAG REFERENCE -->
+  <div class="card">
+    <h2>Inbound Tags Reference</h2>
+    <table>
+      <tr><th>Tag</th><th>Meaning</th></tr>
+      <tr><td><code>inbound_sales</code></td><td>New sales inquiry came in by phone</td></tr>
+      <tr><td><code>inbound_support</code></td><td>Existing customer support request</td></tr>
+      <tr><td><code>inbound_repair</code></td><td>Device repair request</td></tr>
+      <tr><td><code>inbound_warranty</code></td><td>Warranty or insurance question</td></tr>
+      <tr><td><code>inbound_order_status</code></td><td>Order/fulfillment status inquiry</td></tr>
+      <tr><td><code>inbound_appointment</code></td><td>Appointment matter handled on the call</td></tr>
+      <tr><td><code>appt_booked</code> / <code>appt_rescheduled</code> / <code>appt_cancelled</code></td><td>Manually added appointment sub-tags (trigger confirmations/reminders — in development)</td></tr>
+      <tr><td><code>inbound_billing</code></td><td>Billing or financing question</td></tr>
+      <tr><td><code>spanish_request</code></td><td>Spanish-language caller</td></tr>
+      <tr><td><code>inbound_spam</code></td><td>Wrong number, solicitation, or spam</td></tr>
+      <tr><td><code>inbound_callback</code></td><td>Return call to a warm inbound lead went unanswered — triggers gentle callback follow-up</td></tr>
+    </table>
+  </div>
+
+  <div class="footer-note">
+    Hearing Benefit Services · hearingbenefitservices.com · Honolulu, HI<br>
+    Inbound Call Dispositions Training — for internal use · Some features noted as "in development"
+  </div>
+
+</div>
+
+</body>
+</html>
