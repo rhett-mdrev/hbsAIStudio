@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>Inbound Call Management | Hearing Benefit Services</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #f0f4f8; color: #1a202c; line-height: 1.7; }
+
+    header { background: linear-gradient(135deg, #0a3d62 0%, #1e6fa8 100%); color: #fff; padding: 48px 24px; text-align: center; }
+    header h1 { font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: 700; }
+    header p { margin-top: 10px; font-size: 1.05rem; opacity: .88; }
+
+    nav.sticky { position: sticky; top: 0; z-index: 100; background: #0a3d62; padding: 0 16px; overflow-x: auto; white-space: nowrap; box-shadow: 0 2px 8px rgba(0,0,0,.3); }
+    nav.sticky a { display: inline-block; color: #bee3f8; text-decoration: none; padding: 14px 18px; font-size: .88rem; font-weight: 500; transition: color .2s, background .2s; }
+    nav.sticky a:hover { color: #fff; background: rgba(255,255,255,.1); }
+
+    .container { max-width: 960px; margin: 0 auto; padding: 40px 20px 80px; }
+
+    section { background: #fff; border-radius: 14px; padding: 36px 32px; margin-bottom: 32px; box-shadow: 0 2px 12px rgba(0,0,0,.07); }
+    section h2 { font-size: 1.35rem; font-weight: 700; color: #0a3d62; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #bee3f8; }
+    section h3 { font-size: 1.05rem; font-weight: 700; color: #1e6fa8; margin: 22px 0 8px; }
+    section p { margin-bottom: 12px; color: #2d3748; }
+    section ul, section ol { padding-left: 20px; margin-bottom: 12px; }
+    section li { margin-bottom: 6px; color: #2d3748; }
+
+    .action-table { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: .92rem; }
+    .action-table th { background: #0a3d62; color: #fff; padding: 10px 14px; text-align: left; }
+    .action-table td { padding: 10px 14px; border-bottom: 1px solid #e2e8f0; vertical-align: top; }
+    .action-table tr:nth-child(even) td { background: #f7fafc; }
+
+    .chip { display: inline-block; padding: 3px 12px; border-radius: 12px; font-size: .78rem; font-weight: 700; margin: 2px; }
+    .chip-blue { background: #ebf8ff; color: #1e6fa8; }
+    .chip-green { background: #f0fff4; color: #276749; }
+    .chip-yellow { background: #fffff0; color: #744210; }
+    .chip-red { background: #fff5f5; color: #c53030; }
+    .chip-gray { background: #f7fafc; color: #4a5568; }
+
+    .info-box, .warn-box, .success-box { border-radius: 10px; padding: 16px 20px; margin: 16px 0; font-size: .93rem; }
+    .info-box { background: #ebf8ff; border-left: 4px solid #1e6fa8; color: #1a365d; }
+    .warn-box { background: #fffbeb; border-left: 4px solid #d69e2e; color: #744210; }
+    .success-box { background: #f0fff4; border-left: 4px solid #38a169; color: #22543d; }
+
+    .step-row { display: flex; align-items: flex-start; padding: 10px 0; border-bottom: 0.5px solid #f0f4f8; }
+    .step-row:last-child { border-bottom: none; }
+    .step-num { display: inline-flex; align-items: center; justify-content: center; width: 28px; height: 28px; background: #1e6fa8; color: #fff; border-radius: 50%; font-size: .82rem; font-weight: 700; margin-right: 10px; flex-shrink: 0; }
+    .step-row p { margin: 0; color: #2d3748; font-size: 0.97rem; }
+
+    code { background: #fef08a; color: #1a202c; font-family: 'Courier New', monospace; font-size: .88rem; font-weight: 700; padding: 2px 8px; border-radius: 4px; border: 1px solid #fde047; }
+
+    .checklist { list-style: none; padding: 0; }
+    .checklist li { padding: 8px 0 8px 32px; position: relative; border-bottom: 1px solid #f0f4f8; color: #2d3748; }
+    .checklist li::before { content: '☐'; position: absolute; left: 0; font-size: 1.1rem; color: #1e6fa8; }
+
+    .keyword-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+    .keyword { background: #f0fff4; color: #276749; border: 1px solid #c6f6d5; border-radius: 20px; padding: 4px 14px; font-size: .88rem; font-weight: 500; }
+
+    footer { text-align: center; padding: 32px 16px; font-size: .82rem; color: #718096; }
+
+    @media (max-width: 600px) { section { padding: 24px 18px; } }
+  </style>
+</head>
+<body>
+
+<div id="main-content">
+
+  <header>
+    <h1>📞 Inbound Call Management — Staff Training Guide</h1>
+    <p>Everything the Hearing Professional needs to know about handling inbound calls from start to finish.</p>
+  </header>
+
+  <nav class="sticky">
+    <a href="#overview">Overview</a>
+    <a href="#dispositions">The 10 Dispositions</a>
+    <a href="#pipeline">Pipeline Stages</a>
+    <a href="#what-happens">What Happens Automatically</a>
+    <a href="#how-to">How to Log a Call</a>
+    <a href="#checklist">Daily Checklist</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- OVERVIEW -->
+    <section id="overview">
+      <h2>📋 Overview — Inbound Is Now the Focus</h2>
+      <p>Inbound calls are now the <strong>primary activity</strong> for Hearing Benefit Services. Every incoming call is logged with a <strong>disposition</strong> — a code that tells the system what the call was about and what to do next.</p>
+      <div class="warn-box">
+        ⚠️ <strong>This is not a sales script.</strong> Your job is to answer the call, help the caller, and pick the correct disposition so the system routes the call correctly. The system does the rest automatically.
+      </div>
+      <p>When you log a disposition on a call, the system automatically:</p>
+      <ul>
+        <li>Moves the caller's record to the correct stage in the <strong>Call Management</strong> pipeline</li>
+        <li>Adds a note to the record (the record of that call)</li>
+        <li>Applies a tag to the contact for future tracking</li>
+      </ul>
+      <p>Your only job is to <strong>pick the right disposition</strong>. Everything else happens on its own.</p>
+    </section>
+
+    <!-- THE 10 DISPOSITIONS -->
+    <section id="dispositions">
+      <h2>🎯 The 10 Inbound Dispositions</h2>
+      <p>When an inbound call ends, choose the disposition that best describes the call. There are <strong>10</strong> to choose from:</p>
+      <table class="action-table">
+        <thead><tr><th>Disposition</th><th>What It Means</th><th>What the System Does</th></tr></thead>
+        <tbody>
+          <tr><td><span class="chip chip-blue">New Sales Inquiry</span></td><td>A new or potential customer asking about hearing aids, pricing, or services</td><td>Moves to Sales Inquiry — Routed, tags <code>inbound_sales</code></td></tr>
+          <tr><td><span class="chip chip-blue">Existing Customer — Support</span></td><td>An existing customer needs help with their hearing aids</td><td>Moves to Support / Repair — Routed, tags <code>inbound_support</code></td></tr>
+          <tr><td><span class="chip chip-blue">Repair Request</span></td><td>Customer needs a repair on their hearing aids</td><td>Moves to Support / Repair — Routed, tags <code>inbound_repair</code></td></tr>
+          <tr><td><span class="chip chip-blue">Warranty / Insurance</span></td><td>Customer asking about warranty or insurance coverage</td><td>Moves to Warranty / Insurance — Routed, tags <code>inbound_warranty</code></td></tr>
+          <tr><td><span class="chip chip-blue">Order Status</span></td><td>Customer asking about a pending order or shipping</td><td>Moves to Order Status — Routed, tags <code>inbound_order_status</code></td></tr>
+          <tr><td><span class="chip chip-green">Appointment</span></td><td>Caller wants to book, reschedule, or confirm an appointment</td><td>Moves to Appointment Handled, tags <code>inbound_appointment</code></td></tr>
+          <tr><td><span class="chip chip-blue">Billing / Payment</span></td><td>Customer asking about a bill, payment, or financing</td><td>Moves to Billing / Financing — Routed, tags <code>inbound_billing</code></td></tr>
+          <tr><td><span class="chip chip-yellow">Spanish</span></td><td>Caller prefers to communicate in Spanish</td><td>Moves to Spanish — Routed, tags <code>spanish_request</code></td></tr>
+          <tr><td><span class="chip chip-red">Not Relevant / Spam</span></td><td>Sales call, wrong number, or spam — not a real customer</td><td>Moves to Not Relevant / Spam, tags <code>inbound_spam</code></td></tr>
+          <tr><td><span class="chip chip-gray">No Answer / Voicemail Left</span></td><td>You called someone back and they did not answer</td><td>Moves to Missed — Callback Needed, tags <code>inbound_callback</code></td></tr>
+        </tbody>
+      </table>
+
+      <div class="info-box">
+        💡 <strong>Not sure which to pick?</strong> Ask yourself: <em>"Why is this person calling?"</em> The answer maps to one of the 10 dispositions above.
+      </div>
+
+      <h3>Two Dispositions to Watch</h3>
+      <div class="warn-box">
+        ⚠️ <strong>Not Relevant / Spam</strong> — this is terminal. No follow-up happens. Use it only for genuine spam, sales calls, or wrong numbers — <strong>not</strong> for a customer you simply couldn't help.
+      </div>
+      <div class="warn-box">
+        ⚠️ <strong>No Answer / Voicemail Left</strong> — this is <strong>only</strong> for when <em>you</em> call someone back and <em>they</em> don't answer. It is <strong>not</strong> for an inbound call that went unanswered (that is handled separately).
+      </div>
+    </section>
+
+    <!-- PIPELINE STAGES -->
+    <section id="pipeline">
+      <h2>📊 The Call Management Pipeline</h2>
+      <p>Every inbound call is tracked in the <strong>Call Management</strong> pipeline. Each disposition moves the caller to a specific stage:</p>
+      <table class="action-table">
+        <thead><tr><th>Stage</th><th>What It Means</th></tr></thead>
+        <tbody>
+          <tr><td><span class="chip chip-gray">New Inbound Call</span></td><td>Every inbound call lands here first (triage entry)</td></tr>
+          <tr><td><span class="chip chip-blue">Sales Inquiry — Routed</span></td><td>New sales inquiry</td></tr>
+          <tr><td><span class="chip chip-blue">Support / Repair — Routed</span></td><td>Existing customer support or repair request</td></tr>
+          <tr><td><span class="chip chip-blue">Warranty / Insurance — Routed</span></td><td>Warranty or insurance question</td></tr>
+          <tr><td><span class="chip chip-blue">Order Status — Routed</span></td><td>Order or shipping question</td></tr>
+          <tr><td><span class="chip chip-green">Appointment Handled</span></td><td>Appointment booked, rescheduled, or confirmed</td></tr>
+          <tr><td><span class="chip chip-blue">Billing / Financing — Routed</span></td><td>Billing, payment, or financing question</td></tr>
+          <tr><td><span class="chip chip-yellow">Spanish — Routed</span></td><td>Caller prefers Spanish</td></tr>
+          <tr><td><span class="chip chip-gray">Resolved — No Further Action</span></td><td>Call fully handled — no follow-up needed</td></tr>
+          <tr><td><span class="chip chip-red">Missed — Callback Needed</span></td><td>Callback is needed</td></tr>
+          <tr><td><span class="chip chip-red">Not Relevant / Spam</span></td><td>Spam, sales call, or wrong number</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- WHAT HAPPENS AUTOMATICALLY -->
+    <section id="what-happens">
+      <h2>⚙️ What Happens Automatically</h2>
+      <p>Each disposition triggers an automated workflow. You don't build these — they run on their own. Here's what happens when you log each disposition:</p>
+      <table class="action-table">
+        <thead><tr><th>Disposition</th><th>Automatic Actions</th></tr></thead>
+        <tbody>
+          <tr><td><span class="chip chip-blue">New Sales Inquiry</span></td><td>Move to Sales Inquiry → add note → tag <code>inbound_sales</code></td></tr>
+          <tr><td><span class="chip chip-blue">Existing Customer — Support</span></td><td>Move to Support / Repair → add note → tag <code>inbound_support</code></td></tr>
+          <tr><td><span class="chip chip-blue">Repair Request</span></td><td>Move to Support / Repair → add note → tag <code>inbound_repair</code></td></tr>
+          <tr><td><span class="chip chip-blue">Warranty / Insurance</span></td><td>Move to Warranty / Insurance → add note → tag <code>inbound_warranty</code></td></tr>
+          <tr><td><span class="chip chip-blue">Order Status</span></td><td>Move to Order Status → add note → tag <code>inbound_order_status</code></td></tr>
+          <tr><td><span class="chip chip-green">Appointment</span></td><td>Move to Appointment Handled → add note → tag <code>inbound_appointment</code></td></tr>
+          <tr><td><span class="chip chip-blue">Billing / Payment</span></td><td>Move to Billing / Financing → add note → tag <code>inbound_billing</code></td></tr>
+          <tr><td><span class="chip chip-yellow">Spanish</span></td><td>Move to Spanish — Routed → add note → tag <code>spanish_request</code></td></tr>
+          <tr><td><span class="chip chip-red">Not Relevant / Spam</span></td><td>Move to Not Relevant / Spam → add note → tag <code>inbound_spam</code></td></tr>
+          <tr><td><span class="chip chip-gray">No Answer / Voicemail Left</span></td><td>Move to Missed — Callback Needed → add note → tag <code>inbound_callback</code></td></tr>
+        </tbody>
+      </table>
+      <div class="success-box">
+        ✅ <strong>One call = one note.</strong> Every call gets exactly one note on the record — that note is the record of the call. No extra reminders, no duplicate notes.
+      </div>
+    </section>
+
+    <!-- HOW TO LOG A CALL -->
+    <section id="how-to">
+      <h2>📞 How to Log an Inbound Call</h2>
+      <p>Follow these steps every time you handle an inbound call:</p>
+      <div class="step-row"><span class="step-num">1</span><p>Answer the call and help the caller as you normally would</p></div>
+      <div class="step-row"><span class="step-num">2</span><p>When the call ends, open the call record in <strong>Conversations</strong></p></div>
+      <div class="step-row"><span class="step-num">3</span><p>Click the <strong>disposition</strong> field</p></div>
+      <div class="step-row"><span class="step-num">4</span><p>Select the disposition that best matches the call (see the 10 above)</p></div>
+      <div class="step-row"><span class="step-num">5</span><p>Save — the system moves the caller, adds the note, and tags them automatically</p></div>
+
+      <div class="warn-box" style="margin-top:20px;">
+        ⚠️ <strong>Pick the disposition that matches the call.</strong> The whole routing depends on your choice. When in doubt, ask: <em>"What is this person calling about?"</em>
+      </div>
+    </section>
+
+    <!-- DAILY CHECKLIST -->
+    <section id="checklist">
+      <h2>✅ Your Daily Checklist</h2>
+      <p>Use this every day while inbound calls are active:</p>
+      <ul class="checklist">
+        <li>Log in to MDRev.AI and check your <strong>Tasks</strong> — complete any overdue tasks first</li>
+        <li>Check the <strong>Call Management pipeline</strong> — review anyone in Missed — Callback Needed</li>
+        <li>Check your <strong>Conversations inbox</strong> — reply to any inbound messages within 24 hours</li>
+        <li>Log a disposition on every inbound call you take</li>
+        <li>If a caller prefers Spanish — pick the Spanish disposition so they're routed correctly</li>
+        <li>Mark all completed tasks as done to keep the pipeline clean</li>
+      </ul>
+    </section>
+
+  </div>
+
+  <footer>
+    <p>Hearing Benefit Services &nbsp;|&nbsp; hearingbenefitservices.com &nbsp;|&nbsp; Honolulu, HI &nbsp;|&nbsp; Internal Staff Training — Confidential</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
