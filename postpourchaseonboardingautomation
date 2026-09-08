@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Post-Purchase Onboarding Automation | Internal Training | Hearing Benefit Services</title>
+  <meta name="description" content="Internal training page: how the 5-part post-purchase email and SMS onboarding automation works, its timing, and reporting checklist." />
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    :root {
+      --navy:      #0B1E2B;
+      --blue-dark: #1B4965;
+      --blue:      #2A64A7;
+      --gold:      #FFC107;
+      --gold-dark: #e6a800;
+      --green:     #10b981;
+      --red:       #ef4444;
+      --amber:     #f59e0b;
+      --slate-100: #f1f5f9;
+      --slate-200: #e2e8f0;
+      --slate-500: #64748b;
+      --slate-700: #334155;
+      --white:     #ffffff;
+      --shadow-sm: 0 2px 12px rgba(0,0,0,0.06);
+      --shadow-md: 0 8px 32px rgba(0,0,0,0.11);
+      --radius-md: 16px;
+      --radius-lg: 24px;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.05rem;
+      color: var(--slate-700);
+      background: #fff;
+      overflow-x: hidden;
+      line-height: 1.85;
+    }
+
+    a { text-decoration: none; color: inherit; }
+    p { margin-bottom: 14px; }
+    p:last-child { margin-bottom: 0; }
+
+    .hero,
+    .parts-section,
+    .data-section,
+    .weekly-section,
+    .cta-section {
+      width: 100vw;
+      position: relative;
+      left: 50%;
+      right: 50%;
+      margin-left: -50vw;
+      margin-right: -50vw;
+    }
+
+    .content-wrap {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 44px;
+    }
+    .section-title .eyebrow {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+    .section-title h2 {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      color: var(--navy);
+      margin-bottom: 10px;
+      line-height: 1.25;
+    }
+    .section-title p {
+      font-size: 1.05rem;
+      color: var(--slate-500);
+      max-width: 620px;
+      margin: 0 auto;
+      line-height: 1.85;
+    }
+    .title-line {
+      width: 60px; height: 4px;
+      background: var(--gold);
+      border-radius: 2px;
+      margin: 14px auto 0;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #0B1E2B 0%, #1B4965 55%, #2A64A7 100%);
+      color: var(--white);
+      padding: 88px 24px 72px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: radial-gradient(ellipse at 65% 35%, rgba(255,193,7,0.08) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,193,7,0.12);
+      border: 1px solid rgba(255,193,7,0.4);
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 7px 18px;
+      border-radius: 999px;
+      margin-bottom: 22px;
+      position: relative; z-index: 1;
+    }
+    .hero h1 {
+      font-family: 'Lora', serif;
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+      position: relative; z-index: 1;
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero-sub {
+      font-size: 1.15rem;
+      color: rgba(255,255,255,0.82);
+      max-width: 680px;
+      margin: 0 auto 40px;
+      line-height: 1.85;
+      position: relative; z-index: 1;
+    }
+    .hero-pills {
+      display: flex; flex-wrap: wrap;
+      justify-content: center; gap: 12px;
+      position: relative; z-index: 1;
+    }
+    .hero-pill {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.18);
+      border-radius: 999px; padding: 7px 16px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: rgba(255,255,255,0.9);
+    }
+    .hero-pill i { color: var(--gold); }
+
+    /* WORKFLOW COMPONENTS (parts) */
+    .parts-section { padding: 72px 24px; background: var(--slate-100); }
+    .parts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto 32px;
+    }
+    .part-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 28px 22px;
+      box-shadow: var(--shadow-sm);
+      border-top: 4px solid var(--blue);
+      transition: transform .25s, box-shadow .25s;
+    }
+    .part-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); }
+    .part-icon { font-size: 2rem; margin-bottom: 12px; }
+    .part-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .part-card p  { font-size: 0.95rem; color: var(--slate-500); line-height: 1.85; }
+    .parts-callout {
+      background: linear-gradient(135deg, var(--navy), var(--blue-dark));
+      border-radius: var(--radius-md);
+      padding: 24px 28px;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex; align-items: flex-start; gap: 16px;
+    }
+    .parts-callout i { color: var(--gold); font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+    .parts-callout p { font-size: 0.95rem; color: rgba(255,255,255,0.82); line-height: 1.85; margin: 0; }
+    .parts-callout strong { color: var(--white); }
+
+    /* SEQUENCE (daily) */
+    .daily-section { padding: 72px 24px; }
+    .daily-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+      max-width: 1000px;
+      margin: 0 auto 32px;
+    }
+    .daily-step {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: grid;
+      grid-template-columns: 96px 1fr;
+    }
+    @media (max-width: 600px) { .daily-step { grid-template-columns: 1fr; } }
+    .step-num-col {
+      background: linear-gradient(135deg, var(--navy), var(--blue-dark));
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      gap: 2px;
+      color: var(--gold);
+      min-height: 96px;
+      padding: 10px 4px;
+    }
+    .step-num-col .day-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.65); }
+    .step-num-col .day-num { font-size: 1.7rem; font-weight: 800; line-height: 1; }
+    .step-body { padding: 28px 28px 24px; }
+    .step-body h3 {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.3rem, 2.2vw, 1.6rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .step-why {
+      display: inline-block;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+    .step-body p { font-size: 1.05rem; color: var(--slate-500); line-height: 1.85; }
+    .step-list {
+      list-style: none;
+      margin: 12px 0 0;
+      display: flex; flex-direction: column; gap: 8px;
+    }
+    .step-list li {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 1.05rem;
+      color: var(--slate-700);
+      line-height: 1.85;
+    }
+    .step-list li i { color: var(--blue); flex-shrink: 0; margin-top: 3px; font-size: 0.9rem; }
+    .daily-timing {
+      background: linear-gradient(135deg, var(--blue-dark), var(--blue));
+      border-radius: var(--radius-md);
+      padding: 22px 28px;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex; align-items: flex-start; gap: 16px;
+    }
+    .daily-timing i { color: var(--gold); font-size: 1.3rem; flex-shrink: 0; margin-top: 2px; }
+    .daily-timing p { font-size: 1.05rem; color: rgba(255,255,255,0.85); line-height: 1.85; margin: 0; }
+    .daily-timing strong { color: var(--white); }
+
+    /* DO'S AND DON'TS (wax) */
+    .wax-section { padding: 72px 24px; }
+    .wax-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto 28px;
+    }
+    @media (max-width: 640px) { .wax-grid { grid-template-columns: 1fr; } }
+    .wax-card {
+      border-radius: var(--radius-md);
+      padding: 28px 24px;
+    }
+    .wax-card.replace {
+      background: #fff1f2;
+      border: 2px solid #fecaca;
+    }
+    .wax-card.how {
+      background: #f0fdf4;
+      border: 2px solid #bbf7d0;
+    }
+    .wax-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+    .wax-card.replace h3 { color: #b91c1c; }
+    .wax-card.how     h3 { color: #15803d; }
+    .wax-item {
+      display: flex; align-items: flex-start; gap: 10px;
+      font-size: 1.05rem;
+      color: var(--slate-700);
+      line-height: 1.85;
+      margin-bottom: 12px;
+    }
+    .wax-item:last-child { margin-bottom: 0; }
+    .wax-item i { flex-shrink: 0; margin-top: 3px; }
+    .wax-card.replace .wax-item i { color: var(--red); }
+    .wax-card.how     .wax-item i { color: var(--green); }
+
+    /* REPORTING CHECKLIST (weekly) */
+    .weekly-section { padding: 72px 24px; background: var(--slate-100); }
+    .weekly-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto 28px;
+    }
+    .weekly-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 26px 22px;
+      box-shadow: var(--shadow-sm);
+      border-left: 5px solid var(--blue);
+    }
+    .weekly-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+    .weekly-card p  { font-size: 0.95rem; color: var(--slate-500); line-height: 1.85; }
+    .weekly-callout {
+      background: linear-gradient(135deg, var(--navy), var(--blue-dark));
+      border-radius: var(--radius-md);
+      padding: 24px 28px;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex; align-items: flex-start; gap: 16px;
+    }
+    .weekly-callout i { color: var(--gold); font-size: 1.4rem; flex-shrink: 0; margin-top: 2px; }
+    .weekly-callout p { font-size: 1.05rem; color: rgba(255,255,255,0.82); line-height: 1.85; margin: 0; }
+    .weekly-callout strong { color: var(--white); }
+
+    /* CLOSING SUMMARY BANNER */
+    .cta-section {
+      padding: 0; overflow: hidden;
+      background: var(--navy);
+    }
+    .cta-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      min-height: 380px;
+    }
+    @media (max-width: 768px) { .cta-inner { grid-template-columns: 1fr; } }
+    .cta-left {
+      background: linear-gradient(135deg, #0B1E2B 0%, #1a3a55 50%, #1B4965 100%);
+      padding: 64px 52px;
+      display: flex; flex-direction: column; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .cta-left::before {
+      content: '';
+      position: absolute; top: -80px; right: -80px;
+      width: 300px; height: 300px;
+      background: radial-gradient(circle, rgba(255,193,7,0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    @media (max-width: 768px) { .cta-left { padding: 48px 28px; } }
+    .cta-eyebrow {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: rgba(255,193,7,0.12);
+      border: 1px solid rgba(255,193,7,0.35);
+      color: var(--gold);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 6px 14px; border-radius: 999px;
+      margin-bottom: 22px; width: fit-content;
+    }
+    .cta-left h2 {
+      font-family: 'Lora', serif;
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      color: var(--white); line-height: 1.25; margin-bottom: 16px;
+    }
+    .cta-left h2 em { font-style: normal; color: var(--gold); }
+    .cta-left p {
+      font-size: 1.05rem;
+      color: rgba(255,255,255,0.75);
+      line-height: 1.85;
+      margin-bottom: 0;
+      max-width: 420px;
+    }
+    .cta-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+    .cta-pill {
+      display: inline-flex; align-items: center; gap: 7px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: rgba(255,255,255,0.85);
+      font-size: 0.88rem;
+      padding: 7px 14px; border-radius: 999px;
+    }
+    .cta-pill i { color: var(--green); font-size: 0.78rem; }
+    .cta-right {
+      background: linear-gradient(160deg, #1B4965 0%, #2A64A7 100%);
+      padding: 52px 40px;
+      display: flex; flex-direction: column; justify-content: center;
+      gap: 18px; position: relative; overflow: hidden;
+    }
+    @media (max-width: 768px) { .cta-right { padding: 36px 28px; } }
+    .cta-stat-row {
+      display: flex; align-items: center; gap: 18px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 14px; padding: 20px 22px;
+      transition: background .2s;
+    }
+    .cta-stat-row:hover { background: rgba(255,255,255,0.1); }
+    .cta-stat-icon {
+      width: 50px; height: 50px; border-radius: 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.4rem; flex-shrink: 0;
+    }
+    .cta-stat-icon.gold  { background: rgba(255,193,7,0.15); }
+    .cta-stat-icon.green { background: rgba(16,185,129,0.15); }
+    .cta-stat-icon.blue  { background: rgba(59,130,246,0.15); }
+    .cta-stat-text strong {
+      display: block; font-size: 2.2rem; font-weight: 800;
+      color: var(--white); line-height: 1; margin-bottom: 4px;
+    }
+    .cta-stat-text span { font-size: 0.95rem; color: rgba(255,255,255,0.7); line-height: 1.85; }
+
+    /* Disclaimer / status note */
+    .disclaimer {
+      background: #fff8e6;
+      border-left: 4px solid var(--gold);
+      padding: 20px 28px;
+      margin: 40px auto;
+      max-width: 1000px;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      color: #5a4a00;
+    }
+
+    .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.55s ease, transform 0.55s ease; }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+  </style>
+</head>
+<body>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-badge"><i class="fas fa-diagram-project"></i> Internal Training &middot; Automation Overview</div>
+  <h1>Post-Purchase Onboarding<br><span>Automation Workflow</span></h1>
+  <p class="hero-sub">A 5-part email and SMS sequence that starts automatically the moment a hearing aid is delivered &mdash; helping new patients feel confident with their devices and reducing avoidable support calls.</p>
+  <div class="hero-pills">
+    <span class="hero-pill"><i class="fas fa-tag"></i> Tag-Triggered</span>
+    <span class="hero-pill"><i class="fas fa-calendar-days"></i> 21-Day Sequence</span>
+    <span class="hero-pill"><i class="fas fa-envelope"></i> 5 Emails</span>
+    <span class="hero-pill"><i class="fas fa-comment-sms"></i> 5 SMS</span>
+  </div>
+</header>
+
+<!-- SECTION 1 — HOW THE AUTOMATION WORKS -->
+<section class="parts-section reveal">
+  <div class="section-title">
+    <span class="eyebrow">Section 1</span>
+    <h2>How the Automation Works</h2>
+    <p>Four building blocks make up the workflow in GoHighLevel. Understanding each one makes the pipeline below easy to follow.</p>
+    <div class="title-line"></div>
+  </div>
+  <div class="parts-grid">
+    <div class="part-card">
+      <div class="part-icon">&#127991;&#65039;</div>
+      <h3>Trigger</h3>
+      <p>The workflow starts when the <strong>"HA Delivered"</strong> tag is applied to a contact &mdash; typically by the fulfillment or delivery process.</p>
+    </div>
+    <div class="part-card">
+      <div class="part-icon">&#9200;</div>
+      <h3>Wait Step</h3>
+      <p>Between each touchpoint, the workflow pauses for a set number of days so the next message lands at the right moment in the patient's journey.</p>
+    </div>
+    <div class="part-card">
+      <div class="part-icon">&#9993;&#65039;</div>
+      <h3>Email + SMS</h3>
+      <p>Each touchpoint pairs an email with a short SMS on the same topic, sent the same day &mdash; SMS follows the email by about an hour.</p>
+    </div>
+    <div class="part-card">
+      <div class="part-icon">&#9989;</div>
+      <h3>Completion Tag</h3>
+      <p>Once all five touchpoints have gone out, the <strong>"Onboarding Complete"</strong> tag is applied for reporting and to exclude the contact from other new-customer campaigns.</p>
+    </div>
+  </div>
+  <div class="parts-callout">
+    <i class="fas fa-circle-info"></i>
+    <p><strong>Why pair email and SMS instead of picking one?</strong> Email carries the full guide with step-by-step detail and a link back to the live page. SMS is a lightweight nudge that reaches patients who may not open email regularly &mdash; especially useful for an older patient base.</p>
+  </div>
+</section>
+
+<!-- SECTION 2 — THE 5-TOUCHPOINT SEQUENCE -->
+<section class="daily-section reveal">
+  <div class="section-title">
+    <span class="eyebrow">Section 2</span>
+    <h2>The 5-Touchpoint Sequence</h2>
+    <p>Ordered by urgency &mdash; what the patient needs to know first, not by which guide was written first.</p>
+    <div class="title-line"></div>
+  </div>
+  <div class="daily-steps">
+
+    <div class="daily-step">
+      <div class="step-num-col"><span class="day-label">Day</span><span class="day-num">0</span></div>
+      <div class="step-body">
+        <h3>Putting On Your RIC Hearing Aids</h3>
+        <span class="step-why">Why this timing</span>
+        <p>The most urgent topic &mdash; sent the same day the device leaves the office, since the patient needs this before they can wear the aids at all.</p>
+      </div>
+    </div>
+
+    <div class="daily-step">
+      <div class="step-num-col"><span class="day-label">Day</span><span class="day-num">3</span></div>
+      <div class="step-body">
+        <h3>Pairing With Your Phone</h3>
+        <span class="step-why">Why this timing</span>
+        <p>A "delight" feature moved earlier in the sequence &mdash; once basic wear is comfortable, connecting to a phone gives an early win and keeps engagement high.</p>
+      </div>
+    </div>
+
+    <div class="daily-step">
+      <div class="step-num-col"><span class="day-label">Day</span><span class="day-num">7</span></div>
+      <div class="step-body">
+        <h3>How to Clean Your RIC Hearing Aid</h3>
+        <span class="step-why">Why this timing</span>
+        <p>A daily habit that's better instilled early &mdash; before bad habits (or a week's worth of skipped cleaning) can set in.</p>
+      </div>
+    </div>
+
+    <div class="daily-step">
+      <div class="step-num-col"><span class="day-label">Day</span><span class="day-num">12</span></div>
+      <div class="step-body">
+        <h3>Everyday Habits That Make Them Last</h3>
+        <span class="step-why">Why this timing</span>
+        <p>Broader lifestyle habits (dehumidifying, keeping away from pets and heat) land once the basics &mdash; wearing and cleaning &mdash; are already second nature.</p>
+      </div>
+    </div>
+
+    <div class="daily-step">
+      <div class="step-num-col"><span class="day-label">Day</span><span class="day-num">21</span></div>
+      <div class="step-body">
+        <h3>Changing the Dome Tip</h3>
+        <span class="step-why">Why this timing</span>
+        <p>Domes are typically replaced every 4&ndash;6 weeks, so this guide arrives just before most patients would actually need to do it for the first time.</p>
+      </div>
+    </div>
+
+  </div>
+  <div class="daily-timing">
+    <i class="fas fa-route"></i>
+    <p><strong>Total sequence length:</strong> 21 days from the delivery tag to the completion tag. After Day 21, the contact is marked complete and moves out of the onboarding workflow into standard ongoing communications.</p>
+  </div>
+</section>
+
+<!-- SECTION 3 — DO'S AND DON'TS -->
+<section class="wax-section reveal">
+  <div class="section-title">
+    <span class="eyebrow">Section 3</span>
+    <h2>Setup Do's and Don'ts</h2>
+    <p>A few things the team should watch for when building and maintaining this workflow in GoHighLevel.</p>
+    <div class="title-line"></div>
+  </div>
+  <div class="wax-grid">
+    <div class="wax-card replace">
+      <h3><i class="fas fa-circle-xmark" style="margin-right:8px;"></i> Avoid These Mistakes</h3>
+      <div class="wax-item"><i class="fas fa-times-circle"></i> Sending the email and SMS with identical, word-for-word copy &mdash; the SMS should be a short nudge, not a text dump of the email.</div>
+      <div class="wax-item"><i class="fas fa-times-circle"></i> Skipping the "Onboarding Complete" tag &mdash; without it, reporting can't tell who has finished the sequence.</div>
+      <div class="wax-item"><i class="fas fa-times-circle"></i> Hardcoding a patient's name or details instead of using merge tags like <code>{{contact.first_name}}</code>.</div>
+      <div class="wax-item"><i class="fas fa-times-circle"></i> Activating the workflow before testing every email and SMS end-to-end on both iPhone and Android.</div>
+    </div>
+    <div class="wax-card how">
+      <h3><i class="fas fa-circle-check" style="margin-right:8px;"></i> Best Practices</h3>
+      <div class="wax-item"><i class="fas fa-check-circle"></i> Personalize every touchpoint with the patient's first name and a link back to the full guide on the website.</div>
+      <div class="wax-item"><i class="fas fa-check-circle"></i> Send a test version of each step to a real phone and inbox before turning the workflow live.</div>
+      <div class="wax-item"><i class="fas fa-check-circle"></i> Confirm the unsubscribe link and SMS opt-out both work correctly before launch.</div>
+      <div class="wax-item"><i class="fas fa-check-circle"></i> Review open and click rates monthly and adjust timing or copy if a step is underperforming.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 4 — REPORTING CHECKLIST -->
+<section class="weekly-section reveal">
+  <div class="section-title">
+    <span class="eyebrow">Section 4</span>
+    <h2>Reporting &amp; Tags Checklist</h2>
+    <p>What to track once the workflow is live, and how to keep the data clean.</p>
+    <div class="title-line"></div>
+  </div>
+  <div class="weekly-grid">
+    <div class="weekly-card">
+      <h3>&#127991;&#65039; Tags to Track</h3>
+      <p>"HA Delivered" (entry) and "Onboarding Complete" (exit) &mdash; the gap between these counts tells you how many contacts are mid-sequence at any time.</p>
+    </div>
+    <div class="weekly-card">
+      <h3>&#128231; Email Metrics</h3>
+      <p>Open rate and click-through on the "Read the Full Guide" button, tracked per step to spot which topics need stronger subject lines or copy.</p>
+    </div>
+    <div class="weekly-card">
+      <h3>&#128241; SMS Metrics</h3>
+      <p>Delivery rate and opt-out rate. A spike in opt-outs after a specific step is a signal that message may feel repetitive or poorly timed.</p>
+    </div>
+    <div class="weekly-card">
+      <h3>&#128222; Escalation Path</h3>
+      <p>If a patient replies to an SMS or email asking for help, route them to the Tech Support Line &mdash; (800) 350-6093 &mdash; rather than leaving them in the automated sequence.</p>
+    </div>
+  </div>
+  <div class="weekly-callout">
+    <i class="fas fa-user-shield"></i>
+    <p><strong>Ownership:</strong> Whoever manages the GHL workflow is responsible for monitoring these metrics and keeping merge tags, links, and phone numbers up to date as pages and slugs change.</p>
+  </div>
+</section>
+
+<!-- CLOSING SUMMARY -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="cta-left">
+      <div class="cta-eyebrow"><i class="fas fa-flag-checkered"></i> Status</div>
+      <h2>Where This Stands<br><em>Right Now</em></h2>
+      <p>All 5 email templates have been built and are ready to paste into GoHighLevel. SMS copy for each step still needs to be drafted before the workflow can go live.</p>
+      <div class="cta-pills">
+        <span class="cta-pill"><i class="fas fa-check-circle"></i> Emails Built</span>
+        <span class="cta-pill"><i class="fas fa-check-circle"></i> Navigation Updated</span>
+        <span class="cta-pill"><i class="fas fa-circle-notch"></i> SMS Copy Pending</span>
+        <span class="cta-pill"><i class="fas fa-circle-notch"></i> Workflow Not Yet Live</span>
+      </div>
+    </div>
+    <div class="cta-right">
+      <div class="cta-stat-row">
+        <div class="cta-stat-icon gold">&#128231;</div>
+        <div class="cta-stat-text">
+          <strong>5</strong>
+          <span>Email templates built and ready</span>
+        </div>
+      </div>
+      <div class="cta-stat-row">
+        <div class="cta-stat-icon blue">&#128241;</div>
+        <div class="cta-stat-text">
+          <strong>5</strong>
+          <span>SMS messages still to be drafted</span>
+        </div>
+      </div>
+      <div class="cta-stat-row">
+        <div class="cta-stat-icon green">&#128197;</div>
+        <div class="cta-stat-text">
+          <strong>21</strong>
+          <span>Days from delivery to sequence completion</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATUS NOTE -->
+<div class="disclaimer">
+  <strong>Status:</strong> This page documents the planned workflow for internal review. It is not a customer-facing page and is not linked from the site navigation.
+</div>
+
+<script>
+  (function() {
+    var els = document.querySelectorAll('.reveal');
+    var obs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          obs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.06 });
+    els.forEach(function(el) { obs.observe(el); });
+  })();
+</script>
+
+</body>
+</html>
