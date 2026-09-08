@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Federal Retiree ($0 Program) — Process Walkthrough | Hearing Benefit Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,600;1,6..72,400&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#16323C;
+    --ink-soft:#4A6570;
+    --paper:#F2F4F3;
+    --card:#FFFFFF;
+    --rule:#D3DBD9;
+    --auto:#1F6F5C;
+    --auto-bg:#E4F0EC;
+    --person:#7A3E7E;
+    --person-bg:#F1E7F2;
+    --note:#1D3C7A;
+    --note-bg:#E6EBF5;
+    --serif:"Newsreader",Georgia,"Times New Roman",serif;
+    --sans:"Source Sans 3",-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+  }
+
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--sans);
+    font-size:17px;
+    line-height:1.6;
+  }
+  .wrap{max-width:960px;margin:0 auto;padding:0 24px}
+
+  a{color:var(--note)}
+  a:focus-visible,summary:focus-visible{outline:3px solid var(--note);outline-offset:3px}
+
+  /* ---------- Masthead ---------- */
+  .masthead{
+    background:var(--ink);
+    color:#EAF0F0;
+    padding:56px 0 44px;
+    border-bottom:6px solid var(--auto);
+  }
+  .kicker{
+    font-size:15px;
+    letter-spacing:.02em;
+    color:#9FB6BC;
+    margin:0 0 14px;
+  }
+  .masthead h1{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:clamp(34px,5.4vw,52px);
+    line-height:1.1;
+    margin:0 0 18px;
+    letter-spacing:-.01em;
+  }
+  .masthead p{
+    max-width:62ch;
+    margin:0;
+    font-size:19px;
+    color:#CBD9DC;
+  }
+  .stamp{
+    display:inline-block;
+    margin-top:26px;
+    padding:7px 14px;
+    border:1px solid #3D5C67;
+    border-radius:3px;
+    font-size:14px;
+    color:#9FB6BC;
+  }
+
+  /* ---------- Sections ---------- */
+  section{padding:52px 0}
+  section + section{border-top:1px solid var(--rule)}
+  h2{
+    font-family:var(--serif);
+    font-weight:600;
+    font-size:29px;
+    line-height:1.25;
+    margin:0 0 10px;
+  }
+  h2 + .lede{margin:0 0 30px;max-width:66ch;color:var(--ink-soft)}
+  h3{font-size:19px;margin:34px 0 10px}
+  p{max-width:70ch}
+
+  /* ---------- Legend ---------- */
+  .legend{display:grid;gap:16px;grid-template-columns:1fr 1fr;margin-top:26px}
+  .legend div{
+    background:var(--card);
+    border-left:5px solid;
+    padding:18px 20px;
+    border-radius:2px;
+  }
+  .legend .l-auto{border-color:var(--auto)}
+  .legend .l-person{border-color:var(--person)}
+  .legend strong{display:block;font-size:17px;margin-bottom:4px}
+  .legend p{margin:0;font-size:16px;color:var(--ink-soft)}
+
+  .chip{
+    display:inline-block;
+    padding:4px 11px;
+    border-radius:100px;
+    font-size:13.5px;
+    font-weight:600;
+    white-space:nowrap;
+  }
+  .chip-auto{background:var(--auto-bg);color:var(--auto)}
+  .chip-person{background:var(--person-bg);color:var(--person)}
+
+  /* ---------- Existing systems ---------- */
+  .keeps{list-style:none;padding:0;margin:24px 0 0;max-width:72ch}
+  .keeps li{
+    padding:14px 0 14px 30px;
+    border-top:1px solid var(--rule);
+    position:relative;
+  }
+  .keeps li:last-child{border-bottom:1px solid var(--rule)}
+  .keeps li::before{
+    content:"";
+    position:absolute;
+    left:2px;top:22px;
+    width:11px;height:11px;
+    background:var(--auto);
+    border-radius:2px;
+  }
+  .keeps b{font-weight:600}
+
+  /* ---------- Stages ---------- */
+  .stage{
+    display:grid;
+    grid-template-columns:118px 1fr;
+    gap:28px;
+    background:var(--card);
+    border-radius:2px;
+    padding:26px 28px;
+    margin-bottom:14px;
+    border-left:5px solid var(--rule);
+  }
+  .stage.is-auto{border-left-color:var(--auto)}
+  .stage.is-person{border-left-color:var(--person)}
+  .rail .num{
+    font-family:var(--serif);
+    font-size:40px;
+    line-height:1;
+    color:var(--ink);
+    display:block;
+    margin-bottom:12px;
+  }
+  .stage h3{
+    margin:0 0 10px;
+    font-size:21px;
+    font-weight:700;
+    line-height:1.3;
+  }
+  .stage p{margin:0 0 12px;max-width:64ch}
+  .stage p:last-child{margin-bottom:0}
+  .does{list-style:none;padding:0;margin:0 0 14px;max-width:64ch}
+  .does li{
+    padding:3px 0 3px 20px;
+    position:relative;
+    font-size:16.5px;
+    color:var(--ink-soft);
+  }
+  .does li::before{
+    content:"";
+    position:absolute;left:2px;top:14px;
+    width:7px;height:1px;background:var(--ink-soft);
+  }
+  .sms{
+    border:1px solid var(--rule);
+    border-left:3px solid var(--ink-soft);
+    background:#FAFBFB;
+    padding:14px 16px;
+    margin:0 0 14px;
+    max-width:62ch;
+    border-radius:2px;
+  }
+  .sms span{
+    display:block;
+    font-size:13.5px;
+    color:var(--ink-soft);
+    margin-bottom:6px;
+  }
+  .sms q{
+    font-family:var(--serif);
+    font-size:17.5px;
+    line-height:1.55;
+    quotes:"“" "”";
+  }
+  .tagline{font-size:15.5px;color:var(--ink-soft);margin:0}
+  code{
+    font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    font-size:14.5px;
+    background:var(--paper);
+    padding:2px 6px;
+    border-radius:3px;
+  }
+
+  /* ---------- Tables ---------- */
+  .tablewrap{overflow-x:auto;margin-top:20px}
+  table{border-collapse:collapse;width:100%;min-width:520px;background:var(--card)}
+  th,td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--rule);font-size:16px;vertical-align:top}
+  th{font-weight:700;background:#E9EDEC;font-size:15px}
+  td code{background:var(--paper)}
+
+  /* ---------- Notes ---------- */
+  .note{
+    background:var(--note-bg);
+    border-left:5px solid var(--note);
+    padding:22px 24px;
+    border-radius:2px;
+    margin-top:24px;
+  }
+  .note h3{margin:0 0 8px;color:var(--note);font-size:19px}
+  .note p{margin:0 0 10px}
+  .note p:last-child{margin-bottom:0}
+
+  .decisions{counter-reset:d;list-style:none;padding:0;margin:24px 0 0}
+  .decisions li{
+    counter-increment:d;
+    background:var(--card);
+    padding:18px 22px 18px 62px;
+    position:relative;
+    margin-bottom:10px;
+    border-radius:2px;
+    max-width:74ch;
+  }
+  .decisions li::before{
+    content:counter(d);
+    position:absolute;left:22px;top:17px;
+    font-family:var(--serif);
+    font-size:22px;
+    color:var(--person);
+  }
+  .decisions b{display:block;margin-bottom:3px}
+  .decisions span{color:var(--ink-soft);font-size:16px}
+
+  footer{
+    background:var(--ink);
+    color:#9FB6BC;
+    padding:34px 0;
+    font-size:15px;
+    margin-top:20px;
+  }
+  footer p{margin:0;max-width:70ch}
+
+  @media (max-width:720px){
+    body{font-size:16px}
+    .legend{grid-template-columns:1fr}
+    .stage{grid-template-columns:1fr;gap:14px;padding:22px}
+    .rail{display:flex;align-items:center;gap:14px}
+    .rail .num{font-size:30px;margin:0}
+    section{padding:40px 0}
+  }
+  @media print{
+    body{background:#fff}
+    .masthead,footer{background:#fff;color:#000;border-color:#000}
+    .masthead p,.kicker{color:#333}
+    .stage{break-inside:avoid;border:1px solid #ccc;border-left-width:5px}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <p class="kicker">Hearing Benefit Services · Process walkthrough for team review</p>
+    <h1>Federal Retiree ($0 Program):<br>how a lead moves from form to fitting</h1>
+    <p>This is the proposed process, not a built system. Read it, mark anything
+       that doesn't match how you actually work, and we'll adjust before a single
+       workflow gets created in GoHighLevel.</p>
+    <p class="stamp">Draft for review — nothing has been built yet</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap">
+    <h2>Why this pipeline is different</h2>
+    <p class="lede">Every other HBS pipeline tracks a sale. This one tracks an
+      insurance approval that happens <em>before</em> a sale is possible.</p>
+    <p>A federal retiree who fills out the qualification form has not bought
+      anything and can't be quoted yet. Their FEHB plan decides what happens next.
+      So the first half of this pipeline is verification work, and the second half
+      only starts once we know what their benefit actually covers.</p>
+    <p>Once a patient is approved, this pipeline is finished. They hand off to the
+      Online Store Purchase pipeline, which already handles ordering, programming,
+      shipping, and follow-up. We are not rebuilding any of that.</p>
+
+    <div class="legend">
+      <div class="l-auto">
+        <strong>Green — the system does it</strong>
+        <p>Fires on its own. Nobody has to remember anything or click anything.</p>
+      </div>
+      <div class="l-person">
+        <strong>Purple — a hearing professional does it</strong>
+        <p>Requires a person to check something and then apply a tag. The tag is
+           what starts the next automation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>What we're reusing instead of rebuilding</h2>
+    <p class="lede">Four systems already exist and already work. This pipeline
+      plugs into them.</p>
+    <ul class="keeps">
+      <li><b>Appointment reminders.</b> The 24-hour, 3-hour and 15-minute
+        reminders, plus cancellation and reschedule handling, already run on every
+        booking. Federal consults use the same calendar and the same reminders.</li>
+      <li><b>Order fulfillment.</b> Ordering from Signia, programming, shipping,
+        the Day 2 check-in, the two-week follow-up and the review request are all
+        in the Online Store Purchase pipeline. Approved patients get moved there.</li>
+      <li><b>STOP opt-outs.</b> Anyone who replies STOP is already removed from
+        messaging account-wide. No separate federal version needed.</li>
+      <li><b>Email bounce protection.</b> Emails only send to addresses that are
+        present and haven't previously bounced, so this campaign can't damage
+        sending reputation.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>The ten stages</h2>
+    <p class="lede">A lead sits in exactly one stage at a time. Every message
+      below is draft copy — change the wording freely.</p>
+
+    <div class="stage is-auto">
+      <div class="rail"><span class="num">1</span><span class="chip chip-auto">Automated</span></div>
+      <div>
+        <h3>New lead — form submitted</h3>
+        <p>The "See If I Qualify" form is submitted from the federal retiree page.
+          Everything here happens within seconds.</p>
+        <ul class="does">
+          <li>Contact enters the pipeline at this stage</li>
+          <li>Tagged as a federal benefits lead</li>
+          <li>Text and email confirmation go out</li>
+          <li>A verification task is created for the hearing professional</li>
+          <li>Lead advances automatically to stage 2</li>
+        </ul>
+        <div class="sms">
+          <span>Text sent to the patient</span>
+          <q>Hi {{contact.first_name}}, this is Hearing Benefit Services. We got
+            your request to check your federal hearing benefits. We'll review your
+            plan and let you know exactly what it covers. Reply STOP to opt out.</q>
+        </div>
+        <p class="tagline">Tag applied: <code>fed_retiree_lead</code></p>
+      </div>
+    </div>
+
+    <div class="stage is-person">
+      <div class="rail"><span class="num">2</span><span class="chip chip-person">Hearing professional</span></div>
+      <div>
+        <h3>Insurance verification</h3>
+        <p>This is the stage that decides everything downstream. FEHB benefits vary
+          by carrier, by plan tier, and by plan year, so this can't be automated.</p>
+        <ul class="does">
+          <li>Identify the carrier — BCBS, GEHA, Aetna, UHC, or another</li>
+          <li>Confirm whether the plan includes a hearing aid benefit</li>
+          <li>Check the dollar cap and how often it resets</li>
+          <li>Check whether an in-network hearing test is required first</li>
+        </ul>
+        <p>Then apply one tag. That tag decides which of the next three stages the
+          patient lands in, and sends the matching message.</p>
+        <p class="tagline">Tags: <code>fed_qualified_zero</code> ·
+          <code>fed_needs_network_test</code> · <code>fed_needs_more_info</code></p>
+      </div>
+    </div>
+
+    <div class="stage is-auto">
+      <div class="rail"><span class="num">3</span><span class="chip chip-auto">Automated</span></div>
+      <div>
+        <h3>Needs more information</h3>
+        <p>We couldn't verify the plan from what the patient gave us on the form.</p>
+        <div class="sms">
+          <span>Text sent to the patient</span>
+          <q>Hi {{contact.first_name}}, to check your hearing benefit we need a
+            little more from your plan card: the carrier name, plan name, and your
+            member ID. You can reply here with a photo of the card.</q>
+        </div>
+        <p>A follow-up task is created. Once the details come in, the hearing
+          professional returns the patient to stage 2 and verifies again.</p>
+      </div>
+    </div>
+
+    <div class="stage is-auto">
+      <div class="rail"><span class="num">4</span><span class="chip chip-auto">Automated</span></div>
+      <div>
+        <h3>Needs in-network hearing test</h3>
+        <p>The plan requires a test from an in-network provider before it will pay.
+          We send the patient out, but we don't lose them.</p>
+        <div class="sms">
+          <span>Text sent to the patient</span>
+          <q>Hi {{contact.first_name}}, your plan asks for a hearing test from an
+            in-network provider before benefits apply. Once you have those results,
+            send them to us and we'll take it from there.</q>
+        </div>
+        <p>A check-back reminder fires automatically after 14 days so nobody has to
+          keep a mental list of who was sent out for testing.</p>
+      </div>
+    </div>
+
+    <div class="stage is-auto">
+      <div class="rail"><span class="num">5</span><span class="chip chip-auto">Automated</span></div>
+      <div>
+        <h3>Qualified — consultation needed</h3>
+        <p>The benefit is confirmed. Now we book.</p>
+        <div class="sms">
+          <span>Text sent to the patient</span>
+          <q>Good news {{contact.first_name}} — we've reviewed your plan and your
+            hearing benefit is active. The next step is a short consultation with
+            our specialist. Book a time here:
+            hearingbenefitservices.com/appointment</q>
+        </div>
+        <p>If they don't book, follow-up messages continue on a set schedule rather
+          than relying on someone remembering to chase.</p>
+      </div>
+    </div>
+
+    <div class="stage is-auto">
+      <div class="rail"><span class="num">6</span><span class="chip chip-auto">Automated</span></div>
+      <div>
+        <h3>Consultation booked</h3>
+        <p>Booking the appointment moves the patient here on its own. The existing
+          confirmation and reminder sequence takes over from this point — no
+          separate federal reminders, no duplicate texts.</p>
+      </div>
+    </div>
+
+    <div class="stage is-auto">
+      <div class="rail"><span class="num">7</span><span class="chip chip-auto">Automated</span></div>
+      <div>
+        <h3>Consultation completed</h3>
+        <p>When the appointment is marked complete, the patient moves here and a
+          task appears asking for the outcome. Two outcomes are possible, and the
+          hearing professional chooses one at stage 8 or stage 9.</p>
+      </div>
+    </div>
+
+    <div class="stage is-person">
+      <div class="rail"><span class="num">8</span><span class="chip chip-person">Hearing professional</span></div>
+      <div>
+        <h3>Approved — $0 program</h3>
+        <p>Benefits cover the devices in full. This is the win.</p>
+        <ul class="does">
+          <li>The federal opportunity is marked won and closes here</li>
+          <li>A new order automatically opens in the Online Store Purchase pipeline</li>
+          <li>Fulfillment picks it up from "Hearing Aid Ordered on Signia"</li>
+        </ul>
+        <p>From this point the patient is handled by the existing fulfillment
+          process. Nothing about ordering, programming or shipping changes.</p>
+        <p class="tagline">Tags: <code>fed_approved_zero</code> ·
+          <code>fed_converted_zero</code></p>
+      </div>
+    </div>
+
+    <div class="stage is-person">
+      <div class="rail"><span class="num">9</span><span class="chip chip-person">Alternative option</span></div>
+      <div>
+        <h3>Rental or private pay</h3>
+        <p>The patient wants to move forward but benefits won't cover it — out of
+          network, benefit exhausted, or only partial coverage.</p>
+        <div class="sms">
+          <span>Text sent to the patient</span>
+          <q>Hi {{contact.first_name}}, your plan won't cover the full cost, but
+            you still have good options. We can walk you through a monthly plan or
+            our rental program — no large payment up front.</q>
+        </div>
+        <p>Financing details and the Cherry application link are included in the
+          follow-up email so the patient can apply on their own time.</p>
+        <p class="tagline">Tags: <code>fed_alt_option</code> ·
+          <code>fed_converted_paid</code> if they buy</p>
+      </div>
+    </div>
+
+    <div class="stage is-auto">
+      <div class="rail"><span class="num">10</span><span class="chip chip-auto">Automated</span></div>
+      <div>
+        <h3>Closed lost — long-term nurture</h3>
+        <p>No benefit, no response, or price was the blocker. These contacts aren't
+          deleted. They move into a slow educational sequence and stay reachable
+          for the next plan year, when their coverage may have changed.</p>
+        <p class="tagline">Tag: <code>fed_nurture</code></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Tags at a glance</h2>
+    <p class="lede">Tags are the switches. Applying one starts the matching
+      automation; they also stay on the record permanently as history.</p>
+    <div class="tablewrap">
+      <table>
+        <thead>
+          <tr><th>Tag</th><th>Applied by</th><th>What it starts</th></tr>
+        </thead>
+        <tbody>
+          <tr><td><code>fed_retiree_lead</code></td><td>System</td><td>Marks the contact as a federal benefits lead</td></tr>
+          <tr><td><code>fed_qualified_zero</code></td><td>Hearing professional</td><td>Sends the good-news text and booking link</td></tr>
+          <tr><td><code>fed_needs_network_test</code></td><td>Hearing professional</td><td>Sends the in-network instructions and sets a 14-day check-back</td></tr>
+          <tr><td><code>fed_needs_more_info</code></td><td>Hearing professional</td><td>Requests plan card details</td></tr>
+          <tr><td><code>fed_approved_zero</code></td><td>Hearing professional</td><td>Closes the file as won and opens the fulfillment order</td></tr>
+          <tr><td><code>fed_alt_option</code></td><td>Hearing professional</td><td>Sends rental and financing options</td></tr>
+          <tr><td><code>fed_converted_zero</code></td><td>System</td><td>Records a covered-by-benefits sale</td></tr>
+          <tr><td><code>fed_converted_paid</code></td><td>Hearing professional</td><td>Records a self-pay or rental sale</td></tr>
+          <tr><td><code>fed_nurture</code></td><td>System</td><td>Moves the contact into long-term follow-up</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Language we need to be careful with</h2>
+    <div class="note">
+      <h3>Nothing should promise "$0" before verification</h3>
+      <p>FEHB hearing aid coverage is not uniform. Some plans pay in full, some
+        cap the benefit at a fixed dollar amount every few years, and some require
+        an in-network provider before anything is paid at all.</p>
+      <p>Any message sent before we've checked the plan should say we're
+        <em>checking whether the plan covers it</em> — not that the patient
+        qualifies for free hearing aids. Once the benefit is confirmed at stage 2,
+        we can be as specific as the plan allows.</p>
+      <p>The same applies to the landing page headline, since that's what sets the
+        expectation before the form is even submitted. Worth a read-through before
+        this campaign goes live.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Decisions needed before we build</h2>
+    <p class="lede">These are the open items. Each one changes how the build is
+      configured, so we need answers first rather than reworking later.</p>
+    <ol class="decisions">
+      <li><b>Who verifies benefits?</b>
+        <span>One person owning verification, or shared? Whoever owns it receives
+          every stage 2 task.</span></li>
+      <li><b>Same calendar or a federal-specific one?</b>
+        <span>A separate calendar gives cleaner reporting on federal consults.
+          The same calendar is simpler and reuses the existing reminders.</span></li>
+      <li><b>What are we recording about the plan?</b>
+        <span>We should store carrier, plan name and member ID on the contact so
+          verification isn't repeated from scratch on every follow-up.</span></li>
+      <li><b>Are the rental terms confirmed?</b>
+        <span>The $250/month figure came from an outside draft. Confirm the real
+          terms before it goes into any message.</span></li>
+      <li><b>How long before a non-responder is closed?</b>
+        <span>How many follow-up attempts at each stage, and over how many days,
+          before the lead moves to long-term nurture?</span></li>
+      <li><b>Does the in-network referral get tracked?</b>
+        <span>Patients sent out for testing are a real source of return business.
+          The 14-day check-back covers it — confirm that's the right interval.</span></li>
+    </ol>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <p>Hearing Benefit Services · Honolulu, HI · Internal process document.
+      This describes a proposed pipeline that has not yet been built. Send
+      corrections before the build begins.</p>
+  </div>
+</footer>
+
+</body>
+</html>
