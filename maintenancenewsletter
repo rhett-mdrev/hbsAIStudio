@@ -446,30 +446,56 @@
 
 <!-- HERO -->
 <header class="hero">
-  <div class="hero-badge"><i class="fas fa-diagram-project"></i> Internal Training &middot; Newsletter Overview</div>
-  <h1>Post-Delivery Maintenance<br><span>Reminder Newsletter</span></h1>
-  <p class="hero-sub">A 5-part email and SMS reminder newsletter that starts automatically the moment a hearing aid is delivered &mdash; reinforcing good maintenance habits over time and reducing avoidable support calls.</p>
+  <div class="hero-badge"><i class="fas fa-diagram-project"></i> Internal Training &middot; Onboarding &amp; Newsletter Overview</div>
+  <h1>Post-Delivery Onboarding<br><span>&amp; Maintenance Newsletter</span></h1>
+  <p class="hero-sub">Two connected pieces: a one-time onboarding guide sent the moment a hearing aid is delivered, and a 5-part maintenance reminder newsletter that follows &mdash; also usable on its own for existing patients.</p>
   <div class="hero-pills">
     <span class="hero-pill"><i class="fas fa-tag"></i> Tag-Triggered</span>
-    <span class="hero-pill"><i class="fas fa-calendar-days"></i> 21-Day Sequence</span>
+    <span class="hero-pill"><i class="fas fa-calendar-days"></i> 21-Day Newsletter</span>
     <span class="hero-pill"><i class="fas fa-envelope"></i> 5 Emails</span>
     <span class="hero-pill"><i class="fas fa-comment-sms"></i> 5 SMS</span>
   </div>
 </header>
 
+<!-- SECTION 0 — TWO PATHS INTO THE SAME NEWSLETTER -->
+<section class="daily-section reveal">
+  <div class="section-title">
+    <span class="eyebrow">Section 1</span>
+    <h2>Two Paths, One Newsletter</h2>
+    <p>Not every patient enters the same way. New patients get the full onboarding experience; existing patients can be enrolled in just the maintenance newsletter.</p>
+    <div class="title-line"></div>
+  </div>
+  <div class="parts-grid">
+    <div class="part-card">
+      <div class="part-icon">&#127991;&#65039;</div>
+      <h3>New Patients</h3>
+      <p>Tagged <strong>"HA Delivered"</strong> when their device ships. Receive the onboarding guide first, then are automatically handed into the 5-part newsletter.</p>
+    </div>
+    <div class="part-card">
+      <div class="part-icon">&#128233;</div>
+      <h3>Existing Patients</h3>
+      <p>Tagged <strong>"Newsletter Signup"</strong> directly &mdash; skipping onboarding entirely, since they already know the basics of wearing their device.</p>
+    </div>
+  </div>
+  <div class="parts-callout">
+    <i class="fas fa-diagram-project"></i>
+    <p><strong>How the hand-off works:</strong> The "HA Delivered" tag triggers the onboarding email/SMS (linking to the <em>Your New Hearing Aids</em> guide at <strong>hearingbenefitservices.com/yournewhearingaids</strong>), then automatically applies the "Newsletter Signup" tag &mdash; which is the actual trigger for the 5-part newsletter below. For existing patients, apply "Newsletter Signup" directly and they skip straight into Day 0 of the newsletter. Some content overlap between the onboarding guide and the newsletter is expected and fine.</p>
+  </div>
+</section>
+
 <!-- SECTION 1 — HOW THE AUTOMATION WORKS -->
 <section class="parts-section reveal">
   <div class="section-title">
-    <span class="eyebrow">Section 1</span>
-    <h2>How the Automation Works</h2>
-    <p>Four building blocks make up the workflow in GoHighLevel. Understanding each one makes the pipeline below easy to follow.</p>
+    <span class="eyebrow">Section 2</span>
+    <h2>How the Newsletter Automation Works</h2>
+    <p>Four building blocks make up the newsletter workflow in GoHighLevel. Understanding each one makes the pipeline below easy to follow.</p>
     <div class="title-line"></div>
   </div>
   <div class="parts-grid">
     <div class="part-card">
       <div class="part-icon">&#127991;&#65039;</div>
       <h3>Trigger</h3>
-      <p>The workflow starts when the <strong>"HA Delivered"</strong> tag is applied to a contact &mdash; typically by the fulfillment or delivery process.</p>
+      <p>The newsletter starts when the <strong>"Newsletter Signup"</strong> tag is applied &mdash; either automatically after onboarding, or directly for existing patients.</p>
     </div>
     <div class="part-card">
       <div class="part-icon">&#9200;</div>
@@ -496,7 +522,7 @@
 <!-- SECTION 2 — THE 5-TOUCHPOINT SEQUENCE -->
 <section class="daily-section reveal">
   <div class="section-title">
-    <span class="eyebrow">Section 2</span>
+    <span class="eyebrow">Section 3</span>
     <h2>The 5-Touchpoint Sequence</h2>
     <p>Ordered by urgency &mdash; what the patient needs to know first, not by which guide was written first.</p>
     <div class="title-line"></div>
@@ -558,7 +584,7 @@
 <!-- SECTION 3 — DO'S AND DON'TS -->
 <section class="wax-section reveal">
   <div class="section-title">
-    <span class="eyebrow">Section 3</span>
+    <span class="eyebrow">Section 4</span>
     <h2>Setup Do's and Don'ts</h2>
     <p>A few things the team should watch for when building and maintaining this workflow in GoHighLevel.</p>
     <div class="title-line"></div>
@@ -584,7 +610,7 @@
 <!-- SECTION 4 — REPORTING CHECKLIST -->
 <section class="weekly-section reveal">
   <div class="section-title">
-    <span class="eyebrow">Section 4</span>
+    <span class="eyebrow">Section 5</span>
     <h2>Reporting &amp; Tags Checklist</h2>
     <p>What to track once the workflow is live, and how to keep the data clean.</p>
     <div class="title-line"></div>
@@ -592,7 +618,7 @@
   <div class="weekly-grid">
     <div class="weekly-card">
       <h3>&#127991;&#65039; Tags to Track</h3>
-      <p>"HA Delivered" (entry) and "Newsletter Complete" (exit) &mdash; the gap between these counts tells you how many contacts are mid-sequence at any time.</p>
+      <p>"HA Delivered" (new patients only) and "Newsletter Signup" (actual newsletter entry &mdash; either automatic or applied directly) through to "Newsletter Complete" (exit). The gap between entry and exit tags tells you how many contacts are mid-sequence.</p>
     </div>
     <div class="weekly-card">
       <h3>&#128231; Email Metrics</h3>
@@ -619,12 +645,13 @@
     <div class="cta-left">
       <div class="cta-eyebrow"><i class="fas fa-flag-checkered"></i> Status</div>
       <h2>Where This Stands<br><em>Right Now</em></h2>
-      <p>All 5 email templates have been built and are ready to paste into GoHighLevel. SMS copy for each step still needs to be drafted before the workflow can go live.</p>
+      <p>All 5 newsletter email templates and the "Your New Hearing Aids" onboarding page are built, live, and linked from the navigation. SMS copy for each newsletter step, plus the "HA Delivered" &rarr; "Newsletter Signup" &rarr; "Newsletter Complete" tags and pipeline, still need to be set up in GHL before the workflow goes live.</p>
       <div class="cta-pills">
-        <span class="cta-pill"><i class="fas fa-check-circle"></i> Emails Built</span>
+        <span class="cta-pill"><i class="fas fa-check-circle"></i> 5 Newsletter Emails Built</span>
+        <span class="cta-pill"><i class="fas fa-check-circle"></i> Onboarding Page Published</span>
         <span class="cta-pill"><i class="fas fa-check-circle"></i> Navigation Updated</span>
         <span class="cta-pill"><i class="fas fa-circle-notch"></i> SMS Copy Pending</span>
-        <span class="cta-pill"><i class="fas fa-circle-notch"></i> Workflow Not Yet Live</span>
+        <span class="cta-pill"><i class="fas fa-circle-notch"></i> Tags &amp; Pipeline Not Yet Built</span>
       </div>
     </div>
     <div class="cta-right">
@@ -632,7 +659,7 @@
         <div class="cta-stat-icon gold">&#128231;</div>
         <div class="cta-stat-text">
           <strong>5</strong>
-          <span>Email templates built and ready</span>
+          <span>Newsletter email templates built and pasted into GHL</span>
         </div>
       </div>
       <div class="cta-stat-row">
@@ -646,7 +673,7 @@
         <div class="cta-stat-icon green">&#128197;</div>
         <div class="cta-stat-text">
           <strong>21</strong>
-          <span>Days from delivery to sequence completion</span>
+          <span>Days from newsletter signup to sequence completion</span>
         </div>
       </div>
     </div>
