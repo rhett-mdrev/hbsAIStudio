@@ -440,6 +440,112 @@
 
     .reveal { opacity: 0; transform: translateY(20px); transition: opacity 0.55s ease, transform 0.55s ease; }
     .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* EMAIL MOCKUP PREVIEW */
+    .email-mock-section { padding: 72px 24px; }
+    .email-mock {
+      max-width: 420px;
+      margin: 0 auto 36px;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      border: 1px solid var(--slate-200);
+    }
+    .email-mock-header {
+      background: var(--navy);
+      color: var(--white);
+      font-family: 'Lora', serif;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-align: center;
+      padding: 16px;
+      letter-spacing: 0.02em;
+    }
+    .email-mock-header span { color: var(--gold); }
+    .email-mock-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--blue-dark) 100%);
+      color: var(--white);
+      text-align: center;
+      padding: 10px 24px 26px;
+    }
+    .email-mock-badge {
+      display: inline-block;
+      background: var(--white);
+      color: var(--navy);
+      font-size: 0.62rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      padding: 4px 12px;
+      border-radius: 999px;
+      margin-bottom: 10px;
+    }
+    .email-mock-title { font-family: 'Lora', serif; font-weight: 700; font-size: 1.1rem; line-height: 1.3; margin-bottom: 8px; }
+    .email-mock-rule { width: 34px; height: 2px; background: var(--gold); margin: 0 auto 10px; border-radius: 2px; }
+    .email-mock-sub { font-size: 0.78rem; color: rgba(255,255,255,0.8); line-height: 1.5; }
+    .email-mock-body { background: var(--white); padding: 22px 24px; }
+    .email-mock-body p { font-size: 0.82rem; color: var(--slate-700); line-height: 1.6; margin-bottom: 12px; }
+    .email-mock-btn {
+      display: block; text-align: center;
+      background: var(--gold); color: var(--navy);
+      font-size: 0.82rem; font-weight: 700;
+      padding: 10px; border-radius: 8px; margin: 16px 0;
+    }
+    .email-mock-cta {
+      background: var(--navy);
+      border-top: 3px solid var(--gold);
+      border-radius: 10px;
+      text-align: center;
+      padding: 16px;
+      margin-top: 10px;
+    }
+    .email-mock-cta div:first-child { color: var(--white); font-family: 'Lora', serif; font-weight: 700; font-size: 0.85rem; margin-bottom: 4px; }
+    .email-mock-cta div:last-child { color: var(--gold); font-weight: 800; font-size: 1.1rem; }
+    .email-mock-footer { background: var(--slate-100); text-align: center; padding: 12px; font-size: 0.68rem; color: var(--slate-500); }
+    .email-mock-caption { text-align: center; font-size: 0.85rem; color: var(--slate-500); max-width: 420px; margin: -20px auto 36px; }
+
+    /* SUBJECT LINE TABLE reuses .info-table pattern via inline table below */
+
+    /* SMS BUBBLE PREVIEW */
+    .sms-mock-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .sms-mock-card {
+      background: var(--white);
+      border: 1px solid var(--slate-200);
+      border-radius: var(--radius-md);
+      padding: 18px 18px 20px;
+      box-shadow: var(--shadow-sm);
+    }
+    .sms-mock-label {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+    .sms-bubble {
+      background: #e9e9eb;
+      color: #1c1c1e;
+      font-size: 0.88rem;
+      line-height: 1.55;
+      padding: 10px 14px;
+      border-radius: 18px 18px 18px 4px;
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow-wrap: break-word;
+      word-break: break-word;
+      hyphens: auto;
+    }
+    .sms-bubble a {
+      color: var(--blue);
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -474,12 +580,16 @@
     <div class="part-card">
       <div class="part-icon">&#128233;</div>
       <h3>Existing Patients</h3>
-      <p>Tagged <strong>"Newsletter Signup"</strong> directly &mdash; skipping onboarding entirely, since they already know the basics of wearing their device.</p>
+      <p>Tagged <strong>"Maintenance Newsletter Signup"</strong> directly &mdash; skipping onboarding entirely, since they already know the basics of wearing their device.</p>
     </div>
   </div>
   <div class="parts-callout">
     <i class="fas fa-diagram-project"></i>
-    <p><strong>How the hand-off works:</strong> The "HA Delivered" tag triggers the onboarding email/SMS (linking to the <em>Your New Hearing Aids</em> guide at <strong>hearingbenefitservices.com/yournewhearingaids</strong>), then automatically applies the "Newsletter Signup" tag &mdash; which is the actual trigger for the 5-part newsletter below. For existing patients, apply "Newsletter Signup" directly and they skip straight into Day 0 of the newsletter. Some content overlap between the onboarding guide and the newsletter is expected and fine.</p>
+    <p><strong>How the hand-off works:</strong> The "HA Delivered" tag triggers the onboarding email/SMS (linking to the <em>Your New Hearing Aids</em> guide at <strong>hearingbenefitservices.com/yournewhearingaids</strong>), then automatically applies the "Maintenance Newsletter Signup" tag &mdash; which is the actual trigger for the 5-part newsletter below. For existing patients, apply "Maintenance Newsletter Signup" directly and they skip straight into Day 0 of the newsletter. Some content overlap between the onboarding guide and the newsletter is expected and fine.</p>
+  </div>
+  <div class="parts-callout">
+    <i class="fas fa-tag"></i>
+    <p><strong>Why "Maintenance Newsletter" and not just "Newsletter"?</strong> HBS may launch other newsletters in the future &mdash; promotions, discounts, seasonal offers. Naming this one specifically ("Maintenance Newsletter") from the start keeps tags, pipeline stages, and reporting unambiguous once those other newsletters exist, instead of needing a rename later.</p>
   </div>
 </section>
 
@@ -495,7 +605,7 @@
     <div class="part-card">
       <div class="part-icon">&#127991;&#65039;</div>
       <h3>Trigger</h3>
-      <p>The newsletter starts when the <strong>"Newsletter Signup"</strong> tag is applied &mdash; either automatically after onboarding, or directly for existing patients.</p>
+      <p>The newsletter starts when the <strong>"Maintenance Newsletter Signup"</strong> tag is applied &mdash; either automatically after onboarding, or directly for existing patients.</p>
     </div>
     <div class="part-card">
       <div class="part-icon">&#9200;</div>
@@ -510,7 +620,7 @@
     <div class="part-card">
       <div class="part-icon">&#9989;</div>
       <h3>Completion Tag</h3>
-      <p>Once all five touchpoints have gone out, the <strong>"Newsletter Complete"</strong> tag is applied for reporting and to exclude the contact from other new-customer campaigns.</p>
+      <p>Once all five touchpoints have gone out, the <strong>"Maintenance Newsletter Complete"</strong> tag is applied for reporting and to exclude the contact from other new-customer campaigns.</p>
     </div>
   </div>
   <div class="parts-callout">
@@ -593,7 +703,7 @@
     <div class="wax-card replace">
       <h3><i class="fas fa-circle-xmark" style="margin-right:8px;"></i> Avoid These Mistakes</h3>
       <div class="wax-item"><i class="fas fa-times-circle"></i> Sending the email and SMS with identical, word-for-word copy &mdash; the SMS should be a short nudge, not a text dump of the email.</div>
-      <div class="wax-item"><i class="fas fa-times-circle"></i> Skipping the "Newsletter Complete" tag &mdash; without it, reporting can't tell who has finished the sequence.</div>
+      <div class="wax-item"><i class="fas fa-times-circle"></i> Skipping the "Maintenance Newsletter Complete" tag &mdash; without it, reporting can't tell who has finished the sequence.</div>
       <div class="wax-item"><i class="fas fa-times-circle"></i> Hardcoding a patient's name or details instead of using merge tags like <code>{{contact.first_name}}</code>.</div>
       <div class="wax-item"><i class="fas fa-times-circle"></i> Activating the workflow before testing every email and SMS end-to-end on both iPhone and Android.</div>
     </div>
@@ -618,7 +728,7 @@
   <div class="weekly-grid">
     <div class="weekly-card">
       <h3>&#127991;&#65039; Tags to Track</h3>
-      <p>"HA Delivered" (new patients only) and "Newsletter Signup" (actual newsletter entry &mdash; either automatic or applied directly) through to "Newsletter Complete" (exit). The gap between entry and exit tags tells you how many contacts are mid-sequence.</p>
+      <p>"HA Delivered" (new patients only) and "Maintenance Newsletter Signup" (actual newsletter entry &mdash; either automatic or applied directly) through to "Maintenance Newsletter Complete" (exit). The gap between entry and exit tags tells you how many contacts are mid-sequence.</p>
     </div>
     <div class="weekly-card">
       <h3>&#128231; Email Metrics</h3>
@@ -639,34 +749,110 @@
   </div>
 </section>
 
+<!-- SECTION 6 — WHAT THE EMAILS LOOK LIKE -->
+<section class="email-mock-section reveal">
+  <div class="section-title">
+    <span class="eyebrow">Section 6</span>
+    <h2>What the Emails Look Like</h2>
+    <p>All 6 emails (onboarding + 5 newsletter topics) share one template &mdash; navy header, gold accent, a single CTA button, and a Tech Support banner. Only the title, intro, body content, and link change.</p>
+    <div class="title-line"></div>
+  </div>
+
+  <div class="email-mock">
+    <div class="email-mock-header">HEARING <span>BENEFIT</span> SERVICES</div>
+    <div class="email-mock-hero">
+      <span class="email-mock-badge">Device Care Guide</span>
+      <div class="email-mock-title">Email Title Goes Here</div>
+      <div class="email-mock-rule"></div>
+      <div class="email-mock-sub">One or two sentences pulled from the source page's intro, setting up what this email covers.</div>
+    </div>
+    <div class="email-mock-body">
+      <p><strong>Hi {{contact.first_name}},</strong> a short, warm intro paragraph explaining why this email is landing in their inbox today &mdash; then a highlights list or a few key points.</p>
+      <div class="email-mock-btn">Read the Full Guide &rarr;</div>
+      <div class="email-mock-cta">
+        <div>Need a hand? Call the Tech Support Line</div>
+        <div>(800) 350-6093</div>
+      </div>
+    </div>
+    <div class="email-mock-footer">Hearing Benefit Services &middot; Honolulu, HI &middot; Unsubscribe</div>
+  </div>
+  <p class="email-mock-caption">A representative mockup of the shared layout &mdash; not any single email's actual copy.</p>
+
+  <table class="info-table">
+    <tr><th>Touchpoint</th><th>Email Subject Line</th><th>Links To</th></tr>
+    <tr><td>Onboarding</td><td>Congratulations on Your New Hearing Aids</td><td>/yournewhearingaids</td></tr>
+    <tr><td>Day 0</td><td>How to Put On Your RIC Hearing Aids</td><td>/putonrichearingaid</td></tr>
+    <tr><td>Day 3</td><td>How to Pair Your Hearing Aids With Your Phone</td><td>/howtopairyourhearingaidswithyourphone</td></tr>
+    <tr><td>Day 7</td><td>How to Clean Your RIC Hearing Aid</td><td>/cleaningrichearingaid</td></tr>
+    <tr><td>Day 12</td><td>Hearing Aid Care: Everyday Habits That Make Them Last</td><td>/hearingaidcareeverydayhabitsthatmakethemlast</td></tr>
+    <tr><td>Day 21</td><td>How to Change the Dome Tip on Your Hearing Aid</td><td>/changingdometips</td></tr>
+  </table>
+</section>
+
+<!-- SECTION 7 — SMS MESSAGE COPY -->
+<section class="weekly-section reveal">
+  <div class="section-title">
+    <span class="eyebrow">Section 7</span>
+    <h2>SMS Message Copy</h2>
+    <p>Each SMS follows its paired email by about an hour, and always includes a direct link back to the relevant page.</p>
+    <div class="title-line"></div>
+  </div>
+  <div class="sms-mock-grid">
+    <div class="sms-mock-card">
+      <div class="sms-mock-label">Onboarding &mdash; Workflow A</div>
+      <div class="sms-bubble">Hi {{contact.first_name}}, congrats on your new hearing aids from Hearing Benefit Services! We emailed your complete guide to wearing, charging &amp; caring for them: <a href="https://hearingbenefitservices.com/yournewhearingaids" target="_blank" rel="noopener">hearingbenefitservices.com/yournewhearingaids</a> Questions? Call (800) 350-6093.</div>
+    </div>
+    <div class="sms-mock-card">
+      <div class="sms-mock-label">Day 0 &mdash; Putting On</div>
+      <div class="sms-bubble">Hi {{contact.first_name}}, it takes a little practice to get used to putting on your hearing aids &mdash; totally normal! Full step-by-step guide here: <a href="https://hearingbenefitservices.com/putonrichearingaid" target="_blank" rel="noopener">hearingbenefitservices.com/putonrichearingaid</a> &mdash; Hearing Benefit Services</div>
+    </div>
+    <div class="sms-mock-card">
+      <div class="sms-mock-label">Day 3 &mdash; Pairing</div>
+      <div class="sms-bubble">Hi {{contact.first_name}}, did you know you can stream calls &amp; music through your hearing aids? Here's how to pair them with your phone: <a href="https://hearingbenefitservices.com/howtopairyourhearingaidswithyourphone" target="_blank" rel="noopener">hearingbenefitservices.com/howtopairyourhearingaidswithyourphone</a> &mdash; HBS</div>
+    </div>
+    <div class="sms-mock-card">
+      <div class="sms-mock-label">Day 7 &mdash; Cleaning</div>
+      <div class="sms-bubble">Hi {{contact.first_name}}, a 1-minute daily wipe-down prevents most hearing aid sound issues. Here's how: <a href="https://hearingbenefitservices.com/cleaningrichearingaid" target="_blank" rel="noopener">hearingbenefitservices.com/cleaningrichearingaid</a> &mdash; Hearing Benefit Services</div>
+    </div>
+    <div class="sms-mock-card">
+      <div class="sms-mock-label">Day 12 &mdash; Everyday Habits</div>
+      <div class="sms-bubble">Hi {{contact.first_name}}, here are 8 simple daily habits that help your hearing aids last longer: <a href="https://hearingbenefitservices.com/hearingaidcareeverydayhabitsthatmakethemlast" target="_blank" rel="noopener">hearingbenefitservices.com/hearingaidcareeverydayhabitsthatmakethemlast</a> &mdash; HBS</div>
+    </div>
+    <div class="sms-mock-card">
+      <div class="sms-mock-label">Day 21 &mdash; Dome Tip</div>
+      <div class="sms-bubble">Hi {{contact.first_name}}, the dome tip on your hearing aid wears out over time. Here's how &amp; when to change it: <a href="https://hearingbenefitservices.com/changingdometips" target="_blank" rel="noopener">hearingbenefitservices.com/changingdometips</a> &mdash; Hearing Benefit Services</div>
+    </div>
+  </div>
+</section>
+
 <!-- CLOSING SUMMARY -->
 <section class="cta-section">
   <div class="cta-inner">
     <div class="cta-left">
       <div class="cta-eyebrow"><i class="fas fa-flag-checkered"></i> Status</div>
       <h2>Where This Stands<br><em>Right Now</em></h2>
-      <p>All 5 newsletter email templates and the "Your New Hearing Aids" onboarding page are built, live, and linked from the navigation. SMS copy for each newsletter step, plus the "HA Delivered" &rarr; "Newsletter Signup" &rarr; "Newsletter Complete" tags and pipeline, still need to be set up in GHL before the workflow goes live.</p>
+      <p>All 5 newsletter emails, the onboarding email, and the "Your New Hearing Aids" page are built and live. SMS copy is drafted for every touchpoint (Section 7 above), and both workflows &mdash; including pipeline stage updates and contact notes at every step &mdash; are built in GHL.</p>
       <div class="cta-pills">
-        <span class="cta-pill"><i class="fas fa-check-circle"></i> 5 Newsletter Emails Built</span>
+        <span class="cta-pill"><i class="fas fa-check-circle"></i> 6 Emails Built</span>
         <span class="cta-pill"><i class="fas fa-check-circle"></i> Onboarding Page Published</span>
         <span class="cta-pill"><i class="fas fa-check-circle"></i> Navigation Updated</span>
-        <span class="cta-pill"><i class="fas fa-circle-notch"></i> SMS Copy Pending</span>
-        <span class="cta-pill"><i class="fas fa-circle-notch"></i> Tags &amp; Pipeline Not Yet Built</span>
+        <span class="cta-pill"><i class="fas fa-check-circle"></i> SMS Copy Drafted</span>
+        <span class="cta-pill"><i class="fas fa-check-circle"></i> Workflows &amp; Pipeline Built</span>
       </div>
     </div>
     <div class="cta-right">
       <div class="cta-stat-row">
         <div class="cta-stat-icon gold">&#128231;</div>
         <div class="cta-stat-text">
-          <strong>5</strong>
-          <span>Newsletter email templates built and pasted into GHL</span>
+          <strong>6</strong>
+          <span>Email templates built (1 onboarding + 5 newsletter)</span>
         </div>
       </div>
       <div class="cta-stat-row">
         <div class="cta-stat-icon blue">&#128241;</div>
         <div class="cta-stat-text">
-          <strong>5</strong>
-          <span>SMS messages still to be drafted</span>
+          <strong>6</strong>
+          <span>SMS messages drafted and added to the workflows</span>
         </div>
       </div>
       <div class="cta-stat-row">
