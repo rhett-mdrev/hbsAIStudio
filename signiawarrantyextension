@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Signia Warranty Extension — Staff Training | Hearing Benefit Services</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+:root {
+--navy: #1a2744;
+--blue: #2563eb;
+--teal: #0d9488;
+--green: #16a34a;
+--orange: #ea580c;
+--red: #dc2626;
+--purple: #7c3aed;
+--gold: #d97706;
+--bg: #f8fafc;
+--card: #ffffff;
+--border: #e2e8f0;
+--text: #1e293b;
+--text-light: #64748b;
+--text-lighter: #94a3b8;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; }
+code { background: #f1f5f9; border: 1px solid var(--border); border-radius: 4px; padding: 1px 6px; font-size: 0.85em; color: var(--navy); word-break: break-word; }
+a { color: var(--blue); }
+.header {
+background: linear-gradient(135deg, var(--navy) 0%, #2d3f63 100%);
+color: white; padding: 40px 24px; text-align: center;
+}
+.header img { max-width: 180px; margin-bottom: 16px; }
+.header h1 { font-family: 'DM Serif Display', serif; font-size: 2rem; margin-bottom: 6px; }
+.header p { opacity: 0.85; font-size: 0.95rem; max-width: 620px; margin: 0 auto; }
+.header .badge {
+display: inline-block; background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25);
+padding: 4px 14px; border-radius: 20px; font-size: 0.78rem; margin-top: 12px; letter-spacing: 0.5px;
+}
+.container { max-width: 880px; margin: 0 auto; padding: 32px 20px; }
+.login-bar {
+background: #fffbeb; border: 1px solid #fde68a; border-radius: 10px;
+padding: 14px 20px; margin-bottom: 28px; font-size: 0.88rem; color: #92400e;
+}
+.login-bar strong { color: #78350f; }
+.section-label {
+font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px;
+color: var(--blue); margin-bottom: 6px;
+}
+.section-title {
+font-family: 'DM Serif Display', serif; font-size: 1.6rem; margin-bottom: 16px; color: var(--navy);
+}
+.card {
+background: var(--card); border: 1px solid var(--border); border-radius: 12px;
+padding: 28px; margin-bottom: 24px;
+}
+.card h3 { font-size: 1.15rem; font-weight: 700; margin-bottom: 10px; color: var(--navy); }
+.card p, .card li { font-size: 0.92rem; color: var(--text); line-height: 1.7; }
+.card ul, .card ol { padding-left: 20px; margin-top: 8px; }
+.card ul li, .card ol li { margin-bottom: 6px; }
+.module-card {
+background: var(--card); border: 1px solid var(--border); border-radius: 14px;
+padding: 0; margin-bottom: 28px; overflow: hidden;
+}
+.module-header {
+padding: 20px 28px; border-bottom: 1px solid var(--border); display: flex;
+align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.module-number {
+width: 42px; height: 42px; border-radius: 10px; display: flex; align-items: center;
+justify-content: center; font-weight: 700; font-size: 1.1rem; color: white; flex-shrink: 0;
+}
+.module-header h3 { font-size: 1.15rem; font-weight: 700; color: var(--navy); flex: 1; }
+.module-status {
+font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;
+padding: 4px 12px; border-radius: 20px;
+}
+.status-live { background: #dcfce7; color: #166534; }
+.status-built { background: #fef3c7; color: #92400e; }
+.module-body { padding: 24px 28px; }
+.module-body p { font-size: 0.92rem; margin-bottom: 12px; }
+.module-body h3 { font-size: 1.05rem; color: var(--navy); }
+.auto-badge, .manual-badge {
+display: inline-block; padding: 3px 10px; border-radius: 5px;
+font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px;
+margin-bottom: 6px;
+}
+.auto-badge { background: #dbeafe; color: #1e40af; }
+.manual-badge { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+.step-card {
+border: 1px solid var(--border); border-radius: 10px; padding: 18px 20px;
+margin-bottom: 14px; position: relative;
+}
+.step-card.auto-step { border-left: 4px solid var(--blue); background: #fafcff; }
+.step-card.manual-step { border-left: 4px solid var(--orange); background: #fffcf5; }
+.step-card .step-num {
+font-size: 0.72rem; font-weight: 700; color: var(--text-lighter);
+text-transform: uppercase; letter-spacing: 1px; margin-bottom: 4px;
+}
+.step-card h4 { font-size: 1rem; font-weight: 700; margin-bottom: 6px; color: var(--navy); }
+.step-card p { font-size: 0.88rem; margin-bottom: 0; }
+.step-card ul { padding-left: 20px; margin-top: 8px; font-size: 0.88rem; }
+.step-card ul li { margin-bottom: 4px; }
+.manual-action-box {
+background: #fffbeb; border: 2px solid #f59e0b; border-radius: 10px;
+padding: 18px 20px; margin: 16px 0;
+}
+.manual-action-box h4 { font-size: 0.95rem; font-weight: 700; color: #92400e; margin-bottom: 8px; }
+.manual-action-box h5 { font-size: 0.88rem; font-weight: 700; color: #78350f; margin: 14px 0 6px; text-transform: uppercase; letter-spacing: 0.6px; }
+.manual-action-box p { font-size: 0.88rem; color: #78350f; }
+.manual-action-box ol, .manual-action-box ul { padding-left: 20px; font-size: 0.88rem; color: #78350f; }
+.manual-action-box ol li, .manual-action-box ul li { margin-bottom: 6px; line-height: 1.6; }
+.manual-action-box ul ul { margin-top: 4px; }
+.manual-action-box .highlight { background: #fef3c7; padding: 2px 6px; border-radius: 4px; font-weight: 600; }
+.click { display: inline-block; background: #fff; border: 1px solid #fcd34d; border-radius: 4px; padding: 0 6px; font-weight: 600; font-size: 0.85em; color: #78350f; white-space: nowrap; }
+.sms-box {
+background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 10px;
+padding: 16px 20px; margin: 12px 0; font-size: 0.85rem; color: #166534;
+font-style: italic; line-height: 1.6;
+}
+.sms-label {
+font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+color: var(--teal); margin-bottom: 6px; font-style: normal;
+}
+.email-box {
+background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 10px;
+padding: 16px 20px; margin: 12px 0; font-size: 0.85rem; color: #1e40af; line-height: 1.6;
+}
+.email-label {
+font-size: 0.7rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+color: var(--blue); margin-bottom: 6px;
+}
+.tag {
+display: inline-block; padding: 4px 12px; border-radius: 6px; font-size: 0.78rem;
+font-weight: 600; font-family: 'DM Sans', monospace;
+}
+.tag-blue { background: #dbeafe; color: #1e40af; }
+.tag-green { background: #dcfce7; color: #166534; }
+.tag-orange { background: #ffedd5; color: #9a3412; }
+.tag-red { background: #fee2e2; color: #991b1b; }
+.tag-teal { background: #ccfbf1; color: #115e59; }
+.stage-list { margin: 12px 0; }
+.stage-item {
+display: flex; align-items: flex-start; gap: 10px; padding: 10px 0;
+border-bottom: 1px solid #f1f5f9; font-size: 0.88rem;
+}
+.stage-item:last-child { border-bottom: none; }
+.stage-item small { display: block; color: var(--text-light); font-size: 0.8rem; }
+.stage-num {
+width: 26px; height: 26px; border-radius: 6px; background: var(--navy); color: white;
+display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-weight: 700;
+flex-shrink: 0; margin-top: 2px;
+}
+.table-wrap { overflow-x: auto; }
+.info-table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.88rem; }
+.info-table th {
+text-align: left; background: #f1f5f9; padding: 10px 14px; font-weight: 600;
+font-size: 0.8rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.5px;
+}
+.info-table td { padding: 10px 14px; border-bottom: 1px solid #f1f5f9; vertical-align: top; }
+.info-table tr:last-child td { border-bottom: none; }
+.alert { border-radius: 10px; padding: 14px 20px; margin: 16px 0; font-size: 0.88rem; }
+.alert-info { background: #eff6ff; border: 1px solid #bfdbfe; color: #1e40af; }
+.alert-warning { background: #fffbeb; border: 1px solid #fde68a; color: #92400e; }
+.alert-success { background: #f0fdf4; border: 1px solid #bbf7d0; color: #166534; }
+.alert-danger { background: #fef2f2; border: 2px solid #fca5a5; color: #991b1b; }
+.alert-danger strong.big { display: block; font-size: 1rem; margin-bottom: 4px; }
+.divider { border: none; border-top: 2px solid var(--border); margin: 40px 0; }
+.footer {
+background: var(--navy); color: rgba(255,255,255,0.7); text-align: center;
+padding: 28px 20px; font-size: 0.82rem; margin-top: 40px;
+}
+.legend-box {
+display: flex; gap: 20px; flex-wrap: wrap; margin: 16px 0; padding: 16px 20px;
+background: #f8fafc; border: 1px solid var(--border); border-radius: 10px;
+}
+.legend-item { display: flex; align-items: center; gap: 8px; font-size: 0.85rem; }
+.legend-dot { width: 14px; height: 14px; border-radius: 4px; flex-shrink: 0; }
+.flow { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-top: 12px; font-size: 0.82rem; }
+.flow span.box { padding: 6px 12px; border-radius: 8px; font-weight: 600; }
+.flow span.box.a { background: #dbeafe; color: #1e40af; }
+.flow span.box.m { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+.flow span.arrow { color: var(--text-lighter); font-weight: 700; }
+.checklist { list-style: none; padding-left: 0 !important; }
+.checklist li { position: relative; padding-left: 30px; margin-bottom: 10px !important; }
+.checklist li:before { content: ""; position: absolute; left: 0; top: 3px; width: 18px; height: 18px; border: 2px solid var(--orange); border-radius: 4px; background: #fff; }
+@media (max-width: 600px) {
+.header h1 { font-size: 1.5rem; }
+.section-title { font-size: 1.3rem; }
+.module-header { padding: 16px 20px; }
+.module-body { padding: 18px 20px; }
+.card { padding: 20px; }
+.legend-box { flex-direction: column; gap: 10px; }
+}
+.product-table td:first-child { font-weight: 600; color: var(--navy); white-space: nowrap; }
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+<img src="https://assets.cdn.filesafe.space/UDKdmJIdT4xB1V6Lye64/media/68f7cb4d3a4642fd12cdeaab.png" alt="Hearing Benefit Services">
+<div style="font-size:0.78rem;opacity:0.7;margin-bottom:8px;">Staff Training · Confidential</div>
+<h1>Signia Warranty Extension</h1>
+<p>Complete training guide for the 12-Month Signia Warranty Extension. Every workflow is explained, with clear labels showing what's automated and what Len handles manually.</p>
+<div class="badge">Last Updated: October 2026 · Replaces the 6-Month version</div>
+</div>
+
+<div class="container">
+
+<div class="login-bar">
+🔒 <strong>Staff Only.</strong> This page contains internal workflow details, pricing and SMS/email copy. Do not share outside the HBS team.
+</div>
+
+<!-- WHAT CHANGED -->
+<div class="alert alert-warning">
+<strong>🔄 What changed (October 2026):</strong> Signia confirmed that a hearing aid whose warranty has <strong>already expired cannot be extended</strong>. It must be repaired first. So the extension is now <strong>12 months</strong>, and it's only for aids that are <strong>still under warranty</strong> (including the 6-month warranty after a repair). Out-of-warranty aids now go through the <strong>Signia Hearing Aid Repair</strong> product instead. See the separate <em>Signia Hearing Aid Repair</em> training page.
+</div>
+
+<!-- LEGEND -->
+<div class="card">
+<h3>How to Read This Guide</h3>
+<p>Every step in every workflow is labeled so you know exactly what GHL does automatically and what you need to do yourself.</p>
+<div class="legend-box">
+<div class="legend-item">
+<div class="legend-dot" style="background:var(--blue);"></div>
+<span><strong>AUTOMATED</strong>: GHL does this automatically. No action needed from you.</span>
+</div>
+<div class="legend-item">
+<div class="legend-dot" style="background:var(--orange);"></div>
+<span><strong>MANUAL — LEN</strong>: You need to do this step yourself. Don't skip it.</span>
+</div>
+</div>
+</div>
+
+<!-- GOLDEN RULE -->
+<div class="alert alert-danger">
+<strong class="big">⛔ The Golden Rule: Enter the Warranty End Date FIRST, then move the card to "Coverage Active."</strong>
+Moving the card to <strong>Coverage Active</strong> instantly texts and emails the customer their new warranty expiration date. If the <strong>Warranty End Date</strong> field is empty or wrong at that moment, the customer gets a blank or wrong date, and the message <strong>will not resend</strong>.
+</div>
+
+<!-- WHICH PRODUCT -->
+<div class="section-label">Start Here</div>
+<div class="section-title">Which Product Does the Customer Need?</div>
+<div class="card">
+<p>Use the hearing aid's warranty status in the Signia portal to decide.</p>
+<div class="table-wrap">
+<table class="info-table product-table">
+<thead><tr><th>Situation</th><th>What to Offer</th><th>Price</th></tr></thead>
+<tbody>
+<tr><td>Out of warranty, damaged or not working</td><td><strong>Signia Hearing Aid Repair</strong>. Includes a 6-month repair-only warranty.</td><td>$299 ($250 with code <code>JDSKXDH</code>)</td></tr>
+<tr><td>Under warranty (original or after a repair), wants more coverage</td><td><strong>Signia Warranty Extension</strong>. Adds 12 months.</td><td>$299 ($250 with code <code>JDSKXDH</code>)</td></tr>
+<tr><td>Under warranty, hearing aid <strong>lost</strong></td><td>Loss replacement through Signia</td><td>$299 fee per aid*</td></tr>
+<tr><td>Out of warranty, hearing aid <strong>lost</strong></td><td>Not covered. The customer needs a new hearing aid at standard pricing. Offer a consultation.</td><td>Standard pricing</td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:0.82rem;color:var(--text-light);margin-top:8px;">*The $299 loss-replacement fee is pending final confirmation from Andrea. For reference, Signia charges HBS $212 per aid for an in-warranty loss &amp; damage replacement, with free shipping.</p>
+</div>
+
+<!-- OVERVIEW -->
+<div class="section-label">Overview</div>
+<div class="section-title">What Is the Signia Warranty Extension?</div>
+<div class="card">
+<p>The <strong>Signia Hearing Aid Warranty Extension</strong> adds <strong>12 more months of coverage</strong> to the end of a customer's <strong>current</strong> Signia warranty. It's a <strong>$299 one-time payment</strong> ($250 with code <code>JDSKXDH</code>), sold as a digital product in GHL Payments.</p>
+<ul>
+<li><strong>Who qualifies:</strong> genuine Signia hearing aids that are <strong>currently under warranty</strong>. That includes the original warranty, or the 6-month repair warranty after a Signia repair.</li>
+<li><strong>Repairs</strong> during coverage are covered at no extra cost.</li>
+<li><strong>Lost hearing aids</strong> during coverage are replaced for a <strong>$299 fee per aid</strong>.</li>
+</ul>
+<p style="margin-top:12px;">After checkout, the customer is sent straight to the registration page, <a href="https://hearingbenefitservices.com/signia-warranty-registration" target="_blank">hearingbenefitservices.com/signia-warranty-registration</a>, where they enter their hearing aid model and serial numbers. Three connected workflows handle everything else. Len steps in to confirm the warranty, order the extension from Signia and record the new expiration date.</p>
+<div class="flow">
+<span class="box a">Customer buys</span><span class="arrow">→</span>
+<span class="box a">Submits registration form</span><span class="arrow">→</span>
+<span class="box m">Len confirms still in warranty</span><span class="arrow">→</span>
+<span class="box m">Len orders in Signia</span><span class="arrow">→</span>
+<span class="box m">Len enters Warranty End Date</span><span class="arrow">→</span>
+<span class="box m">Len moves card to Coverage Active</span><span class="arrow">→</span>
+<span class="box a">Customer notified · Won</span>
+</div>
+<p style="margin-top:14px;font-size:0.85rem;">Product page: <a href="https://hearingbenefitservices.com/signia-hearing-aid-warranty-extension/product/signiaextendedwarranty" target="_blank">hearingbenefitservices.com/signia-hearing-aid-warranty-extension/product/signiaextendedwarranty</a></p>
+</div>
+
+<!-- PIPELINE STAGES -->
+<div class="section-label">Pipeline</div>
+<div class="section-title">Signia Warranty Extension Purchase — Pipeline Stages</div>
+<div class="card">
+<p>Every warranty extension customer gets one card in this pipeline. GHL moves the card for stages 1, 2 and 5. <strong>Len moves the card for stages 3 and 4</strong>, and moves it to stage 5 if the warranty has already expired.</p>
+<div class="stage-list">
+<div class="stage-item"><div class="stage-num">1</div><div>Purchased - Awaiting Registration <span class="auto-badge">AUTOMATED</span><small>Paid, but hasn't submitted the registration form yet.</small></div></div>
+<div class="stage-item"><div class="stage-num">2</div><div>Registered - Ready to Order <span class="auto-badge">AUTOMATED</span><small>Serial numbers received. Len's order task is waiting.</small></div></div>
+<div class="stage-item"><div class="stage-num">3</div><div>Ordered with Signia <span class="manual-badge">MANUAL — LEN</span><small>Len confirmed the aid is in warranty and placed the order in the Signia portal shop.</small></div></div>
+<div class="stage-item"><div class="stage-num">4</div><div>Coverage Active <span class="manual-badge">MANUAL — LEN</span><small>Warranty End Date entered. Moving here sends the customer confirmation and marks the card Won.</small></div></div>
+<div class="stage-item"><div class="stage-num">5</div><div>Needs Review <span class="auto-badge">AUTOMATED</span> <span class="manual-badge">MANUAL — LEN</span><small>Form submitted without a matching purchase (automated), OR Len found the warranty already expired (manual).</small></div></div>
+</div>
+</div>
+
+<!-- TAGS -->
+<div class="section-label">Tags</div>
+<div class="section-title">All Warranty Extension Tags</div>
+<div class="card">
+<p>All four tags are applied by GHL workflows. <strong>Len never needs to add any of these by hand.</strong></p>
+<div class="table-wrap">
+<table class="info-table" style="margin-top:16px;">
+<thead><tr><th>Tag</th><th>Who Adds It</th><th>Purpose</th></tr></thead>
+<tbody>
+<tr><td><span class="tag tag-blue">warranty-ext-purchased</span></td><td><span class="auto-badge">AUTOMATED</span></td><td>Customer paid for the warranty extension</td></tr>
+<tr><td><span class="tag tag-teal">warranty-ext-registered</span></td><td><span class="auto-badge">AUTOMATED</span></td><td>Registration form submitted. Stops the reminder messages.</td></tr>
+<tr><td><span class="tag tag-green">warranty-ext-active</span></td><td><span class="auto-badge">AUTOMATED</span></td><td>Coverage confirmed and customer notified</td></tr>
+<tr><td><span class="tag tag-red">warranty-ext-unpaid-registration</span></td><td><span class="auto-badge">AUTOMATED</span></td><td>Form submitted with no matching purchase. Needs review.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="alert alert-warning" style="margin-top:16px;">
+<strong>⚠️ Rule:</strong> Never manually add any of these tags. They trigger workflows, and adding them by hand can send duplicate messages to the customer.
+</div>
+</div>
+
+<!-- CUSTOM FIELDS -->
+<div class="section-label">Contact Fields</div>
+<div class="section-title">Where to Find the Customer's Info</div>
+<div class="card">
+<p>When the customer submits the registration form, their answers are saved on their contact record. Open the contact and look for these fields in the left-hand details panel. You can type the field name into the <span class="click">Search fields</span> box to jump to it.</p>
+<div class="table-wrap">
+<table class="info-table" style="margin-top:12px;">
+<thead><tr><th>Field</th><th>Filled By</th><th>Used For</th></tr></thead>
+<tbody>
+<tr><td><strong>Hearing Aid Brand</strong></td><td>Customer (form)</td><td>Should be Signia</td></tr>
+<tr><td><strong>Hearing Aid Model for Warranty Request</strong></td><td>Customer (form)</td><td>Ordering in the Signia portal</td></tr>
+<tr><td><strong>Serial Number for Left</strong></td><td>Customer (form)</td><td>Checking the warranty and ordering in the Signia portal</td></tr>
+<tr><td><strong>Serial Number for Right</strong></td><td>Customer (form)</td><td>Checking the warranty and ordering in the Signia portal</td></tr>
+<tr><td><strong>Approximate Purchase Date</strong></td><td>Customer (form)</td><td>Reference</td></tr>
+<tr><td><strong>Where did you purchase?</strong></td><td>Customer (form)</td><td>Reference</td></tr>
+<tr><td><strong>Warranty End Date</strong></td><td><span class="manual-badge">MANUAL — LEN</span></td><td>The NEW expiration date: current end date + 12 months. This is sent to the customer.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="alert alert-info">
+<strong>Tip:</strong> The full form submission is also logged on the contact's <strong>Activity</strong> timeline, if you want to see exactly what the customer typed.
+</div>
+</div>
+
+<hr class="divider">
+
+<!-- ============================================ -->
+<!-- WORKFLOW 1: PURCHASE FOLLOW-UP -->
+<!-- ============================================ -->
+<div class="section-label">Workflow 1</div>
+<div class="section-title">Purchase Follow-up</div>
+
+<div class="module-card">
+<div class="module-header">
+<div class="module-number" style="background:var(--blue);">1</div>
+<h3>Signia Warranty Extension Purchase Follow-up</h3>
+<span class="module-status status-live">✓ LIVE</span>
+</div>
+<div class="module-body">
+<p><strong>Trigger:</strong> Order Submitted for the product "Signia Hearing Aid Warranty Extension – 12 More Months of Repair &amp; Replacement Coverage."</p>
+<p><strong>Purpose:</strong> Records the purchase, lets Len know, thanks the customer, and makes sure they complete the registration form. If they don't, it reminds them by SMS and then gives Len a call task.</p>
+
+<h3 style="margin-top:20px;">Step-by-Step Breakdown</h3>
+
+<div class="step-card auto-step">
+<div class="step-num">Trigger</div>
+<span class="auto-badge">AUTOMATED</span>
+<h4>Customer Buys the Warranty Extension</h4>
+<p>Payment goes through and the customer is redirected to the registration page automatically.</p>
+</div>
+
+<div class="step-card auto-step">
+<div class="step-num">Step 1</div>
+<span class="auto-badge">AUTOMATED</span>
+<h4>Tag Added + Pipeline Card Created</h4>
+<p>Tag <code>warranty-ext-purchased</code> is added. A $299 card is created in <strong>Signia Warranty Extension Purchase → Purchased - Awaiting Registration</strong>, and a "Warranty Purchase" note is logged on the contact.</p>
+</div>
+
+<div class="step-card auto-step">
+<div class="step-num">Step 2</div>
+<span class="auto-badge">AUTOMATED</span>
+<h4>Len Gets a Heads-Up Email</h4>
+<div class="email-box">
+<div class="email-label">Internal Email to Len</div>
+<strong>Subject:</strong> New Signia Warranty Extension purchase<br>
+Includes the customer's name, email and phone. You'll get an order task once they submit their serial numbers.
+</div>
+</div>
+
+<div class="step-card auto-step">
+<div class="step-num">Step 3</div>
+<span class="auto-badge">AUTOMATED</span>
+<h4>Thank-You Email Sent to Customer</h4>
+<div class="email-box">
+<div class="email-label">Email Subject</div>
+Thank you for your purchase, Hearing Benefit Services
+</div>
+<p>Thanks them, explains the coverage (12 more months: repairs at no extra cost, lost hearing aids replaced for a $299 fee per aid), and reminds them to complete the registration form.</p>
+</div>
+
+<div class="step-card auto-step">
+<div class="step-num">Waits up to 2 days</div>
+<span class="auto-badge">AUTOMATED</span>
+<h4>If They Register: Done</h4>
+<p>As soon as the registration form is submitted, a note "Activation Completed" is added and this workflow ends. Workflow 2 takes over.</p>
+</div>
+
+<div class="step-card auto-step">
+<div class="step-num">Day 2 (if no form)</div>
+<span class="auto-badge">AUTOMATED</span>
+<h4>SMS Reminder Sent</h4>
+<div class="sms-box">
+<div class="sms-label">Reminder SMS</div>
+Your Signia Warranty Extension (12 more months of coverage) isn't active yet. Register your serial numbers here: https://hearingbenefitservices.com/signia-warranty-registration Reply STOP to opt out.
+</div>
+</div>
+
+<div class="step-card auto-step">
+<div class="step-num">Day 5 (still no form)</div>
+<span class="auto-badge">AUTOMATED</span>
+<h4>Call Task Created for Len</h4>
+<p>A task appears in your GHL task list, due in 1 day:</p>
+<p style="font-weight:600;color:var(--navy);margin-top:4px;">"Call to complete warranty registration - [Name]"</p>
+</div>
+
+<div class="manual-action-box">
+<h4>👋 Len — What You Need to Do for This Workflow</h4>
+<p style="margin-bottom:10px;">Most of the time, nothing. The customer registers on their own. You only act if you get the <strong>call task</strong>.</p>
+<h5>When you get the "New Signia Warranty Extension purchase" email</h5>
+<ol>
+<li>No action needed. It's a heads-up that an order task is coming.</li>
+</ol>
+<h5>When you get the "Call to complete warranty registration" task</h5>
+<ol>
+<li>In GHL, go to <span class="click">Contacts</span> → <span class="click">Tasks</span> and open the task.</li>
+<li>Click the customer's name to open their contact record.</li>
+<li><strong>Call the customer</strong> using the phone number on the contact.</li>
+<li>Explain that their warranty extension isn't active until we have their serial numbers. Help them find the numbers: they're printed in small text on each hearing aid, and usually on the original box or paperwork.</li>
+<li>Either:
+<ul>
+<li>Text them the link <span class="highlight">hearingbenefitservices.com/signia-warranty-registration</span> and stay on the line while they fill it out, <strong>or</strong></li>
+<li>Fill out the form yourself while on the call. <span class="highlight">Use the exact email address they used at checkout</span>, or GHL won't match the registration to their purchase.</li>
+</ul>
+</li>
+<li>If you can't reach them, leave a voicemail and add a note on the contact (e.g. "Called 10/21 – left VM re: warranty registration"). Try again the next business day.</li>
+<li>Once the form is submitted, <strong>mark the call task complete</strong>. You'll get the order task within about 5 minutes (Workflow 2).</li>
+</ol>
+</div>
+</div>
+</div>
+
+<!-- ============================================ -->
+<!-- WORKFLOW 2: REGISTRATION -->
+<!-- ============================================ -->
+<div class="section-label">Workflow 2</div>
+<div class="section-title">Registration Form</div>
+
+<div class="module-card">
+<div class="module-header">
+<div class="module-number" style="background:var(--teal);">2</div>
+<h3>Signia Warranty Extension Registration</h3>
+<span class="module-status status-live">✓ LIVE</span>
+</div>
+<div class="module-body">
+<p><strong>Trigger:</strong> Customer submits the registration form on <a href="https://hearingbenefitservices.com/signia-warranty-registration" target="_blank">hearingbenefitservices.com/signia-warranty-registration</a>.</p>
+<p><strong>Purpose:</strong> Checks that the customer actually paid, then moves their card forward and gives Len the task to confirm the warranty and order the extension from Signia. If there's no purchase, it flags the contact for review.</p>
+
+<h3 style="margin-top:20px;">Step-by-Step Breakdown</h3>
+
+<div class="step-card auto-step">
+<div class="step-num">Trigger + 5-minute wait</div>
+<span class="auto-badge">AUTOMATED</span>
+<h4>Customer Submits the Registration Form</h4>
+<p>GHL waits <strong>5 minutes</strong> (so the purchase tag from Workflow 1 has time to land), then checks whether the contact has the <code>warranty-ext-purchased</code> tag and takes one of two paths.</p>
+</div>
+
+<h3 style="margin:22px 0 10px;">Path A: Customer Has Purchased <span class="tag tag-green" style="margin-left:6px;">Normal</span></h3>
+
+<div class="step-card auto-step">
+<div class="step-num">Step 1</div>
+<span class="auto-badge">AUTOMATED</span>
+<h4>Tag Added + Card Moved</h4>
+<p>Tag <code>warranty-ext-registered</code> is added. This stops the reminders in Workflow 1. The card moves to <strong>Registered - Ready to Order</strong>.</p>
+</div>
+
+<div class="step-card auto-step">
+<div class="step-num">Step 2</div>
+<span class="auto-badge">AUTOMATED</span>
+<h4>Order Task Created for Len</h4>
+<p>A task appears in your GHL task list, due in 1 day:</p>
+<p style="font-weight:600;color:var(--navy);margin-top:4px;">"Order Signia warranty extension - [Name]"</p>
+<p style="margin-top:8px;">The description lists the steps you need to do (see below). A "Registration Received" note is also logged on the contact.</p>
+</div>
+
+<div class="step-card auto-step">
+<div class="step-num">Step 3</div>
+<span class="auto-badge">AUTOMATED</span>
+<h4>Confirmation Email Sent to Customer</h4>
+<div class="email-box">
+<div class="email-label">Email Subject</div>
+We received your warranty registration
+</div>
+<p>Tells them we're processing their 12-month extension with Signia and will email and text their new expiration date once it's done.</p>
+</div>
+
+<div class="manual-action-box">
+<h4>👋 Len — What You Need to Do for This Workflow</h4>
+<p style="margin-bottom:10px;">This is the most important part of your job in this process. <strong>The workflow STOPS here and waits for you.</strong> Complete these steps within 1 business day of getting the task.</p>
+
+<h5>Part 1: Get the device details from GHL</h5>
+<ol>
+<li>In GHL, go to <span class="click">Contacts</span> → <span class="click">Tasks</span> and open <strong>"Order Signia warranty extension - [Name]"</strong>.</li>
+<li>Click the customer's name to open their contact record.</li>
+<li>In the left-hand details panel, find and copy:
+<ul>
+<li><strong>Hearing Aid Model for Warranty Request</strong></li>
+<li><strong>Serial Number for Left</strong></li>
+<li><strong>Serial Number for Right</strong></li>
+</ul>
+</li>
+<li>Double-check the serials. They're typed by the customer, so look out for mix-ups like 0/O or 1/I.</li>
+</ol>
+
+<h5>Part 2: Confirm the hearing aid is STILL UNDER WARRANTY</h5>
+<ol start="5">
+<li>Log in to the <strong>Signia portal</strong> with your usual Signia login.</li>
+<li>Search each serial number and confirm the device matches the model the customer gave.</li>
+<li>Check the warranty status. It must be <span class="highlight">still active</span>: either the original warranty or the 6-month repair warranty after a repair.</li>
+<li><strong>If the warranty has EXPIRED:</strong> do NOT order. Move the card to <strong>Needs Review</strong>, add a note with the expiration date shown in Signia, and message Rhett. The customer needs a <strong>Signia Repair</strong> first (see Special Cases below).</li>
+<li>Write down the <strong>current warranty end date</strong> Signia shows. You'll need it in Workflow 3.</li>
+</ol>
+
+<h5>Part 3: Order the extension and move the card</h5>
+<ol start="10">
+<li>In the Signia portal shop, <strong>order the 12-month warranty extension</strong> for the serial number(s): one for the left aid and one for the right, if they have both.</li>
+<li>Add the order/confirmation number as a note on the contact (e.g. "Signia 12-mo extension ordered 10/21 – Order #12345").</li>
+<li>In GHL, go to <span class="click">Opportunities</span> and select the pipeline <span class="highlight">Signia Warranty Extension Purchase</span>.</li>
+<li>Drag the customer's card from <strong>Registered - Ready to Order</strong> to <strong>Ordered with Signia</strong>.</li>
+</ol>
+<p style="margin-top:6px;">Then continue with Workflow 3 below once Signia shows the new expiration date.</p>
+</div>
+
+<h3 style="margin:22px 0 10px;">Path B: No Matching Purchase <span class="tag tag-red" style="margin-left:6px;">Rare</span></h3>
+
+<div class="step-card auto-step">
+<div class="step-num">Step 1</div>
+<span class="auto-badge">AUTOMATED</span>
+<h4>Flagged for Review</h4>
+<p>Tag <code>warranty-ext-unpaid-registration</code> is added, a card is created in <strong>Needs Review</strong>, and a note is logged.</p>
+</div>
+
+<div class="step-card auto-step">
+<div class="step-num">Step 2</div>
+<span class="auto-badge">AUTOMATED</span>
+<h4>Alert Email Sent to Len</h4>
+<div class="email-box">
+<div class="email-label">Internal Email to Len</div>
+<strong>Subject:</strong> Warranty registration without purchase - review<br>
+Includes the customer's name, email and phone. The card is in the Needs Review stage of the Signia Warranty Extension Purchase pipeline.
+</div>
+</div>
+
+<div class="manual-action-box">
+<h4>👋 Len — What to Do When You Get a "Without Purchase" Alert</h4>
+<ol>
+<li><strong>Don't order anything from Signia yet.</strong></li>
+<li>In GHL, go to <span class="click">Payments</span> → <span class="click">Transactions</span> and search for a Warranty Extension payment ($299, or $250 with the coupon) under the customer's name, a different email, or their phone number. The most common cause is that they used a different email at checkout.</li>
+<li><strong>If you find the payment:</strong> message Rhett with both contact names so he can match them up. Once that's fixed, follow the Workflow 2 steps above as normal.</li>
+<li><strong>If there's no payment:</strong> call or text the customer. Let them know the warranty extension needs to be purchased first, and that once it's paid they'll be taken to the registration page.</li>
+<li>Add a note on the contact with what you found and what you did.</li>
+</ol>
+</div>
+</div>
+</div>
+
+<!-- ============================================ -->
+<!-- WORKFLOW 3: ACTIVATION -->
+<!-- ============================================ -->
+<div class="section-label">Workflow 3</div>
+<div class="section-title">Coverage Activation</div>
+
+<div class="module-card">
+<div class="module-header">
+<div class="module-number" style="background:var(--green);">3</div>
+<h3>Signia Warranty Extension Activation</h3>
+<span class="module-status status-live">✓ LIVE</span>
+</div>
+<div class="module-body">
+<p><strong>Trigger:</strong> Len moves the card to <strong>Coverage Active</strong> in the Signia Warranty Extension Purchase pipeline.</p>
+<p><strong>Purpose:</strong> Sends the customer their new warranty expiration date by SMS and email, tags them as active, and closes the card as Won.</p>
+
+<h3 style="margin-top:20px;">Step-by-Step Breakdown</h3>
+
+<div class="step-card manual-step">
+<div class="step-num">Before the Trigger</div>
+<span class="manual-badge">MANUAL — LEN</span>
+<h4>Len Enters the Warranty End Date</h4>
+<p>New date = the <strong>current warranty end date + 12 months</strong>, as confirmed in the Signia portal after the order is processed.</p>
+</div>
+
+<div class="step-card manual-step">
+<div class="step-num">Trigger</div>
+<span class="manual-badge">MANUAL — LEN</span>
+<h4>Len Moves the Card to "Coverage Active"</h4>
+<p>This is the last manual step. Everything below happens automatically.</p>
+</div>
+
+<div class="step-card auto-step">
+<div class="step-num">Step 1</div>
+<span class="auto-badge">AUTOMATED</span>
+<h4>Confirmation SMS Sent</h4>
+<div class="sms-box">
+<div class="sms-label">Confirmation SMS (summary)</div>
+Tells the customer their Signia hearing aids now have 12 more months of coverage, gives their new warranty expiration date ({{Warranty End Date}}), and says: "If a hearing aid is lost during coverage, replacement is $299 per aid. Call 808-435-7002."
+</div>
+</div>
+
+<div class="step-card auto-step">
+<div class="step-num">Step 2</div>
+<span class="auto-badge">AUTOMATED</span>
+<h4>Confirmation Email Sent</h4>
+<div class="email-box">
+<div class="email-label">Email Subject</div>
+Your Signia Warranty Extension is active
+</div>
+<p>Includes their new warranty expiration date, that repairs are covered at no extra cost, the $299-per-aid fee for lost hearing aids, and how to contact us.</p>
+</div>
+
+<div class="step-card auto-step">
+<div class="step-num">Step 3</div>
+<span class="auto-badge">AUTOMATED</span>
+<h4>Tag + Note + Card Marked Won</h4>
+<p>Tag <code>warranty-ext-active</code> is added, a "Warranty Extension Active" note is logged with the new date, and the card is marked <strong>Won</strong>.</p>
+</div>
+
+<div class="manual-action-box">
+<h4>👋 Len — What You Need to Do for This Workflow</h4>
+<h5>Part 1: Enter the new Warranty End Date</h5>
+<ol>
+<li>Once Signia has processed the order, look up the serial number in the Signia portal again and note the <strong>new warranty expiration date</strong>. It should be <span class="highlight">12 months after the old end date</span>. If the left and right aids show different dates, use the <strong>earlier</strong> date and add a note listing both.</li>
+<li>In GHL, open the customer's contact record.</li>
+<li>In the left-hand details panel, type <span class="click">Warranty End Date</span> into the search fields box.</li>
+<li>Click the field, pick the new date in the date picker, and click <span class="click">Save</span>.</li>
+<li><strong>Read the date back</strong> and confirm it matches what Signia shows. The customer will receive exactly what's in this field.</li>
+</ol>
+
+<h5>Part 2: Move the card to "Coverage Active"</h5>
+<ol start="6">
+<li>Go to <span class="click">Opportunities</span> → pipeline <span class="highlight">Signia Warranty Extension Purchase</span>.</li>
+<li>Drag the customer's card from <strong>Ordered with Signia</strong> to <strong>Coverage Active</strong>.</li>
+<li>Within a minute, check the contact's <span class="click">Conversations</span> to confirm the SMS and email went out with the correct date.</li>
+<li>Go back to <span class="click">Contacts</span> → <span class="click">Tasks</span> and <strong>mark the "Order Signia warranty extension" task complete</strong>.</li>
+</ol>
+</div>
+
+<div class="alert alert-success">
+<strong>✅ That's it.</strong> Once the card is in Coverage Active, nothing else happens until the customer contacts us for a repair or a lost hearing aid.
+</div>
+</div>
+</div>
+
+<hr class="divider">
+
+<!-- SPECIAL CASES -->
+<div class="section-label">Troubleshooting</div>
+<div class="section-title">Special Cases</div>
+
+<div class="card">
+<h3>❗ The warranty has already expired</h3>
+<p>Signia <strong>cannot extend</strong> an expired warranty. The hearing aid has to be repaired first.</p>
+<ol>
+<li>Don't order. Move the card to <strong>Needs Review</strong> and add a note with the expiration date shown in Signia.</li>
+<li>Message Rhett. The customer will either get a refund, or switch to the <strong>Signia Hearing Aid Repair</strong> (same price). Once the repair is done, their aid is back under a 6-month warranty, and they can buy the extension then.</li>
+</ol>
+</div>
+
+<div class="card">
+<h3>❗ I moved the card to Coverage Active before entering the date</h3>
+<p>The customer already got a message with a blank or wrong date. Moving the card back and forward again <strong>will not resend it</strong>.</p>
+<ol>
+<li>Enter the correct <strong>Warranty End Date</strong> on the contact and save.</li>
+<li>Open the contact's <span class="click">Conversations</span> and send this SMS by hand:</li>
+</ol>
+<div class="sms-box">
+<div class="sms-label">Correction SMS (send manually)</div>
+Hi [first name], correction from Hearing Benefit Services: your new Signia warranty expiration date is [date]. Sorry for any confusion! If you ever need a repair, call us at 808-435-7002.
+</div>
+<ol start="3">
+<li>Add a note on the contact: "Sent corrected warranty end date [date]."</li>
+</ol>
+</div>
+
+<div class="card">
+<h3>❗ The serial number isn't found in Signia, or doesn't match the model</h3>
+<ol>
+<li>Don't order. Leave the card in <strong>Registered - Ready to Order</strong>.</li>
+<li>Call or text the customer to double-check the serial number (common mix-ups: 0/O, 1/I, 5/S, 8/B).</li>
+<li>Update the <strong>Serial Number for Left / Right</strong> fields on the contact with the corrected number, then continue with the warranty check and order.</li>
+<li>If it still can't be found, add a note and message Rhett.</li>
+</ol>
+</div>
+
+<div class="card">
+<h3>📞 The customer calls asking about their status</h3>
+<p>Open their card in <strong>Opportunities → Signia Warranty Extension Purchase</strong>. The stage tells you exactly where they are:</p>
+<div class="table-wrap">
+<table class="info-table">
+<thead><tr><th>Stage</th><th>What to Tell Them</th></tr></thead>
+<tbody>
+<tr><td>Purchased - Awaiting Registration</td><td>"We still need your serial numbers." Help them submit the form.</td></tr>
+<tr><td>Registered - Ready to Order</td><td>"We have your info and are confirming your warranty and placing the order with Signia now."</td></tr>
+<tr><td>Ordered with Signia</td><td>"It's been ordered. We'll text and email your new expiration date as soon as Signia confirms it."</td></tr>
+<tr><td>Coverage Active</td><td>"You're covered!" Read them the <strong>Warranty End Date</strong> on their contact.</td></tr>
+<tr><td>Needs Review</td><td>"We're looking into your registration and will contact you shortly." Check the notes and message Rhett if unsure.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div class="card">
+<h3>🔧 The customer calls for a repair (damaged hearing aid)</h3>
+<ol>
+<li>Open their contact and confirm they have the tag <code>warranty-ext-active</code>.</li>
+<li>Check that today is <strong>before</strong> their <strong>Warranty End Date</strong>.</li>
+<li>If covered: process the repair through Signia as a warranty repair. <strong>No charge to the customer.</strong> Add a note on the contact.</li>
+<li>If not covered (no tag, or the date has passed): offer the <strong>Signia Hearing Aid Repair</strong> product ($299, or $250 with code <code>JDSKXDH</code>).</li>
+</ol>
+</div>
+
+<div class="card">
+<h3>🔍 The customer calls about a LOST hearing aid</h3>
+<ol>
+<li>Open their contact and confirm they have the tag <code>warranty-ext-active</code>, and that today is <strong>before</strong> their <strong>Warranty End Date</strong>.</li>
+<li><strong>If covered:</strong> the replacement fee is <span class="highlight">$299 per lost hearing aid</span>. Collect payment (message Rhett for the payment link or invoice), then order the loss replacement in the Signia portal using the lost aid's serial number. Add a note with the Signia order number.</li>
+<li><strong>If NOT covered:</strong> loss isn't covered once the warranty has expired. The customer needs a new hearing aid at standard pricing. Offer to book a consultation.</li>
+</ol>
+<div class="alert alert-info" style="margin-bottom:0;">
+<strong>Note:</strong> The $299 fee is pending final confirmation from Andrea. Signia charges HBS $212 per aid for in-warranty loss &amp; damage replacement, with free shipping.
+</div>
+</div>
+
+<hr class="divider">
+
+<!-- QUICK REFERENCE -->
+<div class="section-label">Quick Reference</div>
+<div class="section-title">Everything Len Will Receive</div>
+<div class="card">
+<div class="table-wrap">
+<table class="info-table">
+<thead><tr><th>You'll Receive</th><th>When</th><th>What to Do</th></tr></thead>
+<tbody>
+<tr><td><strong>Email:</strong> "New Signia Warranty Extension purchase"</td><td>Every new purchase</td><td>Nothing. It's a heads-up only.</td></tr>
+<tr><td><strong>Task:</strong> "Order Signia warranty extension - [Name]"</td><td>Customer submits the form</td><td>Check warranty → order → Workflow 3 steps</td></tr>
+<tr><td><strong>Task:</strong> "Call to complete warranty registration - [Name]"</td><td>5 days with no form</td><td>Call the customer (Workflow 1 steps)</td></tr>
+<tr><td><strong>Email:</strong> "Warranty registration without purchase - review"</td><td>Form submitted, no payment found</td><td>Check Payments (Workflow 2, Path B)</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<!-- CHECKLIST -->
+<div class="section-label">Checklist</div>
+<div class="section-title">Len's Checklist for Every Order</div>
+<div class="card">
+<ul class="checklist">
+<li>Opened the "Order Signia warranty extension" task and the customer's contact</li>
+<li>Copied the model and Left/Right serial numbers</li>
+<li>Confirmed in the Signia portal that the aid is <strong>still under warranty</strong> (if expired → Needs Review + message Rhett)</li>
+<li>Ordered the 12-month extension in the Signia portal shop and noted the order number on the contact</li>
+<li>Moved the card to <strong>Ordered with Signia</strong></li>
+<li>Entered the new <strong>Warranty End Date</strong> (old end date + 12 months) and double-checked it</li>
+<li>Moved the card to <strong>Coverage Active</strong></li>
+<li>Confirmed the SMS and email went out with the correct date</li>
+<li>Marked the order task complete</li>
+</ul>
+<div class="alert alert-warning" style="margin-top:12px;">
+<strong>⏱️ Timing goal:</strong> Order from Signia within <strong>1 business day</strong> of getting the order task.
+</div>
+</div>
+
+</div>
+
+<div class="footer">
+Hearing Benefit Services · Staff Training · Confidential<br>
+See also: Signia Hearing Aid Repair training. Questions about this process? Message Rhett.
+</div>
+
+</body>
+</html>
