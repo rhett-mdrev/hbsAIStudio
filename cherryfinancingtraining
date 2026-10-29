@@ -1,0 +1,168 @@
+<!-- HBS — Cherry Financing Purchase Training | Paste into a GHL Custom HTML/Code element -->
+<div class="hbs-cf">
+<style>
+.hbs-cf{--navy:#0b2a4a;--teal:#0f7c8c;--auto:#1f7a3f;--autobg:#e8f5ec;--man:#b45309;--manbg:#fff4e5;--hp:#6d28d9;--hpbg:#f3edff;--line:#dfe5ec;--muted:#5b6775;font-family:Arial,Helvetica,sans-serif;color:#1d2733;line-height:1.55;max-width:980px;margin:0 auto;padding:16px;box-sizing:border-box}
+.hbs-cf *{box-sizing:border-box}
+.hbs-cf .hero{background:linear-gradient(135deg,var(--navy),var(--teal));color:#fff;border-radius:14px;padding:28px 24px;margin-bottom:22px}
+.hbs-cf .hero h1{margin:0 0 6px;font-size:28px;line-height:1.2}
+.hbs-cf .hero p{margin:0;opacity:.92}
+.hbs-cf h2{color:var(--navy);font-size:22px;margin:30px 0 10px;padding-bottom:6px;border-bottom:3px solid var(--teal)}
+.hbs-cf h3{color:var(--navy);font-size:17px;margin:18px 0 8px}
+.hbs-cf .card{background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:12px 0}
+.hbs-cf .legend{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}
+.hbs-cf .pill{display:inline-block;font-size:12px;font-weight:bold;padding:3px 10px;border-radius:999px;white-space:nowrap}
+.hbs-cf .p-auto{background:var(--autobg);color:var(--auto);border:1px solid var(--auto)}
+.hbs-cf .p-oc{background:var(--manbg);color:var(--man);border:1px solid var(--man)}
+.hbs-cf .p-hp{background:var(--hpbg);color:var(--hp);border:1px solid var(--hp)}
+.hbs-cf .tbl{width:100%;overflow-x:auto}
+.hbs-cf table{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+.hbs-cf th{background:var(--navy);color:#fff;text-align:left;padding:9px 10px}
+.hbs-cf td{padding:9px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+.hbs-cf tr:nth-child(even) td{background:#f7f9fb}
+.hbs-cf .step{display:flex;gap:14px;align-items:flex-start;border-left:5px solid var(--line);background:#fff;border-radius:10px;padding:14px 16px;margin:10px 0;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.hbs-cf .step.auto{border-left-color:var(--auto)}
+.hbs-cf .step.oc{border-left-color:var(--man)}
+.hbs-cf .step.hp{border-left-color:var(--hp)}
+.hbs-cf .num{flex:0 0 34px;height:34px;border-radius:50%;background:var(--navy);color:#fff;font-weight:bold;display:flex;align-items:center;justify-content:center}
+.hbs-cf .step h4{margin:0 0 4px;font-size:16px;color:var(--navy)}
+.hbs-cf .step p{margin:4px 0}
+.hbs-cf .note{background:#eef6ff;border:1px solid #bcd8f5;border-radius:10px;padding:12px 14px;margin:12px 0}
+.hbs-cf .warn{background:#fff1f1;border:1px solid #f2b8b8;border-radius:10px;padding:12px 14px;margin:12px 0}
+.hbs-cf code{background:#eef1f5;padding:1px 6px;border-radius:5px;font-size:13px}
+.hbs-cf ul{margin:6px 0 6px 20px;padding:0}
+.hbs-cf .foot{text-align:center;color:var(--muted);font-size:13px;margin-top:30px}
+@media(max-width:600px){.hbs-cf .hero h1{font-size:22px}.hbs-cf .step{flex-direction:column;gap:8px}}
+</style>
+
+<div class="hero">
+  <h1>Cherry Financing Purchase — Staff Training</h1>
+  <p>How a financed hearing aid order moves from the Cherry link to the customer's door, and what each role does at every step.</p>
+</div>
+
+<h2>Who Does What</h2>
+<div class="legend">
+  <span class="pill p-auto">AUTOMATED</span> GHL does this by itself
+</div>
+<div class="legend">
+  <span class="pill p-oc">MANUAL — ORDER COORDINATOR</span> Cherry portal, Signia ordering, PirateShip labels, delivery tracking
+</div>
+<div class="legend">
+  <span class="pill p-hp">MANUAL — HEARING PROFESSIONAL</span> Receiving, programming, and UPS drop-off
+</div>
+<div class="note"><strong>The golden rule:</strong> when you finish your step, <strong>move the card</strong> to the next stage in the <em>HBS — Cherry Financing Purchase</em> pipeline. Moving the card is what creates the next person's task. If a card isn't moved, the next person never gets notified.</div>
+
+<h2>Pipeline Stages at a Glance</h2>
+<div class="tbl"><table>
+<tr><th>#</th><th>Stage</th><th>Moved by</th></tr>
+<tr><td>1</td><td>Financing Link Sent</td><td><span class="pill p-auto">AUTOMATED</span></td></tr>
+<tr><td>2</td><td>Application Started</td><td><span class="pill p-oc">ORDER COORDINATOR</span></td></tr>
+<tr><td>3</td><td>Approved — Awaiting Plan Selection</td><td><span class="pill p-auto">AUTOMATED</span> (tag)</td></tr>
+<tr><td>4</td><td>Declined / Partial Approval</td><td><span class="pill p-auto">AUTOMATED</span> (tag)</td></tr>
+<tr><td>5</td><td>Payment Plan Sent</td><td><span class="pill p-oc">ORDER COORDINATOR</span></td></tr>
+<tr><td>6</td><td>Patient Agreement Sent</td><td><span class="pill p-auto">AUTOMATED</span> (tag)</td></tr>
+<tr><td>7</td><td>Agreement Signed — Down Payment Made</td><td><span class="pill p-oc">ORDER COORDINATOR</span></td></tr>
+<tr><td>8</td><td>Funds Received by HBS</td><td><span class="pill p-auto">AUTOMATED</span> (tag)</td></tr>
+<tr><td>9</td><td>Ordered on Signia Shop</td><td><span class="pill p-oc">ORDER COORDINATOR</span></td></tr>
+<tr><td>10</td><td>Received by Andrea</td><td><span class="pill p-hp">HEARING PROFESSIONAL</span></td></tr>
+<tr><td>11</td><td>Programming Complete</td><td><span class="pill p-hp">HEARING PROFESSIONAL</span></td></tr>
+<tr><td>12</td><td>PirateShip Label Created</td><td><span class="pill p-oc">ORDER COORDINATOR</span></td></tr>
+<tr><td>13</td><td>Label Sent to Andrea (WhatsApp)</td><td><span class="pill p-oc">ORDER COORDINATOR</span></td></tr>
+<tr><td>14</td><td>Dropped Off at UPS — In Transit</td><td><span class="pill p-hp">HEARING PROFESSIONAL</span></td></tr>
+<tr><td>15</td><td>Delivered</td><td><span class="pill p-oc">ORDER COORDINATOR</span></td></tr>
+<tr><td>16</td><td>Day 2 Check-In</td><td><span class="pill p-oc">ORDER COORDINATOR</span></td></tr>
+<tr><td>17</td><td>Stalled — No Response</td><td><span class="pill p-auto">AUTOMATED</span> (tag)</td></tr>
+<tr><td>18</td><td>Closed Lost</td><td><span class="pill p-oc">ORDER COORDINATOR</span></td></tr>
+<tr><td>19</td><td>Refund / Plan Cancelled</td><td><span class="pill p-oc">ORDER COORDINATOR</span></td></tr>
+</table></div>
+
+<h2>Phase 1 — Financing</h2>
+
+<div class="step auto"><div class="num">1</div><div>
+<h4>Send the Cherry link <span class="pill p-oc">ORDER COORDINATOR</span></h4>
+<p>Send the customer the Cherry application link: <code>https://pay.withcherry.com/hearing-benefit-services</code></p>
+<p>Then add the tag <code>cherry_link_sent</code> to the contact. <span class="pill p-auto">AUTOMATED</span> GHL creates the opportunity at <strong>Financing Link Sent</strong>.</p>
+</div></div>
+
+<div class="step oc"><div class="num">2</div><div>
+<h4>Check the Cherry portal daily <span class="pill p-oc">ORDER COORDINATOR</span></h4>
+<p>Cherry does not update GHL by itself. Check the Cherry merchant portal at least once per business day for every open card in stages 1–8.</p>
+<ul>
+<li>Customer started the application → drag card to <strong>Application Started</strong></li>
+<li>Approved → add tag <code>cherry_approved</code></li>
+<li>Declined or partially approved → add tag <code>cherry_declined</code>, then contact the customer about options</li>
+</ul>
+</div></div>
+
+<div class="step oc"><div class="num">3</div><div>
+<h4>Send the payment plan <span class="pill p-oc">ORDER COORDINATOR</span></h4>
+<p>Send the payment plan from the Cherry portal and drag the card to <strong>Payment Plan Sent</strong>.</p>
+</div></div>
+
+<div class="step oc"><div class="num">4</div><div>
+<h4>Send the Patient Agreement <span class="pill p-oc">ORDER COORDINATOR</span></h4>
+<p>Send the Patient Agreement, then add the tag <code>cherry_agreement_sent</code>. <span class="pill p-auto">AUTOMATED</span> The card moves to <strong>Patient Agreement Sent</strong>.</p>
+<p>When the agreement is signed and the down payment is made, drag the card to <strong>Agreement Signed — Down Payment Made</strong>.</p>
+</div></div>
+
+<div class="step oc"><div class="num">5</div><div>
+<h4>Confirm funding <span class="pill p-oc">ORDER COORDINATOR</span></h4>
+<p>When the Cherry portal shows funds paid to HBS, add the tag <code>cherry_funded</code>. <span class="pill p-auto">AUTOMATED</span> The card moves to <strong>Funds Received by HBS</strong> and your Signia ordering task is created.</p>
+</div></div>
+
+<h2>Phase 2 — Fulfillment</h2>
+
+<div class="step oc"><div class="num">6</div><div>
+<h4>Order on the Signia shop <span class="pill p-oc">ORDER COORDINATOR</span></h4>
+<p>Task: <em>Order hearing aids on Signia shop</em> (due next day, 4:00 PM).</p>
+<p>Place the order on the Signia shop, then drag the card to <strong>Ordered on Signia Shop</strong>. <span class="pill p-auto">AUTOMATED</span> The Hearing Professional gets an "Incoming Signia device" task.</p>
+</div></div>
+
+<div class="step hp"><div class="num">7</div><div>
+<h4>Receive and program the device <span class="pill p-hp">HEARING PROFESSIONAL</span></h4>
+<p>When the device arrives, drag the card to <strong>Received by Andrea</strong>.</p>
+<p>After programming, drag it to <strong>Programming Complete</strong>. <span class="pill p-auto">AUTOMATED</span> The Order Coordinator gets the shipping-label task. You no longer need to message anyone; moving the card is the notification.</p>
+</div></div>
+
+<div class="step oc"><div class="num">8</div><div>
+<h4>Create the label and send it <span class="pill p-oc">ORDER COORDINATOR</span></h4>
+<p>Create the UPS label in PirateShip, then drag the card to <strong>PirateShip Label Created</strong>.</p>
+<p>Send the label to the Hearing Professional on WhatsApp, then drag the card to <strong>Label Sent to Andrea (WhatsApp)</strong>. <span class="pill p-auto">AUTOMATED</span> The UPS drop-off task is created.</p>
+</div></div>
+
+<div class="step hp"><div class="num">9</div><div>
+<h4>Drop off at UPS <span class="pill p-hp">HEARING PROFESSIONAL</span></h4>
+<p>Drop the package at UPS, then drag the card to <strong>Dropped Off at UPS — In Transit</strong>. <span class="pill p-auto">AUTOMATED</span> The Order Coordinator gets a delivery-check task due in 3 days.</p>
+</div></div>
+
+<div class="step oc"><div class="num">10</div><div>
+<h4>Confirm delivery and check in <span class="pill p-oc">ORDER COORDINATOR</span></h4>
+<p>Check the UPS tracking. When it shows delivered, drag the card to <strong>Delivered</strong>.</p>
+<p>Two days later, contact the customer to make sure everything is working, then drag the card to <strong>Day 2 Check-In</strong>.</p>
+</div></div>
+
+<h2>Tags Reference</h2>
+<div class="tbl"><table>
+<tr><th>Tag</th><th>When to add it</th><th>What happens</th></tr>
+<tr><td><code>cherry_link_sent</code></td><td>After sending the Cherry link</td><td>Opportunity created at Financing Link Sent</td></tr>
+<tr><td><code>cherry_approved</code></td><td>Portal shows approval</td><td>Card moves to Approved — Awaiting Plan Selection</td></tr>
+<tr><td><code>cherry_declined</code></td><td>Portal shows decline or partial approval</td><td>Card moves to Declined / Partial Approval</td></tr>
+<tr><td><code>cherry_agreement_sent</code></td><td>After sending the Patient Agreement</td><td>Card moves to Patient Agreement Sent</td></tr>
+<tr><td><code>cherry_funded</code></td><td>Portal shows funds paid to HBS</td><td>Card moves to Funds Received + Signia order task</td></tr>
+<tr><td><code>cherry_shipped</code></td><td>Optional; dragging the card does the same</td><td>Card moves to Dropped Off at UPS — In Transit</td></tr>
+<tr><td><code>cherry_stalled</code></td><td>Customer stops responding</td><td>Card moves to Stalled — No Response</td></tr>
+</table></div>
+
+<div class="warn"><strong>Use the right tag.</strong> Older tags with similar names already exist (<code>cherry pre-approved</code>, <code>cherry-approved-high</code>, <code>cherry-approved-mid</code>, <code>cherry-approved-low</code>). They do <strong>not</strong> move cards. Always use the underscore versions listed above.</div>
+
+<h2>Things to Know</h2>
+<div class="card">
+<ul>
+<li><strong>Cards only move forward by tag.</strong> If a card needs to go back (for example, approved and then declined), drag it by hand.</li>
+<li><strong>One open card per customer.</strong> If a customer already has an open card in this pipeline, adding <code>cherry_link_sent</code> again will not create a second one.</li>
+<li><strong>Closed Lost / Refund:</strong> drag the card by hand and add a note explaining why.</li>
+<li><strong>Tasks:</strong> check your GHL task list every morning. Each task tells you exactly which stage to move the card to when you're done.</li>
+</ul>
+</div>
+
+<div class="foot">Hearing Benefit Services · hearingbenefitservices.com · Honolulu, HI · Internal training — October 2026</div>
+</div>
