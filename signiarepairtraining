@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>Signia Hearing Aid Repair — Staff Training | Hearing Benefit Services</title>
+<title>Signia Speedy Repair &amp; Repair Campaign — Staff Training | Hearing Benefit Services</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -202,446 +202,429 @@ background: #f8fafc; border: 1px solid var(--border); border-radius: 10px;
 <div class="header">
 <img src="https://assets.cdn.filesafe.space/UDKdmJIdT4xB1V6Lye64/media/68f7cb4d3a4642fd12cdeaab.png" alt="Hearing Benefit Services">
 <div style="font-size:0.78rem;opacity:0.7;margin-bottom:8px;">Staff Training · Confidential</div>
-<h1>Signia Hearing Aid Repair</h1>
-<p>Complete training guide for the Signia Hearing Aid Repair service, including the 6-month repair warranty and the Warranty Extension upsell. Every workflow is explained, with clear labels showing what's automated and what Len handles manually.</p>
-<div class="badge">Last Updated: October 2026</div>
+<h1>Signia Speedy Repair &amp; Repair Campaign</h1>
+<p>How we sell and fulfill the Signia Hearing Aid Repair, step by step. Covers the Speedy Repair process, the "Repair Offer – All Leads" campaign, and chargers, with clear labels showing what's automated and what Len does.</p>
+<div class="badge">Last Updated: October 30, 2026</div>
 </div>
 
 <div class="container">
 
 <div class="login-bar">
-🔒 <strong>Staff Only.</strong> This page contains internal workflow details, pricing and SMS/email copy. Do not share outside the HBS team.
+🔒 <strong>Staff Only.</strong> This page contains internal workflow details, Signia pricing and SMS/email copy. Do not share outside the HBS team.
+</div>
+
+<div class="alert alert-warning">
+<strong>🔄 What changed (October 2026):</strong>
+<ul style="margin:8px 0 0 20px;">
+<li>We now <strong>always use Signia Speedy Repair</strong>. The customer gets a <strong>replacement hearing aid</strong> (new serial number), not their own aid back.</li>
+<li>The Warranty Extension upsell after a repair was <strong>removed</strong>. Repaired aids can't be extended.</li>
+<li>Len copies the <strong>exact warranty end date</strong> from Signia's "Look Up Warranty Expiration". No more calculating dates.</li>
+<li>New <strong>"Repair Offer – All Leads"</strong> campaign (Part 2).</li>
+<li><strong>All tasks and notifications go to Len.</strong></li>
+</ul>
 </div>
 
 <!-- LEGEND -->
 <div class="card">
 <h3>How to Read This Guide</h3>
-<p>Every step in every workflow is labeled so you know exactly what GHL does automatically and what you need to do yourself.</p>
 <div class="legend-box">
-<div class="legend-item">
-<div class="legend-dot" style="background:var(--blue);"></div>
-<span><strong>AUTOMATED</strong>: GHL does this automatically. No action needed from you.</span>
-</div>
-<div class="legend-item">
-<div class="legend-dot" style="background:var(--orange);"></div>
-<span><strong>MANUAL — LEN</strong>: You need to do this step yourself. Don't skip it.</span>
-</div>
+<div class="legend-item"><div class="legend-dot" style="background:var(--blue);"></div><span><strong>AUTOMATED</strong>: GHL does this automatically.</span></div>
+<div class="legend-item"><div class="legend-dot" style="background:var(--orange);"></div><span><strong>MANUAL — LEN</strong>: You do this step yourself. Don't skip it.</span></div>
 </div>
 </div>
 
-<!-- GOLDEN RULE -->
+<!-- GOLDEN RULES -->
 <div class="alert alert-danger">
-<strong class="big">⛔ The Golden Rule: Enter the Warranty End Date FIRST, then move the card to "Repaired - Returned to Customer."</strong>
-Moving the card to <strong>Repaired - Returned to Customer</strong> instantly texts and emails the customer their repair warranty end date, and starts the Warranty Extension offer. If the <strong>Warranty End Date</strong> field is empty or wrong at that moment, the customer gets a blank or wrong date, and the message <strong>will not resend</strong>.
+<strong class="big">⛔ Golden Rule #1: Enter the Warranty End Date FIRST, then move the card to "Replacement Sent to Customer."</strong>
+Moving the card instantly texts and emails the customer their warranty end date. If the field is empty or wrong, they get a blank or wrong date, and it <strong>will not resend</strong>.
+</div>
+<div class="alert alert-danger">
+<strong class="big">⛔ Golden Rule #2: The old hearing aid must reach Signia within 30 days.</strong>
+If it doesn't, Signia charges HBS a <strong>$299 non-return fee</strong>, which wipes out the sale. Watch the UPS tracking and act on the reminder tasks.
 </div>
 
 <!-- WHICH PRODUCT -->
 <div class="section-label">Start Here</div>
-<div class="section-title">Which Product Does the Customer Need?</div>
+<div class="section-title">What Does the Customer Need?</div>
 <div class="card">
-<p>Use the hearing aid's warranty status in the Signia portal to decide.</p>
+<p>Check the serial number in the Signia portal (<strong>Look Up Warranty Expiration</strong>) first, then use this table.</p>
 <div class="table-wrap">
 <table class="info-table product-table">
-<thead><tr><th>Situation</th><th>What to Offer</th><th>Price</th></tr></thead>
+<thead><tr><th>Situation</th><th>What to Do</th><th>Customer Price</th></tr></thead>
 <tbody>
-<tr><td>Out of warranty, damaged or not working</td><td><strong>Signia Hearing Aid Repair</strong>. Includes a 6-month repair-only warranty.</td><td>$299 ($250 with code <code>JDSKXDH</code>)</td></tr>
-<tr><td>Under warranty, damaged or not working</td><td>Warranty repair through Signia. <strong>No charge</strong>. Don't sell the Repair product.</td><td>Covered</td></tr>
-<tr><td>Under warranty (original or after a repair), wants more coverage</td><td><strong>Signia Warranty Extension</strong>. Adds 12 months.</td><td>$299 ($250 with code <code>JDSKXDH</code>)</td></tr>
-<tr><td>Under warranty, hearing aid <strong>lost</strong></td><td>Loss replacement through Signia</td><td>$299 fee per aid*</td></tr>
-<tr><td>Out of warranty, hearing aid <strong>lost</strong></td><td>Not covered. The customer needs a new hearing aid at standard pricing. Offer a consultation.</td><td>Standard pricing</td></tr>
+<tr><td>Signia, out of warranty, damaged / not working</td><td><strong>Signia Hearing Aid Repair</strong> (Speedy Repair, 6-month repair warranty)</td><td>$299 · $250 with code <code>JDSKXDH</code> (aids under 5 years)</td></tr>
+<tr><td>Signia, still under original warranty, damaged</td><td>Free warranty repair through Signia. <strong>Don't sell the Repair.</strong></td><td>Covered</td></tr>
+<tr><td>Signia, under repair warranty, damaged again</td><td>Free warranty repair through Signia</td><td>Covered</td></tr>
+<tr><td>Signia, under original warranty, <strong>lost</strong></td><td>One-time Loss &amp; Damage replacement (order form). Message Rhett first.</td><td>Fee to be confirmed by Andrea</td></tr>
+<tr><td>Out of warranty (or repair warranty), <strong>lost</strong></td><td>Not covered. New hearing aids: follow up as a consultation.</td><td>Standard pricing</td></tr>
+<tr><td>Charger broken, out of warranty</td><td>New charger order (Part 3)</td><td>Andrea sets the price</td></tr>
+<tr><td>Other brand</td><td>Repair not available. Follow up as a consultation.</td><td>n/a</td></tr>
 </tbody>
 </table>
 </div>
-<p style="font-size:0.82rem;color:var(--text-light);margin-top:8px;">*The $299 loss-replacement fee is pending final confirmation from Andrea. For reference, Signia charges HBS $212 per aid for an in-warranty loss &amp; damage replacement, with free shipping.</p>
-</div>
-
-<!-- OVERVIEW -->
-<div class="section-label">Overview</div>
-<div class="section-title">What Is the Signia Hearing Aid Repair?</div>
-<div class="card">
-<p>The <strong>Signia Hearing Aid Repair</strong> is for customers whose Signia hearing aid is <strong>out of warranty</strong> and damaged or not working properly. It's a <strong>$299 one-time payment</strong> ($250 with code <code>JDSKXDH</code>), sold as a digital product in GHL Payments.</p>
-<ul>
-<li><strong>Includes:</strong> the repair, plus a <strong>6-month repair-only warranty</strong> that starts on the date the repair is completed.</li>
-<li><strong>Repair-only</strong> means repairs are covered for 6 months. Loss and replacement are <strong>not</strong> covered.</li>
-<li><strong>Why it matters:</strong> once repaired, the hearing aid is back under warranty, so the customer can now buy the <strong>12-month Warranty Extension</strong>. GHL offers it to them automatically.</li>
-</ul>
-<p style="margin-top:12px;">After checkout, the customer is sent straight to the registration page, <a href="https://hearingbenefitservices.com/signia-repair-registration" target="_blank">hearingbenefitservices.com/signia-repair-registration</a>, where they enter their hearing aid details and describe the problem. Three connected workflows handle the messages. Len handles the warranty check, shipping, the Signia repair and the final date.</p>
-<div class="flow">
-<span class="box a">Customer buys</span><span class="arrow">→</span>
-<span class="box a">Submits registration form</span><span class="arrow">→</span>
-<span class="box m">Len confirms out of warranty</span><span class="arrow">→</span>
-<span class="box a">Shipping instructions emailed</span><span class="arrow">→</span>
-<span class="box m">Aid received · sent to Signia</span><span class="arrow">→</span>
-<span class="box m">Len enters Warranty End Date</span><span class="arrow">→</span>
-<span class="box m">Len moves card to Repaired</span><span class="arrow">→</span>
-<span class="box a">Customer notified · Won · Extension offer</span>
-</div>
-<p style="margin-top:14px;font-size:0.85rem;">Product page: <a href="https://hearingbenefitservices.com/signia-hearing-aid-repair/product/signiarepairservices" target="_blank">hearingbenefitservices.com/signia-hearing-aid-repair/product/signiarepairservices</a></p>
-</div>
-
-<!-- PIPELINE STAGES -->
-<div class="section-label">Pipeline</div>
-<div class="section-title">Signia Repair — Pipeline Stages</div>
-<div class="card">
-<p>Every repair customer gets one card in this pipeline. GHL moves the card for stages 1, 2 and 5. <strong>Len moves the card for stages 3 and 4.</strong></p>
-<div class="stage-list">
-<div class="stage-item"><div class="stage-num">1</div><div>Purchased - Awaiting Registration <span class="auto-badge">AUTOMATED</span><small>Paid, but hasn't submitted the registration form yet.</small></div></div>
-<div class="stage-item"><div class="stage-num">2</div><div>Registered - Awaiting Shipment <span class="auto-badge">AUTOMATED</span><small>Form received and shipping instructions emailed. Waiting for the hearing aid to arrive.</small></div></div>
-<div class="stage-item"><div class="stage-num">3</div><div>Received - Sent to Signia <span class="manual-badge">MANUAL — LEN</span><small>The hearing aid has arrived and the repair has been submitted to Signia.</small></div></div>
-<div class="stage-item"><div class="stage-num">4</div><div>Repaired - Returned to Customer <span class="manual-badge">MANUAL — LEN</span><small>Repair done and Warranty End Date entered. Moving here sends the customer confirmation, marks the card Won, and starts the Extension offer.</small></div></div>
-<div class="stage-item"><div class="stage-num">5</div><div>Needs Review <span class="auto-badge">AUTOMATED</span><small>Someone submitted the repair form without a matching purchase.</small></div></div>
-</div>
-</div>
-
-<!-- TAGS -->
-<div class="section-label">Tags</div>
-<div class="section-title">All Repair Tags</div>
-<div class="card">
-<p>All four tags are applied by GHL workflows. <strong>Len never needs to add any of these by hand.</strong></p>
-<div class="table-wrap">
-<table class="info-table" style="margin-top:16px;">
-<thead><tr><th>Tag</th><th>Who Adds It</th><th>Purpose</th></tr></thead>
-<tbody>
-<tr><td><span class="tag tag-blue">repair-purchased</span></td><td><span class="auto-badge">AUTOMATED</span></td><td>Customer paid for the repair</td></tr>
-<tr><td><span class="tag tag-teal">repair-registered</span></td><td><span class="auto-badge">AUTOMATED</span></td><td>Registration form submitted. Stops the reminder messages.</td></tr>
-<tr><td><span class="tag tag-green">repair-complete</span></td><td><span class="auto-badge">AUTOMATED</span></td><td>Repair done and customer notified</td></tr>
-<tr><td><span class="tag tag-red">repair-unpaid-registration</span></td><td><span class="auto-badge">AUTOMATED</span></td><td>Form submitted with no matching purchase. Needs review.</td></tr>
-</tbody>
-</table>
-</div>
-<p style="margin-top:12px;font-size:0.88rem;">If the customer later buys the Warranty Extension, they'll also get the <span class="tag tag-blue">warranty-ext-purchased</span> tag, and the Warranty Extension workflows take over. See the <em>Signia Warranty Extension</em> training page.</p>
-<div class="alert alert-warning" style="margin-top:16px;">
-<strong>⚠️ Rule:</strong> Never manually add any of these tags. They trigger workflows, and adding them by hand can send duplicate messages to the customer.
-</div>
-</div>
-
-<!-- CUSTOM FIELDS -->
-<div class="section-label">Contact Fields</div>
-<div class="section-title">Where to Find the Customer's Info</div>
-<div class="card">
-<p>When the customer submits the repair registration form, their answers are saved on their contact record. Open the contact and look for these fields in the left-hand details panel. You can type the field name into the <span class="click">Search fields</span> box to jump to it.</p>
-<div class="table-wrap">
-<table class="info-table" style="margin-top:12px;">
-<thead><tr><th>Field</th><th>Filled By</th><th>Used For</th></tr></thead>
-<tbody>
-<tr><td><strong>Hearing Aid Brand</strong></td><td>Customer (form)</td><td>Should be Signia</td></tr>
-<tr><td><strong>Hearing Aid Model</strong></td><td>Customer (form)</td><td>Checking the device in the Signia portal</td></tr>
-<tr><td><strong>Which hearing aid needs repair?</strong></td><td>Customer (form)</td><td>Left, Right or Both</td></tr>
-<tr><td><strong>Serial Number for Left / Right</strong></td><td>Customer (form)</td><td>Checking the warranty and submitting the repair to Signia</td></tr>
-<tr><td><strong>Describe the damage or problem</strong></td><td>Customer (form)</td><td>Repair notes for Signia</td></tr>
-<tr><td><strong>Approximate Purchase Date</strong> / <strong>Where did you purchase?</strong></td><td>Customer (form)</td><td>Reference</td></tr>
-<tr><td><strong>Warranty End Date</strong></td><td><span class="manual-badge">MANUAL — LEN</span></td><td>Repair completion date + 6 months. This is sent to the customer.</td></tr>
-</tbody>
-</table>
-</div>
-<div class="alert alert-info">
-<strong>Tip:</strong> The full form submission is also logged on the contact's <strong>Activity</strong> timeline, if you want to see exactly what the customer typed.
+<div class="alert alert-info" style="margin-bottom:0;">
+<strong>Warranty Extension:</strong> currently <strong>paused</strong>. Don't sell or quote it. If a customer asks, message Rhett.
 </div>
 </div>
 
 <hr class="divider">
 
-<!-- ============================================ -->
-<!-- WORKFLOW R1: PURCHASE FOLLOW-UP -->
-<!-- ============================================ -->
-<div class="section-label">Workflow R1</div>
-<div class="section-title">Purchase Follow-up</div>
+<!-- ======================= PART 1 ======================= -->
+<div class="section-label">Part 1</div>
+<div class="section-title">The Signia Speedy Repair Process</div>
 
+<div class="card">
+<h3>What the Customer Buys</h3>
+<ul>
+<li><strong>Price:</strong> $299, or $250 with code <code>JDSKXDH</code> for aids under 5 years old. The 5 years count from the <strong>invoice date</strong> shown in Signia.</li>
+<li><strong>What they get:</strong> a <strong>replacement hearing aid</strong> through Signia Speedy Repair, with a <strong>6-month repair-only warranty</strong>. It covers repairs only: not loss, not loss &amp; damage replacement, not the charger.</li>
+<li><strong>Product page:</strong> <a href="https://hearingbenefitservices.com/signia-hearing-aid-repair/product/signiarepairservices" target="_blank">hearingbenefitservices.com/signia-hearing-aid-repair/product/signiarepairservices</a></li>
+<li><strong>Registration page:</strong> <a href="https://hearingbenefitservices.com/signia-repair-registration" target="_blank">hearingbenefitservices.com/signia-repair-registration</a></li>
+</ul>
+<h3 style="margin-top:18px;">What Signia Charges HBS</h3>
+<div class="table-wrap">
+<table class="info-table">
+<thead><tr><th>Item</th><th>Signia cost</th></tr></thead>
+<tbody>
+<tr><td>Repair with 6-month warranty (aid under 5 years)</td><td>$149.04</td></tr>
+<tr><td>Repair with 6-month warranty (aid over 5 years)</td><td>$204.54</td></tr>
+<tr><td>Old aid not returned within 30 days</td><td><strong>$299.00</strong> non-return fee</td></tr>
+</tbody>
+</table>
+</div>
+<h3 style="margin-top:18px;">Key Addresses</h3>
+<ul>
+<li><strong>Replacement ships to (Ship To in the portal):</strong> HBS office, Andrea Sotolongo, 1296 Kapiolani Blvd #1908, Honolulu, HI 96814</li>
+<li><strong>Customer ships the old aid to (on the Signia UPS label):</strong> WS Audiology, 185 Commerce Dr, Hauppauge, NY 11788</li>
+</ul>
+<div class="flow">
+<span class="box a">Customer buys</span><span class="arrow">→</span>
+<span class="box a">Registers aid</span><span class="arrow">→</span>
+<span class="box m">Len checks warranty + orders Speedy Repair</span><span class="arrow">→</span>
+<span class="box m">Len emails form + UPS label</span><span class="arrow">→</span>
+<span class="box a">Old-aid reminders</span><span class="arrow">→</span>
+<span class="box m">Replacement arrives · Len enters date</span><span class="arrow">→</span>
+<span class="box m">Len mails it + moves card</span><span class="arrow">→</span>
+<span class="box a">Customer notified · Won</span>
+</div>
+</div>
+
+<!-- PIPELINE -->
+<div class="card">
+<h3>Pipeline: "Signia Repair" (fulfillment)</h3>
+<div class="stage-list">
+<div class="stage-item"><div class="stage-num">1</div><div>Purchased - Awaiting Registration <span class="auto-badge">AUTOMATED</span><small>Paid, hasn't submitted the registration form yet.</small></div></div>
+<div class="stage-item"><div class="stage-num">2</div><div>Registered - Order Speedy Repair <span class="auto-badge">AUTOMATED</span><small>Form received. Len's "Process Signia repair" task is waiting.</small></div></div>
+<div class="stage-item"><div class="stage-num">3</div><div>Speedy Repair Ordered - Awaiting Old Aid <span class="manual-badge">MANUAL — LEN</span><small>Repair ordered, form + label emailed. Moving here <strong>starts the old-aid reminders</strong> (WF-R4).</small></div></div>
+<div class="stage-item"><div class="stage-num">4</div><div>Replacement Sent to Customer <span class="manual-badge">MANUAL — LEN</span><small>Date entered and replacement mailed. Moving here <strong>sends the customer confirmation</strong> and marks the card Won (WF-R3).</small></div></div>
+<div class="stage-item"><div class="stage-num">5</div><div>Needs Review <span class="auto-badge">AUTOMATED</span><small>Form submitted with no matching purchase.</small></div></div>
+</div>
+</div>
+
+<!-- TAGS -->
+<div class="card">
+<h3>Repair Tags</h3>
+<div class="table-wrap">
+<table class="info-table">
+<thead><tr><th>Tag</th><th>Who Adds It</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td><span class="tag tag-blue">repair-purchased</span></td><td><span class="auto-badge">AUTOMATED</span></td><td>Paid for the repair. Also ends the campaign for that person.</td></tr>
+<tr><td><span class="tag tag-teal">repair-registered</span></td><td><span class="auto-badge">AUTOMATED</span></td><td>Registration form submitted. Stops the registration reminders.</td></tr>
+<tr><td><span class="tag tag-orange">old-aid-shipped</span></td><td><span class="manual-badge">MANUAL — LEN</span></td><td>UPS tracking shows the old aid is on its way to Signia. <strong>Stops the old-aid reminders.</strong></td></tr>
+<tr><td><span class="tag tag-green">repair-complete</span></td><td><span class="auto-badge">AUTOMATED</span></td><td>Replacement sent and customer notified.</td></tr>
+<tr><td><span class="tag tag-red">repair-unpaid-registration</span></td><td><span class="auto-badge">AUTOMATED</span></td><td>Registered without a matching purchase.</td></tr>
+</tbody>
+</table>
+</div>
+<div class="alert alert-warning" style="margin-top:12px;margin-bottom:0;">
+<strong>⚠️ Rule:</strong> The only repair tag you add by hand is <code>old-aid-shipped</code>. Never add the others manually: they trigger workflows.
+</div>
+</div>
+
+<!-- WF-R1 -->
 <div class="module-card">
 <div class="module-header">
 <div class="module-number" style="background:var(--blue);">R1</div>
 <h3>Signia Repair Purchase Follow-up</h3>
-<span class="module-status status-live">✓ LIVE</span>
 </div>
 <div class="module-body">
-<p><strong>Trigger:</strong> Order Submitted for the product "Signia Hearing Aid Repair – Includes 6-Month Repair Warranty."</p>
-<p><strong>Purpose:</strong> Records the purchase, lets Len know, thanks the customer, and makes sure they complete the registration form. If they don't, it reminds them by SMS and then gives Len a call task.</p>
-
-<h3 style="margin-top:20px;">Step-by-Step Breakdown</h3>
-
-<div class="step-card auto-step">
-<div class="step-num">Trigger</div>
-<span class="auto-badge">AUTOMATED</span>
-<h4>Customer Buys the Repair</h4>
-<p>Payment goes through and the customer is redirected to the repair registration page automatically.</p>
-</div>
-
-<div class="step-card auto-step">
-<div class="step-num">Step 1</div>
-<span class="auto-badge">AUTOMATED</span>
-<h4>Tag Added + Pipeline Card Created</h4>
-<p>Tag <code>repair-purchased</code> is added. A $299 card is created in <strong>Signia Repair → Purchased - Awaiting Registration</strong>, and a purchase note is logged on the contact.</p>
-</div>
-
-<div class="step-card auto-step">
-<div class="step-num">Step 2</div>
-<span class="auto-badge">AUTOMATED</span>
-<h4>Len Gets a Heads-Up Email</h4>
-<div class="email-box">
-<div class="email-label">Internal Email to Len</div>
-<strong>Subject:</strong> New Signia Repair purchase<br>
-Includes the customer's name, email and phone. You'll get a repair task once they submit the registration form.
-</div>
-</div>
-
-<div class="step-card auto-step">
-<div class="step-num">Step 3</div>
-<span class="auto-badge">AUTOMATED</span>
-<h4>Thank-You Email Sent to Customer</h4>
-<p>Thanks them and links to the registration page, <a href="https://hearingbenefitservices.com/signia-repair-registration" target="_blank">hearingbenefitservices.com/signia-repair-registration</a>.</p>
-</div>
-
-<div class="step-card auto-step">
-<div class="step-num">Waits up to 2 days</div>
-<span class="auto-badge">AUTOMATED</span>
-<h4>If They Register: Done</h4>
-<p>As soon as the registration form is submitted, a "Repair Registration Completed" note is added and this workflow ends. Workflow R2 takes over.</p>
-</div>
-
-<div class="step-card auto-step">
-<div class="step-num">Day 2 (if no form)</div>
-<span class="auto-badge">AUTOMATED</span>
-<h4>SMS Reminder Sent</h4>
-<p>Reminds the customer to register their hearing aid for repair, with the registration link.</p>
-</div>
-
-<div class="step-card auto-step">
-<div class="step-num">Day 5 (still no form)</div>
-<span class="auto-badge">AUTOMATED</span>
-<h4>Call Task Created for Len</h4>
-<p>A task appears in your GHL task list, due in 1 day:</p>
-<p style="font-weight:600;color:var(--navy);margin-top:4px;">"Call to complete repair registration - [Name]"</p>
-</div>
-
+<p><strong>Trigger:</strong> Customer buys the Signia Hearing Aid Repair.</p>
+<div class="step-card auto-step"><div class="step-num">Right away</div><span class="auto-badge">AUTOMATED</span><h4>Tag, card, heads-up to Len, thank-you email</h4><p>Tag <code>repair-purchased</code> is added, a $299 card is created in <strong>Purchased - Awaiting Registration</strong>, you get a "New Signia Repair purchase" email, and the customer gets a thank-you email with the registration link.</p></div>
+<div class="step-card auto-step"><div class="step-num">Day 2 (no form)</div><span class="auto-badge">AUTOMATED</span><h4>SMS reminder to register</h4></div>
+<div class="step-card auto-step"><div class="step-num">Day 5 (still no form)</div><span class="auto-badge">AUTOMATED</span><h4>Task for Len: "Call to complete repair registration - [Name]"</h4></div>
 <div class="manual-action-box">
-<h4>👋 Len — What You Need to Do for This Workflow</h4>
-<p style="margin-bottom:10px;">Most of the time, nothing. You only act if you get the <strong>call task</strong>.</p>
-<h5>When you get the "Call to complete repair registration" task</h5>
+<h4>👋 Len — If You Get the Call Task</h4>
 <ol>
-<li>In GHL, go to <span class="click">Contacts</span> → <span class="click">Tasks</span> and open the task, then click the customer's name.</li>
-<li><strong>Call the customer.</strong> Explain that we need their hearing aid details before we can send shipping instructions.</li>
-<li>Help them find the serial number: it's printed in small text on the hearing aid, and usually on the original box or paperwork.</li>
-<li>Either text them <span class="highlight">hearingbenefitservices.com/signia-repair-registration</span> and stay on the line, <strong>or</strong> fill out the form yourself during the call. <span class="highlight">Use the exact email they used at checkout.</span></li>
-<li>If you can't reach them, leave a voicemail, add a note on the contact, and try again the next business day.</li>
-<li>Once the form is submitted, <strong>mark the call task complete</strong>. You'll get the repair task within about 5 minutes (Workflow R2).</li>
+<li>Call the customer and help them find the serial number (printed in small text on the hearing aid, or on the original box or paperwork).</li>
+<li>Text them <span class="highlight">hearingbenefitservices.com/signia-repair-registration</span>, or fill it in for them during the call using the <strong>exact email they used at checkout</strong>.</li>
+<li>No answer? Leave a voicemail, add a note, and try again the next business day.</li>
+<li>Mark the task complete once the form is in.</li>
 </ol>
 </div>
 </div>
 </div>
 
-<!-- ============================================ -->
-<!-- WORKFLOW R2: REGISTRATION -->
-<!-- ============================================ -->
-<div class="section-label">Workflow R2</div>
-<div class="section-title">Repair Registration</div>
-
+<!-- WF-R2 -->
 <div class="module-card">
 <div class="module-header">
 <div class="module-number" style="background:var(--teal);">R2</div>
 <h3>Signia Repair Registration</h3>
-<span class="module-status status-live">✓ LIVE</span>
 </div>
 <div class="module-body">
-<p><strong>Trigger:</strong> Customer submits the "Signia Repair Registration" form on <a href="https://hearingbenefitservices.com/signia-repair-registration" target="_blank">hearingbenefitservices.com/signia-repair-registration</a>.</p>
-<p><strong>Purpose:</strong> Checks that the customer paid, emails them shipping instructions, and gives Len the repair task. If there's no purchase, it flags the contact for review.</p>
-
-<h3 style="margin-top:20px;">Step-by-Step Breakdown</h3>
-
-<div class="step-card auto-step">
-<div class="step-num">Trigger + 5-minute wait</div>
-<span class="auto-badge">AUTOMATED</span>
-<h4>Customer Submits the Repair Form</h4>
-<p>GHL waits <strong>5 minutes</strong> (so the purchase tag from Workflow R1 has time to land), then checks whether the contact has the <code>repair-purchased</code> tag and takes one of two paths.</p>
-</div>
-
-<h3 style="margin:22px 0 10px;">Path A: Customer Has Purchased <span class="tag tag-green" style="margin-left:6px;">Normal</span></h3>
-
-<div class="step-card auto-step">
-<div class="step-num">Step 1</div>
-<span class="auto-badge">AUTOMATED</span>
-<h4>Tag Added + Card Moved</h4>
-<p>Tag <code>repair-registered</code> is added. This stops the reminders in Workflow R1. The card moves to <strong>Registered - Awaiting Shipment</strong>.</p>
-</div>
-
-<div class="step-card auto-step">
-<div class="step-num">Step 2</div>
-<span class="auto-badge">AUTOMATED</span>
-<h4>Repair Task Created for Len</h4>
-<p>A task appears in your GHL task list, due in 1 day:</p>
-<p style="font-weight:600;color:var(--navy);margin-top:4px;">"Process Signia repair - [Name]"</p>
-<p style="margin-top:8px;">A "Repair Registration Received" note is also logged on the contact.</p>
-</div>
-
-<div class="step-card auto-step">
-<div class="step-num">Step 3</div>
-<span class="auto-badge">AUTOMATED</span>
-<h4>Confirmation + Shipping Instructions Emailed to Customer</h4>
-<div class="email-box">
-<div class="email-label">Email Subject</div>
-We received your repair registration
-</div>
-<p>Confirms the registration, explains the 6-month repair-only warranty (starting on the date the repair is completed), and gives the customer the shipping instructions for sending in their hearing aid.</p>
-</div>
+<p><strong>Trigger:</strong> Customer submits the "Signia Repair Registration" form. GHL waits 5 minutes, then checks for the <code>repair-purchased</code> tag.</p>
+<div class="step-card auto-step"><div class="step-num">Paid (normal)</div><span class="auto-badge">AUTOMATED</span><h4>Card moves to "Registered - Order Speedy Repair" + task for Len</h4><p>Task: <strong>"Process Signia repair - [Name]"</strong>, due in 1 day. The customer gets the email <em>"We received your repair registration"</em>, which tells them a repair form and prepaid UPS label are coming within 1 business day, to ship the old aid within 7 days, and that the warranty is repair-only.</p></div>
+<div class="step-card auto-step"><div class="step-num">Not paid (rare)</div><span class="auto-badge">AUTOMATED</span><h4>Card in "Needs Review" + email to Len</h4><p>Subject: "Repair registration without purchase - review". Check <span class="click">Payments</span> → <span class="click">Transactions</span> for their payment under another email. Found it? Message Rhett. Not found? Tell the customer the repair must be purchased first.</p></div>
 
 <div class="manual-action-box">
-<h4>👋 Len — What You Need to Do for This Workflow</h4>
-<p style="margin-bottom:10px;"><strong>The workflow STOPS here and waits for you.</strong> Start within 1 business day of getting the task.</p>
-
-<h5>Part 1: Get the device details from GHL</h5>
+<h4>👋 Len — "Process Signia repair" (the main job)</h4>
+<h5>Step 1: Check the hearing aid</h5>
 <ol>
-<li>In GHL, go to <span class="click">Contacts</span> → <span class="click">Tasks</span> and open <strong>"Process Signia repair - [Name]"</strong>, then click the customer's name.</li>
-<li>In the left-hand details panel, note the <strong>model</strong>, <strong>which aid needs repair</strong> (Left / Right / Both), the matching <strong>serial number(s)</strong>, and the <strong>problem description</strong>.</li>
-<li>Double-check the serials for mix-ups like 0/O or 1/I.</li>
+<li>Open the contact. Copy the model, which aid needs repair (Left / Right / Both), the serial number(s) and the problem description.</li>
+<li>In the Signia portal, open <strong>Look Up Warranty Expiration</strong> and search the serial.</li>
+<li>Confirm it's <span class="highlight">out of warranty</span>. If it's still in warranty (original or repair), <strong>stop and message Rhett</strong>: the repair is likely free and the customer may need a refund.</li>
+<li>Note the <strong>invoice date</strong>. If the customer used code <code>JDSKXDH</code> and the aid is 5+ years old, message Rhett.</li>
 </ol>
-
-<h5>Part 2: Confirm the hearing aid is OUT of warranty</h5>
-<ol start="4">
-<li>Log in to the <strong>Signia portal</strong> and search the serial number(s).</li>
-<li>Confirm the device matches the model the customer gave, and that the warranty has <span class="highlight">expired</span>.</li>
-<li><strong>If it's still IN warranty:</strong> stop and message Rhett. The repair may be covered at no charge, and the customer may need a refund. See Special Cases below.</li>
+<h5>Step 2: Order the Speedy Repair</h5>
+<ol start="5">
+<li>In the portal: <span class="click">Services</span> → <span class="click">Repair Order</span> (Hearing Instrument Repair).</li>
+<li>Choose <strong>Speedy Repair</strong> and the <strong>6-month</strong> repair warranty.</li>
+<li><strong>Ship To = HBS office</strong> (Andrea Sotolongo, 1296 Kapiolani Blvd #1908, Honolulu, HI 96814).</li>
+<li>Save the <strong>repair order number</strong> as a note on the contact.</li>
 </ol>
-
-<h5>Part 3: Watch for the hearing aid to arrive</h5>
-<ol start="7">
-<li>Check the contact's <span class="click">Conversations</span> to confirm the shipping instructions email went out.</li>
-<li>When the hearing aid arrives, add a note on the contact (e.g. "Received L aid 10/24").</li>
-<li>Submit the repair to Signia using your usual Signia repair process, including the serial number and the customer's problem description. Add the Signia repair/order number as a note.</li>
-<li>Go to <span class="click">Opportunities</span> → pipeline <span class="highlight">Signia Repair</span>, and drag the card from <strong>Registered - Awaiting Shipment</strong> to <strong>Received - Sent to Signia</strong>.</li>
+<h5>Step 3: Send the customer the form + label</h5>
+<ol start="9">
+<li>Fill in the <strong>Signia Repair/Remake form</strong>: tick <strong>Speedy Repair</strong> and <strong>6-month warranty</strong>, and in Additional Comments write <em>"Order was already processed in portal Order # [number]"</em>.</li>
+<li>Email the customer the filled form + the <strong>Signia UPS label</strong>. Ask them to box the old aid with the printed form and drop it at UPS <strong>within 7 days</strong>.</li>
+<li>Move the card to <strong>Speedy Repair Ordered - Awaiting Old Aid</strong>. This starts the old-aid reminders (WF-R4).</li>
 </ol>
-<p style="margin-top:6px;">Then continue with Workflow R3 below once the repair is done.</p>
+<h5>Step 4: Watch the old aid</h5>
+<ol start="12">
+<li>Check UPS tracking. As soon as it shows the package is moving, add the tag <span class="highlight">old-aid-shipped</span>. This stops the reminders.</li>
+</ol>
+<h5>Step 5: When the replacement arrives at the office</h5>
+<ol start="13">
+<li>Write the <strong>new serial number</strong> in the contact notes.</li>
+<li>Look up the new serial in <strong>Look Up Warranty Expiration</strong> and copy the <strong>exact end date</strong> into the contact's <strong>Warranty End Date</strong> field. Don't calculate it.</li>
+<li>If possible, check it charges in a compatible charger.</li>
+<li>Mail the replacement to the customer, <strong>then</strong> move the card to <strong>Replacement Sent to Customer</strong> (Golden Rule #1).</li>
+<li>Mark the "Process Signia repair" task complete.</li>
+</ol>
 </div>
-
-<h3 style="margin:22px 0 10px;">Path B: No Matching Purchase <span class="tag tag-red" style="margin-left:6px;">Rare</span></h3>
-
-<div class="step-card auto-step">
-<div class="step-num">Step 1</div>
-<span class="auto-badge">AUTOMATED</span>
-<h4>Flagged for Review</h4>
-<p>Tag <code>repair-unpaid-registration</code> is added, a card is created in <strong>Signia Repair → Needs Review</strong>, and a note is logged.</p>
-</div>
-
-<div class="step-card auto-step">
-<div class="step-num">Step 2</div>
-<span class="auto-badge">AUTOMATED</span>
-<h4>Alert Email Sent to Len</h4>
-<div class="email-box">
-<div class="email-label">Internal Email to Len</div>
-<strong>Subject:</strong> Repair registration without purchase - review<br>
-Includes the customer's name, email and phone.
 </div>
 </div>
 
+<!-- WF-R4 -->
+<div class="module-card">
+<div class="module-header">
+<div class="module-number" style="background:var(--orange);">R4</div>
+<h3>Signia Repair Old Aid Reminder</h3>
+</div>
+<div class="module-body">
+<p><strong>Trigger:</strong> Len moves the card to <strong>Speedy Repair Ordered - Awaiting Old Aid</strong>. Each step stops as soon as <code>old-aid-shipped</code> is added.</p>
+<div class="step-card auto-step"><div class="step-num">Day 5</div><span class="auto-badge">AUTOMATED</span><h4>Reminder 1 (SMS + email): ship your old hearing aid</h4></div>
+<div class="step-card auto-step"><div class="step-num">Day 12</div><span class="auto-badge">AUTOMATED</span><h4>Reminder 2 (SMS + email)</h4></div>
+<div class="step-card auto-step"><div class="step-num">Day 20</div><span class="auto-badge">AUTOMATED</span><h4>Task for Len: "Old aid not shipped to Signia - call [Name]"</h4></div>
 <div class="manual-action-box">
-<h4>👋 Len — What to Do When You Get a "Without Purchase" Alert</h4>
+<h4>👋 Len — Day-20 Task</h4>
 <ol>
-<li><strong>Don't process anything yet.</strong> Note: no shipping instructions were sent on this path.</li>
-<li>In GHL, go to <span class="click">Payments</span> → <span class="click">Transactions</span> and search for a Repair payment ($299, or $250 with the coupon) under the customer's name, a different email, or their phone number.</li>
-<li><strong>If you find the payment:</strong> message Rhett with both contact names so he can match them up. Then send the customer the shipping instructions and follow the Path A steps.</li>
-<li><strong>If there's no payment:</strong> call or text the customer. Let them know the repair needs to be purchased first on the product page.</li>
-<li>Add a note on the contact with what you found and what you did.</li>
+<li>Check UPS tracking. If it has shipped, add <code>old-aid-shipped</code> and close the task.</li>
+<li>If not, call the customer. Resend the form and label if they lost them.</li>
+<li>If it still won't be shipped before <strong>day 30</strong>, message Rhett. Signia charges HBS $299 after that.</li>
 </ol>
 </div>
 </div>
 </div>
 
-<!-- ============================================ -->
-<!-- WORKFLOW R3: REPAIR COMPLETED -->
-<!-- ============================================ -->
-<div class="section-label">Workflow R3</div>
-<div class="section-title">Repair Completed + Extension Offer</div>
-
+<!-- WF-R3 -->
 <div class="module-card">
 <div class="module-header">
 <div class="module-number" style="background:var(--green);">R3</div>
-<h3>Signia Repair Completed</h3>
-<span class="module-status status-live">✓ LIVE</span>
+<h3>Signia Repair Completed (Replacement Sent)</h3>
 </div>
 <div class="module-body">
-<p><strong>Trigger:</strong> Len moves the card to <strong>Repaired - Returned to Customer</strong> in the Signia Repair pipeline.</p>
-<p><strong>Purpose:</strong> Tells the customer their repair is done and when their 6-month repair warranty ends, closes the card as Won, then offers the 12-month Warranty Extension.</p>
-
-<h3 style="margin-top:20px;">Step-by-Step Breakdown</h3>
-
-<div class="step-card manual-step">
-<div class="step-num">Before the Trigger</div>
-<span class="manual-badge">MANUAL — LEN</span>
-<h4>Len Enters the Warranty End Date</h4>
-<p>Warranty End Date = <strong>repair completion date + 6 months</strong>. Check the Signia portal for the date it shows after the repair.</p>
-</div>
-
-<div class="step-card manual-step">
-<div class="step-num">Trigger</div>
-<span class="manual-badge">MANUAL — LEN</span>
-<h4>Len Moves the Card to "Repaired - Returned to Customer"</h4>
-<p>This is the last manual step. Everything below happens automatically.</p>
-</div>
-
-<div class="step-card auto-step">
-<div class="step-num">Step 1</div>
-<span class="auto-badge">AUTOMATED</span>
-<h4>Repair Confirmation SMS + Email</h4>
-<div class="sms-box">
-<div class="sms-label">Confirmation SMS (summary)</div>
-Your hearing aid has been repaired. Your 6-month repair-only warranty runs until {{contact.warranty_end_date}}. Questions? Call 808-435-7002.
+<p><strong>Trigger:</strong> Len moves the card to <strong>Replacement Sent to Customer</strong>.</p>
+<div class="step-card auto-step"><div class="step-num">Right away</div><span class="auto-badge">AUTOMATED</span><h4>SMS + email: "Your replacement hearing aid is on its way"</h4><p>Includes their warranty end date ({{Warranty End Date}}), that the warranty covers repairs only (not lost or damaged hearing aids), and a reminder to ship the old aid if they haven't yet.</p></div>
+<div class="step-card auto-step"><div class="step-num">Then</div><span class="auto-badge">AUTOMATED</span><h4>Tag <code>repair-complete</code>, note, card marked Won</h4><p>There is <strong>no extension upsell</strong> anymore. The workflow ends here.</p></div>
 </div>
 </div>
 
-<div class="step-card auto-step">
-<div class="step-num">Step 2</div>
-<span class="auto-badge">AUTOMATED</span>
-<h4>Tag + Note + Card Marked Won</h4>
-<p>Tag <code>repair-complete</code> is added, a "Repair Completed" note is logged with the date, and the card is marked <strong>Won</strong>.</p>
-</div>
+<hr class="divider">
 
-<div class="step-card auto-step">
-<div class="step-num">Day 1 after</div>
-<span class="auto-badge">AUTOMATED</span>
-<h4>Warranty Extension Offer (SMS + Email)</h4>
-<div class="sms-box">
-<div class="sms-label">Extension Offer</div>
-Your hearing aid is back under warranty, so you can now add 12 more months of coverage for $250 with code JDSKXDH. https://hearingbenefitservices.com/signia-hearing-aid-warranty-extension/product/signiaextendedwarranty
-</div>
-</div>
+<!-- ======================= PART 2 ======================= -->
+<div class="section-label">Part 2</div>
+<div class="section-title">The "Repair Offer – All Leads" Campaign</div>
 
-<div class="step-card auto-step">
-<div class="step-num">Day 8 (if no extension bought)</div>
-<span class="auto-badge">AUTOMATED</span>
-<h4>One Reminder Email</h4>
-<div class="email-box">
-<div class="email-label">Email Subject</div>
-Reminder: add 12 more months of coverage for $250
-</div>
-<p>If the customer has bought the extension (tag <code>warranty-ext-purchased</code>), no reminder is sent. Either way, the workflow ends here.</p>
-</div>
-
-<div class="manual-action-box">
-<h4>👋 Len — What You Need to Do for This Workflow</h4>
-<h5>Part 1: Enter the Warranty End Date</h5>
-<ol>
-<li>When Signia confirms the repair is complete, look up the serial number in the Signia portal and note the <strong>repair warranty end date</strong>. It should be about <span class="highlight">6 months after the repair completion date</span>.</li>
-<li>In GHL, open the customer's contact record and type <span class="click">Warranty End Date</span> into the search fields box.</li>
-<li>Pick the date in the date picker and click <span class="click">Save</span>. <strong>Read it back</strong> to make sure it's right.</li>
-</ol>
-
-<h5>Part 2: Move the card</h5>
-<ol start="4">
-<li>Once the repaired hearing aid is on its way back to the customer, go to <span class="click">Opportunities</span> → pipeline <span class="highlight">Signia Repair</span>.</li>
-<li>Drag the card from <strong>Received - Sent to Signia</strong> to <strong>Repaired - Returned to Customer</strong>.</li>
-<li>Within a minute, check the contact's <span class="click">Conversations</span> to confirm the SMS and email went out with the correct date.</li>
-<li>Mark the <strong>"Process Signia repair"</strong> task complete.</li>
-</ol>
-
-<h5>If the customer buys the Warranty Extension</h5>
+<div class="card">
+<p>A short SMS + email campaign to our <strong>current leads</strong>, any hearing aid brand. It offers two things:</p>
 <ul>
-<li>The Warranty Extension workflows take over. You'll get the usual <strong>"Order Signia warranty extension"</strong> task. Follow the Warranty Extension training page.</li>
-<li>Their current warranty end date is the repair warranty end date, so the new date will be <strong>repair warranty end + 12 months</strong>.</li>
-<li>If the Signia portal won't let you extend this aid (Signia mentioned an age limit for extending repaired aids), stop and message Rhett.</li>
+<li><strong>Signia owners:</strong> Signia Speedy Repair ($299, or $250 with <code>JDSKXDH</code>).</li>
+<li><strong>Everyone else:</strong> a free consultation for new hearing aids.</li>
+</ul>
+<p style="margin-top:10px;">It starts when <strong>Len adds the tag</strong> <code>repair-campaign-lead</code>, and stops as soon as the person replies, clicks a link, or buys.</p>
+</div>
+
+<!-- TAGGING -->
+<div class="manual-action-box">
+<h4>👋 Len — How to Enroll Leads</h4>
+<h5>When</h5>
+<ul>
+<li>Tag only between <span class="highlight">9 AM and 6 PM US Eastern, Monday–Saturday</span>, so texts arrive in the daytime.</li>
+<li>Up to <strong>about 200 leads per day</strong>. Start the very first day with about 50.</li>
+</ul>
+<h5>Who to skip</h5>
+<ul>
+<li>Existing patients</li>
+<li>Anyone with an open deal or consultation in progress</li>
+<li>Anyone with DND or the <code>opted_out</code> tag, anyone who asked not to be contacted, and anyone you know didn't agree to texts</li>
+</ul>
+<h5>How</h5>
+<ol>
+<li>Go to <span class="click">Contacts</span>, use <span class="click">Filters</span> to find the leads.</li>
+<li>Tick the checkboxes (don't use "Select all").</li>
+<li>Click <span class="click">More</span> → <span class="click">Add tags</span> → <span class="highlight">repair-campaign-lead</span> → confirm.</li>
+</ol>
+<h5>To stop someone</h5>
+<ul>
+<li>Open the contact and <strong>remove them from the "WF-M1 Repair Offer - All Leads" workflow</strong>. Removing the tag does NOT stop it.</li>
 </ul>
 </div>
 
-<div class="alert alert-success">
-<strong>✅ That's it.</strong> After the card is in Repaired - Returned to Customer, GHL handles the extension offer on its own.
+<!-- SEQUENCE -->
+<div class="module-card">
+<div class="module-header">
+<div class="module-number" style="background:var(--blue);">M1</div>
+<h3>Repair Offer – All Leads (the messages)</h3>
 </div>
+<div class="module-body">
+<p><strong>Trigger:</strong> Len adds <code>repair-campaign-lead</code>. Contacts who already bought, or have DND, are skipped.</p>
+<div class="table-wrap">
+<table class="info-table">
+<thead><tr><th>Day</th><th>Can receive texts</th><th>Can't receive texts</th></tr></thead>
+<tbody>
+<tr><td>Day 0</td><td><strong>SMS 1</strong> (held until 9 AM–7 PM, Mon–Sat)</td><td><strong>Email 1</strong></td></tr>
+<tr><td>Day 2</td><td><strong>SMS 2</strong> (follow-up)</td><td>n/a</td></tr>
+<tr><td>Day 4</td><td><strong>Email 1</strong></td><td><strong>Email 2</strong> (last)</td></tr>
+<tr><td>Day 8</td><td><strong>Email 2</strong> (last)</td><td>n/a</td></tr>
+</tbody>
+</table>
+</div>
+<p>After the last email, the contact gets the tag <code>repair-not-now</code>. Anyone who replies, clicks or buys drops out of the sequence automatically.</p>
+<div class="sms-box"><div class="sms-label">SMS 1</div>Hi {{contact.first_name}}, it's Hearing Benefit Services. Hearing aid acting up? Signia owners: get a replacement through Speedy Repair, $250 with code JDSKXDH: [repair link]. Other brands: book a free consultation: [consultation link]. Reply STOP to opt out.</div>
+<div class="sms-box"><div class="sms-label">SMS 2 (follow-up)</div>Hi {{contact.first_name}}, just following up from Hearing Benefit Services. If your hearing aid still isn't working right, we can help. Signia owners: [repair link]. Other brands: [consultation link]. Or just reply here and we'll call you. Reply STOP to opt out.</div>
+<div class="email-box"><div class="email-label">Email 1</div><strong>Subject:</strong> Hearing aid not working the way it should?<br>Explains Speedy Repair for Signia owners and a free consultation for other brands, with two buttons: "Start My Signia Repair" and "Book a Free Consultation".</div>
+<div class="email-box"><div class="email-label">Email 2 (last)</div><strong>Subject:</strong> Still having trouble with your hearing aid?<br>A short reminder with the same two buttons.</div>
+</div>
+</div>
+
+<!-- SALES PIPELINE -->
+<div class="card">
+<h3>Pipeline: "Signia Repair - Sales" (campaign leads)</h3>
+<div class="stage-list">
+<div class="stage-item"><div class="stage-num">1</div><div>New Lead <span class="auto-badge">AUTOMATED</span><small>Clicked the repair link or replied.</small></div></div>
+<div class="stage-item"><div class="stage-num">2</div><div>Contacted <span class="manual-badge">MANUAL — LEN</span><small>After your first call or message.</small></div></div>
+<div class="stage-item"><div class="stage-num">3</div><div>Link Sent - Deciding <span class="manual-badge">MANUAL — LEN</span><small>Signia, out of warranty, product link sent.</small></div></div>
+<div class="stage-item"><div class="stage-num">4</div><div>Purchased <span class="auto-badge">AUTOMATED</span><small>They bought. Marked Won, and the repair continues in the "Signia Repair" pipeline.</small></div></div>
+<div class="stage-item"><div class="stage-num">5</div><div>Not Now - Nurture <span class="manual-badge">MANUAL — LEN</span><small>Not ready yet.</small></div></div>
+<div class="stage-item"><div class="stage-num">6</div><div>Not Eligible <span class="manual-badge">MANUAL — LEN</span><small>In warranty, other brand, or lost aid. Set status to <strong>Lost</strong> by hand.</small></div></div>
+</div>
+<h3 style="margin-top:16px;">Campaign Tags</h3>
+<div class="table-wrap">
+<table class="info-table">
+<thead><tr><th>Tag</th><th>Added by</th><th>Meaning</th></tr></thead>
+<tbody>
+<tr><td><span class="tag tag-orange">repair-campaign-lead</span></td><td><span class="manual-badge">MANUAL — LEN</span></td><td>Starts the campaign</td></tr>
+<tr><td><span class="tag tag-blue">repair-lead</span></td><td><span class="auto-badge">AUTOMATED</span></td><td>Clicked the repair link or replied</td></tr>
+<tr><td><span class="tag tag-teal">consult-interest</span></td><td><span class="auto-badge">AUTOMATED</span> / Len</td><td>Wants new hearing aids / a consultation</td></tr>
+<tr><td><span class="tag tag-red">repair-not-now</span></td><td><span class="auto-badge">AUTOMATED</span> / Len</td><td>No response, or not ready</td></tr>
+<tr><td><span class="tag tag-red">repair-not-eligible</span></td><td>Len</td><td>In warranty, other brand, or lost aid</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<!-- RESPONSES -->
+<div class="module-card">
+<div class="module-header">
+<div class="module-number" style="background:var(--teal);">M2</div>
+<h3>When a Lead Responds</h3>
+</div>
+<div class="module-body">
+<div class="step-card auto-step"><div class="step-num">Repair link click or any reply</div><span class="auto-badge">AUTOMATED</span><h4>Card in "Signia Repair - Sales / New Lead" + task for Len</h4><p>Task: <strong>"Call repair campaign lead - [Name]"</strong>, due in 1 business day. The lead stops getting campaign messages.</p></div>
+<div class="step-card auto-step"><div class="step-num">Consultation link click</div><span class="auto-badge">AUTOMATED</span><h4>Card in "Warm Leads / Prospects - Private Pay and Insurance" + task for Len</h4><p>Stage: "Showed Interest - Need to call, email, and text info requested &amp; office info". Task: <strong>"Follow up consultation interest - [Name]"</strong>. The lead stops getting campaign messages.</p></div>
+<div class="step-card auto-step"><div class="step-num">They buy the repair</div><span class="auto-badge">AUTOMATED</span><h4>Card → Purchased (Won), campaign stops</h4><p>Then it's a normal repair: Part 1 starts with WF-R1.</p></div>
+
+<div class="manual-action-box">
+<h4>👋 Len — "Call repair campaign lead"</h4>
+<ol>
+<li>Read their reply in <span class="click">Conversations</span>, then call or text. Ask what hearing aid they have and what's wrong.</li>
+<li>Check the serial in <strong>Look Up Warranty Expiration</strong> if they're a Signia owner.</li>
+<li>Then move the card:
+<ul>
+<li><strong>Signia, out of warranty</strong> → explain Speedy Repair and send the product link (code <code>JDSKXDH</code> only if under 5 years old by invoice date) → <strong>Link Sent - Deciding</strong>.</li>
+<li><strong>Signia, still in warranty</strong> → <strong>Not Eligible</strong> + tag <code>repair-not-eligible</code>, and help them with the free warranty repair.</li>
+<li><strong>Other brand / wants new hearing aids</strong> → add tag <code>consult-interest</code> (creates the consultation follow-up) → <strong>Not Eligible</strong>.</li>
+<li><strong>Lost hearing aid</strong> → see the table at the top → <strong>Not Eligible</strong>.</li>
+<li><strong>Not ready</strong> → <strong>Not Now - Nurture</strong> + tag <code>repair-not-now</code>.</li>
+<li><strong>Wants no more messages</strong> → mark DND and add <code>opted_out</code>.</li>
+</ul>
+</li>
+<li>Mark the task complete and add a short note.</li>
+</ol>
+</div>
+
+<div class="manual-action-box">
+<h4>👋 Len — "Follow up consultation interest"</h4>
+<ol>
+<li>Call or text within 1 business day. Ask about their hearing needs, current hearing aids and insurance.</li>
+<li>Book a consultation and move their card along in the "Warm Leads / Prospects" pipeline as usual.</li>
+</ol>
+</div>
+</div>
+</div>
+
+<hr class="divider">
+
+<!-- ======================= PART 3 ======================= -->
+<div class="section-label">Part 3</div>
+<div class="section-title">Chargers</div>
+<div class="card">
+<p>Confirmed by Signia support (Oct 27, 2026) and the Price &amp; Policy Guide.</p>
+<div class="table-wrap">
+<table class="info-table">
+<thead><tr><th>Situation</th><th>Coverage</th></tr></thead>
+<tbody>
+<tr><td>Charger shipped in a set with the aids</td><td>Same warranty as the aids (from the fit date)</td></tr>
+<tr><td>Charger bought separately / any new charger</td><td>12-month accessory warranty</td></tr>
+<tr><td>Charger lost</td><td>Not covered: new charger purchase</td></tr>
+<tr><td>Charger broken, out of warranty</td><td><strong>Not repaired</strong>: new charger purchase</td></tr>
+<tr><td>Warranty extension / repair warranty</td><td>Never cover the charger</td></tr>
+<tr><td>After a Speedy Repair</td><td>The customer's existing charger still works with the replacement aid</td></tr>
+</tbody>
+</table>
+</div>
+<h3 style="margin-top:16px;">Common Charger Costs (HBS price / Signia list)</h3>
+<div class="table-wrap">
+<table class="info-table">
+<thead><tr><th>Hearing aid</th><th>Charger (SKU)</th><th>HBS cost / List</th></tr></thead>
+<tbody>
+<tr><td>Active IX / Active Pro IX</td><td>Active Charger IX (21028351)</td><td>$212 / $235</td></tr>
+<tr><td>Pure C&amp;G IX, AX</td><td>RIC Desktop Charger US (21053880)</td><td>$204 / $268</td></tr>
+<tr><td>Pure C&amp;G MaX</td><td>RIC Desktop Charger Pure 2.0 (21055370)</td><td>$204 / $226</td></tr>
+<tr><td>Styletto IX, AX</td><td>Styletto Portable Charger US (21054302)</td><td>$204 / $226</td></tr>
+<tr><td>Silk C&amp;G IX</td><td>Silk Charge&amp;Go Charger (21023269)</td><td>$212 / $235</td></tr>
+<tr><td>Insio C&amp;G AX</td><td>Insio AX Desktop Charger (21025145)</td><td>$204 / $226</td></tr>
+<tr><td>Motion C&amp;G X and older</td><td>Inductive Charger II (10966942)</td><td>$204 / $226</td></tr>
+</tbody>
+</table>
+</div>
+<p style="font-size:0.85rem;color:var(--text-light);">Plus about $14 UPS Ground shipping. Andrea sets the customer price. Order in the portal: <span class="click">Accessories</span> → <span class="click">Chargers</span>.</p>
+<div class="manual-action-box" style="margin-bottom:0;">
+<h4>👋 Len — Charger or hearing aid?</h4>
+<ul>
+<li>If <strong>one</strong> aid charges and the other doesn't, the problem is usually the <strong>hearing aid</strong>, not the charger.</li>
+<li>Ask the customer to charge the case/charger itself first (if it has a battery) and gently clean the contacts with a dry cloth. <strong>Never metal.</strong></li>
+<li>Test the replacement aid in a known-good charger at the office before mailing when possible.</li>
+</ul>
 </div>
 </div>
 
@@ -652,80 +635,42 @@ Reminder: add 12 more months of coverage for $250
 <div class="section-title">Special Cases</div>
 
 <div class="card">
-<h3>❗ The hearing aid is still under warranty</h3>
-<p>The customer shouldn't pay for a repair that's already covered.</p>
+<h3>❗ I moved the card to "Replacement Sent" before entering the date</h3>
 <ol>
-<li>Don't send it to Signia as a paid repair. Add a note with the warranty end date shown in Signia.</li>
-<li>Message Rhett. Usually the customer gets a refund and the repair is processed as a free warranty repair.</li>
+<li>Enter the correct <strong>Warranty End Date</strong> and save.</li>
+<li>Send this SMS by hand from <span class="click">Conversations</span>:</li>
 </ol>
+<div class="sms-box"><div class="sms-label">Correction SMS (send manually)</div>Hi [first name], correction from Hearing Benefit Services: your repair warranty runs until [date]. Sorry for any confusion! Questions? Call us at 808-435-7002.</div>
 </div>
 
 <div class="card">
-<h3>❗ The customer actually LOST the hearing aid</h3>
-<p>The Repair product doesn't cover loss.</p>
-<ol>
-<li>If it's <strong>out of warranty</strong>: loss isn't covered. The customer needs a new hearing aid at standard pricing. Message Rhett about a refund and offer to book a consultation.</li>
-<li>If it's <strong>in warranty</strong>: it can be replaced for a <strong>$299 fee per aid</strong> (pending Andrea's confirmation). Message Rhett to sort out the payment, then order the loss replacement in the Signia portal.</li>
-</ol>
+<h3>❗ The aid turns out to be still in warranty</h3>
+<p>Don't order a paid repair. Add a note with the warranty date and message Rhett (likely refund + free warranty repair).</p>
 </div>
 
 <div class="card">
-<h3>❗ Signia says the hearing aid can't be repaired</h3>
-<ol>
-<li>Add a note with what Signia said, and leave the card in <strong>Received - Sent to Signia</strong>.</li>
-<li>Message Rhett. The options are usually a refund or a new hearing aid quote.</li>
-</ol>
+<h3>❗ Signia says it can't be repaired</h3>
+<p>Leave the card where it is, add a note, and message Rhett (usually a refund or a new hearing aid quote).</p>
 </div>
 
 <div class="card">
-<h3>❗ The hearing aid hasn't arrived</h3>
-<ol>
-<li>If the card has been in <strong>Registered - Awaiting Shipment</strong> for about a week with no aid received, call or text the customer.</li>
-<li>Check they got the shipping instructions email (look in <span class="click">Conversations</span>). Resend the instructions if needed.</li>
-<li>Add a note with what you found.</li>
-</ol>
+<h3>❗ The customer actually lost the aid</h3>
+<p>The repair doesn't cover loss. In original warranty: one-time Loss &amp; Damage replacement (Signia charges $212 + shipping), so message Rhett. Out of warranty: new hearing aids, so treat it as a consultation.</p>
 </div>
 
 <div class="card">
-<h3>❗ I moved the card to Repaired before entering the date</h3>
-<p>The customer already got a message with a blank or wrong date, and it <strong>will not resend</strong>.</p>
-<ol>
-<li>Enter the correct <strong>Warranty End Date</strong> on the contact and save.</li>
-<li>Open the contact's <span class="click">Conversations</span> and send this SMS by hand:</li>
-</ol>
-<div class="sms-box">
-<div class="sms-label">Correction SMS (send manually)</div>
-Hi [first name], correction from Hearing Benefit Services: your 6-month repair warranty runs until [date]. Sorry for any confusion! Questions? Call us at 808-435-7002.
-</div>
-<ol start="3">
-<li>Add a note on the contact: "Sent corrected repair warranty end date [date]."</li>
-</ol>
-</div>
-
-<div class="card">
-<h3>📞 The customer calls asking about their repair</h3>
-<p>Open their card in <strong>Opportunities → Signia Repair</strong>. The stage tells you exactly where they are:</p>
+<h3>📞 Customer asks about their repair status</h3>
 <div class="table-wrap">
 <table class="info-table">
 <thead><tr><th>Stage</th><th>What to Tell Them</th></tr></thead>
 <tbody>
-<tr><td>Purchased - Awaiting Registration</td><td>"We still need your hearing aid details." Help them submit the form.</td></tr>
-<tr><td>Registered - Awaiting Shipment</td><td>"We're waiting for your hearing aid to arrive." Confirm they have the shipping instructions.</td></tr>
-<tr><td>Received - Sent to Signia</td><td>"We received it and it's being repaired. We'll text and email you when it's on its way back."</td></tr>
-<tr><td>Repaired - Returned to Customer</td><td>"It's been repaired!" Read them the <strong>Warranty End Date</strong> and mention the 12-month extension offer.</td></tr>
-<tr><td>Needs Review</td><td>"We're looking into your registration and will contact you shortly."</td></tr>
+<tr><td>Purchased - Awaiting Registration</td><td>"We still need your hearing aid details." Help them register.</td></tr>
+<tr><td>Registered - Order Speedy Repair</td><td>"We're placing your repair with Signia. Your UPS label is coming by email."</td></tr>
+<tr><td>Speedy Repair Ordered - Awaiting Old Aid</td><td>"Please ship your old aid with the UPS label. Your replacement is on its way to our office."</td></tr>
+<tr><td>Replacement Sent to Customer</td><td>"Your replacement is in the mail!" Read them the Warranty End Date.</td></tr>
 </tbody>
 </table>
 </div>
-</div>
-
-<div class="card">
-<h3>🔧 The repaired hearing aid breaks again within 6 months</h3>
-<ol>
-<li>Confirm today is <strong>before</strong> their <strong>Warranty End Date</strong> (and they have the tag <code>repair-complete</code>).</li>
-<li>If covered: process it through Signia as a warranty repair. <strong>No charge to the customer.</strong> Add a note.</li>
-<li>If it's lost instead of broken, see "The customer actually LOST the hearing aid" above. The 6-month repair warranty doesn't cover loss.</li>
-</ol>
 </div>
 
 <hr class="divider">
@@ -738,41 +683,47 @@ Hi [first name], correction from Hearing Benefit Services: your 6-month repair w
 <table class="info-table">
 <thead><tr><th>You'll Receive</th><th>When</th><th>What to Do</th></tr></thead>
 <tbody>
-<tr><td><strong>Email:</strong> "New Signia Repair purchase"</td><td>Every new purchase</td><td>Nothing. It's a heads-up only.</td></tr>
-<tr><td><strong>Task:</strong> "Process Signia repair - [Name]"</td><td>Customer submits the form</td><td>Check warranty → receive aid → send to Signia → Workflow R3 steps</td></tr>
-<tr><td><strong>Task:</strong> "Call to complete repair registration - [Name]"</td><td>5 days with no form</td><td>Call the customer (Workflow R1 steps)</td></tr>
-<tr><td><strong>Email:</strong> "Repair registration without purchase - review"</td><td>Form submitted, no payment found</td><td>Check Payments (Workflow R2, Path B)</td></tr>
+<tr><td>Email: "New Signia Repair purchase"</td><td>Every purchase</td><td>Heads-up only</td></tr>
+<tr><td>Task: "Process Signia repair - [Name]"</td><td>Customer registers</td><td>Part 1, WF-R2 steps</td></tr>
+<tr><td>Task: "Call to complete repair registration"</td><td>5 days, no form</td><td>Call the customer</td></tr>
+<tr><td>Email: "Repair registration without purchase"</td><td>Form, no payment</td><td>Check Payments</td></tr>
+<tr><td>Task: "Old aid not shipped to Signia - call"</td><td>Day 20, no <code>old-aid-shipped</code></td><td>Call before day 30</td></tr>
+<tr><td>Task: "Call repair campaign lead"</td><td>Campaign reply or repair click</td><td>Part 2 call steps</td></tr>
+<tr><td>Task: "Follow up consultation interest"</td><td>Consultation click / tag</td><td>Call and book a consultation</td></tr>
 </tbody>
 </table>
 </div>
 </div>
 
-<!-- CHECKLIST -->
-<div class="section-label">Checklist</div>
-<div class="section-title">Len's Checklist for Every Repair</div>
+<!-- CHECKLISTS -->
+<div class="section-label">Checklists</div>
+<div class="section-title">Len's Checklists</div>
 <div class="card">
+<h3>Every repair</h3>
 <ul class="checklist">
-<li>Opened the "Process Signia repair" task and the customer's contact</li>
-<li>Noted the model, which aid, serial number(s) and problem description</li>
-<li>Confirmed in the Signia portal that the aid is <strong>out of warranty</strong> (if in warranty → message Rhett)</li>
-<li>Confirmed the shipping instructions email went out</li>
-<li>Hearing aid received, noted on the contact, and repair submitted to Signia (order number noted)</li>
-<li>Moved the card to <strong>Received - Sent to Signia</strong></li>
-<li>Entered the <strong>Warranty End Date</strong> (repair completion date + 6 months) and double-checked it</li>
-<li>Moved the card to <strong>Repaired - Returned to Customer</strong></li>
-<li>Confirmed the SMS and email went out with the correct date</li>
-<li>Marked the repair task complete</li>
+<li>Checked the serial: out of warranty, invoice date noted</li>
+<li>Ordered Speedy Repair, 6-month warranty, Ship To = HBS office; order # in notes</li>
+<li>Emailed the filled Repair/Remake form + UPS label</li>
+<li>Moved the card to <strong>Speedy Repair Ordered - Awaiting Old Aid</strong></li>
+<li>Added <code>old-aid-shipped</code> when UPS shows it's moving</li>
+<li>Replacement arrived: new serial in notes, exact end date copied into Warranty End Date</li>
+<li>Mailed the replacement, then moved the card to <strong>Replacement Sent to Customer</strong></li>
+<li>Confirmed the SMS/email went out with the right date; closed the task</li>
 </ul>
-<div class="alert alert-warning" style="margin-top:12px;">
-<strong>⏱️ Timing goal:</strong> Check the warranty within <strong>1 business day</strong> of getting the task, and send the aid to Signia within <strong>1 business day</strong> of receiving it.
-</div>
+<h3 style="margin-top:16px;">Every campaign batch</h3>
+<ul class="checklist">
+<li>Between 9 AM and 6 PM Eastern, Mon–Sat</li>
+<li>Up to ~200 leads; skipped patients, open deals, DND / opted out</li>
+<li>Tagged <code>repair-campaign-lead</code></li>
+<li>Checked Conversations and tasks the next day for replies</li>
+</ul>
 </div>
 
 </div>
 
 <div class="footer">
 Hearing Benefit Services · Staff Training · Confidential<br>
-See also: Signia Warranty Extension training. Questions about this process? Message Rhett.
+Questions about this process? Message Rhett.
 </div>
 
 </body>
