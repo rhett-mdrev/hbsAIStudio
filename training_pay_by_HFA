@@ -7,10 +7,6 @@
 
     <section style="margin-bottom: 30px;">
         <p style="font-size: 16px;">This guide covers the step-by-step process for submitting a patient financing application through the <strong>Pay By HFA Provider Portal</strong>. Pay By HFA guarantees 100% patient approval with 0% APR.</p>
-        
-        <div style="background-color: #fef08a; border-left: 5px solid #eab308; padding: 15px; margin: 20px 0; border-radius: 4px;">
-            <p style="margin: 0; color: #854d0e;"><strong>⚠️ IMPORTANT RULE:</strong> There is no public website for applicants to apply on their own. All applications <strong>must</strong> be initiated by staff through the provider dashboard.</p>
-        </div>
     </section>
 
     <section style="margin-bottom: 35px;">
@@ -75,4 +71,32 @@
         </ul>
     </section>
 
-</div>
+    <section style="margin-bottom: 35px;">
+        <h2 style="color: #2563eb; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">Step 6: Understanding the Pricing & Provider Fee Tiers</h2>
+        <p style="margin-bottom: 15px;">Pay By HFA approves 100% of patients, but the <strong>fee charged to our practice</strong> depends on the patient's credit tier as determined by their soft credit pull. Below is the standard fee schedule based on a <strong>12-Month Term</strong> (30-Day Recission program), using a $2,855 financed amount as an example:</p>
+        
+        <div style="overflow-x: auto;">
+            <table style="width: 100%; border-collapse: collapse; text-align: left; margin-bottom: 15px;">
+                <thead>
+                    <tr style="background-color: #f1f5f9;">
+                        <th style="padding: 12px; border: 1px solid #cbd5e1; color: #0f172a;">Credit Score Tier</th>
+                        <th style="padding: 12px; border: 1px solid #cbd5e1; color: #0f172a;">Provider Fee %</th>
+                        <th style="padding: 12px; border: 1px solid #cbd5e1; color: #0f172a;">Example Fee (on $2,855)</th>
+                        <th style="padding: 12px; border: 1px solid #cbd5e1; color: #0f172a;">Net Payment to Practice</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="padding: 12px; border: 1px solid #cbd5e1;"><strong>Tier 1:</strong> 720 - 850</td>
+                        <td style="padding: 12px; border: 1px solid #cbd5e1; font-weight: bold; color: #166534;">18%</td>
+                        <td style="padding: 12px; border: 1px solid #cbd5e1; color: #b91c1c;">-$513.90</td>
+                        <td style="padding: 12px; border: 1px solid #cbd5e1; font-weight: bold; color: #15803d;">$2,341.10</td>
+                    </tr>
+                    <tr style="background-color: #f8fafc;">
+                        <td style="padding: 12px; border: 1px solid #cbd5e1;"><strong>Tier 2:</strong> 620 - 719</td>
+                        <td style="padding: 12px; border: 1px solid #cbd5e1; font-weight: bold; color: #166534;">31%</td>
+                        <td style="padding: 12px; border: 1px solid #cbd5e1; color: #b91c1c;">-$885.05</td>
+                        <td style="padding: 12px; border: 1px solid #cbd5e1; font-weight: bold; color: #15803d;">$1,969.95</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 12
