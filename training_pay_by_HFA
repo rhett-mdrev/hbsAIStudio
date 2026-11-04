@@ -27,16 +27,12 @@
     </section>
 
     <section style="margin-bottom: 35px;">
-        <h2 style="color: #2563eb; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">Step 2: Billing Details & Terms</h2>
+        <h2 style="color: #2563eb; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">Step 2: Billing Details & Internal Tracking</h2>
         <img src="https://assets.cdn.filesafe.space/UDKdmJIdT4xB1V6Lye64/media/6aeb9415e322309abfc299a7.png" alt="Step 2 Billing Details" style="max-width: 100%; height: auto; border: 1px solid #cbd5e1; border-radius: 6px; margin: 15px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
         <ul style="padding-left: 20px;">
             <li style="margin-bottom: 10px;"><strong>Amount:</strong> Enter the total cost to be financed (Max: $7,500).</li>
-            <li style="margin-bottom: 10px;"><strong>Funding Preferences:</strong> 
-                <ul>
-                    <li>Check the <em>"Installment Only"</em> box to be paid out monthly as the patient pays.</li>
-                    <li>Leave the box <strong>unchecked</strong> to receive advanced funding upfront.</li>
-                </ul>
-            </li>
+            <li style="margin-bottom: 10px;"><strong>Internal Data Points:</strong> Fields for <em>Length of Treatment</em>, <em>Account Number</em>, and <em>Start Date of Treatment</em> are for our practice's internal tracking only and do not affect the application itself.</li>
+            <li style="margin-bottom: 10px;"><strong>Funding Preferences:</strong> Check the <em>"Installment Only"</em> box to be paid out monthly as the patient pays. Leave the box <strong>unchecked</strong> to receive advanced funding upfront.</li>
             <li style="margin-bottom: 10px;"><strong>Term Length:</strong> Select a payment term up to 12 months.</li>
             <li style="margin-bottom: 10px;"><strong>Anti-Stacking Certification:</strong> You must certify that you are not "loan stacking" (splitting the financing of this specific service with another third-party provider like CareCredit or Cherry).</li>
         </ul>
@@ -57,7 +53,7 @@
         <h2 style="color: #2563eb; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">Step 4: Prequalification & Acknowledgments</h2>
         <img src="https://assets.cdn.filesafe.space/UDKdmJIdT4xB1V6Lye64/media/6aeb9415dfd4785f0859e568.png" alt="Step 4 Prequalification" style="max-width: 100%; height: auto; border: 1px solid #cbd5e1; border-radius: 6px; margin: 15px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
         <ul style="padding-left: 20px;">
-            <li style="margin-bottom: 10px;"><strong>Information Gathering:</strong> The patient inputs their address and SSN (or ITIN). They will also provide income and housing costs—this is for internal data only and will not trigger a denial.</li>
+            <li style="margin-bottom: 10px;"><strong>Information Gathering:</strong> The patient inputs their address and SSN (or ITIN for non-US citizens).</li>
             <li style="margin-bottom: 10px;"><strong>Required Patient Agreements:</strong> The patient must agree to three conditions to proceed:
                 <ol>
                     <li style="margin-top: 5px;">Consent to a <strong>soft credit pull</strong> (This does NOT affect their credit score, but it determines the fee tier charged to the practice).</li>
@@ -69,8 +65,27 @@
     </section>
 
     <section style="margin-bottom: 35px;">
-        <h2 style="color: #2563eb; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">Step 5: Payment Setup & Final Signatures</h2>
-        <img src="https://assets.cdn.filesafe.space/UDKdmJIdT4xB1V6Lye64/media/6aeb941534f57914738b979c.png" alt="Step 5 Payment Setup" style="max-width: 100%; height: auto; border: 1px solid #cbd5e1; border-radius: 6px; margin: 15px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+        <h2 style="color: #2563eb; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">Step 5: Financial Details & Down Payment</h2>
+        <ul style="padding-left: 20px;">
+            <li style="margin-bottom: 10px;"><strong>Income & Housing:</strong> Patients are asked for their monthly income and housing costs. This is required for HFA's internal data, but it <em>does not</em> trigger a denial.</li>
+            <li style="margin-bottom: 10px;"><strong>Adjusting the Term:</strong> The system defaults to the max qualified term (e.g., 12 months). The patient can use the slider to shorten this term (e.g., to 10 months) if they wish to pay the balance off faster.</li>
+            <li style="margin-bottom: 10px;"><strong>Down Payment:</strong> The patient can choose to put down a larger initial payment upfront rather than proceeding with standard monthly amounts.</li>
+            <li style="margin-bottom: 10px;"><strong>0% Interest:</strong> The system confirms to the patient that the payment plan is completely interest-free.</li>
+        </ul>
+    </section>
+
+    <section style="margin-bottom: 35px;">
+        <h2 style="color: #2563eb; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">Step 6: Application Summary & Payment Scheduling</h2>
+        <img src="https://assets.cdn.filesafe.space/UDKdmJIdT4xB1V6Lye64/media/6aeb941534f57914738b979c.png" alt="Step 6 Payment Setup" style="max-width: 100%; height: auto; border: 1px solid #cbd5e1; border-radius: 6px; margin: 15px 0; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+        <ul style="padding-left: 20px;">
+            <li style="margin-bottom: 10px;"><strong>Review Details:</strong> The patient reviews all entered applicant, financial, and billing information for accuracy.</li>
+            <li style="margin-bottom: 10px;"><strong>Payment Scheduling:</strong> The <em>First Payment Date</em> is always processed the same day the application is signed. However, the <em>Start Date of Remaining Payments</em> can be pushed out up to a maximum of <strong>30 days</strong> from the first payment.</li>
+            <li style="margin-bottom: 10px;"><strong>Legal Consents:</strong> The patient must check the three boxes at the bottom of the screen to acknowledge the HFA Privacy Notice, Terms and Conditions, and Electronic Communications Disclosure before continuing.</li>
+        </ul>
+    </section>
+
+    <section style="margin-bottom: 35px;">
+        <h2 style="color: #2563eb; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">Step 7: Payment Method & Final Signatures</h2>
         <ul style="padding-left: 20px;">
             <li style="margin-bottom: 10px;"><strong>Payment Methods & Fees:</strong> Patients can link a Debit, Credit, HSA, or ACH bank account.
                 <ul>
@@ -78,13 +93,13 @@
                     <li style="color: #15803d;"><strong>Note on ACH:</strong> Using ACH avoids the 1.99% fee for the patient, but advanced funding takes 3–4 business days to settle.</li>
                 </ul>
             </li>
-            <li style="margin-bottom: 10px;"><strong>E-Signatures:</strong> The patient electronically signs a Promissory Note and a Payment Method Authorization form.</li>
+            <li style="margin-bottom: 10px;"><strong>E-Signatures:</strong> The patient electronically signs a Promissory Note and a Payment Method Authorization form (via mouse, keyboard typing, or uploading a photo of their signature).</li>
             <li style="margin-bottom: 10px;"><strong>Processing:</strong> Once signed, the first payment processes immediately for In-Person and Text Link applications. Phone applications process overnight.</li>
         </ul>
     </section>
 
     <section style="margin-bottom: 35px;">
-        <h2 style="color: #2563eb; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">Step 6: Understanding the Pricing & Provider Fee Tiers</h2>
+        <h2 style="color: #2563eb; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">Step 8: Understanding the Pricing & Provider Fee Tiers</h2>
         <p style="margin-bottom: 15px;">Pay By HFA approves 100% of patients, but the <strong>fee charged to our practice</strong> depends on the patient's credit tier as determined by their soft credit pull. Below is the standard fee schedule based on a <strong>12-Month Term</strong> (30-Day Recission program), using a $2,855 financed amount as an example:</p>
         
         <div style="overflow-x: auto;">
