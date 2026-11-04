@@ -1,0 +1,78 @@
+<div style="max-width: 800px; margin: 0 auto; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; line-height: 1.6; color: #333333; padding: 20px;">
+    
+    <header style="text-align: center; border-bottom: 3px solid #2563eb; padding-bottom: 20px; margin-bottom: 30px;">
+        <h1 style="color: #1e3a8a; margin-bottom: 5px;">Pay By HFA Provider Portal</h1>
+        <p style="font-size: 18px; color: #64748b; margin-top: 0;">Staff Training & Standard Operating Procedures</p>
+    </header>
+
+    <section style="margin-bottom: 30px;">
+        <p style="font-size: 16px;">This guide covers the step-by-step process for submitting a patient financing application through the <strong>Pay By HFA Provider Portal</strong>. Pay By HFA guarantees 100% patient approval with 0% APR.</p>
+        
+        <div style="background-color: #fef08a; border-left: 5px solid #eab308; padding: 15px; margin: 20px 0; border-radius: 4px;">
+            <p style="margin: 0; color: #854d0e;"><strong>⚠️ IMPORTANT RULE:</strong> There is no public website for applicants to apply on their own. All applications <strong>must</strong> be initiated by staff through the provider dashboard.</p>
+        </div>
+    </section>
+
+    <section style="margin-bottom: 35px;">
+        <h2 style="color: #2563eb; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">Step 1: Initial Setup & Patient Info</h2>
+        <ul style="padding-left: 20px;">
+            <li style="margin-bottom: 10px;"><strong>Create Account:</strong> From the home screen, select <em>"Create New Billing Account"</em> and choose <em>"Multi Payments"</em> for a monthly installment plan.</li>
+            <li style="margin-bottom: 10px;"><strong>Demographics:</strong> Enter the applicant's basic contact information.</li>
+            <li style="margin-bottom: 10px;"><strong>Applicant vs. Patient:</strong> Specify if the patient is the same as the applicant. If they are different (e.g., a family member applying on behalf of the patient), the applicant assumes all financial responsibility.</li>
+        </ul>
+    </section>
+
+    <section style="margin-bottom: 35px;">
+        <h2 style="color: #2563eb; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">Step 2: Billing Details & Terms</h2>
+        <ul style="padding-left: 20px;">
+            <li style="margin-bottom: 10px;"><strong>Amount:</strong> Enter the total cost to be financed (Max: $7,500).</li>
+            <li style="margin-bottom: 10px;"><strong>Funding Preferences:</strong> 
+                <ul>
+                    <li>Check the <em>"Installment Only"</em> box to be paid out monthly as the patient pays.</li>
+                    <li>Leave the box <strong>unchecked</strong> to receive advanced funding upfront.</li>
+                </ul>
+            </li>
+            <li style="margin-bottom: 10px;"><strong>Term Length:</strong> Select a payment term up to 12 months.</li>
+            <li style="margin-bottom: 10px;"><strong>Anti-Stacking Certification:</strong> You must certify that you are not "loan stacking" (splitting the financing of this specific service with another third-party provider like CareCredit or Cherry).</li>
+        </ul>
+    </section>
+
+    <section style="margin-bottom: 35px;">
+        <h2 style="color: #2563eb; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">Step 3: Choosing the Application Method</h2>
+        <p style="margin-bottom: 15px;">Choose how the patient will complete the application based on their location:</p>
+        <ul style="padding-left: 20px;">
+            <li style="margin-bottom: 10px;"><strong>In-Person:</strong> Hand a tablet or office computer directly to the patient to complete the form.</li>
+            <li style="margin-bottom: 10px;"><strong>Over the Phone / Virtual:</strong> Read the questions to the patient during a call or telehealth visit, fill out the form on their behalf, and the final agreements will be emailed to them to e-sign.</li>
+            <li style="margin-bottom: 10px;"><strong>Text Link:</strong> Send a secure link via text message directly to the applicant's phone. They have <strong>14 days</strong> to complete the application before the link expires.</li>
+        </ul>
+    </section>
+
+    <section style="margin-bottom: 35px;">
+        <h2 style="color: #2563eb; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">Step 4: Prequalification & Acknowledgments</h2>
+        <ul style="padding-left: 20px;">
+            <li style="margin-bottom: 10px;"><strong>Information Gathering:</strong> The patient inputs their address and SSN (or ITIN). They will also provide income and housing costs—this is for internal data only and will not trigger a denial.</li>
+            <li style="margin-bottom: 10px;"><strong>Required Patient Agreements:</strong> The patient must agree to three conditions to proceed:
+                <ol>
+                    <li style="margin-top: 5px;">Consent to a <strong>soft credit pull</strong> (This does NOT affect their credit score, but it determines the fee tier charged to the practice).</li>
+                    <li>Confirmation they are not on any terrorism or money laundering watchlists.</li>
+                    <li>Acknowledgment that HFA only handles financing and does not hold their medical records.</li>
+                </ol>
+            </li>
+        </ul>
+    </section>
+
+    <section style="margin-bottom: 35px;">
+        <h2 style="color: #2563eb; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">Step 5: Payment Setup & Final Signatures</h2>
+        <ul style="padding-left: 20px;">
+            <li style="margin-bottom: 10px;"><strong>Payment Methods & Fees:</strong> Patients can link a Debit, Credit, HSA, or ACH bank account.
+                <ul>
+                    <li style="color: #b91c1c; margin-top: 5px;"><strong>Note on Cards:</strong> Credit and debit cards incur a <strong>1.99% convenience fee</strong> on monthly payments. However, cards allow for instant advanced funding to the practice.</li>
+                    <li style="color: #15803d;"><strong>Note on ACH:</strong> Using ACH avoids the 1.99% fee for the patient, but advanced funding takes 3–4 business days to settle.</li>
+                </ul>
+            </li>
+            <li style="margin-bottom: 10px;"><strong>E-Signatures:</strong> The patient electronically signs a Promissory Note and a Payment Method Authorization form.</li>
+            <li style="margin-bottom: 10px;"><strong>Processing:</strong> Once signed, the first payment processes immediately for In-Person and Text Link applications. Phone applications process overnight.</li>
+        </ul>
+    </section>
+
+</div>
