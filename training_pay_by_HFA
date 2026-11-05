@@ -7,7 +7,7 @@
 
     <section style="margin-bottom: 30px; text-align: center;">
         <video width="100%" style="max-width: 800px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);" controls>
-            <source src="https://assets.cdn.filesafe.space/UDKdmJIdT4xB1V6Lye64/media/6aeb95e631d623e532b28745.mp4" type="video/mp4">
+            <source src="https://assets.cdn.filesafe.space/UDKdmJIdT4xB1V6Lye64/media/6aecafbf31d623e532d33f5b.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </section>
@@ -141,6 +141,23 @@
             </table>
         </div>
         <p style="font-size: 14px; color: #64748b;"><em>Note: The patient's monthly payment remains a standard split (e.g., $237.92/month for $2,855 over 12 months) at 0% interest. The credit tier only dictates the discounted net payout given to the practice.</em></p>
+    </section>
+
+    <section style="margin-bottom: 35px; background-color: #f8fafc; border: 1px solid #cbd5e1; padding: 20px; border-radius: 6px;">
+        <h2 style="color: #2563eb; margin-top: 0; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">Step 9: Important HFA Policies & FAQs</h2>
+        <p style="margin-bottom: 15px; font-size: 15px;">Please adhere to the following internal policies based on our direct agreements with HFA:</p>
+        <ul style="padding-left: 20px; font-size: 15px;">
+            <li style="margin-bottom: 10px;"><strong>Patient Application Support:</strong> If a patient is having technical issues completing their application (especially if they are applying from home via Text Link), you can forward them directly to HFA Customer Support at <strong>888-889-7033</strong>. Wait times are typically under one minute.</li>
+            <li style="margin-bottom: 10px;"><strong>Fees on Down Payments:</strong> The provider fee percentage is calculated based on the <strong>entire sale amount</strong>, not just the remaining financed amount. Keep this in mind when discussing large down payments.</li>
+            <li style="margin-bottom: 10px;"><strong>Refunds & Cancellations (30-Day Rescission):</strong> If a patient cancels within the 30-day rescission period or requests a return, we do <strong>not</strong> receive a full refund of the provider fee deducted (only 92% is refunded). <strong style="color: #b91c1c;">All refunds and cancellations must be escalated to and discussed with HBS management prior to processing.</strong></li>
+            <li style="margin-bottom: 10px;"><strong>Additional/Hidden Fees:</strong> There are no setup fees, monthly gateway fees, or batch processing fees. However, there is a <strong>$249/month non-usage fee</strong> if the platform is not utilized to process financing. This fee is waived for the first 60 days, meaning it will take effect starting January 5th.</li>
+            <li style="margin-bottom: 10px;"><strong>ACH Settlement Timelines:</strong> ACH payments take 3 to 5 business days for advanced funding to settle. HFA <em>cannot</em> expedite this process. Instant next-day payouts strictly require using a debit or credit card (which incurs a 1.99% convenience fee to the patient).</li>
+            <li style="margin-bottom: 10px;"><strong>100% Approval & Credit Freezes:</strong> While 100% of patients are approved, if a patient has an active <strong>credit freeze</strong>, they are automatically forced into the lowest credit tier (Tier 4). If they lift the freeze, the application can be re-run to secure their accurate normal credit tier.</li>
+            <li style="margin-bottom: 10px;"><strong>Dispute & Default Liability:</strong> Once the 30-day rescission period has passed, HFA assumes <strong>100% of the collection risk</strong>. If a patient defaults on their monthly payments, there is no clawback or recourse against our practice.</li>
+            <li style="margin-bottom: 10px;"><strong>Installment Only Payouts:</strong> If we set up a patient using the "Installment Only" funding option rather than advanced funding, HFA releases payouts to our practice on the <strong>same day</strong> the customer's monthly payment clears.</li>
+            <li style="margin-bottom: 10px;"><strong>API & CRM Integration:</strong> HFA supports API integrations. We are coordinating with our rep (Logan) to get GoHighLevel integration set up for automated tracking.</li>
+            <li style="margin-bottom: 10px;"><strong>Volume-Based Discounts:</strong> <em>(Pending Clarification from HFA)</em> Do they offer lower provider fee percentages for high financing volume?</li>
+        </ul>
     </section>
 
 </div>
